@@ -1,0 +1,155 @@
+.products {
+    width: 100%;
+    padding-top: 87px;
+}
+
+.down-arrow {
+    width: 12px;
+    margin-left: 12px;
+}
+
+.header {
+    width: 100%;
+}
+
+.product__name {
+    width: 100%;
+    height: 14vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../img/Imagen_principal.jpg');
+}
+
+.product__name h1{
+    font-size: 4rem;
+    color: white;
+}
+
+.products__list {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.products__list__container {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    margin-top: 64px;
+}
+
+.list__aside {
+    width: 30%;
+    padding: 12px;
+}
+
+.list__aside__title {
+    font-size: 1.3rem;
+    margin-bottom: 6px;
+}
+
+.list__aside-box {
+    width: 52px;
+    height: 4px;
+    background: #000;
+    margin-bottom: 24px;
+}
+
+.list__aside ul {
+    list-style-type: none;
+    margin-bottom: 42px;
+}
+
+.list__aside ul li {
+    margin-bottom: 12px;
+}
+
+.list__aside ul li a{
+    display: block;
+    text-decoration: none;
+    margin-bottom: 6px;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 1.1rem;
+}
+
+.list__products {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.list__products__options {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 42px;
+}
+
+.list__products__options-item {
+    display: flex;
+    
+}
+
+.list__products__options-btn{
+    border: 2px solid black;
+    padding: 8px 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 14px;
+    margin-right: 12px;
+}
+
+.list__products__options-btn-ico {
+    width: 24px;
+}
+
+.list__products__options-btn {}
+
+.product-img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.list__products-ul {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    justify-content: center;
+    width: 100%;
+    padding: 24px;
+}
+.list__products ul li{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 300px;
+    margin: 10px;
+}
+
+.list__products ul li a{
+    text-decoration: none;
+    color:black
+}
+
+.list__productos-pages ul{
+    width: 50%;
+    height: 100px;
+}
+
+.list__productos-pages ul li{
+    height: 48px;
+}
+
+.list__productos-pages-ul {
+    display: flex;
+}
+
+.barra {
+    width: 100%;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin-top: 128px;
+}
