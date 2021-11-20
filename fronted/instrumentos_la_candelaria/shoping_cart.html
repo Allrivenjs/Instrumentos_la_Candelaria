@@ -56,68 +56,173 @@
                 </div>
             </div>
         </nav>
+        <nav class="nav-mobile">
+            <div class="nav-mobile-btns">
+                <img src="./assets/img/logo.png" class="logo-mobile" />
+                <img src="./assets/icons/menu-icon.svg" class="nav-mobile-menu-icon">
+            </div>
+
+            <div class="nav-mobile__items">
+                <ul class="nav-mobile__btns">
+                    <li class="nav-mobile__inicio"><a href="./index.html">Inicio</a></li>
+                    <li class="nav-mobile__subtitle">Categorias</li>
+                    <ul class="nav-mobile__categories">
+                        <li><a href="./product.html">Guitarras</a></li>
+                        <li><a href="javascript:void(0);">Percusión</a></li> 
+                        <li><a href="javascript:void(0);">Bajos</a></li> 
+                        <li><a href="javascript:void(0);">Ukuleles</a></li> 
+                        <li><a href="javascript:void(0);">Teclados</a></li>
+                        <li><a href="javascript:void(0);">Efectos</a></li>
+                    </ul>
+                    <li class="nav-mobile__subtitle">Categorias</li>
+                    <ul class="nav-mobile__categories">
+                        <li><a href="./product.html">Guitarras</a></li>
+                        <li><a href="javascript:void(0);">Percusión</a></li> 
+                        <li><a href="javascript:void(0);">Bajos</a></li> 
+                        <li><a href="javascript:void(0);">Ukuleles</a></li> 
+                        <li><a href="javascript:void(0);">Teclados</a></li>
+                        <li><a href="javascript:void(0);">Efectos</a></li>
+                    </ul>
+                </ul>
+            </div>
+        </nav>
     </header>
-    <main>
-    <div class="Cart-Container">  
-        <div class="Header">
-                <h3 class="Heading">Shopping Cart</h3>
-                <h5 class="Action">Remove all</h5>
-            </div>
-            <div class="Cart-Items">
-                    <div class="image-box">
-                        <img src="assets/img/instrumentos/strat.jpg" class="producto_primary"/>
+
+    <main class="shopping-cart__container">
+        <article class="shopping-cart">
+            <section class="shopping-cart__item">
+                <header class="shopping-cart__header">
+                    <h2>Carrito de compra</h2>
+                    <p>3 Items</p>
+                </header>
+
+                <div class="line"></div>
+                <div class="product__row-h">
+                    <div class="product__details-h header-row">
+                        DETALLES DEL PRODUCTO
                     </div>
-                    <div class="about">
-                        <h1 class="title">Guitarra Eléctrica Texas ADK-E10W-S-W, White</h1>
-                        <h3 class="subtitle">Marca Texas</h3>
-                        <h3 class="subtitle">Color blaco</h3>
-                        <img src="https://www.clipartmax.com/png/middle/204-2043038_lenny-polonski-puntos-de-color-verde.png" class="point_green"/>
+                    <div class="product__info-h">
+                        <div class="product__details-h header-row">
+                            CANTIDAD
+                        </div>
+                        <div class="product__details-h header-row">
+                            PRICE
+                        </div>
+                        <div class="product__details-h header-row">
+                            TOTAL
+                        </div>
                     </div>
-                    <div class="counter">
-                        <div class="btn">+</div>
-                        <div class="count">2</div>
-                        <div class="btn">-</div>
+                </div>
+                
+                    <div class="shoping-cart__products">
+                        <div class="product__row">
+                            <div class="product__details">
+                                <img class="product__img"  src="./assets/img/instrumentos/strat-red.jpg" alt="🎸 strart">
+                                <div class="product__details-info">
+                                    <h3>Guitarra Eléctrica Texas ADK-E10W-S-W</h3>
+                                    <p>Red</p>
+                                    <a class="remove-btn">Remove</a>
+                                </div>
+                            </div>
+                            <div class="product__info">
+                                <div class="product__info-item">
+                                    <span class="quantity-controller">-</span>
+                                    <span class="quantity-view">1</span>
+                                    <span class="quantity-controller">+</span>
+                                </div>
+                                <div class="product__info-item">
+                                    $368,000
+                                </div>
+                                <div class="product__info-item">
+                                    $368,000
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__row">
+                            <div class="product__details">
+                                <img class="product__img"  src="./assets/img/instrumentos/strat-red.jpg" alt="🎸 strart">
+                                <div class="product__details-info">
+                                    <h3>Guitarra Eléctrica Texas ADK-E10W-S-W</h3>
+                                    <p>Red</p>
+                                    <a class="remove-btn">Remove</a>
+                                </div>
+                            </div>
+                            <div class="product__info">
+                                <div class="product__info-item">
+                                    <span class="quantity-controller">-</span>
+                                    <span class="quantity-view">1</span>
+                                    <span class="quantity-controller">+</span>
+                                </div>
+                                <div class="product__info-item">
+                                    $368,000
+                                </div>
+                                <div class="product__info-item">
+                                    $368,000
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__row">
+                            <div class="product__details">
+                                <img class="product__img"  src="./assets/img/instrumentos/strat-red.jpg" alt="🎸 strart">
+                                <div class="product__details-info">
+                                    <h3>Guitarra Eléctrica Texas ADK-E10W-S-W</h3>
+                                    <p>Red</p>
+                                    <a class="remove-btn">Remove</a>
+                                </div>
+                            </div>
+                            <div class="product__info">
+                                <div class="product__info-item">
+                                    <span class="quantity-controller">-</span>
+                                    <span class="quantity-view">1</span>
+                                    <span class="quantity-controller">+</span>
+                                </div>
+                                <div class="product__info-item">
+                                    $368,000
+                                </div>
+                                <div class="product__info-item">
+                                    $368,000
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="prices">
-                        <div class="amount">$268,000</div>
-                        <div class="save"><u>Save for later</u></div>
-                        <div class="remove"><u>Remove</u></div>
+
+            </section>
+            <section class="shopping-cart__item">
+                    <header class="shopping-cart__header summary">
+                        <h2>Resumen del pedido</h2>
+                    </header>
+                    <div class="line_order"></div>
+                <div class="shopping-cart_summary">
+                    <div class="items_and_price">
+                        <p>3 Items</p>
+                        <p>$19.200</p>
                     </div>
-            </div>
-            <div class="Cart-Items">
-                <div class="image-box">
-                    <img src="assets/img/instrumentos/strat-red.jpg" class="producto_primary"/>
+                    <div class="shopping_delivery">
+                        <label for="cars" class="label_text">Tipo de envio:</label>
+                            <select name="cars" id="cars" class="items_option">
+                            <option value="volvo">Envio estandar</option>
+                            <option value="saab">Envio rapido</option>
+                            <option value="mercedes">Envio premium</option>
+                            <option value="audi">Entregado como regalo</option>
+                            </select>
+                    </div>
+                    <div class="promo_code">
+                        <p>Tienes un cupon?</p>
+                        <input type="text">
+                        <button type="button"> Aplicar </button>
+                    </div>
+                    
+                    <div class="line_order"></div>
+                    <div class="delivery_confirm">
+                        <p>Total</p>
+                        <p>$19.400</p>
+                    </div>
+
+                    
                 </div>
-                <div class="about">
-                    <h1 class="title">Guitarra Eléctrica Texas ADK-E10W-S-W, White</h1>
-                    <h3 class="subtitle">Marca Texas</h3>
-                    <h3 class="subtitle">Color rojo</h3>
-                    <img src="https://www.clipartmax.com/png/middle/204-2043038_lenny-polonski-puntos-de-color-verde.png" class="point_green"/>
-                </div>
-                <div class="counter">
-                    <div class="btn">+</div>
-                    <div class="count">2</div>
-                    <div class="btn">-</div>
-                </div>
-                <div class="prices">
-                    <div class="amount">$268,000</div>
-                    <div class="save"><u>Save for later</u></div>
-                    <div class="remove"><u>Remove</u></div>
-                </div>
-        </div>
-            <hr> 
-            <div class="checkout">
-                <div class="total">
-                    <div>
-                        <div class="Subtotal">Sub-Total</div>
-                        <div class="items">2 items</div>
-                     </div>
-                    <div class="total-amount">$6.18</div>
-                </div>
-                 <button class="button">Checkout</button>
-                </div>
-        </main>         
-    </div>
+            </section>  
+        </article>
+    </main>
 </body>
 
 </html>
