@@ -167,7 +167,7 @@
 }
 
 .items_and_price p {
-    font-size: 1.2rem;
+    font-size: 1.2rem;  
 }
 
 .shopping_delivery {
@@ -184,11 +184,16 @@
     margin-top: 1.5rem;
     margin-bottom:1.5rem;
 }
-.shopping_delivery label{
-    font-size: 1.4rem;
-}
-.items_option{
 
+.shopping_delivery p{
+    font-size: 1.2rem;
+}
+
+
+.items_option{
+    background: none;
+    border: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
 }
 
 .shopping_delivery {
@@ -202,11 +207,15 @@
 }
 
 .promo_code p {
+    font-size: 1.2rem;
     margin-bottom: 1rem;
 }
 
 .promo_code input {
     margin-bottom: 1rem;
+    background: none;
+    border: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
 }
 
 .promo_code button {
