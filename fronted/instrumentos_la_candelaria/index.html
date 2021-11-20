@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="author" content="">
 
@@ -53,36 +53,73 @@
                     </div>
                 </div>
             </nav>
+            <nav class="nav-mobile">
+                <div class="nav-mobile-btns">
+                    <img src="./assets/img/logo.png" class="logo-mobile" />
+                    <img src="./assets/icons/menu-icon.svg" class="nav-mobile-menu-icon">
+                </div>
+
+                <div class="nav-mobile__items">
+                    <ul class="nav-mobile__btns">
+                        <li class="nav-mobile__inicio"><a href="./index.html">Inicio</a></li>
+                        <li class="nav-mobile__subtitle">Categorias</li>
+                        <ul class="nav-mobile__categories">
+                            <li><a href="./product.html">Guitarras</a></li>
+                            <li><a href="javascript:void(0);">Percusión</a></li> 
+                            <li><a href="javascript:void(0);">Bajos</a></li> 
+                            <li><a href="javascript:void(0);">Ukuleles</a></li> 
+                            <li><a href="javascript:void(0);">Teclados</a></li>
+                            <li><a href="javascript:void(0);">Efectos</a></li>
+                        </ul>
+                        <li class="nav-mobile__subtitle">Categorias</li>
+                        <ul class="nav-mobile__categories">
+                            <li><a href="./product.html">Guitarras</a></li>
+                            <li><a href="javascript:void(0);">Percusión</a></li> 
+                            <li><a href="javascript:void(0);">Bajos</a></li> 
+                            <li><a href="javascript:void(0);">Ukuleles</a></li> 
+                            <li><a href="javascript:void(0);">Teclados</a></li>
+                            <li><a href="javascript:void(0);">Efectos</a></li>
+                        </ul>
+                    </ul>
+                </div>
+            </nav>
         </header>
         
         <section class="welcome">
-            <div class="welcome__item">
-                
-            </div>
-            <div class="welcome__item">
-                <h2 class="welcome__mini-title">NUEVAS GUITARRAS</p>
-                <h1 class="welcome__title">FENDER COLLECTION</h1>
-                <a href="javascript:void(0);" class="welcome__btn">DESCUBRIR AHORA</a>
-                <div class="welcome__news">
-                    <div class="news__options">
-                        <p>01/03</p>
-                        <div class="news__btns">
-                            <img src="./assets/icons/arrows.svg" class="news__arrows" alt="arrow"></span>
-                            <img src="./assets/icons/arrows.svg" class="news__arrows" alt="arrow"></span>
+            <div class="welcome-container">
+                <div class="welcome__item">
+                    
+                </div>
+                <div class="welcome__item">
+                    <h2 class="welcome__mini-title">NUEVAS GUITARRAS</p>
+                    <h1 class="welcome__title">FENDER COLLECTION</h1>
+                    <a href="javascript:void(0);" class="welcome__btn">DESCUBRIR AHORA</a>
+                    <div class="welcome__news">
+                        <div class="news__options">
+                            <p>01/03</p>
+                            <div class="news__btns">
+                                <img src="./assets/icons/arrows.svg" class="news__arrows" alt="arrow"></span>
+                                <img src="./assets/icons/arrows.svg" class="news__arrows" alt="arrow"></span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="news__items">
-                        <div class="news__item">
-                            <h2>FENDER COLLECTION</h2>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, facilis. Culpa exercitationem voluptate voluptates praesentium. Repellat qui, quis nesciunt temporibus consequuntur est ipsa alias odio officia repudiandae adipisci voluptatum perspiciatis.</p>                            
+                        <div class="news__bars">
+                            <div class="news__bar"></div>
+                            <div class="news__bar"></div>
+                            <div class="news__bar"></div>
                         </div>
-                        <div class="news__item">
-                            <h2>NUEVOS EFECTOS</h2>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, facilis. Culpa exercitationem voluptate voluptates praesentium. Repellat qui, quis nesciunt temporibus consequuntur est ipsa alias odio officia repudiandae adipisci voluptatum perspiciatis.</p>                            
-                        </div>
-                        <div class="news__item">
-                            <h2>TDESCUENTO EN AMPLIFICADORES</h2>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, facilis. Culpa exercitationem voluptate voluptates praesentium. Repellat qui, quis nesciunt temporibus consequuntur est ipsa alias odio officia repudiandae adipisci voluptatum perspiciatis.</p>                            
+                        <div class="news__items">
+                            <div class="news__item">
+                                <h2>FENDER COLLECTION</h2>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, facilis. Culpa exercitationem voluptate voluptates praesentium. Repellat qui.</p>                            
+                            </div>
+                            <div class="news__item">
+                                <h2>FENDER COLLECTION</h2>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, facilis. Culpa exercitationem voluptate voluptates praesentium. Repellat qui.</p>                            
+                            </div>
+                            <div class="news__item">
+                                <h2>FENDER COLLECTION</h2>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, facilis. Culpa exercitationem voluptate voluptates praesentium. Repellat qui.</p>                            
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -116,7 +153,9 @@
 
         <article class="article" id="second_article">
 
-            
+            <section class="article__img">
+                <img class="img_show" src="./assets/img/instrumentos/guitarra_acustica.jpg" alt="pizzaa">
+            </section>
             <section class="article__text">
 
                 <div class="article__theme">
@@ -137,9 +176,7 @@
 				</a>
             </section>
             
-            <section class="article__img">
-                <img class="img_show" src="./assets/img/instrumentos/guitarra_acustica.jpg" alt="pizzaa">
-            </section>
+          
         </article>
 
         <article class="article" id="three_article">
@@ -162,6 +199,7 @@
 				<a href="javascript:void(0);" class="article__btn">
 					Hacer pedido
 				</a>
+                
             </section>
         </article>
 
