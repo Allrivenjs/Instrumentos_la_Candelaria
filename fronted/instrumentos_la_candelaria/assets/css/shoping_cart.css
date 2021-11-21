@@ -26,6 +26,7 @@
 .shopping-cart__item:nth-child(2) {
     width: 25%;
     background-color: rgba(0, 0, 0, 0.3);
+    background-color: #d8d8d8;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     color: black;
@@ -40,11 +41,9 @@
 }
 
 .line {
-    width: 96%;
+    width: 100%;
     height: 3px;
     background-color: rgba(136, 70, 70, 0.2);
-    margin-left: 16px;
-    margin-right: 32px;
 }
 .line_order {
     width: 90%;
@@ -146,19 +145,10 @@
     align-items: center;
 }
 
-.quantity-controller {
-    font-size: 2rem;
-    margin: 8px;
-}
-
-.quantity-view {
-    font-size: 1.2rem;
-    padding: 4px 12px;
-    border: 1px solid black;
-}
-
 .remove-btn {
     color: red;
+    text-decoration: none;
+    font-weight: 500;
 }
 
 .items_and_price {
@@ -259,6 +249,68 @@
     text-decoration: none;
 }
 
+.shoping-cart__products-mobile {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    height: 86.5%;
+    overflow-y: auto;
+    padding: 16px;
+}
+
+.products-row-mobile {
+    width: 100%;
+    display: flex;
+    border-bottom: 3px solid rgba(136, 70, 70, 0.2) ;
+    margin-bottom: 18px;
+    padding-bottom: 12px;
+}
+
+.products__img-mobile {
+    width: 40%;
+}
+
+.products__details-mobile {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.products__controls-mobile {
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    width: fit-content;
+}
+
+.quantity-controller {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    width: 30px;
+    height: 30px;
+
+    background-color:#F0F2F2;
+}
+
+.quantity-view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;  
+    width: 30px;
+    height: 30px;
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.controllers-icons {
+    width: 10px;
+}
+
 @media (max-width: 1920px) {
     .shopping-cart {
         height: 774px;
@@ -315,6 +367,18 @@
 }
 
 @media (max-width: 425px) {
+    .shoping-cart__products {
+        display: none;
+    }
+
+    .shoping-cart__products-mobile {
+        display: flex;
+    }
+
+    .product__row-h {
+        display: none;
+    }
+
    .product__img {
        display: none;
    }

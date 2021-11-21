@@ -22,8 +22,8 @@
             <div class="nav__items">
                 <img src="./assets/img/logo.png" class="logo" />
                 <ul class="nav__btns">
-                    <li><a href="/index.html">Inicio</a></li>
-                    <li><a href="/product.html">Guitarras</a></li>
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="./product.html">Guitarras</a></li>
                     <li><a href="javascript:void(0);">Percusión</a></li> 
                     <li><a href="javascript:void(0);">Bajos</a></li> 
                     <li><a href="javascript:void(0);">Ukuleles</a></li> 
@@ -35,7 +35,7 @@
                 <ul class="options__buttons">
                     <li>
                         <img src="./assets/icons/trolley.svg">
-                        <a href="/shoping_cart.html">Carro</a>
+                        <a href="./shoping_cart.html">Carro</a>
                     </li>
                     <li>
                         <img src="./assets/icons/location.svg">
@@ -59,31 +59,42 @@
         <nav class="nav-mobile">
             <div class="nav-mobile-btns">
                 <img src="./assets/img/logo.png" class="logo-mobile" />
-                <img src="./assets/icons/menu-icon.svg" class="nav-mobile-menu-icon">
-            </div>
-
-            <div class="nav-mobile__items">
-                <ul class="nav-mobile__btns">
-                    <li class="nav-mobile__inicio"><a href="./index.html">Inicio</a></li>
-                    <li class="nav-mobile__subtitle">Categorias</li>
-                    <ul class="nav-mobile__categories">
-                        <li><a href="./product.html">Guitarras</a></li>
-                        <li><a href="javascript:void(0);">Percusión</a></li> 
-                        <li><a href="javascript:void(0);">Bajos</a></li> 
-                        <li><a href="javascript:void(0);">Ukuleles</a></li> 
-                        <li><a href="javascript:void(0);">Teclados</a></li>
-                        <li><a href="javascript:void(0);">Efectos</a></li>
-                    </ul>
-                    <li class="nav-mobile__subtitle">Categorias</li>
-                    <ul class="nav-mobile__categories">
-                        <li><a href="./product.html">Guitarras</a></li>
-                        <li><a href="javascript:void(0);">Percusión</a></li> 
-                        <li><a href="javascript:void(0);">Bajos</a></li> 
-                        <li><a href="javascript:void(0);">Ukuleles</a></li> 
-                        <li><a href="javascript:void(0);">Teclados</a></li>
-                        <li><a href="javascript:void(0);">Efectos</a></li>
-                    </ul>
-                </ul>
+                <div class="menu-deployer">
+                    <img src="./assets/icons/menu-icon.svg" class="nav-mobile-menu-icon">
+                    <div class="nav-mobile__items">
+                        <ul class="nav-mobile__btns">
+                            <li class="nav-mobile__inicio"><a href="./index.html">Inicio</a></li>
+                            <li class="nav-mobile__subtitle">Categorias</li>
+                            <ul class="nav-mobile__categories">
+                                <li><a href="./product.html">Guitarras</a></li>
+                                <li><a href="javascript:void(0);">Percusión</a></li> 
+                                <li><a href="javascript:void(0);">Bajos</a></li> 
+                                <li><a href="javascript:void(0);">Ukuleles</a></li> 
+                                <li><a href="javascript:void(0);">Teclados</a></li>
+                                <li><a href="javascript:void(0);">Efectos</a></li>
+                            </ul>
+                            <li class="nav-mobile__subtitle">Optiones</li>
+                            <ul class="nav-mobile__categories">
+                                <li>
+                                    <img src="./assets/icons/trolley.svg">
+                                    <a href="./shoping_cart.html">Carro</a>
+                                </li>
+                                <li>
+                                    <img src="./assets/icons/location.svg">
+                                    <a href="javascript:void(0);">Ubicación</a>
+                                </li>
+                                <li>
+                                    <img src="./assets/icons/info.svg">
+                                    <a href="javascript:void(0);">Info</a>
+                                </li> 
+                                <li>
+                                    <img src="./assets/icons/login.svg">
+                                    <a href="javascript:void(0);">Login</a>
+                                </li> 
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </nav>
     </header>
@@ -93,7 +104,7 @@
             <section class="shopping-cart__item">
                 <header class="shopping-cart__header">
                     <h2>Carrito de compra</h2>
-                    <p>3 Items</p>
+                    <p>5 Items</p>
                 </header>
 
                 <div class="line"></div>
@@ -125,10 +136,10 @@
                             </div>
                         </div>
                         <div class="product__info">
-                            <div class="product__info-item">
-                                <span class="quantity-controller">-</span>
-                                <span class="quantity-view">1</span>
-                                <span class="quantity-controller">+</span>
+                            <div class="product__info-item products__controls-mobile">
+                                <div class="quantity-controller"><img class="controllers-icons" src="./assets/icons/minus.svg" alt="minus"/></div>
+                                <div class="quantity-view">1</div>
+                                <div class="quantity-controller plus"><img class="controllers-icons" src="./assets/icons/plus.svg" alt="plus"/></div>
                             </div>
                             <div class="product__info-item">
                                 $368,000
@@ -148,10 +159,10 @@
                             </div>
                         </div>
                         <div class="product__info">
-                            <div class="product__info-item">
-                                <span class="quantity-controller">-</span>
-                                <span class="quantity-view">1</span>
-                                <span class="quantity-controller">+</span>
+                            <div class="product__info-item products__controls-mobile">
+                                <div class="quantity-controller"><img class="controllers-icons" src="./assets/icons/minus.svg" alt="minus"/></div>
+                                <div class="quantity-view">1</div>
+                                <div class="quantity-controller plus"><img class="controllers-icons" src="./assets/icons/plus.svg" alt="plus"/></div>
                             </div>
                             <div class="product__info-item">
                                 $368,000
@@ -171,10 +182,10 @@
                             </div>
                         </div>
                         <div class="product__info">
-                            <div class="product__info-item">
-                                <span class="quantity-controller">-</span>
-                                <span class="quantity-view">1</span>
-                                <span class="quantity-controller">+</span>
+                            <div class="product__info-item products__controls-mobile">
+                                <div class="quantity-controller"><img class="controllers-icons" src="./assets/icons/minus.svg" alt="minus"/></div>
+                                <div class="quantity-view">1</div>
+                                <div class="quantity-controller plus"><img class="controllers-icons" src="./assets/icons/plus.svg" alt="plus"/></div>
                             </div>
                             <div class="product__info-item">
                                 $368,000
@@ -194,10 +205,10 @@
                             </div>
                         </div>
                         <div class="product__info">
-                            <div class="product__info-item">
-                                <span class="quantity-controller">-</span>
-                                <span class="quantity-view">1</span>
-                                <span class="quantity-controller">+</span>
+                            <div class="product__info-item products__controls-mobile">
+                                <div class="quantity-controller"><img class="controllers-icons" src="./assets/icons/minus.svg" alt="minus"/></div>
+                                <div class="quantity-view">1</div>
+                                <div class="quantity-controller plus"><img class="controllers-icons" src="./assets/icons/plus.svg" alt="plus"/></div>
                             </div>
                             <div class="product__info-item">
                                 $368,000
@@ -217,10 +228,10 @@
                             </div>
                         </div>
                         <div class="product__info">
-                            <div class="product__info-item">
-                                <span class="quantity-controller">-</span>
-                                <span class="quantity-view">1</span>
-                                <span class="quantity-controller">+</span>
+                            <div class="product__info-item products__controls-mobile">
+                                <div class="quantity-controller"><img class="controllers-icons" src="./assets/icons/minus.svg" alt="minus"/></div>
+                                <div class="quantity-view">1</div>
+                                <div class="quantity-controller plus"><img class="controllers-icons" src="./assets/icons/plus.svg" alt="plus"/></div>
                             </div>
                             <div class="product__info-item">
                                 $368,000
@@ -230,27 +241,77 @@
                             </div>
                         </div>
                     </div>
-                    <div class="product__row">
-                        <div class="product__details">
-                            <img class="product__img"  src="./assets/img/instrumentos/strat-red.jpg" alt="🎸 strart">
-                            <div class="product__details-info">
-                                <h3>Guitarra Eléctrica Texas ADK-E10W-S-W</h3>
-                                <p>Red</p>
-                                <a class="remove-btn">Remove</a>
+                </div>
+
+                <div class="shoping-cart__products-mobile">
+                    <div class="products-row-mobile">
+                        <img class="products__img-mobile" src="assets/img/instrumentos/strat-red.jpg" alt="🎸 strat">
+                        <div class="products__details-mobile">
+                            <h2>Guitarra Eléctrica Texas ADK-E10W-S-W</h2>
+                            <p>$368,000</p>
+                            <p>Rojo</p>
+                            <div class="product__info-item products__controls-mobile">
+                                <div class="quantity-controller"><img class="controllers-icons" src="./assets/icons/minus.svg" alt="minus"/></div>
+                                <div class="quantity-view">1</div>
+                                <div class="quantity-controller plus"><img class="controllers-icons" src="./assets/icons/plus.svg" alt="plus"/></div>
                             </div>
+                            <a href="#" class="remove-btn">Remove</a>
                         </div>
-                        <div class="product__info">
-                            <div class="product__info-item">
-                                <span class="quantity-controller">-</span>
-                                <span class="quantity-view">1</span>
-                                <span class="quantity-controller">+</span>
+                    </div>
+                    <div class="products-row-mobile">
+                        <img class="products__img-mobile" src="assets/img/instrumentos/strat-red.jpg" alt="🎸 strat">
+                        <div class="products__details-mobile">
+                            <h2>Guitarra Eléctrica Texas ADK-E10W-S-W</h2>
+                            <p>$368,000</p>
+                            <p>Rojo</p>
+                            <div class="product__info-item products__controls-mobile">
+                                <div class="quantity-controller"><img class="controllers-icons" src="./assets/icons/minus.svg" alt="minus"/></div>
+                                <div class="quantity-view">1</div>
+                                <div class="quantity-controller plus"><img class="controllers-icons" src="./assets/icons/plus.svg" alt="plus"/></div>
                             </div>
-                            <div class="product__info-item">
-                                $368,000
+                            <a href="#" class="remove-btn">Remove</a>
+                        </div>
+                    </div>
+                    <div class="products-row-mobile">
+                        <img class="products__img-mobile" src="assets/img/instrumentos/strat-red.jpg" alt="🎸 strat">
+                        <div class="products__details-mobile">
+                            <h2>Guitarra Eléctrica Texas ADK-E10W-S-W</h2>
+                            <p>$368,000</p>
+                            <p>Rojo</p>
+                            <div class="product__info-item products__controls-mobile">
+                                <div class="quantity-controller"><img class="controllers-icons" src="./assets/icons/minus.svg" alt="minus"/></div>
+                                <div class="quantity-view">1</div>
+                                <div class="quantity-controller plus"><img class="controllers-icons" src="./assets/icons/plus.svg" alt="plus"/></div>
                             </div>
-                            <div class="product__info-item">
-                                $368,000
+                            <a href="#" class="remove-btn">Remove</a>
+                        </div>
+                    </div>
+                    <div class="products-row-mobile">
+                        <img class="products__img-mobile" src="assets/img/instrumentos/strat-red.jpg" alt="🎸 strat">
+                        <div class="products__details-mobile">
+                            <h2>Guitarra Eléctrica Texas ADK-E10W-S-W</h2>
+                            <p>$368,000</p>
+                            <p>Rojo</p>
+                            <div class="product__info-item products__controls-mobile">
+                                <div class="quantity-controller"><img class="controllers-icons" src="./assets/icons/minus.svg" alt="minus"/></div>
+                                <div class="quantity-view">1</div>
+                                <div class="quantity-controller plus"><img class="controllers-icons" src="./assets/icons/plus.svg" alt="plus"/></div>
                             </div>
+                            <a href="#" class="remove-btn">Remove</a>
+                        </div>
+                    </div>
+                    <div class="products-row-mobile">
+                        <img class="products__img-mobile" src="assets/img/instrumentos/strat-red.jpg" alt="🎸 strat">
+                        <div class="products__details-mobile">
+                            <h2>Guitarra Eléctrica Texas ADK-E10W-S-W</h2>
+                            <p>$368,000</p>
+                            <p>Rojo</p>
+                            <div class="product__info-item products__controls-mobile">
+                                <div class="quantity-controller"><img class="controllers-icons" src="./assets/icons/minus.svg" alt="minus"/></div>
+                                <div class="quantity-view">1</div>
+                                <div class="quantity-controller plus"><img class="controllers-icons" src="./assets/icons/plus.svg" alt="plus"/></div>
+                            </div>
+                            <a href="#" class="remove-btn">Remove</a>
                         </div>
                     </div>
                 </div>
@@ -263,7 +324,7 @@
                 <div class="line_order"></div>
                 <div class="shopping-cart_summary">
                     <div class="items_and_price">
-                        <p>3 Items</p>
+                        <p>5 Items</p>
                         <p>$19.200</p>
                     </div>
                     <div class="shopping_delivery">

@@ -452,12 +452,35 @@ body {
 
 .nav-mobile__categories li {
     margin-bottom: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav-mobile__categories li a {
     color: black;
     text-decoration: none;
     font-size: 1.2rem;
+    margin-left: 6px;
+}
+
+.nav-mobile__items {
+    display: none;
+    position: absolute;
+    background-color: white;
+}
+
+.menu-deployer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-deployer:hover .nav-mobile__items {
+    display: block;
+    top: 50px;
+    left: 0;
+    width: 100%;
 }
 
 @keyframes blob-1-anim {
@@ -659,7 +682,7 @@ body {
     }
 }
 
-@media (max-width: 411px) {
+@media (max-width: 425px) {
     .nav {
         display: none;
     } 
@@ -674,7 +697,7 @@ body {
         width: 50px;
     }
     .welcome-container{
-        background-position-x: -150px;
+        background-position-x: -300px;
     }
 
     .welcome__item:nth-child(1) {
