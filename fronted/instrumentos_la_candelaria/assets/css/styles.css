@@ -468,12 +468,14 @@ body {
     display: none;
     position: absolute;
     background-color: white;
+    box-shadow: 0px 10px 14px -3px rgba(0,0,0,0.1);
 }
 
 .menu-deployer {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .menu-deployer:hover .nav-mobile__items {
@@ -481,6 +483,7 @@ body {
     top: 50px;
     left: 0;
     width: 100%;
+    
 }
 
 @keyframes blob-1-anim {
