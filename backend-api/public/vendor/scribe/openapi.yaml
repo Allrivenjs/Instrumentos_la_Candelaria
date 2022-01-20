@@ -1,0 +1,1594 @@
+openapi: 3.0.3
+info:
+  title: Laravel
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://backend-api.test'
+paths:
+  /api/products:
+    get:
+      summary: 'Desplay a listing of products'
+      description: 'Gets a list of users'
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      id: 1
+                      sku: '9785389188631'
+                      name: 'Mr. Landen Ankunding'
+                      price: 716761
+                      weight: 0
+                      description: 'Suscipit corporis non natus at cumque. Est illo sit atque quia omnis facilis ratione. Veritatis modi optio eos non et est. Tempora necessitatibus reiciendis fugiat. Asperiores qui sit error illo. Exercitationem expedita dolores numquam sunt sed voluptas ratione eligendi. Officiis omnis nam magni. Ut eaque minima distinctio. Voluptas consequuntur sapiente id. Rerum voluptatum quo quam est.'
+                      thumbnail: storage/product/172a258f9738bbe996e808bb4ef4bc5f.png
+                      stock: 60
+                      slug: mr-landen-ankunding
+                      user_id: 4
+                      created_at: '2022-01-17T07:44:19.000000Z'
+                      updated_at: '2022-01-17T07:44:19.000000Z'
+                      user:
+                        id: 4
+                        name: 'Mrs. Lillie Kuhlman Jr.'
+                        email: considine.jolie@example.org
+                        email_verified_at: '2022-01-17T07:44:17.000000Z'
+                        created_at: '2022-01-17T07:44:17.000000Z'
+                        updated_at: '2022-01-17T07:44:17.000000Z'
+                      image:
+                        -
+                          id: 1
+                          url: storage/product/397695d3a0031777f93cafdc49ba8c4a.png
+                          created_at: '2022-01-17T07:44:20.000000Z'
+                          updated_at: '2022-01-17T07:44:20.000000Z'
+                        -
+                          id: 2
+                          url: storage/product/4c92504fb9db459abccac094caacc976.png
+                          created_at: '2022-01-17T07:44:20.000000Z'
+                          updated_at: '2022-01-17T07:44:20.000000Z'
+                        -
+                          id: 3
+                          url: storage/product/2ad0f9d7eb80fcb1bc33d9e7aa13366d.png
+                          created_at: '2022-01-17T07:44:20.000000Z'
+                          updated_at: '2022-01-17T07:44:20.000000Z'
+                    -
+                      id: 2
+                      sku: '9793301646305'
+                      name: 'Ramiro VonRueden'
+                      price: 219848
+                      weight: 3
+                      description: 'Quia aut deleniti et commodi. Aliquam veniam quis sit non ut aut. Libero inventore quidem quo rerum ipsam consectetur fuga nihil. Voluptate minima non rerum enim quaerat. Sed laborum harum et. Sequi explicabo aut voluptas possimus sint. Esse eum ducimus saepe et molestiae est. Fuga maxime nulla similique eius fugit. Praesentium tempora non inventore sed facilis fuga dolore. Vitae aut qui quam iusto non delectus. Voluptatem est quod totam laboriosam consectetur et nisi.'
+                      thumbnail: storage/product/1f109063391f7b0fc32c219d9a3a65e3.png
+                      stock: 3
+                      slug: ramiro-vonrueden
+                      user_id: 5
+                      created_at: '2022-01-17T07:44:19.000000Z'
+                      updated_at: '2022-01-17T07:44:19.000000Z'
+                      user:
+                        id: 5
+                        name: 'Brennan Weber'
+                        email: von.dorian@example.com
+                        email_verified_at: '2022-01-17T07:44:17.000000Z'
+                        created_at: '2022-01-17T07:44:17.000000Z'
+                        updated_at: '2022-01-17T07:44:17.000000Z'
+                      image:
+                        -
+                          id: 4
+                          url: storage/product/4b1e2c311410691f06cd196bff3ba219.png
+                          created_at: '2022-01-17T07:44:21.000000Z'
+                          updated_at: '2022-01-17T07:44:21.000000Z'
+                        -
+                          id: 5
+                          url: storage/product/c2d60e5a387cd09227e36cdad6dbb3a3.png
+                          created_at: '2022-01-17T07:44:21.000000Z'
+                          updated_at: '2022-01-17T07:44:21.000000Z'
+                        -
+                          id: 6
+                          url: storage/product/c66d83c3ff703f2a69c364f63fa25bd4.png
+                          created_at: '2022-01-17T07:44:21.000000Z'
+                          updated_at: '2022-01-17T07:44:21.000000Z'
+                    -
+                      id: 3
+                      sku: '9794981261642'
+                      name: 'Immanuel Homenick'
+                      price: 40554
+                      weight: 4
+                      description: 'Et molestiae exercitationem corrupti odio. Et minus labore aliquid quis ut corrupti repudiandae. Qui cum reprehenderit cumque illum. Alias autem et dolorem mollitia. Aliquid est suscipit quia ut id. Dignissimos eaque quasi eligendi totam eligendi. Debitis minus ratione ullam adipisci nulla aut et. Quas ullam illum sed molestiae nemo. Occaecati quas at eius facilis. Dolor enim sit possimus ullam exercitationem sed odit. Eum itaque provident ipsa eos quibusdam.'
+                      thumbnail: storage/product/b1379c21e139c18eefeba7848e2fbc60.png
+                      stock: 99
+                      slug: immanuel-homenick
+                      user_id: 4
+                      created_at: '2022-01-17T07:44:19.000000Z'
+                      updated_at: '2022-01-17T07:44:19.000000Z'
+                      user:
+                        id: 4
+                        name: 'Mrs. Lillie Kuhlman Jr.'
+                        email: considine.jolie@example.org
+                        email_verified_at: '2022-01-17T07:44:17.000000Z'
+                        created_at: '2022-01-17T07:44:17.000000Z'
+                        updated_at: '2022-01-17T07:44:17.000000Z'
+                      image:
+                        -
+                          id: 7
+                          url: storage/product/94bd57238c7cfde248e1e0b76885552a.png
+                          created_at: '2022-01-17T07:44:21.000000Z'
+                          updated_at: '2022-01-17T07:44:21.000000Z'
+                        -
+                          id: 8
+                          url: storage/product/d9db971b932780dabc30b36a56d14d29.png
+                          created_at: '2022-01-17T07:44:21.000000Z'
+                          updated_at: '2022-01-17T07:44:21.000000Z'
+                        -
+                          id: 9
+                          url: storage/product/be0f6c456523825fa98d66bb00ddf859.png
+                          created_at: '2022-01-17T07:44:21.000000Z'
+                          updated_at: '2022-01-17T07:44:21.000000Z'
+                    -
+                      id: 4
+                      sku: '9795939827194'
+                      name: 'Prof. Imani Howell'
+                      price: 745938
+                      weight: 0
+                      description: 'Sit ad molestiae voluptas praesentium est quo. Et nisi laborum quia. Unde ut magnam iste cum asperiores. Neque iure harum porro explicabo dignissimos. Et dignissimos quis accusamus odio qui officiis quidem ipsam. Quia unde nobis aut. Aut adipisci ut sunt voluptatum. Sapiente commodi explicabo neque. Tenetur omnis reiciendis et molestias fugiat deleniti debitis. Cum numquam laudantium rem aliquam quo. Eligendi omnis et officiis qui eum suscipit rerum.'
+                      thumbnail: storage/product/304787cd3b562f49cbc7ce6ea80828cc.png
+                      stock: 20
+                      slug: prof-imani-howell
+                      user_id: 3
+                      created_at: '2022-01-17T07:44:19.000000Z'
+                      updated_at: '2022-01-17T07:44:19.000000Z'
+                      user:
+                        id: 3
+                        name: 'Eileen Grady'
+                        email: bethel44@example.org
+                        email_verified_at: '2022-01-17T07:44:17.000000Z'
+                        created_at: '2022-01-17T07:44:17.000000Z'
+                        updated_at: '2022-01-17T07:44:17.000000Z'
+                      image:
+                        -
+                          id: 10
+                          url: storage/product/ad28af090b29cfb8e85b560a508b92d3.png
+                          created_at: '2022-01-17T07:44:22.000000Z'
+                          updated_at: '2022-01-17T07:44:22.000000Z'
+                        -
+                          id: 11
+                          url: storage/product/8c4fc5b29be36323d6e4af08c58ed419.png
+                          created_at: '2022-01-17T07:44:22.000000Z'
+                          updated_at: '2022-01-17T07:44:22.000000Z'
+                        -
+                          id: 12
+                          url: storage/product/320d6371c634d22b6d9aa93e8709ce0f.png
+                          created_at: '2022-01-17T07:44:22.000000Z'
+                          updated_at: '2022-01-17T07:44:22.000000Z'
+                    -
+                      id: 5
+                      sku: '9785971412601'
+                      name: 'Maverick Upton'
+                      price: 562324
+                      weight: 1
+                      description: 'Omnis qui recusandae tempore tempore recusandae aspernatur. Animi quis qui et odio tenetur. Quis nisi culpa quis quia. Est consequatur commodi reiciendis quo dolorum. Aut laborum vitae labore autem qui. Quaerat beatae voluptatem aut molestiae voluptatibus dolorem. Sit ipsam hic consequuntur beatae blanditiis optio. Voluptatem aut quisquam rerum ipsa fuga et. Qui dicta nisi quia aut aut fugit alias. Sunt consequuntur ipsum qui occaecati est.'
+                      thumbnail: storage/product/890aea4d3f5ed41a001bd62391aed8f7.png
+                      stock: 32
+                      slug: maverick-upton
+                      user_id: 7
+                      created_at: '2022-01-17T07:44:19.000000Z'
+                      updated_at: '2022-01-17T07:44:19.000000Z'
+                      user:
+                        id: 7
+                        name: 'Dr. Florida Watsica MD'
+                        email: sfarrell@example.net
+                        email_verified_at: '2022-01-17T07:44:17.000000Z'
+                        created_at: '2022-01-17T07:44:17.000000Z'
+                        updated_at: '2022-01-17T07:44:17.000000Z'
+                      image:
+                        -
+                          id: 13
+                          url: storage/product/70a4f54b48801230c2bcfaced5c5d743.png
+                          created_at: '2022-01-17T07:44:23.000000Z'
+                          updated_at: '2022-01-17T07:44:23.000000Z'
+                        -
+                          id: 14
+                          url: storage/product/7818b8263aafca0d2b9daf0af69b8e88.png
+                          created_at: '2022-01-17T07:44:23.000000Z'
+                          updated_at: '2022-01-17T07:44:23.000000Z'
+                        -
+                          id: 15
+                          url: storage/product/092aefd6bd106a97b1f425cc9de57541.png
+                          created_at: '2022-01-17T07:44:23.000000Z'
+                          updated_at: '2022-01-17T07:44:23.000000Z'
+                    -
+                      id: 6
+                      sku: '9795838407206'
+                      name: 'Wilma Leannon'
+                      price: 43221
+                      weight: 1
+                      description: 'Illum rerum provident temporibus labore in pariatur saepe. Qui dolorem aut alias inventore veniam non ad. Tempore quia eaque eaque vel hic totam. Omnis in vitae dolores et voluptatem. Perspiciatis voluptas enim beatae et aspernatur tenetur. Ipsam blanditiis est rem quae enim debitis commodi. Corrupti quidem ut qui mollitia suscipit magni. Nemo rerum sed quis reprehenderit voluptates et.'
+                      thumbnail: storage/product/bd5633def1c05cfe4d1ca8fd910bdd25.png
+                      stock: 61
+                      slug: wilma-leannon
+                      user_id: 2
+                      created_at: '2022-01-17T07:44:19.000000Z'
+                      updated_at: '2022-01-17T07:44:19.000000Z'
+                      user:
+                        id: 2
+                        name: 'Celine Heathcote'
+                        email: orlando93@example.org
+                        email_verified_at: '2022-01-17T07:44:17.000000Z'
+                        created_at: '2022-01-17T07:44:17.000000Z'
+                        updated_at: '2022-01-17T07:44:17.000000Z'
+                      image:
+                        -
+                          id: 16
+                          url: storage/product/9b177e906b96a4df5709d2a546e3c4bf.png
+                          created_at: '2022-01-17T07:44:23.000000Z'
+                          updated_at: '2022-01-17T07:44:23.000000Z'
+                        -
+                          id: 17
+                          url: storage/product/04736d392cf741c444532a228a97188c.png
+                          created_at: '2022-01-17T07:44:23.000000Z'
+                          updated_at: '2022-01-17T07:44:23.000000Z'
+                        -
+                          id: 18
+                          url: storage/product/2ca9298dd5e5a4839cc8a3ae5b67fc90.png
+                          created_at: '2022-01-17T07:44:23.000000Z'
+                          updated_at: '2022-01-17T07:44:23.000000Z'
+                    -
+                      id: 7
+                      sku: '9792952012620'
+                      name: 'Ansel Padberg'
+                      price: 605259
+                      weight: 2
+                      description: 'Perferendis et culpa quaerat iusto expedita eum ut. Eum aut et adipisci aut earum. Neque consequatur sed aspernatur excepturi labore quam ipsam. Molestiae autem consequuntur et et qui ullam vitae non. Quo sunt porro aut quia voluptate eos libero. Id eos est qui et voluptas qui. Est doloribus optio eaque ea incidunt aut omnis.'
+                      thumbnail: storage/product/220b19ca47348abe861b850bef2f8a83.png
+                      stock: 91
+                      slug: ansel-padberg
+                      user_id: 4
+                      created_at: '2022-01-17T07:44:19.000000Z'
+                      updated_at: '2022-01-17T07:44:19.000000Z'
+                      user:
+                        id: 4
+                        name: 'Mrs. Lillie Kuhlman Jr.'
+                        email: considine.jolie@example.org
+                        email_verified_at: '2022-01-17T07:44:17.000000Z'
+                        created_at: '2022-01-17T07:44:17.000000Z'
+                        updated_at: '2022-01-17T07:44:17.000000Z'
+                      image:
+                        -
+                          id: 19
+                          url: storage/product/bf58279cd3b95831d6732b6fe9d44a2c.png
+                          created_at: '2022-01-17T07:44:24.000000Z'
+                          updated_at: '2022-01-17T07:44:24.000000Z'
+                        -
+                          id: 20
+                          url: storage/product/754d9313f6c6ac06278e168942ea89a4.png
+                          created_at: '2022-01-17T07:44:24.000000Z'
+                          updated_at: '2022-01-17T07:44:24.000000Z'
+                        -
+                          id: 21
+                          url: storage/product/298bab882267e437170a61550fc5d5b1.png
+                          created_at: '2022-01-17T07:44:24.000000Z'
+                          updated_at: '2022-01-17T07:44:24.000000Z'
+                    -
+                      id: 8
+                      sku: '9787490250245'
+                      name: 'Cyril Will'
+                      price: 186375
+                      weight: 0
+                      description: 'Ex nostrum magni rem veniam. Qui et fugit sed consequatur sed iste voluptas. Eligendi aperiam veniam eaque occaecati sit qui. Consectetur vero reprehenderit dicta adipisci consequatur ab. In molestiae ut animi iure est quia quo. Dignissimos fugit molestiae molestias. Voluptatem ut magnam non maxime cupiditate. Quis dolorem quod non reiciendis.'
+                      thumbnail: storage/product/c833bea09bcf7a4e8b2d0a87162a1843.png
+                      stock: 16
+                      slug: cyril-will
+                      user_id: 9
+                      created_at: '2022-01-17T07:44:19.000000Z'
+                      updated_at: '2022-01-17T07:44:19.000000Z'
+                      user:
+                        id: 9
+                        name: 'Prof. Russ Pagac'
+                        email: ukreiger@example.net
+                        email_verified_at: '2022-01-17T07:44:17.000000Z'
+                        created_at: '2022-01-17T07:44:17.000000Z'
+                        updated_at: '2022-01-17T07:44:17.000000Z'
+                      image:
+                        -
+                          id: 22
+                          url: storage/product/1e18153a5ecc45185a83fde4705c257b.png
+                          created_at: '2022-01-17T07:44:25.000000Z'
+                          updated_at: '2022-01-17T07:44:25.000000Z'
+                        -
+                          id: 23
+                          url: storage/product/b1b26402263c11176417957cea460ea1.png
+                          created_at: '2022-01-17T07:44:25.000000Z'
+                          updated_at: '2022-01-17T07:44:25.000000Z'
+                        -
+                          id: 24
+                          url: storage/product/c5e719e96a61b15069b2fa47a72628be.png
+                          created_at: '2022-01-17T07:44:25.000000Z'
+                          updated_at: '2022-01-17T07:44:25.000000Z'
+                  links:
+                    first: 'http://backend-api.test/api/products?page=1'
+                    last: 'http://backend-api.test/api/products?page=2'
+                    prev: null
+                    next: 'http://backend-api.test/api/products?page=2'
+                  meta:
+                    current_page: 1
+                    from: 1
+                    last_page: 2
+                    links:
+                      -
+                        url: null
+                        label: '&laquo; Previous'
+                        active: false
+                      -
+                        url: 'http://backend-api.test/api/products?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: 'http://backend-api.test/api/products?page=2'
+                        label: '2'
+                        active: false
+                      -
+                        url: 'http://backend-api.test/api/products?page=2'
+                        label: 'Next &raquo;'
+                        active: false
+                    path: 'http://backend-api.test/api/products'
+                    per_page: 8
+                    to: 8
+                    total: 16
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 1
+                        sku: '9785389188631'
+                        name: 'Mr. Landen Ankunding'
+                        price: 716761
+                        weight: 0
+                        description: 'Suscipit corporis non natus at cumque. Est illo sit atque quia omnis facilis ratione. Veritatis modi optio eos non et est. Tempora necessitatibus reiciendis fugiat. Asperiores qui sit error illo. Exercitationem expedita dolores numquam sunt sed voluptas ratione eligendi. Officiis omnis nam magni. Ut eaque minima distinctio. Voluptas consequuntur sapiente id. Rerum voluptatum quo quam est.'
+                        thumbnail: storage/product/172a258f9738bbe996e808bb4ef4bc5f.png
+                        stock: 60
+                        slug: mr-landen-ankunding
+                        user_id: 4
+                        created_at: '2022-01-17T07:44:19.000000Z'
+                        updated_at: '2022-01-17T07:44:19.000000Z'
+                        user:
+                          id: 4
+                          name: 'Mrs. Lillie Kuhlman Jr.'
+                          email: considine.jolie@example.org
+                          email_verified_at: '2022-01-17T07:44:17.000000Z'
+                          created_at: '2022-01-17T07:44:17.000000Z'
+                          updated_at: '2022-01-17T07:44:17.000000Z'
+                        image:
+                          -
+                            id: 1
+                            url: storage/product/397695d3a0031777f93cafdc49ba8c4a.png
+                            created_at: '2022-01-17T07:44:20.000000Z'
+                            updated_at: '2022-01-17T07:44:20.000000Z'
+                          -
+                            id: 2
+                            url: storage/product/4c92504fb9db459abccac094caacc976.png
+                            created_at: '2022-01-17T07:44:20.000000Z'
+                            updated_at: '2022-01-17T07:44:20.000000Z'
+                          -
+                            id: 3
+                            url: storage/product/2ad0f9d7eb80fcb1bc33d9e7aa13366d.png
+                            created_at: '2022-01-17T07:44:20.000000Z'
+                            updated_at: '2022-01-17T07:44:20.000000Z'
+                      -
+                        id: 2
+                        sku: '9793301646305'
+                        name: 'Ramiro VonRueden'
+                        price: 219848
+                        weight: 3
+                        description: 'Quia aut deleniti et commodi. Aliquam veniam quis sit non ut aut. Libero inventore quidem quo rerum ipsam consectetur fuga nihil. Voluptate minima non rerum enim quaerat. Sed laborum harum et. Sequi explicabo aut voluptas possimus sint. Esse eum ducimus saepe et molestiae est. Fuga maxime nulla similique eius fugit. Praesentium tempora non inventore sed facilis fuga dolore. Vitae aut qui quam iusto non delectus. Voluptatem est quod totam laboriosam consectetur et nisi.'
+                        thumbnail: storage/product/1f109063391f7b0fc32c219d9a3a65e3.png
+                        stock: 3
+                        slug: ramiro-vonrueden
+                        user_id: 5
+                        created_at: '2022-01-17T07:44:19.000000Z'
+                        updated_at: '2022-01-17T07:44:19.000000Z'
+                        user:
+                          id: 5
+                          name: 'Brennan Weber'
+                          email: von.dorian@example.com
+                          email_verified_at: '2022-01-17T07:44:17.000000Z'
+                          created_at: '2022-01-17T07:44:17.000000Z'
+                          updated_at: '2022-01-17T07:44:17.000000Z'
+                        image:
+                          -
+                            id: 4
+                            url: storage/product/4b1e2c311410691f06cd196bff3ba219.png
+                            created_at: '2022-01-17T07:44:21.000000Z'
+                            updated_at: '2022-01-17T07:44:21.000000Z'
+                          -
+                            id: 5
+                            url: storage/product/c2d60e5a387cd09227e36cdad6dbb3a3.png
+                            created_at: '2022-01-17T07:44:21.000000Z'
+                            updated_at: '2022-01-17T07:44:21.000000Z'
+                          -
+                            id: 6
+                            url: storage/product/c66d83c3ff703f2a69c364f63fa25bd4.png
+                            created_at: '2022-01-17T07:44:21.000000Z'
+                            updated_at: '2022-01-17T07:44:21.000000Z'
+                      -
+                        id: 3
+                        sku: '9794981261642'
+                        name: 'Immanuel Homenick'
+                        price: 40554
+                        weight: 4
+                        description: 'Et molestiae exercitationem corrupti odio. Et minus labore aliquid quis ut corrupti repudiandae. Qui cum reprehenderit cumque illum. Alias autem et dolorem mollitia. Aliquid est suscipit quia ut id. Dignissimos eaque quasi eligendi totam eligendi. Debitis minus ratione ullam adipisci nulla aut et. Quas ullam illum sed molestiae nemo. Occaecati quas at eius facilis. Dolor enim sit possimus ullam exercitationem sed odit. Eum itaque provident ipsa eos quibusdam.'
+                        thumbnail: storage/product/b1379c21e139c18eefeba7848e2fbc60.png
+                        stock: 99
+                        slug: immanuel-homenick
+                        user_id: 4
+                        created_at: '2022-01-17T07:44:19.000000Z'
+                        updated_at: '2022-01-17T07:44:19.000000Z'
+                        user:
+                          id: 4
+                          name: 'Mrs. Lillie Kuhlman Jr.'
+                          email: considine.jolie@example.org
+                          email_verified_at: '2022-01-17T07:44:17.000000Z'
+                          created_at: '2022-01-17T07:44:17.000000Z'
+                          updated_at: '2022-01-17T07:44:17.000000Z'
+                        image:
+                          -
+                            id: 7
+                            url: storage/product/94bd57238c7cfde248e1e0b76885552a.png
+                            created_at: '2022-01-17T07:44:21.000000Z'
+                            updated_at: '2022-01-17T07:44:21.000000Z'
+                          -
+                            id: 8
+                            url: storage/product/d9db971b932780dabc30b36a56d14d29.png
+                            created_at: '2022-01-17T07:44:21.000000Z'
+                            updated_at: '2022-01-17T07:44:21.000000Z'
+                          -
+                            id: 9
+                            url: storage/product/be0f6c456523825fa98d66bb00ddf859.png
+                            created_at: '2022-01-17T07:44:21.000000Z'
+                            updated_at: '2022-01-17T07:44:21.000000Z'
+                      -
+                        id: 4
+                        sku: '9795939827194'
+                        name: 'Prof. Imani Howell'
+                        price: 745938
+                        weight: 0
+                        description: 'Sit ad molestiae voluptas praesentium est quo. Et nisi laborum quia. Unde ut magnam iste cum asperiores. Neque iure harum porro explicabo dignissimos. Et dignissimos quis accusamus odio qui officiis quidem ipsam. Quia unde nobis aut. Aut adipisci ut sunt voluptatum. Sapiente commodi explicabo neque. Tenetur omnis reiciendis et molestias fugiat deleniti debitis. Cum numquam laudantium rem aliquam quo. Eligendi omnis et officiis qui eum suscipit rerum.'
+                        thumbnail: storage/product/304787cd3b562f49cbc7ce6ea80828cc.png
+                        stock: 20
+                        slug: prof-imani-howell
+                        user_id: 3
+                        created_at: '2022-01-17T07:44:19.000000Z'
+                        updated_at: '2022-01-17T07:44:19.000000Z'
+                        user:
+                          id: 3
+                          name: 'Eileen Grady'
+                          email: bethel44@example.org
+                          email_verified_at: '2022-01-17T07:44:17.000000Z'
+                          created_at: '2022-01-17T07:44:17.000000Z'
+                          updated_at: '2022-01-17T07:44:17.000000Z'
+                        image:
+                          -
+                            id: 10
+                            url: storage/product/ad28af090b29cfb8e85b560a508b92d3.png
+                            created_at: '2022-01-17T07:44:22.000000Z'
+                            updated_at: '2022-01-17T07:44:22.000000Z'
+                          -
+                            id: 11
+                            url: storage/product/8c4fc5b29be36323d6e4af08c58ed419.png
+                            created_at: '2022-01-17T07:44:22.000000Z'
+                            updated_at: '2022-01-17T07:44:22.000000Z'
+                          -
+                            id: 12
+                            url: storage/product/320d6371c634d22b6d9aa93e8709ce0f.png
+                            created_at: '2022-01-17T07:44:22.000000Z'
+                            updated_at: '2022-01-17T07:44:22.000000Z'
+                      -
+                        id: 5
+                        sku: '9785971412601'
+                        name: 'Maverick Upton'
+                        price: 562324
+                        weight: 1
+                        description: 'Omnis qui recusandae tempore tempore recusandae aspernatur. Animi quis qui et odio tenetur. Quis nisi culpa quis quia. Est consequatur commodi reiciendis quo dolorum. Aut laborum vitae labore autem qui. Quaerat beatae voluptatem aut molestiae voluptatibus dolorem. Sit ipsam hic consequuntur beatae blanditiis optio. Voluptatem aut quisquam rerum ipsa fuga et. Qui dicta nisi quia aut aut fugit alias. Sunt consequuntur ipsum qui occaecati est.'
+                        thumbnail: storage/product/890aea4d3f5ed41a001bd62391aed8f7.png
+                        stock: 32
+                        slug: maverick-upton
+                        user_id: 7
+                        created_at: '2022-01-17T07:44:19.000000Z'
+                        updated_at: '2022-01-17T07:44:19.000000Z'
+                        user:
+                          id: 7
+                          name: 'Dr. Florida Watsica MD'
+                          email: sfarrell@example.net
+                          email_verified_at: '2022-01-17T07:44:17.000000Z'
+                          created_at: '2022-01-17T07:44:17.000000Z'
+                          updated_at: '2022-01-17T07:44:17.000000Z'
+                        image:
+                          -
+                            id: 13
+                            url: storage/product/70a4f54b48801230c2bcfaced5c5d743.png
+                            created_at: '2022-01-17T07:44:23.000000Z'
+                            updated_at: '2022-01-17T07:44:23.000000Z'
+                          -
+                            id: 14
+                            url: storage/product/7818b8263aafca0d2b9daf0af69b8e88.png
+                            created_at: '2022-01-17T07:44:23.000000Z'
+                            updated_at: '2022-01-17T07:44:23.000000Z'
+                          -
+                            id: 15
+                            url: storage/product/092aefd6bd106a97b1f425cc9de57541.png
+                            created_at: '2022-01-17T07:44:23.000000Z'
+                            updated_at: '2022-01-17T07:44:23.000000Z'
+                      -
+                        id: 6
+                        sku: '9795838407206'
+                        name: 'Wilma Leannon'
+                        price: 43221
+                        weight: 1
+                        description: 'Illum rerum provident temporibus labore in pariatur saepe. Qui dolorem aut alias inventore veniam non ad. Tempore quia eaque eaque vel hic totam. Omnis in vitae dolores et voluptatem. Perspiciatis voluptas enim beatae et aspernatur tenetur. Ipsam blanditiis est rem quae enim debitis commodi. Corrupti quidem ut qui mollitia suscipit magni. Nemo rerum sed quis reprehenderit voluptates et.'
+                        thumbnail: storage/product/bd5633def1c05cfe4d1ca8fd910bdd25.png
+                        stock: 61
+                        slug: wilma-leannon
+                        user_id: 2
+                        created_at: '2022-01-17T07:44:19.000000Z'
+                        updated_at: '2022-01-17T07:44:19.000000Z'
+                        user:
+                          id: 2
+                          name: 'Celine Heathcote'
+                          email: orlando93@example.org
+                          email_verified_at: '2022-01-17T07:44:17.000000Z'
+                          created_at: '2022-01-17T07:44:17.000000Z'
+                          updated_at: '2022-01-17T07:44:17.000000Z'
+                        image:
+                          -
+                            id: 16
+                            url: storage/product/9b177e906b96a4df5709d2a546e3c4bf.png
+                            created_at: '2022-01-17T07:44:23.000000Z'
+                            updated_at: '2022-01-17T07:44:23.000000Z'
+                          -
+                            id: 17
+                            url: storage/product/04736d392cf741c444532a228a97188c.png
+                            created_at: '2022-01-17T07:44:23.000000Z'
+                            updated_at: '2022-01-17T07:44:23.000000Z'
+                          -
+                            id: 18
+                            url: storage/product/2ca9298dd5e5a4839cc8a3ae5b67fc90.png
+                            created_at: '2022-01-17T07:44:23.000000Z'
+                            updated_at: '2022-01-17T07:44:23.000000Z'
+                      -
+                        id: 7
+                        sku: '9792952012620'
+                        name: 'Ansel Padberg'
+                        price: 605259
+                        weight: 2
+                        description: 'Perferendis et culpa quaerat iusto expedita eum ut. Eum aut et adipisci aut earum. Neque consequatur sed aspernatur excepturi labore quam ipsam. Molestiae autem consequuntur et et qui ullam vitae non. Quo sunt porro aut quia voluptate eos libero. Id eos est qui et voluptas qui. Est doloribus optio eaque ea incidunt aut omnis.'
+                        thumbnail: storage/product/220b19ca47348abe861b850bef2f8a83.png
+                        stock: 91
+                        slug: ansel-padberg
+                        user_id: 4
+                        created_at: '2022-01-17T07:44:19.000000Z'
+                        updated_at: '2022-01-17T07:44:19.000000Z'
+                        user:
+                          id: 4
+                          name: 'Mrs. Lillie Kuhlman Jr.'
+                          email: considine.jolie@example.org
+                          email_verified_at: '2022-01-17T07:44:17.000000Z'
+                          created_at: '2022-01-17T07:44:17.000000Z'
+                          updated_at: '2022-01-17T07:44:17.000000Z'
+                        image:
+                          -
+                            id: 19
+                            url: storage/product/bf58279cd3b95831d6732b6fe9d44a2c.png
+                            created_at: '2022-01-17T07:44:24.000000Z'
+                            updated_at: '2022-01-17T07:44:24.000000Z'
+                          -
+                            id: 20
+                            url: storage/product/754d9313f6c6ac06278e168942ea89a4.png
+                            created_at: '2022-01-17T07:44:24.000000Z'
+                            updated_at: '2022-01-17T07:44:24.000000Z'
+                          -
+                            id: 21
+                            url: storage/product/298bab882267e437170a61550fc5d5b1.png
+                            created_at: '2022-01-17T07:44:24.000000Z'
+                            updated_at: '2022-01-17T07:44:24.000000Z'
+                      -
+                        id: 8
+                        sku: '9787490250245'
+                        name: 'Cyril Will'
+                        price: 186375
+                        weight: 0
+                        description: 'Ex nostrum magni rem veniam. Qui et fugit sed consequatur sed iste voluptas. Eligendi aperiam veniam eaque occaecati sit qui. Consectetur vero reprehenderit dicta adipisci consequatur ab. In molestiae ut animi iure est quia quo. Dignissimos fugit molestiae molestias. Voluptatem ut magnam non maxime cupiditate. Quis dolorem quod non reiciendis.'
+                        thumbnail: storage/product/c833bea09bcf7a4e8b2d0a87162a1843.png
+                        stock: 16
+                        slug: cyril-will
+                        user_id: 9
+                        created_at: '2022-01-17T07:44:19.000000Z'
+                        updated_at: '2022-01-17T07:44:19.000000Z'
+                        user:
+                          id: 9
+                          name: 'Prof. Russ Pagac'
+                          email: ukreiger@example.net
+                          email_verified_at: '2022-01-17T07:44:17.000000Z'
+                          created_at: '2022-01-17T07:44:17.000000Z'
+                          updated_at: '2022-01-17T07:44:17.000000Z'
+                        image:
+                          -
+                            id: 22
+                            url: storage/product/1e18153a5ecc45185a83fde4705c257b.png
+                            created_at: '2022-01-17T07:44:25.000000Z'
+                            updated_at: '2022-01-17T07:44:25.000000Z'
+                          -
+                            id: 23
+                            url: storage/product/b1b26402263c11176417957cea460ea1.png
+                            created_at: '2022-01-17T07:44:25.000000Z'
+                            updated_at: '2022-01-17T07:44:25.000000Z'
+                          -
+                            id: 24
+                            url: storage/product/c5e719e96a61b15069b2fa47a72628be.png
+                            created_at: '2022-01-17T07:44:25.000000Z'
+                            updated_at: '2022-01-17T07:44:25.000000Z'
+                    items:
+                      type: object
+                  links:
+                    type: object
+                    example:
+                      first: 'http://backend-api.test/api/products?page=1'
+                      last: 'http://backend-api.test/api/products?page=2'
+                      prev: null
+                      next: 'http://backend-api.test/api/products?page=2'
+                  meta:
+                    type: object
+                    example:
+                      current_page: 1
+                      from: 1
+                      last_page: 2
+                      links:
+                        -
+                          url: null
+                          label: '&laquo; Previous'
+                          active: false
+                        -
+                          url: 'http://backend-api.test/api/products?page=1'
+                          label: '1'
+                          active: true
+                        -
+                          url: 'http://backend-api.test/api/products?page=2'
+                          label: '2'
+                          active: false
+                        -
+                          url: 'http://backend-api.test/api/products?page=2'
+                          label: 'Next &raquo;'
+                          active: false
+                      path: 'http://backend-api.test/api/products'
+                      per_page: 8
+                      to: 8
+                      total: 16
+      tags:
+        - 'Product Management'
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: multipart/form-data
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Product Management'
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: id
+                description:
+                  type: string
+                  description: 'Must not be greater than 850 characters.'
+                  example: whddeymnmkgcmpanjbgusiciepzpzisxmtuuvjgwixkvrozwacscuiotocqmssjlouwtdafpnpcnmhrdqimsbzrsntlktvyooxwbzkticaoxtyflzujnnpitoqpybppdcmwdgsuapfzzonibygppagrjwyfugttdfuxqbcghxdncfcqygrpxtrbjcbfvoxbafacbpazovubcmkglwzbqnhjoilmrbrkdggnnqstgvpiffmqchimdanpogbbasfoyognieqwzsycvifjnhccwakrlocsjzrfrnyzhxdzribypcbtjmjsuieepxiyuzxlxvokzgxaamjchbkxcerfos
+                price:
+                  type: integer
+                  description: 'Must be at least 1.'
+                  example: 0
+                weight:
+                  type: integer
+                  description: 'Must be at least 1.'
+                  example: 0
+                stock:
+                  type: integer
+                  description: 'Must be at least 1.'
+                  example: 1
+                thumbnail:
+                  type: string
+                  format: binary
+                  description: 'Must be an image.'
+                images:
+                  type: string
+                  format: binary
+                  description: Multi-images
+              required:
+                - name
+                - description
+                - price
+                - weight
+                - stock
+                - thumbnail
+      security: []
+  '/api/products/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'No query results for model [App\Models\Product] 1'
+                  exception: Symfony\Component\HttpKernel\Exception\NotFoundHttpException
+                  file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php
+                  line: 385
+                  trace:
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php
+                      line: 332
+                      function: prepareException
+                      class: Illuminate\Foundation\Exceptions\Handler
+                      type: '->'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/nunomaduro/collision/src/Adapters/Laravel/ExceptionHandler.php
+                      line: 54
+                      function: render
+                      class: Illuminate\Foundation\Exceptions\Handler
+                      type: '->'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php
+                      line: 51
+                      function: render
+                      class: NunoMaduro\Collision\Adapters\Laravel\ExceptionHandler
+                      type: '->'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 172
+                      function: handleException
+                      class: Illuminate\Routing\Pipeline
+                      type: '->'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
+                      line: 127
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
+                      line: 103
+                      function: handleRequest
+                      class: Illuminate\Routing\Middleware\ThrottleRequests
+                      type: '->'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
+                      line: 55
+                      function: handleRequestUsingNamedLimiter
+                      class: Illuminate\Routing\Middleware\ThrottleRequests
+                      type: '->'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 167
+                      function: handle
+                      class: Illuminate\Routing\Middleware\ThrottleRequests
+                      type: '->'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 103
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                      line: 697
+                      function: then
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                      line: 672
+                      function: runRouteWithinStack
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                      line: 636
+                      function: runRoute
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                      line: 625
+                      function: dispatchToRoute
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                      line: 167
+                      function: dispatch
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 128
+                      function: 'Illuminate\Foundation\Http\{closure}'
+                      class: Illuminate\Foundation\Http\Kernel
+                      type: '->'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
+                      line: 21
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php
+                      line: 31
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\TransformsRequest
+                      type: '->'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 167
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull
+                      type: '->'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
+                      line: 21
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php
+                      line: 40
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\TransformsRequest
+                      type: '->'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 167
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\TrimStrings
+                      type: '->'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php
+                      line: 27
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 167
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\ValidatePostSize
+                      type: '->'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php
+                      line: 86
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 167
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance
+                      type: '->'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/fruitcake/laravel-cors/src/HandleCors.php
+                      line: 52
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 167
+                      function: handle
+                      class: Fruitcake\Cors\HandleCors
+                      type: '->'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php
+                      line: 39
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 167
+                      function: handle
+                      class: Illuminate\Http\Middleware\TrustProxies
+                      type: '->'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 103
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                      line: 142
+                      function: then
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                      line: 111
+                      function: sendRequestThroughRouter
+                      class: Illuminate\Foundation\Http\Kernel
+                      type: '->'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                      line: 299
+                      function: handle
+                      class: Illuminate\Foundation\Http\Kernel
+                      type: '->'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                      line: 287
+                      function: callLaravelOrLumenRoute
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                      line: 89
+                      function: makeApiCall
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                      line: 45
+                      function: makeResponseCall
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                      line: 35
+                      function: makeResponseCallIfConditionsPass
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                      line: 222
+                      function: __invoke
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                      line: 179
+                      function: iterateThroughStrategies
+                      class: Knuckles\Scribe\Extracting\Extractor
+                      type: '->'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                      line: 116
+                      function: fetchResponses
+                      class: Knuckles\Scribe\Extracting\Extractor
+                      type: '->'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                      line: 117
+                      function: processRoute
+                      class: Knuckles\Scribe\Extracting\Extractor
+                      type: '->'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                      line: 75
+                      function: extractEndpointsInfoFromLaravelApp
+                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                      type: '->'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                      line: 51
+                      function: extractEndpointsInfoAndWriteToDisk
+                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                      type: '->'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php
+                      line: 48
+                      function: get
+                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                      type: '->'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                      line: 36
+                      function: handle
+                      class: Knuckles\Scribe\Commands\GenerateDocumentation
+                      type: '->'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Container/Util.php
+                      line: 40
+                      function: 'Illuminate\Container\{closure}'
+                      class: Illuminate\Container\BoundMethod
+                      type: '::'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                      line: 93
+                      function: unwrapIfClosure
+                      class: Illuminate\Container\Util
+                      type: '::'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                      line: 37
+                      function: callBoundMethod
+                      class: Illuminate\Container\BoundMethod
+                      type: '::'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Container/Container.php
+                      line: 653
+                      function: call
+                      class: Illuminate\Container\BoundMethod
+                      type: '::'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Console/Command.php
+                      line: 136
+                      function: call
+                      class: Illuminate\Container\Container
+                      type: '->'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/symfony/console/Command/Command.php
+                      line: 298
+                      function: execute
+                      class: Illuminate\Console\Command
+                      type: '->'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Console/Command.php
+                      line: 121
+                      function: run
+                      class: Symfony\Component\Console\Command\Command
+                      type: '->'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/symfony/console/Application.php
+                      line: 1005
+                      function: run
+                      class: Illuminate\Console\Command
+                      type: '->'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/symfony/console/Application.php
+                      line: 299
+                      function: doRunCommand
+                      class: Symfony\Component\Console\Application
+                      type: '->'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/symfony/console/Application.php
+                      line: 171
+                      function: doRun
+                      class: Symfony\Component\Console\Application
+                      type: '->'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Console/Application.php
+                      line: 94
+                      function: run
+                      class: Symfony\Component\Console\Application
+                      type: '->'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php
+                      line: 129
+                      function: run
+                      class: Illuminate\Console\Application
+                      type: '->'
+                    -
+                      file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/artisan
+                      line: 37
+                      function: handle
+                      class: Illuminate\Foundation\Console\Kernel
+                      type: '->'
+                properties:
+                  message:
+                    type: string
+                    example: 'No query results for model [App\Models\Product] 1'
+                  exception:
+                    type: string
+                    example: Symfony\Component\HttpKernel\Exception\NotFoundHttpException
+                  file:
+                    type: string
+                    example: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php
+                  line:
+                    type: integer
+                    example: 385
+                  trace:
+                    type: array
+                    example:
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php
+                        line: 332
+                        function: prepareException
+                        class: Illuminate\Foundation\Exceptions\Handler
+                        type: '->'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/nunomaduro/collision/src/Adapters/Laravel/ExceptionHandler.php
+                        line: 54
+                        function: render
+                        class: Illuminate\Foundation\Exceptions\Handler
+                        type: '->'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php
+                        line: 51
+                        function: render
+                        class: NunoMaduro\Collision\Adapters\Laravel\ExceptionHandler
+                        type: '->'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 172
+                        function: handleException
+                        class: Illuminate\Routing\Pipeline
+                        type: '->'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
+                        line: 127
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
+                        line: 103
+                        function: handleRequest
+                        class: Illuminate\Routing\Middleware\ThrottleRequests
+                        type: '->'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
+                        line: 55
+                        function: handleRequestUsingNamedLimiter
+                        class: Illuminate\Routing\Middleware\ThrottleRequests
+                        type: '->'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 167
+                        function: handle
+                        class: Illuminate\Routing\Middleware\ThrottleRequests
+                        type: '->'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 103
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                        line: 697
+                        function: then
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                        line: 672
+                        function: runRouteWithinStack
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                        line: 636
+                        function: runRoute
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                        line: 625
+                        function: dispatchToRoute
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                        line: 167
+                        function: dispatch
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 128
+                        function: 'Illuminate\Foundation\Http\{closure}'
+                        class: Illuminate\Foundation\Http\Kernel
+                        type: '->'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
+                        line: 21
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php
+                        line: 31
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\TransformsRequest
+                        type: '->'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 167
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull
+                        type: '->'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
+                        line: 21
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php
+                        line: 40
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\TransformsRequest
+                        type: '->'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 167
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\TrimStrings
+                        type: '->'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php
+                        line: 27
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 167
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\ValidatePostSize
+                        type: '->'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php
+                        line: 86
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 167
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance
+                        type: '->'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/fruitcake/laravel-cors/src/HandleCors.php
+                        line: 52
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 167
+                        function: handle
+                        class: Fruitcake\Cors\HandleCors
+                        type: '->'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php
+                        line: 39
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 167
+                        function: handle
+                        class: Illuminate\Http\Middleware\TrustProxies
+                        type: '->'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 103
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                        line: 142
+                        function: then
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                        line: 111
+                        function: sendRequestThroughRouter
+                        class: Illuminate\Foundation\Http\Kernel
+                        type: '->'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                        line: 299
+                        function: handle
+                        class: Illuminate\Foundation\Http\Kernel
+                        type: '->'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                        line: 287
+                        function: callLaravelOrLumenRoute
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                        line: 89
+                        function: makeApiCall
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                        line: 45
+                        function: makeResponseCall
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                        line: 35
+                        function: makeResponseCallIfConditionsPass
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                        line: 222
+                        function: __invoke
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                        line: 179
+                        function: iterateThroughStrategies
+                        class: Knuckles\Scribe\Extracting\Extractor
+                        type: '->'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                        line: 116
+                        function: fetchResponses
+                        class: Knuckles\Scribe\Extracting\Extractor
+                        type: '->'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                        line: 117
+                        function: processRoute
+                        class: Knuckles\Scribe\Extracting\Extractor
+                        type: '->'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                        line: 75
+                        function: extractEndpointsInfoFromLaravelApp
+                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                        type: '->'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                        line: 51
+                        function: extractEndpointsInfoAndWriteToDisk
+                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                        type: '->'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php
+                        line: 48
+                        function: get
+                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                        type: '->'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                        line: 36
+                        function: handle
+                        class: Knuckles\Scribe\Commands\GenerateDocumentation
+                        type: '->'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Container/Util.php
+                        line: 40
+                        function: 'Illuminate\Container\{closure}'
+                        class: Illuminate\Container\BoundMethod
+                        type: '::'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                        line: 93
+                        function: unwrapIfClosure
+                        class: Illuminate\Container\Util
+                        type: '::'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                        line: 37
+                        function: callBoundMethod
+                        class: Illuminate\Container\BoundMethod
+                        type: '::'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Container/Container.php
+                        line: 653
+                        function: call
+                        class: Illuminate\Container\BoundMethod
+                        type: '::'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Console/Command.php
+                        line: 136
+                        function: call
+                        class: Illuminate\Container\Container
+                        type: '->'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/symfony/console/Command/Command.php
+                        line: 298
+                        function: execute
+                        class: Illuminate\Console\Command
+                        type: '->'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Console/Command.php
+                        line: 121
+                        function: run
+                        class: Symfony\Component\Console\Command\Command
+                        type: '->'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/symfony/console/Application.php
+                        line: 1005
+                        function: run
+                        class: Illuminate\Console\Command
+                        type: '->'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/symfony/console/Application.php
+                        line: 299
+                        function: doRunCommand
+                        class: Symfony\Component\Console\Application
+                        type: '->'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/symfony/console/Application.php
+                        line: 171
+                        function: doRun
+                        class: Symfony\Component\Console\Application
+                        type: '->'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Console/Application.php
+                        line: 94
+                        function: run
+                        class: Symfony\Component\Console\Application
+                        type: '->'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php
+                        line: 129
+                        function: run
+                        class: Illuminate\Console\Application
+                        type: '->'
+                      -
+                        file: /home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/artisan
+                        line: 37
+                        function: handle
+                        class: Illuminate\Foundation\Console\Kernel
+                        type: '->'
+                    items:
+                      type: object
+      tags:
+        - 'Product Management'
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: multipart/form-data
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Product Management'
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: officiis
+                description:
+                  type: string
+                  description: 'Must not be greater than 850 characters.'
+                  example: gmaospuadfyudzbpkxvdoxesekwhdormundpubsnkaeivnfinfqyrzegdzbgbuzibuzjugdcjtgatjrywzlfsyqjrzhqqeavgccebiolmdfgnixwjlwnnhmstbkuynqtawvdhnelspexbkdngyxnesntdqhevbampmhrbprcvjyaizzzzpctnyxojfcbviefrxapzownxyspoyuecbfictjmdbtrcdabgrgmearmhoipozqwjibwzllogbiyslclsufxmfwreubryjfogafdupwzrtruhhgosraddkxumtsomrwpmukpmecednhhvmglebiinnldltjyaftjwypnksezwdgijvngnoqekkzjdsowjqpzgaanmdbsixququwvwdfzeotsyzknrjumyifejhdapmnvdbuez
+                price:
+                  type: integer
+                  description: 'Must be at least 1.'
+                  example: 0
+                weight:
+                  type: integer
+                  description: 'Must be at least 1.'
+                  example: 0
+                stock:
+                  type: integer
+                  description: 'Must be at least 1.'
+                  example: 0
+                thumbnail:
+                  type: string
+                  format: binary
+                  description: 'Must be an image.'
+              required:
+                - name
+                - description
+                - price
+                - weight
+                - stock
+                - thumbnail
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Product Management'
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the product.'
+        example: aut
+        required: true
+        schema:
+          type: string
+tags:
+  -
+    name: 'Product Management'
+    description: "\nAPIs to manage the product resource"

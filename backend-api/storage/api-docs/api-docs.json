@@ -1,0 +1,133 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Api ecommers",
+        "description": "Api public of ecommers basic",
+        "contact": {
+            "email": "jaimeruizxdd2@gmail.com"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "1.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:8000/api/",
+            "description": "Demo API Server"
+        }
+    ],
+    "paths": {
+        "/api/product": {
+            "get": {
+                "tags": [
+                    "Product"
+                ],
+                "summary": "Get List Product",
+                "operationId": "5cc57bec35d0f2045983cc8dcd00eccd",
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "properties": {
+                                                    "id": {
+                                                        "type": "number",
+                                                        "example": "1"
+                                                    },
+                                                    "sku": {
+                                                        "type": "number",
+                                                        "example": "9781075354694"
+                                                    },
+                                                    "name": {
+                                                        "type": "string",
+                                                        "example": "Keara Gutkowski Sr."
+                                                    },
+                                                    "price": {
+                                                        "type": "number",
+                                                        "example": "9784"
+                                                    },
+                                                    "weight": {
+                                                        "type": "number",
+                                                        "example": "3"
+                                                    },
+                                                    "description": {
+                                                        "type": "string",
+                                                        "example": "Corporis facilis voluptate quas sit modi. Ut modi cumque minus sapiente quia autem qui. Quos suscipit cum nisi sunt odit. Voluptatem vero animi voluptates officia voluptatem numquam. Repudiandae natus incidunt id earum et dolorum id. Rerum quo et ipsam a. Ut ut similique explicabo. Placeat sed ipsa commodi ipsum debitis numquam consequatur. Laboriosam reiciendis fuga ut laborum. Asperiores ea tempora amet earum dolore nulla."
+                                                    },
+                                                    "thumbnail": {
+                                                        "type": "string",
+                                                        "example": "storage/product/e7af634c5505bd4838cbba42e389e360.png"
+                                                    },
+                                                    "image": {
+                                                        "type": "string",
+                                                        "example": "storage/product/e7af634c5505bd4838cbba42e389e360.png"
+                                                    },
+                                                    "stock": {
+                                                        "type": "number",
+                                                        "example": "56"
+                                                    },
+                                                    "slug": {
+                                                        "type": "string",
+                                                        "example": "keara-gutkowski-sr"
+                                                    },
+                                                    "user_id": {
+                                                        "type": "number",
+                                                        "example": "1"
+                                                    },
+                                                    "user": {
+                                                        "type": "Array",
+                                                        "example": "[]"
+                                                    },
+                                                    "updated_at": {
+                                                        "type": "datatime",
+                                                        "example": "2021-12-11T09:25:53.000000Z"
+                                                    },
+                                                    "created_at": {
+                                                        "type": "datatime",
+                                                        "example": "2021-12-11T09:25:53.000000Z"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "User": {
+                "title": "User",
+                "description": "User model",
+                "required": [
+                    "id"
+                ],
+                "xml": {
+                    "name": "User"
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Product",
+            "description": "API Endpoints of Product"
+        }
+    ],
+    "security": [
+        []
+    ]
+}

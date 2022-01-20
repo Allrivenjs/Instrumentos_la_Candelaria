@@ -1,0 +1,3353 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Api resource of Ecommer's</title>
+
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../docs/css/theme-default.style.css" media="screen">
+    <link rel="stylesheet" href="../docs/css/theme-default.print.css" media="print">
+
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
+
+    <link rel="stylesheet"
+          href="https://unpkg.com/@highlightjs/cdn-assets@10.7.2/styles/obsidian.min.css">
+    <script src="https://unpkg.com/@highlightjs/cdn-assets@10.7.2/highlight.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jets/0.14.1/jets.min.js"></script>
+
+    <style id="language-style">
+        /* starts out as display none and is replaced with js later  */
+                    body .content .bash-example code { display: none; }
+                    body .content .javascript-example code { display: none; }
+                    body .content .ruby-example code { display: none; }
+                    body .content .php-example code { display: none; }
+                    body .content .python-example code { display: none; }
+            </style>
+
+    <script>
+        var baseUrl = "http://localhost:8000";
+        var useCsrf = Boolean();
+        var csrfUrl = "/sanctum/csrf-cookie";
+    </script>
+    <script src="../docs/js/tryitout-3.21.0.js"></script>
+
+    <script src="../docs/js/theme-default-3.21.0.js"></script>
+
+</head>
+
+<body data-languages="[&quot;bash&quot;,&quot;javascript&quot;,&quot;ruby&quot;,&quot;php&quot;,&quot;python&quot;]">
+
+<a href="#" id="nav-button">
+    <span>
+        MENU
+        <img src="../docs/images/navbar.png" alt="navbar-image" />
+    </span>
+</a>
+<div class="tocify-wrapper">
+    
+            <div class="lang-selector">
+                                            <button type="button" class="lang-button" data-language-name="bash">bash</button>
+                                            <button type="button" class="lang-button" data-language-name="javascript">javascript</button>
+                                            <button type="button" class="lang-button" data-language-name="ruby">ruby</button>
+                                            <button type="button" class="lang-button" data-language-name="php">php</button>
+                                            <button type="button" class="lang-button" data-language-name="python">python</button>
+                    </div>
+    
+    <div class="search">
+        <input type="text" class="search" id="input-search" placeholder="Search">
+    </div>
+
+    <div id="toc">
+                                                                            <ul id="tocify-header-0" class="tocify-header">
+                    <li class="tocify-item level-1" data-unique="introduction">
+                        <a href="#introduction">Introduction</a>
+                    </li>
+                                            
+                                                                    </ul>
+                                                <ul id="tocify-header-1" class="tocify-header">
+                    <li class="tocify-item level-1" data-unique="authenticating-requests">
+                        <a href="#authenticating-requests">Authenticating requests</a>
+                    </li>
+                                            
+                                                </ul>
+                    
+                    <ul id="tocify-header-2" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="authenticating-method-v1">
+                    <a href="#authenticating-method-v1">Authenticating method v1</a>
+                </li>
+                                    <ul id="tocify-subheader-authenticating-method-v1" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="authenticating-method-v1-POSTapi-auth-login">
+                        <a href="#authenticating-method-v1-POSTapi-auth-login">Login Auth</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="authenticating-method-v1-POSTapi-auth-register">
+                        <a href="#authenticating-method-v1-POSTapi-auth-register">POST api/auth/register</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="authenticating-method-v1-POSTapi-auth-logout">
+                        <a href="#authenticating-method-v1-POSTapi-auth-logout">POST api/auth/logout</a>
+                    </li>
+                                                    </ul>
+                            </ul>
+                    <ul id="tocify-header-3" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="category-management">
+                    <a href="#category-management">Category Management</a>
+                </li>
+                                    <ul id="tocify-subheader-category-management" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="category-management-GETapi-categories">
+                        <a href="#category-management-GETapi-categories">Display a listing of the resource.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="category-management-POSTapi-categories">
+                        <a href="#category-management-POSTapi-categories">Store a newly created resource in storage.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="category-management-GETapi-categories--id-">
+                        <a href="#category-management-GETapi-categories--id-">Display the specified resource.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="category-management-DELETEapi-categories--id-">
+                        <a href="#category-management-DELETEapi-categories--id-">Remove the specified resource from storage.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="category-management-PUTapi-categories--id-">
+                        <a href="#category-management-PUTapi-categories--id-">Update the specified resource in storage.</a>
+                    </li>
+                                                    </ul>
+                            </ul>
+                    <ul id="tocify-header-4" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="product-management">
+                    <a href="#product-management">Product Management</a>
+                </li>
+                                    <ul id="tocify-subheader-product-management" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="product-management-POSTapi-products">
+                        <a href="#product-management-POSTapi-products">Store a newly created resource in storage.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="product-management-PUTapi-products--id-">
+                        <a href="#product-management-PUTapi-products--id-">Update the specified resource in storage.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="product-management-DELETEapi-products--id-">
+                        <a href="#product-management-DELETEapi-products--id-">Remove the specified resource from storage.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="product-management-GETapi-products">
+                        <a href="#product-management-GETapi-products">Desplay a listing of products</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="product-management-GETapi-products--id-">
+                        <a href="#product-management-GETapi-products--id-">Display the specified resource.</a>
+                    </li>
+                                                    </ul>
+                            </ul>
+        
+                        
+            </div>
+
+            <ul class="toc-footer" id="toc-footer">
+                            <li><a href="../docs/collection.json">View Postman collection</a></li>
+                            <li><a href="../docs/openapi.yaml">View OpenAPI spec</a></li>
+                            <li><a href="http://github.com/knuckleswtf/scribe">Documentation powered by Scribe ✍</a></li>
+                    </ul>
+        <ul class="toc-footer" id="last-updated">
+        <li>Last updated: January 20 2022</li>
+    </ul>
+</div>
+
+<div class="page-wrapper">
+    <div class="dark-box"></div>
+    <div class="content">
+        <h1 id="introduction">Introduction</h1>
+<p>Api template for ecommer's basic</p>
+<p>This documentation aims to provide all the information you need to work with our API.</p>
+<aside>
+This api is written in PHP-laravel, and it is based on the structure of a basic emmers for its operation, I hope it will be very helpful :D</aside>
+<blockquote>
+<p>Base URL</p>
+</blockquote>
+<pre><code class="language-yaml">http://localhost:8000</code></pre>
+
+        <h1 id="authenticating-requests">Authenticating requests</h1>
+<p>This API is authenticated by sending an <strong><code>Authorization</code></strong> header with the value <strong><code>"Bearer your-token"</code></strong>.</p>
+<p>All authenticated endpoints are marked with a <code>requires authentication</code> badge in the documentation below.</p>
+<p>You can retrieve your token by visiting your dashboard and clicking <b>Generate API token</b>.</p>
+
+        <h1 id="authenticating-method-v1">Authenticating method v1</h1>
+
+    <p>APIs to manage the Authenticating requests</p>
+<p>This endpoint allows you to add a word to the list.
+It's a really useful endpoint, and you should play around
+with it for a bit.</p>
+<aside class="notice">We mean it; you really should.😕</aside>
+
+            <h2 id="authenticating-method-v1-POSTapi-auth-login">Login Auth</h2>
+
+<p>
+</p>
+
+<aside class="notice"> Method to authenticate yourself in the api, it is necessary to use some of its functions</aside>
+
+<span id="example-requests-POSTapi-auth-login">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost:8000/api/auth/login" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"name\": \"\\\"Julian\\\"\",
+    \"password\": \"\\\"passwordsecret\\\"\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/auth/login"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "name": "\"Julian\"",
+    "password": "\"passwordsecret\""
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="ruby-example">
+    <pre><code class="language-ruby">
+require 'rest-client'
+
+    body = {
+    "name": "\"Julian\"",
+    "password": "\"passwordsecret\""
+}
+    headers = {
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+        }
+
+response = RestClient.post(
+'http://localhost:8000/api/auth/login',
+body ,
+headers
+)
+
+p response.body
+</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;post(
+    'http://localhost:8000/api/auth/login',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+        'json' =&gt; [
+            'name' =&gt; '"Julian"',
+            'password' =&gt; '"passwordsecret"',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/auth/login'
+payload = {
+    "name": "\"Julian\"",
+    "password": "\"passwordsecret\""
+}
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('POST', url, headers=headers, json=payload)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-auth-login">
+</span>
+<span id="execution-results-POSTapi-auth-login" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-auth-login"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-auth-login"></code></pre>
+</span>
+<span id="execution-error-POSTapi-auth-login" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-auth-login"></code></pre>
+</span>
+<form id="form-POSTapi-auth-login" data-method="POST"
+      data-path="api/auth/login"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-auth-login', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-auth-login"
+                    onclick="tryItOut('POSTapi-auth-login');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-auth-login"
+                    onclick="cancelTryOut('POSTapi-auth-login');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-auth-login" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/auth/login</code></b>
+        </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>name</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="name"
+               data-endpoint="POSTapi-auth-login"
+               value=""Julian""
+               data-component="body" hidden>
+    <br>
+
+        </p>
+                <p>
+            <b><code>password</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="password"
+               data-endpoint="POSTapi-auth-login"
+               value=""passwordsecret""
+               data-component="body" hidden>
+    <br>
+
+        </p>
+        </form>
+
+            <h2 id="authenticating-method-v1-POSTapi-auth-register">POST api/auth/register</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-auth-register">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost:8000/api/auth/register" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"name\": \"UserSupersecret\",
+    \"email\": \"UserSupersecret@gmail.com\",
+    \"password\": \"passwordsupersecret123@\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/auth/register"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "name": "UserSupersecret",
+    "email": "UserSupersecret@gmail.com",
+    "password": "passwordsupersecret123@"
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="ruby-example">
+    <pre><code class="language-ruby">
+require 'rest-client'
+
+    body = {
+    "name": "UserSupersecret",
+    "email": "UserSupersecret@gmail.com",
+    "password": "passwordsupersecret123@"
+}
+    headers = {
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+        }
+
+response = RestClient.post(
+'http://localhost:8000/api/auth/register',
+body ,
+headers
+)
+
+p response.body
+</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;post(
+    'http://localhost:8000/api/auth/register',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+        'json' =&gt; [
+            'name' =&gt; 'UserSupersecret',
+            'email' =&gt; 'UserSupersecret@gmail.com',
+            'password' =&gt; 'passwordsupersecret123@',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/auth/register'
+payload = {
+    "name": "UserSupersecret",
+    "email": "UserSupersecret@gmail.com",
+    "password": "passwordsupersecret123@"
+}
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('POST', url, headers=headers, json=payload)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-auth-register">
+</span>
+<span id="execution-results-POSTapi-auth-register" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-auth-register"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-auth-register"></code></pre>
+</span>
+<span id="execution-error-POSTapi-auth-register" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-auth-register"></code></pre>
+</span>
+<form id="form-POSTapi-auth-register" data-method="POST"
+      data-path="api/auth/register"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-auth-register', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-auth-register"
+                    onclick="tryItOut('POSTapi-auth-register');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-auth-register"
+                    onclick="cancelTryOut('POSTapi-auth-register');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-auth-register" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/auth/register</code></b>
+        </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>name</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="name"
+               data-endpoint="POSTapi-auth-register"
+               value="UserSupersecret"
+               data-component="body" hidden>
+    <br>
+<p>User name. Must not be greater than 255 characters.</p>
+        </p>
+                <p>
+            <b><code>email</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="email"
+               data-endpoint="POSTapi-auth-register"
+               value="UserSupersecret@gmail.com"
+               data-component="body" hidden>
+    <br>
+<p>User email. Must be a valid email address.</p>
+        </p>
+                <p>
+            <b><code>password</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="password"
+               data-endpoint="POSTapi-auth-register"
+               value="passwordsupersecret123@"
+               data-component="body" hidden>
+    <br>
+<p>User password.</p>
+        </p>
+        </form>
+
+            <h2 id="authenticating-method-v1-POSTapi-auth-logout">POST api/auth/logout</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-POSTapi-auth-logout">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost:8000/api/auth/logout" \
+    --header "Authorization: Bearer 3e6ck5vPbf16daZDg48aVhE" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/auth/logout"
+);
+
+const headers = {
+    "Authorization": "Bearer 3e6ck5vPbf16daZDg48aVhE",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="ruby-example">
+    <pre><code class="language-ruby">
+require 'rest-client'
+
+    headers = {
+            "Authorization": "Bearer 3e6ck5vPbf16daZDg48aVhE",
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+        }
+
+response = RestClient.post(
+'http://localhost:8000/api/auth/logout',
+headers
+)
+
+p response.body
+</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;post(
+    'http://localhost:8000/api/auth/logout',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer 3e6ck5vPbf16daZDg48aVhE',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/auth/logout'
+headers = {
+  'Authorization': 'Bearer 3e6ck5vPbf16daZDg48aVhE',
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('POST', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-auth-logout">
+</span>
+<span id="execution-results-POSTapi-auth-logout" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-auth-logout"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-auth-logout"></code></pre>
+</span>
+<span id="execution-error-POSTapi-auth-logout" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-auth-logout"></code></pre>
+</span>
+<form id="form-POSTapi-auth-logout" data-method="POST"
+      data-path="api/auth/logout"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer 3e6ck5vPbf16daZDg48aVhE","Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-auth-logout', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-auth-logout"
+                    onclick="tryItOut('POSTapi-auth-logout');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-auth-logout"
+                    onclick="cancelTryOut('POSTapi-auth-logout');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-auth-logout" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/auth/logout</code></b>
+        </p>
+                <p>
+            <label id="auth-POSTapi-auth-logout" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="POSTapi-auth-logout"
+                                                                data-component="header"></label>
+        </p>
+                </form>
+
+        <h1 id="category-management">Category Management</h1>
+
+    <p>APIs to manage the categories resource</p>
+
+            <h2 id="category-management-GETapi-categories">Display a listing of the resource.</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-categories">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/categories" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/categories"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="ruby-example">
+    <pre><code class="language-ruby">
+require 'rest-client'
+
+    headers = {
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+        }
+
+response = RestClient.get(
+'http://localhost:8000/api/categories',
+headers
+)
+
+p response.body
+</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/categories',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/categories'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-categories">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 53
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">[]</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-categories" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-categories"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-categories"></code></pre>
+</span>
+<span id="execution-error-GETapi-categories" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-categories"></code></pre>
+</span>
+<form id="form-GETapi-categories" data-method="GET"
+      data-path="api/categories"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-categories', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-categories"
+                    onclick="tryItOut('GETapi-categories');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-categories"
+                    onclick="cancelTryOut('GETapi-categories');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-categories" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/categories</code></b>
+        </p>
+                    </form>
+
+            <h2 id="category-management-POSTapi-categories">Store a newly created resource in storage.</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-POSTapi-categories">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost:8000/api/categories" \
+    --header "Authorization: Bearer Pdgh6k3eDZ14EavV58a6bfc" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"name\": \"technology\",
+    \"description\": \"State-of-the-art technological products\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/categories"
+);
+
+const headers = {
+    "Authorization": "Bearer Pdgh6k3eDZ14EavV58a6bfc",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "name": "technology",
+    "description": "State-of-the-art technological products"
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="ruby-example">
+    <pre><code class="language-ruby">
+require 'rest-client'
+
+    body = {
+    "name": "technology",
+    "description": "State-of-the-art technological products"
+}
+    headers = {
+            "Authorization": "Bearer Pdgh6k3eDZ14EavV58a6bfc",
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+        }
+
+response = RestClient.post(
+'http://localhost:8000/api/categories',
+body ,
+headers
+)
+
+p response.body
+</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;post(
+    'http://localhost:8000/api/categories',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer Pdgh6k3eDZ14EavV58a6bfc',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+        'json' =&gt; [
+            'name' =&gt; 'technology',
+            'description' =&gt; 'State-of-the-art technological products',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/categories'
+payload = {
+    "name": "technology",
+    "description": "State-of-the-art technological products"
+}
+headers = {
+  'Authorization': 'Bearer Pdgh6k3eDZ14EavV58a6bfc',
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('POST', url, headers=headers, json=payload)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-categories">
+</span>
+<span id="execution-results-POSTapi-categories" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-categories"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-categories"></code></pre>
+</span>
+<span id="execution-error-POSTapi-categories" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-categories"></code></pre>
+</span>
+<form id="form-POSTapi-categories" data-method="POST"
+      data-path="api/categories"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer Pdgh6k3eDZ14EavV58a6bfc","Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-categories', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-categories"
+                    onclick="tryItOut('POSTapi-categories');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-categories"
+                    onclick="cancelTryOut('POSTapi-categories');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-categories" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/categories</code></b>
+        </p>
+                <p>
+            <label id="auth-POSTapi-categories" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="POSTapi-categories"
+                                                                data-component="header"></label>
+        </p>
+                        <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>name</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="name"
+               data-endpoint="POSTapi-categories"
+               value="technology"
+               data-component="body" hidden>
+    <br>
+<p>🤖 Category name, unique in the table category.</p>
+        </p>
+                <p>
+            <b><code>description</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="description"
+               data-endpoint="POSTapi-categories"
+               value="State-of-the-art technological products"
+               data-component="body" hidden>
+    <br>
+<p>📝 Category description .</p>
+        </p>
+        </form>
+
+            <h2 id="category-management-GETapi-categories--id-">Display the specified resource.</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-categories--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/categories/1" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/categories/1"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="ruby-example">
+    <pre><code class="language-ruby">
+require 'rest-client'
+
+    headers = {
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+        }
+
+response = RestClient.get(
+'http://localhost:8000/api/categories/1',
+headers
+)
+
+p response.body
+</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/categories/1',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/categories/1'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-categories--id-">
+            <blockquote>
+            <p>Example response (404):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 52
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;message&quot;: &quot;No query results for model [App\\Models\\Category] 1&quot;,
+    &quot;exception&quot;: &quot;Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException&quot;,
+    &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php&quot;,
+    &quot;line&quot;: 385,
+    &quot;trace&quot;: [
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php&quot;,
+            &quot;line&quot;: 332,
+            &quot;function&quot;: &quot;prepareException&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Exceptions\\Handler&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/nunomaduro/collision/src/Adapters/Laravel/ExceptionHandler.php&quot;,
+            &quot;line&quot;: 54,
+            &quot;function&quot;: &quot;render&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Exceptions\\Handler&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php&quot;,
+            &quot;line&quot;: 51,
+            &quot;function&quot;: &quot;render&quot;,
+            &quot;class&quot;: &quot;NunoMaduro\\Collision\\Adapters\\Laravel\\ExceptionHandler&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 172,
+            &quot;function&quot;: &quot;handleException&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php&quot;,
+            &quot;line&quot;: 127,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php&quot;,
+            &quot;line&quot;: 103,
+            &quot;function&quot;: &quot;handleRequest&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php&quot;,
+            &quot;line&quot;: 55,
+            &quot;function&quot;: &quot;handleRequestUsingNamedLimiter&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 167,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 103,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
+            &quot;line&quot;: 723,
+            &quot;function&quot;: &quot;then&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
+            &quot;line&quot;: 698,
+            &quot;function&quot;: &quot;runRouteWithinStack&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
+            &quot;line&quot;: 662,
+            &quot;function&quot;: &quot;runRoute&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
+            &quot;line&quot;: 651,
+            &quot;function&quot;: &quot;dispatchToRoute&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php&quot;,
+            &quot;line&quot;: 167,
+            &quot;function&quot;: &quot;dispatch&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 128,
+            &quot;function&quot;: &quot;Illuminate\\Foundation\\Http\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php&quot;,
+            &quot;line&quot;: 21,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php&quot;,
+            &quot;line&quot;: 31,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 167,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php&quot;,
+            &quot;line&quot;: 21,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php&quot;,
+            &quot;line&quot;: 40,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 167,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TrimStrings&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php&quot;,
+            &quot;line&quot;: 27,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 167,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php&quot;,
+            &quot;line&quot;: 86,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 167,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/fruitcake/laravel-cors/src/HandleCors.php&quot;,
+            &quot;line&quot;: 52,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 167,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Fruitcake\\Cors\\HandleCors&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php&quot;,
+            &quot;line&quot;: 39,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 167,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\TrustProxies&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 103,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php&quot;,
+            &quot;line&quot;: 142,
+            &quot;function&quot;: &quot;then&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php&quot;,
+            &quot;line&quot;: 111,
+            &quot;function&quot;: &quot;sendRequestThroughRouter&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
+            &quot;line&quot;: 299,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
+            &quot;line&quot;: 287,
+            &quot;function&quot;: &quot;callLaravelOrLumenRoute&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
+            &quot;line&quot;: 89,
+            &quot;function&quot;: &quot;makeApiCall&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
+            &quot;line&quot;: 45,
+            &quot;function&quot;: &quot;makeResponseCall&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
+            &quot;line&quot;: 35,
+            &quot;function&quot;: &quot;makeResponseCallIfConditionsPass&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php&quot;,
+            &quot;line&quot;: 222,
+            &quot;function&quot;: &quot;__invoke&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php&quot;,
+            &quot;line&quot;: 179,
+            &quot;function&quot;: &quot;iterateThroughStrategies&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php&quot;,
+            &quot;line&quot;: 116,
+            &quot;function&quot;: &quot;fetchResponses&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php&quot;,
+            &quot;line&quot;: 117,
+            &quot;function&quot;: &quot;processRoute&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php&quot;,
+            &quot;line&quot;: 75,
+            &quot;function&quot;: &quot;extractEndpointsInfoFromLaravelApp&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php&quot;,
+            &quot;line&quot;: 51,
+            &quot;function&quot;: &quot;extractEndpointsInfoAndWriteToDisk&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php&quot;,
+            &quot;line&quot;: 48,
+            &quot;function&quot;: &quot;get&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php&quot;,
+            &quot;line&quot;: 36,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Commands\\GenerateDocumentation&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Container/Util.php&quot;,
+            &quot;line&quot;: 40,
+            &quot;function&quot;: &quot;Illuminate\\Container\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php&quot;,
+            &quot;line&quot;: 93,
+            &quot;function&quot;: &quot;unwrapIfClosure&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\Util&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php&quot;,
+            &quot;line&quot;: 37,
+            &quot;function&quot;: &quot;callBoundMethod&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Container/Container.php&quot;,
+            &quot;line&quot;: 653,
+            &quot;function&quot;: &quot;call&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Console/Command.php&quot;,
+            &quot;line&quot;: 136,
+            &quot;function&quot;: &quot;call&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\Container&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/symfony/console/Command/Command.php&quot;,
+            &quot;line&quot;: 298,
+            &quot;function&quot;: &quot;execute&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Console/Command.php&quot;,
+            &quot;line&quot;: 121,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Command\\Command&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/symfony/console/Application.php&quot;,
+            &quot;line&quot;: 1005,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/symfony/console/Application.php&quot;,
+            &quot;line&quot;: 299,
+            &quot;function&quot;: &quot;doRunCommand&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/symfony/console/Application.php&quot;,
+            &quot;line&quot;: 171,
+            &quot;function&quot;: &quot;doRun&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Console/Application.php&quot;,
+            &quot;line&quot;: 94,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php&quot;,
+            &quot;line&quot;: 129,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/artisan&quot;,
+            &quot;line&quot;: 37,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Console\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        }
+    ]
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-categories--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-categories--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-categories--id-"></code></pre>
+</span>
+<span id="execution-error-GETapi-categories--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-categories--id-"></code></pre>
+</span>
+<form id="form-GETapi-categories--id-" data-method="GET"
+      data-path="api/categories/{id}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-categories--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-categories--id-"
+                    onclick="tryItOut('GETapi-categories--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-categories--id-"
+                    onclick="cancelTryOut('GETapi-categories--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-categories--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/categories/{id}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="GETapi-categories--id-"
+               value="1"
+               data-component="url" hidden>
+    <br>
+<p>The ID of the category.</p>
+            </p>
+                    </form>
+
+            <h2 id="category-management-DELETEapi-categories--id-">Remove the specified resource from storage.</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-DELETEapi-categories--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request DELETE \
+    "http://localhost:8000/api/categories/5" \
+    --header "Authorization: Bearer 14Pdv5E3cekaVZfh68bDa6g" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/categories/5"
+);
+
+const headers = {
+    "Authorization": "Bearer 14Pdv5E3cekaVZfh68bDa6g",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "DELETE",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="ruby-example">
+    <pre><code class="language-ruby">
+require 'rest-client'
+
+    headers = {
+            "Authorization": "Bearer 14Pdv5E3cekaVZfh68bDa6g",
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+        }
+
+response = RestClient.delete(
+'http://localhost:8000/api/categories/5',
+headers
+)
+
+p response.body
+</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;delete(
+    'http://localhost:8000/api/categories/5',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer 14Pdv5E3cekaVZfh68bDa6g',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/categories/5'
+headers = {
+  'Authorization': 'Bearer 14Pdv5E3cekaVZfh68bDa6g',
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('DELETE', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-DELETEapi-categories--id-">
+</span>
+<span id="execution-results-DELETEapi-categories--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-DELETEapi-categories--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-DELETEapi-categories--id-"></code></pre>
+</span>
+<span id="execution-error-DELETEapi-categories--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-DELETEapi-categories--id-"></code></pre>
+</span>
+<form id="form-DELETEapi-categories--id-" data-method="DELETE"
+      data-path="api/categories/{id}"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer 14Pdv5E3cekaVZfh68bDa6g","Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('DELETEapi-categories--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-DELETEapi-categories--id-"
+                    onclick="tryItOut('DELETEapi-categories--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-DELETEapi-categories--id-"
+                    onclick="cancelTryOut('DELETEapi-categories--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-DELETEapi-categories--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-red">DELETE</small>
+            <b><code>api/categories/{id}</code></b>
+        </p>
+                <p>
+            <label id="auth-DELETEapi-categories--id-" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="DELETEapi-categories--id-"
+                                                                data-component="header"></label>
+        </p>
+                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="DELETEapi-categories--id-"
+               value="5"
+               data-component="url" hidden>
+    <br>
+<p>The ID of the category.</p>
+            </p>
+                    </form>
+
+            <h2 id="category-management-PUTapi-categories--id-">Update the specified resource in storage.</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-PUTapi-categories--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request PUT \
+    "http://localhost:8000/api/categories/1" \
+    --header "Authorization: Bearer 65ce68ZdVPgEfbkh4av3D1a" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"name\": \"technology\",
+    \"description\": \"State-of-the-art technological products\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/categories/1"
+);
+
+const headers = {
+    "Authorization": "Bearer 65ce68ZdVPgEfbkh4av3D1a",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "name": "technology",
+    "description": "State-of-the-art technological products"
+};
+
+fetch(url, {
+    method: "PUT",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="ruby-example">
+    <pre><code class="language-ruby">
+require 'rest-client'
+
+    body = {
+    "name": "technology",
+    "description": "State-of-the-art technological products"
+}
+    headers = {
+            "Authorization": "Bearer 65ce68ZdVPgEfbkh4av3D1a",
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+        }
+
+response = RestClient.put(
+'http://localhost:8000/api/categories/1',
+body ,
+headers
+)
+
+p response.body
+</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;put(
+    'http://localhost:8000/api/categories/1',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer 65ce68ZdVPgEfbkh4av3D1a',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+        'json' =&gt; [
+            'name' =&gt; 'technology',
+            'description' =&gt; 'State-of-the-art technological products',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/categories/1'
+payload = {
+    "name": "technology",
+    "description": "State-of-the-art technological products"
+}
+headers = {
+  'Authorization': 'Bearer 65ce68ZdVPgEfbkh4av3D1a',
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('PUT', url, headers=headers, json=payload)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-PUTapi-categories--id-">
+</span>
+<span id="execution-results-PUTapi-categories--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-PUTapi-categories--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-PUTapi-categories--id-"></code></pre>
+</span>
+<span id="execution-error-PUTapi-categories--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-PUTapi-categories--id-"></code></pre>
+</span>
+<form id="form-PUTapi-categories--id-" data-method="PUT"
+      data-path="api/categories/{id}"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer 65ce68ZdVPgEfbkh4av3D1a","Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('PUTapi-categories--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-PUTapi-categories--id-"
+                    onclick="tryItOut('PUTapi-categories--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-PUTapi-categories--id-"
+                    onclick="cancelTryOut('PUTapi-categories--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-PUTapi-categories--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-darkblue">PUT</small>
+            <b><code>api/categories/{id}</code></b>
+        </p>
+            <p>
+            <small class="badge badge-purple">PATCH</small>
+            <b><code>api/categories/{id}</code></b>
+        </p>
+                <p>
+            <label id="auth-PUTapi-categories--id-" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="PUTapi-categories--id-"
+                                                                data-component="header"></label>
+        </p>
+                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="PUTapi-categories--id-"
+               value="1"
+               data-component="url" hidden>
+    <br>
+<p>Defaults to 'id'.</p>
+            </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>name</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="name"
+               data-endpoint="PUTapi-categories--id-"
+               value="technology"
+               data-component="body" hidden>
+    <br>
+<p>🤖 Category name, unique in the table category.</p>
+        </p>
+                <p>
+            <b><code>description</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="description"
+               data-endpoint="PUTapi-categories--id-"
+               value="State-of-the-art technological products"
+               data-component="body" hidden>
+    <br>
+<p>📝 Category description .</p>
+        </p>
+        </form>
+
+        <h1 id="product-management">Product Management</h1>
+
+    <p>APIs to manage the product resource</p>
+
+            <h2 id="product-management-POSTapi-products">Store a newly created resource in storage.</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-POSTapi-products">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost:8000/api/products" \
+    --header "Authorization: Bearer ckdP56Dhg8v1aeVf64bZa3E" \
+    --header "Content-Type: multipart/form-data" \
+    --header "Accept: application/json" \
+    --form "name=Glass" \
+    --form "description=Glasses for all people" \
+    --form "price=33" \
+    --form "weight=2" \
+    --form "stock=34" \
+    --form "thumbnail=@/tmp/phpfOOigC" \
+    --form "images[]=@/tmp/phpWAq3aD" </code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/products"
+);
+
+const headers = {
+    "Authorization": "Bearer ckdP56Dhg8v1aeVf64bZa3E",
+    "Content-Type": "multipart/form-data",
+    "Accept": "application/json",
+};
+
+const body = new FormData();
+body.append('name', 'Glass');
+body.append('description', 'Glasses for all people');
+body.append('price', '33');
+body.append('weight', '2');
+body.append('stock', '34');
+body.append('thumbnail', document.querySelector('input[name="thumbnail"]').files[0]);
+body.append('images[]', document.querySelector('input[name="images[]"]').files[0]);
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="ruby-example">
+    <pre><code class="language-ruby">
+require 'rest-client'
+
+    body = {
+    "name": "Glass",
+    "description": "Glasses for all people",
+    "price": 33,
+    "weight": 2,
+    "stock": 34
+}
+    headers = {
+            "Authorization": "Bearer ckdP56Dhg8v1aeVf64bZa3E",
+            "Content-Type": "multipart/form-data",
+            "Accept": "application/json",
+        }
+
+response = RestClient.post(
+'http://localhost:8000/api/products',
+body ,
+headers
+)
+
+p response.body
+</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;post(
+    'http://localhost:8000/api/products',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer ckdP56Dhg8v1aeVf64bZa3E',
+            'Content-Type' =&gt; 'multipart/form-data',
+            'Accept' =&gt; 'application/json',
+        ],
+        'multipart' =&gt; [
+            [
+                'name' =&gt; 'name',
+                'contents' =&gt; 'Glass'
+            ],
+            [
+                'name' =&gt; 'description',
+                'contents' =&gt; 'Glasses for all people'
+            ],
+            [
+                'name' =&gt; 'price',
+                'contents' =&gt; '33'
+            ],
+            [
+                'name' =&gt; 'weight',
+                'contents' =&gt; '2'
+            ],
+            [
+                'name' =&gt; 'stock',
+                'contents' =&gt; '34'
+            ],
+            [
+                'name' =&gt; 'thumbnail',
+                'contents' =&gt; fopen('/tmp/phpfOOigC', 'r')
+            ],
+            [
+                'name' =&gt; 'images[]',
+                'contents' =&gt; fopen('/tmp/phpWAq3aD', 'r')
+            ],
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/products'
+files = {
+  'thumbnail': open('/tmp/phpfOOigC', 'rb'),
+  'images[]': open('/tmp/phpWAq3aD', 'rb')
+}
+payload = {
+    "name": "Glass",
+    "description": "Glasses for all people",
+    "price": 33,
+    "weight": 2,
+    "stock": 34
+}
+headers = {
+  'Authorization': 'Bearer ckdP56Dhg8v1aeVf64bZa3E',
+  'Content-Type': 'multipart/form-data',
+  'Accept': 'application/json'
+}
+
+response = requests.request('POST', url, headers=headers, files=files, data=payload)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-products">
+</span>
+<span id="execution-results-POSTapi-products" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-products"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-products"></code></pre>
+</span>
+<span id="execution-error-POSTapi-products" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-products"></code></pre>
+</span>
+<form id="form-POSTapi-products" data-method="POST"
+      data-path="api/products"
+      data-authed="1"
+      data-hasfiles="1"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer ckdP56Dhg8v1aeVf64bZa3E","Content-Type":"multipart\/form-data","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-products', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-products"
+                    onclick="tryItOut('POSTapi-products');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-products"
+                    onclick="cancelTryOut('POSTapi-products');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-products" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/products</code></b>
+        </p>
+                <p>
+            <label id="auth-POSTapi-products" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="POSTapi-products"
+                                                                data-component="header"></label>
+        </p>
+                        <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>name</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="name"
+               data-endpoint="POSTapi-products"
+               value="Glass"
+               data-component="body" hidden>
+    <br>
+<p>🤖 Product name.</p>
+        </p>
+                <p>
+            <b><code>description</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="description"
+               data-endpoint="POSTapi-products"
+               value="Glasses for all people"
+               data-component="body" hidden>
+    <br>
+<p>📝 Product description . Must not be greater than 850 characters.</p>
+        </p>
+                <p>
+            <b><code>price</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="price"
+               data-endpoint="POSTapi-products"
+               value="33"
+               data-component="body" hidden>
+    <br>
+<p>💵 Product price . Must be at least 1.</p>
+        </p>
+                <p>
+            <b><code>weight</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="weight"
+               data-endpoint="POSTapi-products"
+               value="2"
+               data-component="body" hidden>
+    <br>
+<p>📏 Product weight . Must be at least 1.</p>
+        </p>
+                <p>
+            <b><code>stock</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="stock"
+               data-endpoint="POSTapi-products"
+               value="34"
+               data-component="body" hidden>
+    <br>
+<p>🗃 Product stock . Must be at least 1.</p>
+        </p>
+                <p>
+            <b><code>thumbnail</code></b>&nbsp;&nbsp;<small>file</small>  &nbsp;
+                <input type="file"
+               name="thumbnail"
+               data-endpoint="POSTapi-products"
+               value=""
+               data-component="body" hidden>
+    <br>
+<p>📷 Thumbnail of the product, it will be shown as an image when selling . Must be an image.</p>
+        </p>
+                <p>
+            <b><code>images</code></b>&nbsp;&nbsp;<small>file[]</small>     <i>optional</i> &nbsp;
+                <input type="file"
+               name="images[0]"
+               data-endpoint="POSTapi-products"
+               data-component="body" hidden>
+        <input type="file"
+               name="images[1]"
+               data-endpoint="POSTapi-products"
+               data-component="body" hidden>
+    <br>
+<p>📷 📸 You can upload several images related to the product</p>
+        </p>
+        </form>
+
+            <h2 id="product-management-PUTapi-products--id-">Update the specified resource in storage.</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-PUTapi-products--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request PUT \
+    "http://localhost:8000/api/products/1" \
+    --header "Authorization: Bearer Zvc1ab6P8D4dEea35gkVhf6" \
+    --header "Content-Type: multipart/form-data" \
+    --header "Accept: application/json" \
+    --form "name=Glass" \
+    --form "description=Glasses for all people" \
+    --form "price=33" \
+    --form "weight=2" \
+    --form "stock=34" \
+    --form "thumbnail=@/tmp/phpprOIKE" </code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/products/1"
+);
+
+const headers = {
+    "Authorization": "Bearer Zvc1ab6P8D4dEea35gkVhf6",
+    "Content-Type": "multipart/form-data",
+    "Accept": "application/json",
+};
+
+const body = new FormData();
+body.append('name', 'Glass');
+body.append('description', 'Glasses for all people');
+body.append('price', '33');
+body.append('weight', '2');
+body.append('stock', '34');
+body.append('thumbnail', document.querySelector('input[name="thumbnail"]').files[0]);
+
+fetch(url, {
+    method: "PUT",
+    headers,
+    body,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="ruby-example">
+    <pre><code class="language-ruby">
+require 'rest-client'
+
+    body = {
+    "name": "Glass",
+    "description": "Glasses for all people",
+    "price": 33,
+    "weight": 2,
+    "stock": 34
+}
+    headers = {
+            "Authorization": "Bearer Zvc1ab6P8D4dEea35gkVhf6",
+            "Content-Type": "multipart/form-data",
+            "Accept": "application/json",
+        }
+
+response = RestClient.put(
+'http://localhost:8000/api/products/1',
+body ,
+headers
+)
+
+p response.body
+</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;put(
+    'http://localhost:8000/api/products/1',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer Zvc1ab6P8D4dEea35gkVhf6',
+            'Content-Type' =&gt; 'multipart/form-data',
+            'Accept' =&gt; 'application/json',
+        ],
+        'multipart' =&gt; [
+            [
+                'name' =&gt; 'name',
+                'contents' =&gt; 'Glass'
+            ],
+            [
+                'name' =&gt; 'description',
+                'contents' =&gt; 'Glasses for all people'
+            ],
+            [
+                'name' =&gt; 'price',
+                'contents' =&gt; '33'
+            ],
+            [
+                'name' =&gt; 'weight',
+                'contents' =&gt; '2'
+            ],
+            [
+                'name' =&gt; 'stock',
+                'contents' =&gt; '34'
+            ],
+            [
+                'name' =&gt; 'thumbnail',
+                'contents' =&gt; fopen('/tmp/phpprOIKE', 'r')
+            ],
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/products/1'
+files = {
+  'thumbnail': open('/tmp/phpprOIKE', 'rb')
+}
+payload = {
+    "name": "Glass",
+    "description": "Glasses for all people",
+    "price": 33,
+    "weight": 2,
+    "stock": 34
+}
+headers = {
+  'Authorization': 'Bearer Zvc1ab6P8D4dEea35gkVhf6',
+  'Content-Type': 'multipart/form-data',
+  'Accept': 'application/json'
+}
+
+response = requests.request('PUT', url, headers=headers, files=files, data=payload)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-PUTapi-products--id-">
+</span>
+<span id="execution-results-PUTapi-products--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-PUTapi-products--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-PUTapi-products--id-"></code></pre>
+</span>
+<span id="execution-error-PUTapi-products--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-PUTapi-products--id-"></code></pre>
+</span>
+<form id="form-PUTapi-products--id-" data-method="PUT"
+      data-path="api/products/{id}"
+      data-authed="1"
+      data-hasfiles="1"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer Zvc1ab6P8D4dEea35gkVhf6","Content-Type":"multipart\/form-data","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('PUTapi-products--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-PUTapi-products--id-"
+                    onclick="tryItOut('PUTapi-products--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-PUTapi-products--id-"
+                    onclick="cancelTryOut('PUTapi-products--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-PUTapi-products--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-darkblue">PUT</small>
+            <b><code>api/products/{id}</code></b>
+        </p>
+            <p>
+            <small class="badge badge-purple">PATCH</small>
+            <b><code>api/products/{id}</code></b>
+        </p>
+                <p>
+            <label id="auth-PUTapi-products--id-" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="PUTapi-products--id-"
+                                                                data-component="header"></label>
+        </p>
+                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="PUTapi-products--id-"
+               value="1"
+               data-component="url" hidden>
+    <br>
+<p>Defaults to 'id'.</p>
+            </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>name</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="name"
+               data-endpoint="PUTapi-products--id-"
+               value="Glass"
+               data-component="body" hidden>
+    <br>
+<p>🤖 Product name.</p>
+        </p>
+                <p>
+            <b><code>description</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="description"
+               data-endpoint="PUTapi-products--id-"
+               value="Glasses for all people"
+               data-component="body" hidden>
+    <br>
+<p>📝 Product description . Must not be greater than 850 characters.</p>
+        </p>
+                <p>
+            <b><code>price</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="price"
+               data-endpoint="PUTapi-products--id-"
+               value="33"
+               data-component="body" hidden>
+    <br>
+<p>💵 Product price . Must be at least 1.</p>
+        </p>
+                <p>
+            <b><code>weight</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="weight"
+               data-endpoint="PUTapi-products--id-"
+               value="2"
+               data-component="body" hidden>
+    <br>
+<p>📏 Product weight . Must be at least 1.</p>
+        </p>
+                <p>
+            <b><code>stock</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="stock"
+               data-endpoint="PUTapi-products--id-"
+               value="34"
+               data-component="body" hidden>
+    <br>
+<p>🗃 Product stock . Must be at least 1.</p>
+        </p>
+                <p>
+            <b><code>thumbnail</code></b>&nbsp;&nbsp;<small>file</small>  &nbsp;
+                <input type="file"
+               name="thumbnail"
+               data-endpoint="PUTapi-products--id-"
+               value=""
+               data-component="body" hidden>
+    <br>
+<p>📷 Thumbnail of the product, it will be shown as an image when selling . Must be an image.</p>
+        </p>
+        </form>
+
+            <h2 id="product-management-DELETEapi-products--id-">Remove the specified resource from storage.</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-DELETEapi-products--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request DELETE \
+    "http://localhost:8000/api/products/10" \
+    --header "Authorization: Bearer kE61ev3Vf65gPadD4aZ8bhc" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/products/10"
+);
+
+const headers = {
+    "Authorization": "Bearer kE61ev3Vf65gPadD4aZ8bhc",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "DELETE",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="ruby-example">
+    <pre><code class="language-ruby">
+require 'rest-client'
+
+    headers = {
+            "Authorization": "Bearer kE61ev3Vf65gPadD4aZ8bhc",
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+        }
+
+response = RestClient.delete(
+'http://localhost:8000/api/products/10',
+headers
+)
+
+p response.body
+</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;delete(
+    'http://localhost:8000/api/products/10',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer kE61ev3Vf65gPadD4aZ8bhc',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/products/10'
+headers = {
+  'Authorization': 'Bearer kE61ev3Vf65gPadD4aZ8bhc',
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('DELETE', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-DELETEapi-products--id-">
+</span>
+<span id="execution-results-DELETEapi-products--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-DELETEapi-products--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-DELETEapi-products--id-"></code></pre>
+</span>
+<span id="execution-error-DELETEapi-products--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-DELETEapi-products--id-"></code></pre>
+</span>
+<form id="form-DELETEapi-products--id-" data-method="DELETE"
+      data-path="api/products/{id}"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer kE61ev3Vf65gPadD4aZ8bhc","Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('DELETEapi-products--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-DELETEapi-products--id-"
+                    onclick="tryItOut('DELETEapi-products--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-DELETEapi-products--id-"
+                    onclick="cancelTryOut('DELETEapi-products--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-DELETEapi-products--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-red">DELETE</small>
+            <b><code>api/products/{id}</code></b>
+        </p>
+                <p>
+            <label id="auth-DELETEapi-products--id-" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="DELETEapi-products--id-"
+                                                                data-component="header"></label>
+        </p>
+                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="DELETEapi-products--id-"
+               value="10"
+               data-component="url" hidden>
+    <br>
+<p>The ID of the product.</p>
+            </p>
+                    </form>
+
+            <h2 id="product-management-GETapi-products">Desplay a listing of products</h2>
+
+<p>
+</p>
+
+<p>Gets a list of users</p>
+
+<span id="example-requests-GETapi-products">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/products" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/products"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="ruby-example">
+    <pre><code class="language-ruby">
+require 'rest-client'
+
+    headers = {
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+        }
+
+response = RestClient.get(
+'http://localhost:8000/api/products',
+headers
+)
+
+p response.body
+</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/products',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/products'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-products">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 55
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 1,
+            &quot;sku&quot;: &quot;9793521858489&quot;,
+            &quot;name&quot;: &quot;Jed Predovic&quot;,
+            &quot;price&quot;: 166552,
+            &quot;weight&quot;: 4,
+            &quot;description&quot;: &quot;Cum numquam officiis ullam enim assumenda. Dolorum facilis consequatur dicta possimus quidem. Omnis labore maiores esse aut dolorem voluptatum tempora. Vel soluta odit quas voluptatem. Quaerat blanditiis vero aliquid eum. Facilis aut eos sit delectus expedita. Sed repellat ducimus quod. Eum quia hic ea aut molestias. Quam fugiat est officiis ex qui.&quot;,
+            &quot;thumbnail&quot;: &quot;storage/product/52fd1217246670e373ba362d3c31f95d.png&quot;,
+            &quot;stock&quot;: 41,
+            &quot;slug&quot;: &quot;jed-predovic&quot;,
+            &quot;user_id&quot;: 5,
+            &quot;created_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;,
+            &quot;user&quot;: {
+                &quot;id&quot;: 5,
+                &quot;name&quot;: &quot;Khalil Hermann&quot;,
+                &quot;email&quot;: &quot;fred.konopelski@example.com&quot;,
+                &quot;email_verified_at&quot;: &quot;2022-01-20T03:34:50.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2022-01-20T03:34:50.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-01-20T03:34:50.000000Z&quot;
+            },
+            &quot;image&quot;: [
+                {
+                    &quot;id&quot;: 1,
+                    &quot;url&quot;: &quot;storage/product/98c38e14ee36d33e1bc97eb9fc689e57.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 2,
+                    &quot;url&quot;: &quot;storage/product/c5e0f7f7d6416c6fa7158a8ce183dc04.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 3,
+                    &quot;url&quot;: &quot;storage/product/5a2dffa1c4dd74810cc19d7d0cce4e07.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: 2,
+            &quot;sku&quot;: &quot;9780365725213&quot;,
+            &quot;name&quot;: &quot;Van Moore PhD&quot;,
+            &quot;price&quot;: 103568,
+            &quot;weight&quot;: 2,
+            &quot;description&quot;: &quot;Quisquam et ut similique animi fugit sed aliquam neque. Fugit quis veritatis omnis molestiae. Rerum pariatur quo sint. Aspernatur consequatur sit nemo voluptas voluptas harum. Natus dolorem incidunt ex voluptas ex laudantium. Molestiae suscipit magni qui culpa fuga officiis asperiores unde. Similique rem ab voluptas aliquam non. Necessitatibus commodi recusandae est soluta quod in aut. Debitis sit alias tempore corrupti tempora consequatur.&quot;,
+            &quot;thumbnail&quot;: &quot;storage/product/6480eea7e1e850ef50b9793eeb8bc9e6.png&quot;,
+            &quot;stock&quot;: 3,
+            &quot;slug&quot;: &quot;van-moore-phd&quot;,
+            &quot;user_id&quot;: 2,
+            &quot;created_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;,
+            &quot;user&quot;: {
+                &quot;id&quot;: 2,
+                &quot;name&quot;: &quot;Rick Waelchi&quot;,
+                &quot;email&quot;: &quot;dward@example.org&quot;,
+                &quot;email_verified_at&quot;: &quot;2022-01-20T03:34:50.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2022-01-20T03:34:50.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-01-20T03:34:50.000000Z&quot;
+            },
+            &quot;image&quot;: [
+                {
+                    &quot;id&quot;: 4,
+                    &quot;url&quot;: &quot;storage/product/73a040ee7f60f5299b262a9a0fd2a276.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-20T03:34:55.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-20T03:34:55.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 5,
+                    &quot;url&quot;: &quot;storage/product/601fbf60160c7b539ab9eda223e32b22.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-20T03:34:55.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-20T03:34:55.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 6,
+                    &quot;url&quot;: &quot;storage/product/abef40878001b6746e2a7ba7e9971750.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-20T03:34:55.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-20T03:34:55.000000Z&quot;
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: 3,
+            &quot;sku&quot;: &quot;9793091859589&quot;,
+            &quot;name&quot;: &quot;Prof. Quinn Renner IV&quot;,
+            &quot;price&quot;: 130129,
+            &quot;weight&quot;: 0,
+            &quot;description&quot;: &quot;Maxime omnis qui iste dolores cupiditate asperiores modi. Qui ipsam aut qui assumenda necessitatibus voluptates sed. Dolor officiis cumque voluptatem fugiat sed. Sint quas voluptas vitae rerum eos deleniti. Dolor animi ad pariatur voluptatem fugit. Sunt eos sunt sint nihil sed esse. Enim et voluptas in sit impedit. Hic a error impedit quasi corrupti. Perferendis est nam eius molestias quia veniam. Ex sit quas dolore qui illo. Qui voluptatum veniam molestias omnis qui tenetur nesciunt.&quot;,
+            &quot;thumbnail&quot;: &quot;storage/product/d07e6848ab87e5e461d040d80ade36e6.png&quot;,
+            &quot;stock&quot;: 50,
+            &quot;slug&quot;: &quot;prof-quinn-renner-iv&quot;,
+            &quot;user_id&quot;: 10,
+            &quot;created_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;,
+            &quot;user&quot;: {
+                &quot;id&quot;: 10,
+                &quot;name&quot;: &quot;Prof. Keegan Nikolaus&quot;,
+                &quot;email&quot;: &quot;donnelly.florence@example.org&quot;,
+                &quot;email_verified_at&quot;: &quot;2022-01-20T03:34:50.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2022-01-20T03:34:50.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-01-20T03:34:50.000000Z&quot;
+            },
+            &quot;image&quot;: [
+                {
+                    &quot;id&quot;: 7,
+                    &quot;url&quot;: &quot;storage/product/1fd7734c6f4016b7ddfc4e53604f2bde.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-20T03:34:55.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-20T03:34:55.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 8,
+                    &quot;url&quot;: &quot;storage/product/eb20addb80632c79ea8dbd0b59f36475.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-20T03:34:55.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-20T03:34:55.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 9,
+                    &quot;url&quot;: &quot;storage/product/23e4a079c92c339e0bd3a79cb6d82c6a.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-20T03:34:55.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-20T03:34:55.000000Z&quot;
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: 4,
+            &quot;sku&quot;: &quot;9793562170229&quot;,
+            &quot;name&quot;: &quot;Cierra Moen DDS&quot;,
+            &quot;price&quot;: 112773,
+            &quot;weight&quot;: 4,
+            &quot;description&quot;: &quot;Doloribus dolor laboriosam et sint. Praesentium dolor et sed nemo deleniti. Exercitationem necessitatibus dignissimos quo voluptas aut tenetur. Sunt ipsum iusto non veritatis. Et sunt dolor repudiandae quis repellendus exercitationem delectus eaque. Aut aperiam id placeat odit qui deserunt veritatis hic. Corporis quia adipisci molestiae aperiam dolorem aspernatur laborum.&quot;,
+            &quot;thumbnail&quot;: &quot;storage/product/9929d9f284b1f20831ad12b5e86e1ca4.png&quot;,
+            &quot;stock&quot;: 99,
+            &quot;slug&quot;: &quot;cierra-moen-dds&quot;,
+            &quot;user_id&quot;: 2,
+            &quot;created_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;,
+            &quot;user&quot;: {
+                &quot;id&quot;: 2,
+                &quot;name&quot;: &quot;Rick Waelchi&quot;,
+                &quot;email&quot;: &quot;dward@example.org&quot;,
+                &quot;email_verified_at&quot;: &quot;2022-01-20T03:34:50.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2022-01-20T03:34:50.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-01-20T03:34:50.000000Z&quot;
+            },
+            &quot;image&quot;: [
+                {
+                    &quot;id&quot;: 10,
+                    &quot;url&quot;: &quot;storage/product/566b65f1d1e514347617e7f1e622daf3.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-20T03:34:56.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-20T03:34:56.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 11,
+                    &quot;url&quot;: &quot;storage/product/5359d7fb7bc0d37266c00b0bdd94f9b1.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-20T03:34:56.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-20T03:34:56.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 12,
+                    &quot;url&quot;: &quot;storage/product/7d561a754036075eed5d17361c0fea14.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-20T03:34:56.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-20T03:34:56.000000Z&quot;
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: 5,
+            &quot;sku&quot;: &quot;9792261891329&quot;,
+            &quot;name&quot;: &quot;Vergie Sanford&quot;,
+            &quot;price&quot;: 92512,
+            &quot;weight&quot;: 3,
+            &quot;description&quot;: &quot;Quia optio dignissimos deserunt asperiores. Et aspernatur omnis deleniti numquam iusto porro. Sit et pariatur ut quibusdam consectetur eum. Sed eos similique minus sed. Temporibus at aspernatur commodi labore quia beatae. Excepturi voluptatum fugiat omnis nostrum est minus ea. Accusamus quo enim quis earum quis. Porro non natus quos est quia eum. Atque quis in dolores tenetur ratione voluptates vel labore.&quot;,
+            &quot;thumbnail&quot;: &quot;storage/product/2a42dfe047f3faa375659820d4eb2e7b.png&quot;,
+            &quot;stock&quot;: 51,
+            &quot;slug&quot;: &quot;vergie-sanford&quot;,
+            &quot;user_id&quot;: 1,
+            &quot;created_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;,
+            &quot;user&quot;: {
+                &quot;id&quot;: 1,
+                &quot;name&quot;: &quot;Admin&quot;,
+                &quot;email&quot;: &quot;admin@gmail.com&quot;,
+                &quot;email_verified_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-01-20T03:34:50.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-01-20T03:34:50.000000Z&quot;
+            },
+            &quot;image&quot;: [
+                {
+                    &quot;id&quot;: 13,
+                    &quot;url&quot;: &quot;storage/product/8a3b33056e7e33ca77dfcd2d692c203e.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-20T03:34:57.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-20T03:34:57.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 14,
+                    &quot;url&quot;: &quot;storage/product/e5470940eba5ae2002678b644abe62e1.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-20T03:34:57.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-20T03:34:57.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 15,
+                    &quot;url&quot;: &quot;storage/product/141da6cc81b292a842222e112541aecf.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-20T03:34:57.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-20T03:34:57.000000Z&quot;
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: 6,
+            &quot;sku&quot;: &quot;9784180546015&quot;,
+            &quot;name&quot;: &quot;Darrell Metz&quot;,
+            &quot;price&quot;: 776593,
+            &quot;weight&quot;: 3,
+            &quot;description&quot;: &quot;Dolore eveniet ex tenetur aut ut. Accusamus nihil pariatur quo at id. Saepe sed sunt sed quisquam ab non. Odit assumenda recusandae porro error non voluptatem. Natus nisi qui consequuntur cumque. Ut maiores ut aut reiciendis rerum. Ut perferendis voluptas dignissimos eaque sit voluptatem et. Vitae libero repellendus molestiae ut. Est sed error consequatur suscipit eos quas. Accusamus quaerat sapiente autem ipsa dignissimos.&quot;,
+            &quot;thumbnail&quot;: &quot;storage/product/a0524fd804a05a816840746adaefc407.png&quot;,
+            &quot;stock&quot;: 42,
+            &quot;slug&quot;: &quot;darrell-metz&quot;,
+            &quot;user_id&quot;: 7,
+            &quot;created_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;,
+            &quot;user&quot;: {
+                &quot;id&quot;: 7,
+                &quot;name&quot;: &quot;Simeon Sanford&quot;,
+                &quot;email&quot;: &quot;claudia62@example.net&quot;,
+                &quot;email_verified_at&quot;: &quot;2022-01-20T03:34:50.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2022-01-20T03:34:50.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-01-20T03:34:50.000000Z&quot;
+            },
+            &quot;image&quot;: [
+                {
+                    &quot;id&quot;: 16,
+                    &quot;url&quot;: &quot;storage/product/f0eaf5c78d520608954b87d1f6cdca78.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-20T03:34:57.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-20T03:34:57.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 17,
+                    &quot;url&quot;: &quot;storage/product/41c6a3e6ef80dd418196c80c5c6b5282.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-20T03:34:57.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-20T03:34:57.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 18,
+                    &quot;url&quot;: &quot;storage/product/9cb402556277c1bd10653ca75cb97a67.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-20T03:34:57.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-20T03:34:57.000000Z&quot;
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: 7,
+            &quot;sku&quot;: &quot;9786272017366&quot;,
+            &quot;name&quot;: &quot;Faye Thiel&quot;,
+            &quot;price&quot;: 445813,
+            &quot;weight&quot;: 1,
+            &quot;description&quot;: &quot;Dicta vel quo ratione a et qui est doloribus. Vitae architecto voluptate est vel fugit. Asperiores suscipit iste ipsam eos et consectetur. Quis optio et dolorum sed est porro. Voluptates sapiente et quo sit ut. Numquam impedit illo eos ratione dignissimos ipsa. Est voluptate dolores similique velit et illum ipsam. Qui aperiam ut aperiam optio. Mollitia veritatis sunt reprehenderit qui consectetur voluptatem aut. Odit dolor sed excepturi modi praesentium temporibus.&quot;,
+            &quot;thumbnail&quot;: &quot;storage/product/73dedd65fdf050acff7d777b48601fe5.png&quot;,
+            &quot;stock&quot;: 88,
+            &quot;slug&quot;: &quot;faye-thiel&quot;,
+            &quot;user_id&quot;: 9,
+            &quot;created_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;,
+            &quot;user&quot;: {
+                &quot;id&quot;: 9,
+                &quot;name&quot;: &quot;Evans Feest&quot;,
+                &quot;email&quot;: &quot;ucummerata@example.com&quot;,
+                &quot;email_verified_at&quot;: &quot;2022-01-20T03:34:50.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2022-01-20T03:34:50.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-01-20T03:34:50.000000Z&quot;
+            },
+            &quot;image&quot;: [
+                {
+                    &quot;id&quot;: 19,
+                    &quot;url&quot;: &quot;storage/product/b91ee45b98285da2f57e884c76e765d5.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-20T03:34:58.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-20T03:34:58.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 20,
+                    &quot;url&quot;: &quot;storage/product/83a99cebcdc10588ed532c51ac0976a6.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-20T03:34:58.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-20T03:34:58.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 21,
+                    &quot;url&quot;: &quot;storage/product/b1c3f7900fbfba8a9867cb8d64d63505.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-20T03:34:58.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-20T03:34:58.000000Z&quot;
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: 8,
+            &quot;sku&quot;: &quot;9790465816490&quot;,
+            &quot;name&quot;: &quot;Mrs. Reba Sawayn V&quot;,
+            &quot;price&quot;: 964684,
+            &quot;weight&quot;: 0,
+            &quot;description&quot;: &quot;Officiis accusantium perferendis vel nobis saepe. Facilis laboriosam voluptas ipsam qui in delectus occaecati. Quam sit labore velit quaerat corporis et. Iste id doloribus dolore. Nihil consequatur enim a soluta voluptatem. Enim voluptatem est odit dolorum quo hic. Ut fuga ut nihil tenetur facilis et. Omnis eaque sapiente porro fuga ut at reiciendis. Qui velit et quia pariatur sint animi est accusamus.&quot;,
+            &quot;thumbnail&quot;: &quot;storage/product/acad835df11f4ead9d1f57a9d65d1464.png&quot;,
+            &quot;stock&quot;: 32,
+            &quot;slug&quot;: &quot;mrs-reba-sawayn-v&quot;,
+            &quot;user_id&quot;: 8,
+            &quot;created_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;,
+            &quot;user&quot;: {
+                &quot;id&quot;: 8,
+                &quot;name&quot;: &quot;Miss Tina Buckridge V&quot;,
+                &quot;email&quot;: &quot;thirthe@example.org&quot;,
+                &quot;email_verified_at&quot;: &quot;2022-01-20T03:34:50.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2022-01-20T03:34:50.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-01-20T03:34:50.000000Z&quot;
+            },
+            &quot;image&quot;: [
+                {
+                    &quot;id&quot;: 22,
+                    &quot;url&quot;: &quot;storage/product/3cd8406a0a6cc7697cfd1debba14a424.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-20T03:34:59.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-20T03:34:59.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 23,
+                    &quot;url&quot;: &quot;storage/product/8fd5529dfa00be70d88394a441fc67a4.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-20T03:34:59.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-20T03:34:59.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 24,
+                    &quot;url&quot;: &quot;storage/product/a183e26634c767b1846fe62480a9815d.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-20T03:34:59.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-20T03:34:59.000000Z&quot;
+                }
+            ]
+        }
+    ],
+    &quot;links&quot;: {
+        &quot;first&quot;: &quot;http://localhost:8000/api/products?page=1&quot;,
+        &quot;last&quot;: &quot;http://localhost:8000/api/products?page=2&quot;,
+        &quot;prev&quot;: null,
+        &quot;next&quot;: &quot;http://localhost:8000/api/products?page=2&quot;
+    },
+    &quot;meta&quot;: {
+        &quot;current_page&quot;: 1,
+        &quot;from&quot;: 1,
+        &quot;last_page&quot;: 2,
+        &quot;links&quot;: [
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;&amp;laquo; Previous&quot;,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost:8000/api/products?page=1&quot;,
+                &quot;label&quot;: &quot;1&quot;,
+                &quot;active&quot;: true
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost:8000/api/products?page=2&quot;,
+                &quot;label&quot;: &quot;2&quot;,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost:8000/api/products?page=2&quot;,
+                &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
+                &quot;active&quot;: false
+            }
+        ],
+        &quot;path&quot;: &quot;http://localhost:8000/api/products&quot;,
+        &quot;per_page&quot;: 8,
+        &quot;to&quot;: 8,
+        &quot;total&quot;: 11
+    }
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-products" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-products"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-products"></code></pre>
+</span>
+<span id="execution-error-GETapi-products" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-products"></code></pre>
+</span>
+<form id="form-GETapi-products" data-method="GET"
+      data-path="api/products"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-products', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-products"
+                    onclick="tryItOut('GETapi-products');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-products"
+                    onclick="cancelTryOut('GETapi-products');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-products" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/products</code></b>
+        </p>
+                    </form>
+
+            <h2 id="product-management-GETapi-products--id-">Display the specified resource.</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-products--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/products/1" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/products/1"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="ruby-example">
+    <pre><code class="language-ruby">
+require 'rest-client'
+
+    headers = {
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+        }
+
+response = RestClient.get(
+'http://localhost:8000/api/products/1',
+headers
+)
+
+p response.body
+</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/products/1',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/products/1'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-products--id-">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 54
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;data&quot;: {
+        &quot;id&quot;: 1,
+        &quot;sku&quot;: &quot;9793521858489&quot;,
+        &quot;name&quot;: &quot;Jed Predovic&quot;,
+        &quot;price&quot;: 166552,
+        &quot;weight&quot;: 4,
+        &quot;description&quot;: &quot;Cum numquam officiis ullam enim assumenda. Dolorum facilis consequatur dicta possimus quidem. Omnis labore maiores esse aut dolorem voluptatum tempora. Vel soluta odit quas voluptatem. Quaerat blanditiis vero aliquid eum. Facilis aut eos sit delectus expedita. Sed repellat ducimus quod. Eum quia hic ea aut molestias. Quam fugiat est officiis ex qui.&quot;,
+        &quot;thumbnail&quot;: &quot;storage/product/52fd1217246670e373ba362d3c31f95d.png&quot;,
+        &quot;stock&quot;: 41,
+        &quot;slug&quot;: &quot;jed-predovic&quot;,
+        &quot;user_id&quot;: 5,
+        &quot;created_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;,
+        &quot;user&quot;: {
+            &quot;id&quot;: 5,
+            &quot;name&quot;: &quot;Khalil Hermann&quot;,
+            &quot;email&quot;: &quot;fred.konopelski@example.com&quot;,
+            &quot;email_verified_at&quot;: &quot;2022-01-20T03:34:50.000000Z&quot;,
+            &quot;created_at&quot;: &quot;2022-01-20T03:34:50.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-01-20T03:34:50.000000Z&quot;
+        },
+        &quot;image&quot;: [
+            {
+                &quot;id&quot;: 1,
+                &quot;url&quot;: &quot;storage/product/98c38e14ee36d33e1bc97eb9fc689e57.png&quot;,
+                &quot;created_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;
+            },
+            {
+                &quot;id&quot;: 2,
+                &quot;url&quot;: &quot;storage/product/c5e0f7f7d6416c6fa7158a8ce183dc04.png&quot;,
+                &quot;created_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;
+            },
+            {
+                &quot;id&quot;: 3,
+                &quot;url&quot;: &quot;storage/product/5a2dffa1c4dd74810cc19d7d0cce4e07.png&quot;,
+                &quot;created_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;
+            }
+        ]
+    }
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-products--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-products--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-products--id-"></code></pre>
+</span>
+<span id="execution-error-GETapi-products--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-products--id-"></code></pre>
+</span>
+<form id="form-GETapi-products--id-" data-method="GET"
+      data-path="api/products/{id}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-products--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-products--id-"
+                    onclick="tryItOut('GETapi-products--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-products--id-"
+                    onclick="cancelTryOut('GETapi-products--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-products--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/products/{id}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="GETapi-products--id-"
+               value="1"
+               data-component="url" hidden>
+    <br>
+<p>Defaults to 'id'.</p>
+            </p>
+                    </form>
+
+    
+
+        
+    </div>
+    <div class="dark-box">
+                    <div class="lang-selector">
+                                                        <button type="button" class="lang-button" data-language-name="bash">bash</button>
+                                                        <button type="button" class="lang-button" data-language-name="javascript">javascript</button>
+                                                        <button type="button" class="lang-button" data-language-name="ruby">ruby</button>
+                                                        <button type="button" class="lang-button" data-language-name="php">php</button>
+                                                        <button type="button" class="lang-button" data-language-name="python">python</button>
+                            </div>
+            </div>
+</div>
+</body>
+</html>

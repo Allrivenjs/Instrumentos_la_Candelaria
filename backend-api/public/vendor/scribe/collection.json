@@ -1,0 +1,321 @@
+{
+    "variable": [
+        {
+            "id": "baseUrl",
+            "key": "baseUrl",
+            "type": "string",
+            "name": "string",
+            "value": "http:\/\/backend-api.test"
+        }
+    ],
+    "info": {
+        "name": "Laravel",
+        "_postman_id": "3a43874b-0573-4bde-8580-e7b6f01d64f9",
+        "description": "",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "Product Management",
+            "description": "\nAPIs to manage the product resource",
+            "item": [
+                {
+                    "name": "Desplay a listing of products",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/products",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/products"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "Gets a list of users",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "57"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"data\":[{\"id\":1,\"sku\":\"9785389188631\",\"name\":\"Mr. Landen Ankunding\",\"price\":716761,\"weight\":0,\"description\":\"Suscipit corporis non natus at cumque. Est illo sit atque quia omnis facilis ratione. Veritatis modi optio eos non et est. Tempora necessitatibus reiciendis fugiat. Asperiores qui sit error illo. Exercitationem expedita dolores numquam sunt sed voluptas ratione eligendi. Officiis omnis nam magni. Ut eaque minima distinctio. Voluptas consequuntur sapiente id. Rerum voluptatum quo quam est.\",\"thumbnail\":\"storage\\\/product\\\/172a258f9738bbe996e808bb4ef4bc5f.png\",\"stock\":60,\"slug\":\"mr-landen-ankunding\",\"user_id\":4,\"created_at\":\"2022-01-17T07:44:19.000000Z\",\"updated_at\":\"2022-01-17T07:44:19.000000Z\",\"user\":{\"id\":4,\"name\":\"Mrs. Lillie Kuhlman Jr.\",\"email\":\"considine.jolie@example.org\",\"email_verified_at\":\"2022-01-17T07:44:17.000000Z\",\"created_at\":\"2022-01-17T07:44:17.000000Z\",\"updated_at\":\"2022-01-17T07:44:17.000000Z\"},\"image\":[{\"id\":1,\"url\":\"storage\\\/product\\\/397695d3a0031777f93cafdc49ba8c4a.png\",\"created_at\":\"2022-01-17T07:44:20.000000Z\",\"updated_at\":\"2022-01-17T07:44:20.000000Z\"},{\"id\":2,\"url\":\"storage\\\/product\\\/4c92504fb9db459abccac094caacc976.png\",\"created_at\":\"2022-01-17T07:44:20.000000Z\",\"updated_at\":\"2022-01-17T07:44:20.000000Z\"},{\"id\":3,\"url\":\"storage\\\/product\\\/2ad0f9d7eb80fcb1bc33d9e7aa13366d.png\",\"created_at\":\"2022-01-17T07:44:20.000000Z\",\"updated_at\":\"2022-01-17T07:44:20.000000Z\"}]},{\"id\":2,\"sku\":\"9793301646305\",\"name\":\"Ramiro VonRueden\",\"price\":219848,\"weight\":3,\"description\":\"Quia aut deleniti et commodi. Aliquam veniam quis sit non ut aut. Libero inventore quidem quo rerum ipsam consectetur fuga nihil. Voluptate minima non rerum enim quaerat. Sed laborum harum et. Sequi explicabo aut voluptas possimus sint. Esse eum ducimus saepe et molestiae est. Fuga maxime nulla similique eius fugit. Praesentium tempora non inventore sed facilis fuga dolore. Vitae aut qui quam iusto non delectus. Voluptatem est quod totam laboriosam consectetur et nisi.\",\"thumbnail\":\"storage\\\/product\\\/1f109063391f7b0fc32c219d9a3a65e3.png\",\"stock\":3,\"slug\":\"ramiro-vonrueden\",\"user_id\":5,\"created_at\":\"2022-01-17T07:44:19.000000Z\",\"updated_at\":\"2022-01-17T07:44:19.000000Z\",\"user\":{\"id\":5,\"name\":\"Brennan Weber\",\"email\":\"von.dorian@example.com\",\"email_verified_at\":\"2022-01-17T07:44:17.000000Z\",\"created_at\":\"2022-01-17T07:44:17.000000Z\",\"updated_at\":\"2022-01-17T07:44:17.000000Z\"},\"image\":[{\"id\":4,\"url\":\"storage\\\/product\\\/4b1e2c311410691f06cd196bff3ba219.png\",\"created_at\":\"2022-01-17T07:44:21.000000Z\",\"updated_at\":\"2022-01-17T07:44:21.000000Z\"},{\"id\":5,\"url\":\"storage\\\/product\\\/c2d60e5a387cd09227e36cdad6dbb3a3.png\",\"created_at\":\"2022-01-17T07:44:21.000000Z\",\"updated_at\":\"2022-01-17T07:44:21.000000Z\"},{\"id\":6,\"url\":\"storage\\\/product\\\/c66d83c3ff703f2a69c364f63fa25bd4.png\",\"created_at\":\"2022-01-17T07:44:21.000000Z\",\"updated_at\":\"2022-01-17T07:44:21.000000Z\"}]},{\"id\":3,\"sku\":\"9794981261642\",\"name\":\"Immanuel Homenick\",\"price\":40554,\"weight\":4,\"description\":\"Et molestiae exercitationem corrupti odio. Et minus labore aliquid quis ut corrupti repudiandae. Qui cum reprehenderit cumque illum. Alias autem et dolorem mollitia. Aliquid est suscipit quia ut id. Dignissimos eaque quasi eligendi totam eligendi. Debitis minus ratione ullam adipisci nulla aut et. Quas ullam illum sed molestiae nemo. Occaecati quas at eius facilis. Dolor enim sit possimus ullam exercitationem sed odit. Eum itaque provident ipsa eos quibusdam.\",\"thumbnail\":\"storage\\\/product\\\/b1379c21e139c18eefeba7848e2fbc60.png\",\"stock\":99,\"slug\":\"immanuel-homenick\",\"user_id\":4,\"created_at\":\"2022-01-17T07:44:19.000000Z\",\"updated_at\":\"2022-01-17T07:44:19.000000Z\",\"user\":{\"id\":4,\"name\":\"Mrs. Lillie Kuhlman Jr.\",\"email\":\"considine.jolie@example.org\",\"email_verified_at\":\"2022-01-17T07:44:17.000000Z\",\"created_at\":\"2022-01-17T07:44:17.000000Z\",\"updated_at\":\"2022-01-17T07:44:17.000000Z\"},\"image\":[{\"id\":7,\"url\":\"storage\\\/product\\\/94bd57238c7cfde248e1e0b76885552a.png\",\"created_at\":\"2022-01-17T07:44:21.000000Z\",\"updated_at\":\"2022-01-17T07:44:21.000000Z\"},{\"id\":8,\"url\":\"storage\\\/product\\\/d9db971b932780dabc30b36a56d14d29.png\",\"created_at\":\"2022-01-17T07:44:21.000000Z\",\"updated_at\":\"2022-01-17T07:44:21.000000Z\"},{\"id\":9,\"url\":\"storage\\\/product\\\/be0f6c456523825fa98d66bb00ddf859.png\",\"created_at\":\"2022-01-17T07:44:21.000000Z\",\"updated_at\":\"2022-01-17T07:44:21.000000Z\"}]},{\"id\":4,\"sku\":\"9795939827194\",\"name\":\"Prof. Imani Howell\",\"price\":745938,\"weight\":0,\"description\":\"Sit ad molestiae voluptas praesentium est quo. Et nisi laborum quia. Unde ut magnam iste cum asperiores. Neque iure harum porro explicabo dignissimos. Et dignissimos quis accusamus odio qui officiis quidem ipsam. Quia unde nobis aut. Aut adipisci ut sunt voluptatum. Sapiente commodi explicabo neque. Tenetur omnis reiciendis et molestias fugiat deleniti debitis. Cum numquam laudantium rem aliquam quo. Eligendi omnis et officiis qui eum suscipit rerum.\",\"thumbnail\":\"storage\\\/product\\\/304787cd3b562f49cbc7ce6ea80828cc.png\",\"stock\":20,\"slug\":\"prof-imani-howell\",\"user_id\":3,\"created_at\":\"2022-01-17T07:44:19.000000Z\",\"updated_at\":\"2022-01-17T07:44:19.000000Z\",\"user\":{\"id\":3,\"name\":\"Eileen Grady\",\"email\":\"bethel44@example.org\",\"email_verified_at\":\"2022-01-17T07:44:17.000000Z\",\"created_at\":\"2022-01-17T07:44:17.000000Z\",\"updated_at\":\"2022-01-17T07:44:17.000000Z\"},\"image\":[{\"id\":10,\"url\":\"storage\\\/product\\\/ad28af090b29cfb8e85b560a508b92d3.png\",\"created_at\":\"2022-01-17T07:44:22.000000Z\",\"updated_at\":\"2022-01-17T07:44:22.000000Z\"},{\"id\":11,\"url\":\"storage\\\/product\\\/8c4fc5b29be36323d6e4af08c58ed419.png\",\"created_at\":\"2022-01-17T07:44:22.000000Z\",\"updated_at\":\"2022-01-17T07:44:22.000000Z\"},{\"id\":12,\"url\":\"storage\\\/product\\\/320d6371c634d22b6d9aa93e8709ce0f.png\",\"created_at\":\"2022-01-17T07:44:22.000000Z\",\"updated_at\":\"2022-01-17T07:44:22.000000Z\"}]},{\"id\":5,\"sku\":\"9785971412601\",\"name\":\"Maverick Upton\",\"price\":562324,\"weight\":1,\"description\":\"Omnis qui recusandae tempore tempore recusandae aspernatur. Animi quis qui et odio tenetur. Quis nisi culpa quis quia. Est consequatur commodi reiciendis quo dolorum. Aut laborum vitae labore autem qui. Quaerat beatae voluptatem aut molestiae voluptatibus dolorem. Sit ipsam hic consequuntur beatae blanditiis optio. Voluptatem aut quisquam rerum ipsa fuga et. Qui dicta nisi quia aut aut fugit alias. Sunt consequuntur ipsum qui occaecati est.\",\"thumbnail\":\"storage\\\/product\\\/890aea4d3f5ed41a001bd62391aed8f7.png\",\"stock\":32,\"slug\":\"maverick-upton\",\"user_id\":7,\"created_at\":\"2022-01-17T07:44:19.000000Z\",\"updated_at\":\"2022-01-17T07:44:19.000000Z\",\"user\":{\"id\":7,\"name\":\"Dr. Florida Watsica MD\",\"email\":\"sfarrell@example.net\",\"email_verified_at\":\"2022-01-17T07:44:17.000000Z\",\"created_at\":\"2022-01-17T07:44:17.000000Z\",\"updated_at\":\"2022-01-17T07:44:17.000000Z\"},\"image\":[{\"id\":13,\"url\":\"storage\\\/product\\\/70a4f54b48801230c2bcfaced5c5d743.png\",\"created_at\":\"2022-01-17T07:44:23.000000Z\",\"updated_at\":\"2022-01-17T07:44:23.000000Z\"},{\"id\":14,\"url\":\"storage\\\/product\\\/7818b8263aafca0d2b9daf0af69b8e88.png\",\"created_at\":\"2022-01-17T07:44:23.000000Z\",\"updated_at\":\"2022-01-17T07:44:23.000000Z\"},{\"id\":15,\"url\":\"storage\\\/product\\\/092aefd6bd106a97b1f425cc9de57541.png\",\"created_at\":\"2022-01-17T07:44:23.000000Z\",\"updated_at\":\"2022-01-17T07:44:23.000000Z\"}]},{\"id\":6,\"sku\":\"9795838407206\",\"name\":\"Wilma Leannon\",\"price\":43221,\"weight\":1,\"description\":\"Illum rerum provident temporibus labore in pariatur saepe. Qui dolorem aut alias inventore veniam non ad. Tempore quia eaque eaque vel hic totam. Omnis in vitae dolores et voluptatem. Perspiciatis voluptas enim beatae et aspernatur tenetur. Ipsam blanditiis est rem quae enim debitis commodi. Corrupti quidem ut qui mollitia suscipit magni. Nemo rerum sed quis reprehenderit voluptates et.\",\"thumbnail\":\"storage\\\/product\\\/bd5633def1c05cfe4d1ca8fd910bdd25.png\",\"stock\":61,\"slug\":\"wilma-leannon\",\"user_id\":2,\"created_at\":\"2022-01-17T07:44:19.000000Z\",\"updated_at\":\"2022-01-17T07:44:19.000000Z\",\"user\":{\"id\":2,\"name\":\"Celine Heathcote\",\"email\":\"orlando93@example.org\",\"email_verified_at\":\"2022-01-17T07:44:17.000000Z\",\"created_at\":\"2022-01-17T07:44:17.000000Z\",\"updated_at\":\"2022-01-17T07:44:17.000000Z\"},\"image\":[{\"id\":16,\"url\":\"storage\\\/product\\\/9b177e906b96a4df5709d2a546e3c4bf.png\",\"created_at\":\"2022-01-17T07:44:23.000000Z\",\"updated_at\":\"2022-01-17T07:44:23.000000Z\"},{\"id\":17,\"url\":\"storage\\\/product\\\/04736d392cf741c444532a228a97188c.png\",\"created_at\":\"2022-01-17T07:44:23.000000Z\",\"updated_at\":\"2022-01-17T07:44:23.000000Z\"},{\"id\":18,\"url\":\"storage\\\/product\\\/2ca9298dd5e5a4839cc8a3ae5b67fc90.png\",\"created_at\":\"2022-01-17T07:44:23.000000Z\",\"updated_at\":\"2022-01-17T07:44:23.000000Z\"}]},{\"id\":7,\"sku\":\"9792952012620\",\"name\":\"Ansel Padberg\",\"price\":605259,\"weight\":2,\"description\":\"Perferendis et culpa quaerat iusto expedita eum ut. Eum aut et adipisci aut earum. Neque consequatur sed aspernatur excepturi labore quam ipsam. Molestiae autem consequuntur et et qui ullam vitae non. Quo sunt porro aut quia voluptate eos libero. Id eos est qui et voluptas qui. Est doloribus optio eaque ea incidunt aut omnis.\",\"thumbnail\":\"storage\\\/product\\\/220b19ca47348abe861b850bef2f8a83.png\",\"stock\":91,\"slug\":\"ansel-padberg\",\"user_id\":4,\"created_at\":\"2022-01-17T07:44:19.000000Z\",\"updated_at\":\"2022-01-17T07:44:19.000000Z\",\"user\":{\"id\":4,\"name\":\"Mrs. Lillie Kuhlman Jr.\",\"email\":\"considine.jolie@example.org\",\"email_verified_at\":\"2022-01-17T07:44:17.000000Z\",\"created_at\":\"2022-01-17T07:44:17.000000Z\",\"updated_at\":\"2022-01-17T07:44:17.000000Z\"},\"image\":[{\"id\":19,\"url\":\"storage\\\/product\\\/bf58279cd3b95831d6732b6fe9d44a2c.png\",\"created_at\":\"2022-01-17T07:44:24.000000Z\",\"updated_at\":\"2022-01-17T07:44:24.000000Z\"},{\"id\":20,\"url\":\"storage\\\/product\\\/754d9313f6c6ac06278e168942ea89a4.png\",\"created_at\":\"2022-01-17T07:44:24.000000Z\",\"updated_at\":\"2022-01-17T07:44:24.000000Z\"},{\"id\":21,\"url\":\"storage\\\/product\\\/298bab882267e437170a61550fc5d5b1.png\",\"created_at\":\"2022-01-17T07:44:24.000000Z\",\"updated_at\":\"2022-01-17T07:44:24.000000Z\"}]},{\"id\":8,\"sku\":\"9787490250245\",\"name\":\"Cyril Will\",\"price\":186375,\"weight\":0,\"description\":\"Ex nostrum magni rem veniam. Qui et fugit sed consequatur sed iste voluptas. Eligendi aperiam veniam eaque occaecati sit qui. Consectetur vero reprehenderit dicta adipisci consequatur ab. In molestiae ut animi iure est quia quo. Dignissimos fugit molestiae molestias. Voluptatem ut magnam non maxime cupiditate. Quis dolorem quod non reiciendis.\",\"thumbnail\":\"storage\\\/product\\\/c833bea09bcf7a4e8b2d0a87162a1843.png\",\"stock\":16,\"slug\":\"cyril-will\",\"user_id\":9,\"created_at\":\"2022-01-17T07:44:19.000000Z\",\"updated_at\":\"2022-01-17T07:44:19.000000Z\",\"user\":{\"id\":9,\"name\":\"Prof. Russ Pagac\",\"email\":\"ukreiger@example.net\",\"email_verified_at\":\"2022-01-17T07:44:17.000000Z\",\"created_at\":\"2022-01-17T07:44:17.000000Z\",\"updated_at\":\"2022-01-17T07:44:17.000000Z\"},\"image\":[{\"id\":22,\"url\":\"storage\\\/product\\\/1e18153a5ecc45185a83fde4705c257b.png\",\"created_at\":\"2022-01-17T07:44:25.000000Z\",\"updated_at\":\"2022-01-17T07:44:25.000000Z\"},{\"id\":23,\"url\":\"storage\\\/product\\\/b1b26402263c11176417957cea460ea1.png\",\"created_at\":\"2022-01-17T07:44:25.000000Z\",\"updated_at\":\"2022-01-17T07:44:25.000000Z\"},{\"id\":24,\"url\":\"storage\\\/product\\\/c5e719e96a61b15069b2fa47a72628be.png\",\"created_at\":\"2022-01-17T07:44:25.000000Z\",\"updated_at\":\"2022-01-17T07:44:25.000000Z\"}]}],\"links\":{\"first\":\"http:\\\/\\\/backend-api.test\\\/api\\\/products?page=1\",\"last\":\"http:\\\/\\\/backend-api.test\\\/api\\\/products?page=2\",\"prev\":null,\"next\":\"http:\\\/\\\/backend-api.test\\\/api\\\/products?page=2\"},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":2,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/backend-api.test\\\/api\\\/products?page=1\",\"label\":\"1\",\"active\":true},{\"url\":\"http:\\\/\\\/backend-api.test\\\/api\\\/products?page=2\",\"label\":\"2\",\"active\":false},{\"url\":\"http:\\\/\\\/backend-api.test\\\/api\\\/products?page=2\",\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/backend-api.test\\\/api\\\/products\",\"per_page\":8,\"to\":8,\"total\":16}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Store a newly created resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/products",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/products"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "multipart\/form-data"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "name",
+                                    "value": "id",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "description",
+                                    "value": "whddeymnmkgcmpanjbgusiciepzpzisxmtuuvjgwixkvrozwacscuiotocqmssjlouwtdafpnpcnmhrdqimsbzrsntlktvyooxwbzkticaoxtyflzujnnpitoqpybppdcmwdgsuapfzzonibygppagrjwyfugttdfuxqbcghxdncfcqygrpxtrbjcbfvoxbafacbpazovubcmkglwzbqnhjoilmrbrkdggnnqstgvpiffmqchimdanpogbbasfoyognieqwzsycvifjnhccwakrlocsjzrfrnyzhxdzribypcbtjmjsuieepxiyuzxlxvokzgxaamjchbkxcerfos",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "price",
+                                    "value": 0,
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "weight",
+                                    "value": 0,
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "stock",
+                                    "value": 1,
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "thumbnail",
+                                    "src": [],
+                                    "type": "file"
+                                },
+                                {
+                                    "key": "images",
+                                    "src": [],
+                                    "type": "file"
+                                }
+                            ]
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display the specified resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/products\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/products\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "aut",
+                                    "description": "The ID of the product."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "56"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 404,
+                            "body": "{\n    \"message\": \"No query results for model [App\\\\Models\\\\Product] 1\",\n    \"exception\": \"Symfony\\\\Component\\\\HttpKernel\\\\Exception\\\\NotFoundHttpException\",\n    \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Exceptions\/Handler.php\",\n    \"line\": 385,\n    \"trace\": [\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Exceptions\/Handler.php\",\n            \"line\": 332,\n            \"function\": \"prepareException\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Exceptions\\\\Handler\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/nunomaduro\/collision\/src\/Adapters\/Laravel\/ExceptionHandler.php\",\n            \"line\": 54,\n            \"function\": \"render\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Exceptions\\\\Handler\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Pipeline.php\",\n            \"line\": 51,\n            \"function\": \"render\",\n            \"class\": \"NunoMaduro\\\\Collision\\\\Adapters\\\\Laravel\\\\ExceptionHandler\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 172,\n            \"function\": \"handleException\",\n            \"class\": \"Illuminate\\\\Routing\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Middleware\/ThrottleRequests.php\",\n            \"line\": 127,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Middleware\/ThrottleRequests.php\",\n            \"line\": 103,\n            \"function\": \"handleRequest\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Middleware\/ThrottleRequests.php\",\n            \"line\": 55,\n            \"function\": \"handleRequestUsingNamedLimiter\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 167,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 103,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php\",\n            \"line\": 697,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php\",\n            \"line\": 672,\n            \"function\": \"runRouteWithinStack\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php\",\n            \"line\": 636,\n            \"function\": \"runRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php\",\n            \"line\": 625,\n            \"function\": \"dispatchToRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Kernel.php\",\n            \"line\": 167,\n            \"function\": \"dispatch\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 128,\n            \"function\": \"Illuminate\\\\Foundation\\\\Http\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/ConvertEmptyStringsToNull.php\",\n            \"line\": 31,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 167,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ConvertEmptyStringsToNull\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/TrimStrings.php\",\n            \"line\": 40,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 167,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TrimStrings\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/ValidatePostSize.php\",\n            \"line\": 27,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 167,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ValidatePostSize\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/PreventRequestsDuringMaintenance.php\",\n            \"line\": 86,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 167,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\PreventRequestsDuringMaintenance\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/fruitcake\/laravel-cors\/src\/HandleCors.php\",\n            \"line\": 52,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 167,\n            \"function\": \"handle\",\n            \"class\": \"Fruitcake\\\\Cors\\\\HandleCors\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/laravel\/framework\/src\/Illuminate\/Http\/Middleware\/TrustProxies.php\",\n            \"line\": 39,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 167,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\TrustProxies\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 103,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Kernel.php\",\n            \"line\": 142,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Kernel.php\",\n            \"line\": 111,\n            \"function\": \"sendRequestThroughRouter\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Strategies\/Responses\/ResponseCalls.php\",\n            \"line\": 299,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Strategies\/Responses\/ResponseCalls.php\",\n            \"line\": 287,\n            \"function\": \"callLaravelOrLumenRoute\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Strategies\/Responses\/ResponseCalls.php\",\n            \"line\": 89,\n            \"function\": \"makeApiCall\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Strategies\/Responses\/ResponseCalls.php\",\n            \"line\": 45,\n            \"function\": \"makeResponseCall\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Strategies\/Responses\/ResponseCalls.php\",\n            \"line\": 35,\n            \"function\": \"makeResponseCallIfConditionsPass\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Extractor.php\",\n            \"line\": 222,\n            \"function\": \"__invoke\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Extractor.php\",\n            \"line\": 179,\n            \"function\": \"iterateThroughStrategies\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Extractor.php\",\n            \"line\": 116,\n            \"function\": \"fetchResponses\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/knuckleswtf\/scribe\/src\/GroupedEndpoints\/GroupedEndpointsFromApp.php\",\n            \"line\": 117,\n            \"function\": \"processRoute\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/knuckleswtf\/scribe\/src\/GroupedEndpoints\/GroupedEndpointsFromApp.php\",\n            \"line\": 75,\n            \"function\": \"extractEndpointsInfoFromLaravelApp\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/knuckleswtf\/scribe\/src\/GroupedEndpoints\/GroupedEndpointsFromApp.php\",\n            \"line\": 51,\n            \"function\": \"extractEndpointsInfoAndWriteToDisk\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/knuckleswtf\/scribe\/src\/Commands\/GenerateDocumentation.php\",\n            \"line\": 48,\n            \"function\": \"get\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/BoundMethod.php\",\n            \"line\": 36,\n            \"function\": \"handle\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Commands\\\\GenerateDocumentation\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/Util.php\",\n            \"line\": 40,\n            \"function\": \"Illuminate\\\\Container\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/BoundMethod.php\",\n            \"line\": 93,\n            \"function\": \"unwrapIfClosure\",\n            \"class\": \"Illuminate\\\\Container\\\\Util\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/BoundMethod.php\",\n            \"line\": 37,\n            \"function\": \"callBoundMethod\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/Container.php\",\n            \"line\": 653,\n            \"function\": \"call\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/laravel\/framework\/src\/Illuminate\/Console\/Command.php\",\n            \"line\": 136,\n            \"function\": \"call\",\n            \"class\": \"Illuminate\\\\Container\\\\Container\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/symfony\/console\/Command\/Command.php\",\n            \"line\": 298,\n            \"function\": \"execute\",\n            \"class\": \"Illuminate\\\\Console\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/laravel\/framework\/src\/Illuminate\/Console\/Command.php\",\n            \"line\": 121,\n            \"function\": \"run\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Command\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/symfony\/console\/Application.php\",\n            \"line\": 1005,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Console\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/symfony\/console\/Application.php\",\n            \"line\": 299,\n            \"function\": \"doRunCommand\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/symfony\/console\/Application.php\",\n            \"line\": 171,\n            \"function\": \"doRun\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/laravel\/framework\/src\/Illuminate\/Console\/Application.php\",\n            \"line\": 94,\n            \"function\": \"run\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Console\/Kernel.php\",\n            \"line\": 129,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/home\/allrivenjs\/Programacion\/Instrumentos_la_Candelaria\/backend-api\/artisan\",\n            \"line\": 37,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Console\\\\Kernel\",\n            \"type\": \"->\"\n        }\n    ]\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Update the specified resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/products\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/products\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "delectus",
+                                    "description": "The ID of the product."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "multipart\/form-data"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "name",
+                                    "value": "officiis",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "description",
+                                    "value": "gmaospuadfyudzbpkxvdoxesekwhdormundpubsnkaeivnfinfqyrzegdzbgbuzibuzjugdcjtgatjrywzlfsyqjrzhqqeavgccebiolmdfgnixwjlwnnhmstbkuynqtawvdhnelspexbkdngyxnesntdqhevbampmhrbprcvjyaizzzzpctnyxojfcbviefrxapzownxyspoyuecbfictjmdbtrcdabgrgmearmhoipozqwjibwzllogbiyslclsufxmfwreubryjfogafdupwzrtruhhgosraddkxumtsomrwpmukpmecednhhvmglebiinnldltjyaftjwypnksezwdgijvngnoqekkzjdsowjqpzgaanmdbsixququwvwdfzeotsyzknrjumyifejhdapmnvdbuez",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "price",
+                                    "value": 0,
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "weight",
+                                    "value": 0,
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "stock",
+                                    "value": 0,
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "thumbnail",
+                                    "src": [],
+                                    "type": "file"
+                                }
+                            ]
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Remove the specified resource from storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/products\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/products\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "aut",
+                                    "description": "The ID of the product."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "noauth"
+    }
+}
