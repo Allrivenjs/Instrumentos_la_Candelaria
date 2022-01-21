@@ -1,0 +1,923 @@
+name: 'Product Management'
+description: |-
+
+  APIs to manage the product resource
+endpoints:
+  -
+    httpMethods:
+      - POST
+    uri: api/products
+    metadata:
+      title: 'Store a newly created resource in storage.'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer 451EfvbgVZ8c6e6adka3hDP'
+      Content-Type: multipart/form-data
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: '🤖 Product name.'
+        required: true
+        example: Glass
+        type: string
+        custom: []
+      description:
+        name: description
+        description: '📝 Product description . Must not be greater than 850 characters.'
+        required: true
+        example: 'Glasses for all people'
+        type: string
+        custom: []
+      price:
+        name: price
+        description: '💵 Product price . Must be at least 1.'
+        required: true
+        example: 33
+        type: integer
+        custom: []
+      weight:
+        name: weight
+        description: '📏 Product weight . Must be at least 1.'
+        required: true
+        example: 2
+        type: integer
+        custom: []
+      stock:
+        name: stock
+        description: '🗃 Product stock . Must be at least 1.'
+        required: true
+        example: 34
+        type: integer
+        custom: []
+      thumbnail:
+        name: thumbnail
+        description: '📷 Thumbnail of the product, it will be shown as an image when selling . Must be an image.'
+        required: true
+        example: null
+        type: file
+        custom: []
+      images:
+        name: images
+        description: '📷 📸 You can upload several images related to the product'
+        required: false
+        example:
+          - null
+        type: 'file[]'
+        custom: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'api/products/{id}'
+    metadata:
+      title: 'Update the specified resource in storage.'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer 64DdgfbV5Z81khe6vcEaPa3'
+      Content-Type: multipart/form-data
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'Defaults to ''id''.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    queryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: '🤖 Product name.'
+        required: true
+        example: Glass
+        type: string
+        custom: []
+      description:
+        name: description
+        description: '📝 Product description . Must not be greater than 850 characters.'
+        required: true
+        example: 'Glasses for all people'
+        type: string
+        custom: []
+      price:
+        name: price
+        description: '💵 Product price . Must be at least 1.'
+        required: true
+        example: 33
+        type: integer
+        custom: []
+      weight:
+        name: weight
+        description: '📏 Product weight . Must be at least 1.'
+        required: true
+        example: 2
+        type: integer
+        custom: []
+      stock:
+        name: stock
+        description: '🗃 Product stock . Must be at least 1.'
+        required: true
+        example: 34
+        type: integer
+        custom: []
+      thumbnail:
+        name: thumbnail
+        description: '📷 Thumbnail of the product, it will be shown as an image when selling . Must be an image.'
+        required: true
+        example: null
+        type: file
+        custom: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/products/{id}'
+    metadata:
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer VbZeD6a6k4EaPvhc8fd315g'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the product.'
+        required: true
+        example: 17
+        type: integer
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/products
+    metadata:
+      title: 'Desplay a listing of products'
+      description: 'Gets a list of users'
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 404
+        content: |-
+          {
+              "message": "",
+              "exception": "Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException",
+              "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Routing/AbstractRouteCollection.php",
+              "line": 43,
+              "trace": [
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php",
+                      "line": 162,
+                      "function": "handleMatchedRoute",
+                      "class": "Illuminate\\Routing\\AbstractRouteCollection",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+                      "line": 673,
+                      "function": "match",
+                      "class": "Illuminate\\Routing\\RouteCollection",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+                      "line": 662,
+                      "function": "findRoute",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+                      "line": 651,
+                      "function": "dispatchToRoute",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
+                      "line": 167,
+                      "function": "dispatch",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 128,
+                      "function": "Illuminate\\Foundation\\Http\\{closure}",
+                      "class": "Illuminate\\Foundation\\Http\\Kernel",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php",
+                      "line": 21,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php",
+                      "line": 31,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 167,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php",
+                      "line": 21,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php",
+                      "line": 40,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 167,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TrimStrings",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php",
+                      "line": 27,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 167,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php",
+                      "line": 86,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 167,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/fruitcake/laravel-cors/src/HandleCors.php",
+                      "line": 38,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 167,
+                      "function": "handle",
+                      "class": "Fruitcake\\Cors\\HandleCors",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php",
+                      "line": 39,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 167,
+                      "function": "handle",
+                      "class": "Illuminate\\Http\\Middleware\\TrustProxies",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 103,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
+                      "line": 142,
+                      "function": "then",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
+                      "line": 111,
+                      "function": "sendRequestThroughRouter",
+                      "class": "Illuminate\\Foundation\\Http\\Kernel",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 299,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Kernel",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 287,
+                      "function": "callLaravelOrLumenRoute",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 89,
+                      "function": "makeApiCall",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 45,
+                      "function": "makeResponseCall",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 35,
+                      "function": "makeResponseCallIfConditionsPass",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
+                      "line": 222,
+                      "function": "__invoke",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
+                      "line": 179,
+                      "function": "iterateThroughStrategies",
+                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
+                      "line": 116,
+                      "function": "fetchResponses",
+                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
+                      "line": 117,
+                      "function": "processRoute",
+                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
+                      "line": 75,
+                      "function": "extractEndpointsInfoFromLaravelApp",
+                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
+                      "line": 51,
+                      "function": "extractEndpointsInfoAndWriteToDisk",
+                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php",
+                      "line": 48,
+                      "function": "get",
+                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
+                      "line": 36,
+                      "function": "handle",
+                      "class": "Knuckles\\Scribe\\Commands\\GenerateDocumentation",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Container/Util.php",
+                      "line": 40,
+                      "function": "Illuminate\\Container\\{closure}",
+                      "class": "Illuminate\\Container\\BoundMethod",
+                      "type": "::"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
+                      "line": 93,
+                      "function": "unwrapIfClosure",
+                      "class": "Illuminate\\Container\\Util",
+                      "type": "::"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
+                      "line": 37,
+                      "function": "callBoundMethod",
+                      "class": "Illuminate\\Container\\BoundMethod",
+                      "type": "::"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Container/Container.php",
+                      "line": 653,
+                      "function": "call",
+                      "class": "Illuminate\\Container\\BoundMethod",
+                      "type": "::"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Console/Command.php",
+                      "line": 136,
+                      "function": "call",
+                      "class": "Illuminate\\Container\\Container",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/symfony/console/Command/Command.php",
+                      "line": 298,
+                      "function": "execute",
+                      "class": "Illuminate\\Console\\Command",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Console/Command.php",
+                      "line": 121,
+                      "function": "run",
+                      "class": "Symfony\\Component\\Console\\Command\\Command",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/symfony/console/Application.php",
+                      "line": 1005,
+                      "function": "run",
+                      "class": "Illuminate\\Console\\Command",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/symfony/console/Application.php",
+                      "line": 299,
+                      "function": "doRunCommand",
+                      "class": "Symfony\\Component\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/symfony/console/Application.php",
+                      "line": 171,
+                      "function": "doRun",
+                      "class": "Symfony\\Component\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Console/Application.php",
+                      "line": 94,
+                      "function": "run",
+                      "class": "Symfony\\Component\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php",
+                      "line": 129,
+                      "function": "run",
+                      "class": "Illuminate\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/artisan",
+                      "line": 37,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Console\\Kernel",
+                      "type": "->"
+                  }
+              ]
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/products/{id}'
+    metadata:
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'Defaults to ''id''.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 404
+        content: |-
+          {
+              "message": "",
+              "exception": "Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException",
+              "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Routing/AbstractRouteCollection.php",
+              "line": 43,
+              "trace": [
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php",
+                      "line": 162,
+                      "function": "handleMatchedRoute",
+                      "class": "Illuminate\\Routing\\AbstractRouteCollection",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+                      "line": 673,
+                      "function": "match",
+                      "class": "Illuminate\\Routing\\RouteCollection",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+                      "line": 662,
+                      "function": "findRoute",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+                      "line": 651,
+                      "function": "dispatchToRoute",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
+                      "line": 167,
+                      "function": "dispatch",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 128,
+                      "function": "Illuminate\\Foundation\\Http\\{closure}",
+                      "class": "Illuminate\\Foundation\\Http\\Kernel",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php",
+                      "line": 21,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php",
+                      "line": 31,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 167,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php",
+                      "line": 21,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php",
+                      "line": 40,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 167,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TrimStrings",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php",
+                      "line": 27,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 167,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php",
+                      "line": 86,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 167,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/fruitcake/laravel-cors/src/HandleCors.php",
+                      "line": 38,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 167,
+                      "function": "handle",
+                      "class": "Fruitcake\\Cors\\HandleCors",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php",
+                      "line": 39,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 167,
+                      "function": "handle",
+                      "class": "Illuminate\\Http\\Middleware\\TrustProxies",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 103,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
+                      "line": 142,
+                      "function": "then",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
+                      "line": 111,
+                      "function": "sendRequestThroughRouter",
+                      "class": "Illuminate\\Foundation\\Http\\Kernel",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 299,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Kernel",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 287,
+                      "function": "callLaravelOrLumenRoute",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 89,
+                      "function": "makeApiCall",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 45,
+                      "function": "makeResponseCall",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 35,
+                      "function": "makeResponseCallIfConditionsPass",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
+                      "line": 222,
+                      "function": "__invoke",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
+                      "line": 179,
+                      "function": "iterateThroughStrategies",
+                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
+                      "line": 116,
+                      "function": "fetchResponses",
+                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
+                      "line": 117,
+                      "function": "processRoute",
+                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
+                      "line": 75,
+                      "function": "extractEndpointsInfoFromLaravelApp",
+                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
+                      "line": 51,
+                      "function": "extractEndpointsInfoAndWriteToDisk",
+                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php",
+                      "line": 48,
+                      "function": "get",
+                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
+                      "line": 36,
+                      "function": "handle",
+                      "class": "Knuckles\\Scribe\\Commands\\GenerateDocumentation",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Container/Util.php",
+                      "line": 40,
+                      "function": "Illuminate\\Container\\{closure}",
+                      "class": "Illuminate\\Container\\BoundMethod",
+                      "type": "::"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
+                      "line": 93,
+                      "function": "unwrapIfClosure",
+                      "class": "Illuminate\\Container\\Util",
+                      "type": "::"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
+                      "line": 37,
+                      "function": "callBoundMethod",
+                      "class": "Illuminate\\Container\\BoundMethod",
+                      "type": "::"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Container/Container.php",
+                      "line": 653,
+                      "function": "call",
+                      "class": "Illuminate\\Container\\BoundMethod",
+                      "type": "::"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Console/Command.php",
+                      "line": 136,
+                      "function": "call",
+                      "class": "Illuminate\\Container\\Container",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/symfony/console/Command/Command.php",
+                      "line": 298,
+                      "function": "execute",
+                      "class": "Illuminate\\Console\\Command",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Console/Command.php",
+                      "line": 121,
+                      "function": "run",
+                      "class": "Symfony\\Component\\Console\\Command\\Command",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/symfony/console/Application.php",
+                      "line": 1005,
+                      "function": "run",
+                      "class": "Illuminate\\Console\\Command",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/symfony/console/Application.php",
+                      "line": 299,
+                      "function": "doRunCommand",
+                      "class": "Symfony\\Component\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/symfony/console/Application.php",
+                      "line": 171,
+                      "function": "doRun",
+                      "class": "Symfony\\Component\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Console/Application.php",
+                      "line": 94,
+                      "function": "run",
+                      "class": "Symfony\\Component\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php",
+                      "line": 129,
+                      "function": "run",
+                      "class": "Illuminate\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/u124311080/domains/registrodocumental.com/public_html/jaime/Instrumentos_la_Candelaria/backend-api/artisan",
+                      "line": 37,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Console\\Kernel",
+                      "type": "->"
+                  }
+              ]
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+        description: null
+    responseFields: []

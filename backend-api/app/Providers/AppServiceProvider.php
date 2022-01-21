@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Models\User;
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 
 use Knuckles\Camel\Extraction\ExtractedEndpointData;
@@ -28,6 +29,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        Schema::defaultStringLength(191);
         if (class_exists(\Knuckles\Scribe\Scribe::class)) {
             Scribe::beforeResponseCall(function (Request $request, ExtractedEndpointData $endpointData) {
                 $tokenResult = User::first()->createToken('authToken');
