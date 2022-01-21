@@ -42,7 +42,10 @@ class CategoryController extends Controller
      */
     public function store(StoreCategoryRequest $request)
     {
-        $category = Category::create([$request->all()]);
+        $category = Category::create([
+            'name'=>$request->name,
+            'description'=>$request->description,
+        ]);
         return (new DataResource($category))->response()->setStatusCode(Response::HTTP_OK);
     }
 
@@ -66,7 +69,10 @@ class CategoryController extends Controller
      */
     public function update(UpdateCategoryRequest $request, Category $category)
     {
-        return (new DataResource($category->update($request->all())))->response()->setStatusCode(Response::HTTP_OK);
+        return (new DataResource($category->update([
+            'name'=>$request->name,
+            'description'=>$request->description,
+            ])))->response()->setStatusCode(Response::HTTP_OK);
     }
 
     /**
