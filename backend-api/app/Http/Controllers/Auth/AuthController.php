@@ -84,7 +84,7 @@ class AuthController extends Controller
             'password'=> ['required', Rules\Password::defaults()],
         ]);
         $validatedData['password']=Hash::make($request->password);
-        $user = User::create($validatedData);
+        $user = User::create($validatedData)->assignRole('Buyer');
         $tokenResult = $user->createToken('authToken');
         $token=$tokenResult->token;
         return \response([

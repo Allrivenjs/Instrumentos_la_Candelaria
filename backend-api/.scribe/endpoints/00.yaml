@@ -87,7 +87,7 @@ endpoints:
       authenticated: true
       custom: []
     headers:
-      Authorization: 'Bearer V5hPvE8cdfD6a3e1abZ6kg4'
+      Authorization: 'Bearer PfDga8E4ahcd616V3kv5beZ'
       Content-Type: application/json
       Accept: application/json
     urlParameters: []

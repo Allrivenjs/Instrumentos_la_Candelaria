@@ -28,7 +28,7 @@ Route::prefix('auth')->group(function (){
     Route::post('logout',[AuthController::class, 'logout'])->name('logout')->middleware('auth:sanctum');
 });
 
-Route::apiResource('products', ProductController::class);
+Route::apiResource('products', ProductController::class)->names('products');
 
-Route::apiResource('categories', CategoryController::class);
+Route::apiResource('categories', CategoryController::class)->names('categories');
 
