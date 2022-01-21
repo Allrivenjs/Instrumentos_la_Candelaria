@@ -10,5 +10,5 @@ This api is written in PHP-laravel, and it is based on the structure of a basic 
 > Base URL
 
 ```yaml
-http://localhost:8000
+http://jaime.registrodocumental.com/Instrumentos_la_Candelaria/backend-api/public
 ```
