@@ -160,10 +160,10 @@ This api is written in PHP-laravel, and it is based on the structure of a basic 
 <blockquote>
 <p>Base URL</p>
 </blockquote>
-<pre><code class="language-yaml">http://localhost:8000</code></pre>
+<pre><code class="language-yaml">http://jaime.registrodocumental.com/Instrumentos_la_Candelaria/backend-api/public</code></pre>
 
         <h1 id="authenticating-requests">Authenticating requests</h1>
-<p>To authenticate requests, include an <strong><code>Authorization</code></strong> header with the value <strong><code>"Bearer your-token"</code></strong>.</p>
+<p>Authenticate requests to this API's endpoints by sending an <strong><code>Authorization</code></strong> header with the value <strong><code>"Bearer your-token"</code></strong>.</p>
 <p>All authenticated endpoints are marked with a <code>requires authentication</code> badge in the documentation below.</p>
 <p>You can retrieve your token by visiting your dashboard and clicking <b>Generate API token</b>.</p>
 
@@ -545,7 +545,7 @@ response.json()</code></pre></div>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
     "http://localhost:8000/api/auth/logout" \
-    --header "Authorization: Bearer 5a8dfehPg1V64kb6EvDc3aZ" \
+    --header "Authorization: Bearer PfDga8E4ahcd616V3kv5beZ" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -556,7 +556,7 @@ response.json()</code></pre></div>
 );
 
 const headers = {
-    "Authorization": "Bearer 5a8dfehPg1V64kb6EvDc3aZ",
+    "Authorization": "Bearer PfDga8E4ahcd616V3kv5beZ",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -572,7 +572,7 @@ fetch(url, {
 require 'rest-client'
 
     headers = {
-            "Authorization": "Bearer 5a8dfehPg1V64kb6EvDc3aZ",
+            "Authorization": "Bearer PfDga8E4ahcd616V3kv5beZ",
             "Content-Type": "application/json",
             "Accept": "application/json",
         }
@@ -592,7 +592,7 @@ $response = $client-&gt;post(
     'http://localhost:8000/api/auth/logout',
     [
         'headers' =&gt; [
-            'Authorization' =&gt; 'Bearer 5a8dfehPg1V64kb6EvDc3aZ',
+            'Authorization' =&gt; 'Bearer PfDga8E4ahcd616V3kv5beZ',
             'Content-Type' =&gt; 'application/json',
             'Accept' =&gt; 'application/json',
         ],
@@ -608,7 +608,7 @@ import json
 
 url = 'http://localhost:8000/api/auth/logout'
 headers = {
-  'Authorization': 'Bearer 5a8dfehPg1V64kb6EvDc3aZ',
+  'Authorization': 'Bearer PfDga8E4ahcd616V3kv5beZ',
   'Content-Type': 'application/json',
   'Accept': 'application/json'
 }
@@ -635,7 +635,7 @@ response.json()</code></pre></div>
       data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
-      data-headers='{"Authorization":"Bearer 5a8dfehPg1V64kb6EvDc3aZ","Content-Type":"application\/json","Accept":"application\/json"}'
+      data-headers='{"Authorization":"Bearer PfDga8E4ahcd616V3kv5beZ","Content-Type":"application\/json","Accept":"application\/json"}'
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('POSTapi-auth-logout', this);">
     <h3>
@@ -845,7 +845,7 @@ access-control-allow-origin: *
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
     "http://localhost:8000/api/categories" \
-    --header "Authorization: Bearer 8vf6aPg1eb6dk5c3ahDZEV4" \
+    --header "Authorization: Bearer 85Zka346PEDcdavegVb16hf" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -861,7 +861,7 @@ access-control-allow-origin: *
 );
 
 const headers = {
-    "Authorization": "Bearer 8vf6aPg1eb6dk5c3ahDZEV4",
+    "Authorization": "Bearer 85Zka346PEDcdavegVb16hf",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -887,7 +887,7 @@ require 'rest-client'
     "description": "State-of-the-art technological products"
 }
     headers = {
-            "Authorization": "Bearer 8vf6aPg1eb6dk5c3ahDZEV4",
+            "Authorization": "Bearer 85Zka346PEDcdavegVb16hf",
             "Content-Type": "application/json",
             "Accept": "application/json",
         }
@@ -908,7 +908,7 @@ $response = $client-&gt;post(
     'http://localhost:8000/api/categories',
     [
         'headers' =&gt; [
-            'Authorization' =&gt; 'Bearer 8vf6aPg1eb6dk5c3ahDZEV4',
+            'Authorization' =&gt; 'Bearer 85Zka346PEDcdavegVb16hf',
             'Content-Type' =&gt; 'application/json',
             'Accept' =&gt; 'application/json',
         ],
@@ -932,7 +932,7 @@ payload = {
     "description": "State-of-the-art technological products"
 }
 headers = {
-  'Authorization': 'Bearer 8vf6aPg1eb6dk5c3ahDZEV4',
+  'Authorization': 'Bearer 85Zka346PEDcdavegVb16hf',
   'Content-Type': 'application/json',
   'Accept': 'application/json'
 }
@@ -959,7 +959,7 @@ response.json()</code></pre></div>
       data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
-      data-headers='{"Authorization":"Bearer 8vf6aPg1eb6dk5c3ahDZEV4","Content-Type":"application\/json","Accept":"application\/json"}'
+      data-headers='{"Authorization":"Bearer 85Zka346PEDcdavegVb16hf","Content-Type":"application\/json","Accept":"application\/json"}'
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('POSTapi-categories', this);">
     <h3>
@@ -1027,14 +1027,14 @@ response.json()</code></pre></div>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/categories/7" \
+    --get "http://localhost:8000/api/categories/20" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/categories/7"
+    "http://localhost:8000/api/categories/20"
 );
 
 const headers = {
@@ -1058,7 +1058,7 @@ require 'rest-client'
         }
 
 response = RestClient.get(
-'http://localhost:8000/api/categories/7',
+'http://localhost:8000/api/categories/20',
 headers
 )
 
@@ -1069,7 +1069,7 @@ p response.body
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/categories/7',
+    'http://localhost:8000/api/categories/20',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -1085,7 +1085,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/categories/7'
+url = 'http://localhost:8000/api/categories/20'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -1168,7 +1168,7 @@ access-control-allow-origin: *
                 <input type="number"
                name="id"
                data-endpoint="GETapi-categories--id-"
-               value="7"
+               value="20"
                data-component="url" hidden>
     <br>
 <p>The ID of the category.</p>
@@ -1189,19 +1189,19 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/categories/9" \
-    --header "Authorization: Bearer 36Efhdvc8a64eZDbV1a5Pkg" \
+    "http://localhost:8000/api/categories/14" \
+    --header "Authorization: Bearer 68c6fgk1PahVdv3EZa45bDe" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/categories/9"
+    "http://localhost:8000/api/categories/14"
 );
 
 const headers = {
-    "Authorization": "Bearer 36Efhdvc8a64eZDbV1a5Pkg",
+    "Authorization": "Bearer 68c6fgk1PahVdv3EZa45bDe",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -1217,13 +1217,13 @@ fetch(url, {
 require 'rest-client'
 
     headers = {
-            "Authorization": "Bearer 36Efhdvc8a64eZDbV1a5Pkg",
+            "Authorization": "Bearer 68c6fgk1PahVdv3EZa45bDe",
             "Content-Type": "application/json",
             "Accept": "application/json",
         }
 
 response = RestClient.delete(
-'http://localhost:8000/api/categories/9',
+'http://localhost:8000/api/categories/14',
 headers
 )
 
@@ -1234,10 +1234,10 @@ p response.body
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;delete(
-    'http://localhost:8000/api/categories/9',
+    'http://localhost:8000/api/categories/14',
     [
         'headers' =&gt; [
-            'Authorization' =&gt; 'Bearer 36Efhdvc8a64eZDbV1a5Pkg',
+            'Authorization' =&gt; 'Bearer 68c6fgk1PahVdv3EZa45bDe',
             'Content-Type' =&gt; 'application/json',
             'Accept' =&gt; 'application/json',
         ],
@@ -1251,9 +1251,9 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/categories/9'
+url = 'http://localhost:8000/api/categories/14'
 headers = {
-  'Authorization': 'Bearer 36Efhdvc8a64eZDbV1a5Pkg',
+  'Authorization': 'Bearer 68c6fgk1PahVdv3EZa45bDe',
   'Content-Type': 'application/json',
   'Accept': 'application/json'
 }
@@ -1280,7 +1280,7 @@ response.json()</code></pre></div>
       data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
-      data-headers='{"Authorization":"Bearer 36Efhdvc8a64eZDbV1a5Pkg","Content-Type":"application\/json","Accept":"application\/json"}'
+      data-headers='{"Authorization":"Bearer 68c6fgk1PahVdv3EZa45bDe","Content-Type":"application\/json","Accept":"application\/json"}'
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('DELETEapi-categories--id-', this);">
     <h3>
@@ -1318,7 +1318,7 @@ response.json()</code></pre></div>
                 <input type="number"
                name="id"
                data-endpoint="DELETEapi-categories--id-"
-               value="9"
+               value="14"
                data-component="url" hidden>
     <br>
 <p>The ID of the category.</p>
@@ -1340,7 +1340,7 @@ response.json()</code></pre></div>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
     "http://localhost:8000/api/categories/1" \
-    --header "Authorization: Bearer 58ge3faZbDvEk64c1VPad6h" \
+    --header "Authorization: Bearer ZabckP668dafveg13EDh5V4" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -1356,7 +1356,7 @@ response.json()</code></pre></div>
 );
 
 const headers = {
-    "Authorization": "Bearer 58ge3faZbDvEk64c1VPad6h",
+    "Authorization": "Bearer ZabckP668dafveg13EDh5V4",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -1382,7 +1382,7 @@ require 'rest-client'
     "description": "State-of-the-art technological products"
 }
     headers = {
-            "Authorization": "Bearer 58ge3faZbDvEk64c1VPad6h",
+            "Authorization": "Bearer ZabckP668dafveg13EDh5V4",
             "Content-Type": "application/json",
             "Accept": "application/json",
         }
@@ -1403,7 +1403,7 @@ $response = $client-&gt;put(
     'http://localhost:8000/api/categories/1',
     [
         'headers' =&gt; [
-            'Authorization' =&gt; 'Bearer 58ge3faZbDvEk64c1VPad6h',
+            'Authorization' =&gt; 'Bearer ZabckP668dafveg13EDh5V4',
             'Content-Type' =&gt; 'application/json',
             'Accept' =&gt; 'application/json',
         ],
@@ -1427,7 +1427,7 @@ payload = {
     "description": "State-of-the-art technological products"
 }
 headers = {
-  'Authorization': 'Bearer 58ge3faZbDvEk64c1VPad6h',
+  'Authorization': 'Bearer ZabckP668dafveg13EDh5V4',
   'Content-Type': 'application/json',
   'Accept': 'application/json'
 }
@@ -1454,7 +1454,7 @@ response.json()</code></pre></div>
       data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
-      data-headers='{"Authorization":"Bearer 58ge3faZbDvEk64c1VPad6h","Content-Type":"application\/json","Accept":"application\/json"}'
+      data-headers='{"Authorization":"Bearer ZabckP668dafveg13EDh5V4","Content-Type":"application\/json","Accept":"application\/json"}'
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('PUTapi-categories--id-', this);">
     <h3>
@@ -1543,7 +1543,7 @@ response.json()</code></pre></div>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
     "http://localhost:8000/api/products" \
-    --header "Authorization: Bearer ak4c3aP6bZdv8gf6V5EehD1" \
+    --header "Authorization: Bearer Z66De3PfVaEcghdv4851kba" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
     --form "name=Glass" \
@@ -1551,8 +1551,8 @@ response.json()</code></pre></div>
     --form "price=33" \
     --form "weight=2" \
     --form "stock=34" \
-    --form "thumbnail=@/tmp/phpLPj1zZ" \
-    --form "images[]=@/tmp/phpNYeibZ" </code></pre></div>
+    --form "thumbnail=@/tmp/phpsd7krN" \
+    --form "images[]=@/tmp/phpjgJwBP" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -1561,7 +1561,7 @@ response.json()</code></pre></div>
 );
 
 const headers = {
-    "Authorization": "Bearer ak4c3aP6bZdv8gf6V5EehD1",
+    "Authorization": "Bearer Z66De3PfVaEcghdv4851kba",
     "Content-Type": "multipart/form-data",
     "Accept": "application/json",
 };
@@ -1594,7 +1594,7 @@ require 'rest-client'
     "stock": 34
 }
     headers = {
-            "Authorization": "Bearer ak4c3aP6bZdv8gf6V5EehD1",
+            "Authorization": "Bearer Z66De3PfVaEcghdv4851kba",
             "Content-Type": "multipart/form-data",
             "Accept": "application/json",
         }
@@ -1615,7 +1615,7 @@ $response = $client-&gt;post(
     'http://localhost:8000/api/products',
     [
         'headers' =&gt; [
-            'Authorization' =&gt; 'Bearer ak4c3aP6bZdv8gf6V5EehD1',
+            'Authorization' =&gt; 'Bearer Z66De3PfVaEcghdv4851kba',
             'Content-Type' =&gt; 'multipart/form-data',
             'Accept' =&gt; 'application/json',
         ],
@@ -1642,11 +1642,11 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'thumbnail',
-                'contents' =&gt; fopen('/tmp/phpLPj1zZ', 'r')
+                'contents' =&gt; fopen('/tmp/phpsd7krN', 'r')
             ],
             [
                 'name' =&gt; 'images[]',
-                'contents' =&gt; fopen('/tmp/phpNYeibZ', 'r')
+                'contents' =&gt; fopen('/tmp/phpjgJwBP', 'r')
             ],
         ],
     ]
@@ -1661,8 +1661,8 @@ import json
 
 url = 'http://localhost:8000/api/products'
 files = {
-  'thumbnail': open('/tmp/phpLPj1zZ', 'rb'),
-  'images[]': open('/tmp/phpNYeibZ', 'rb')
+  'thumbnail': open('/tmp/phpsd7krN', 'rb'),
+  'images[]': open('/tmp/phpjgJwBP', 'rb')
 }
 payload = {
     "name": "Glass",
@@ -1672,7 +1672,7 @@ payload = {
     "stock": 34
 }
 headers = {
-  'Authorization': 'Bearer ak4c3aP6bZdv8gf6V5EehD1',
+  'Authorization': 'Bearer Z66De3PfVaEcghdv4851kba',
   'Content-Type': 'multipart/form-data',
   'Accept': 'application/json'
 }
@@ -1699,7 +1699,7 @@ response.json()</code></pre></div>
       data-authed="1"
       data-hasfiles="1"
       data-isarraybody="0"
-      data-headers='{"Authorization":"Bearer ak4c3aP6bZdv8gf6V5EehD1","Content-Type":"multipart\/form-data","Accept":"application\/json"}'
+      data-headers='{"Authorization":"Bearer Z66De3PfVaEcghdv4851kba","Content-Type":"multipart\/form-data","Accept":"application\/json"}'
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('POSTapi-products', this);">
     <h3>
@@ -1822,7 +1822,7 @@ response.json()</code></pre></div>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
     "http://localhost:8000/api/products/1" \
-    --header "Authorization: Bearer E5eP13bVh6gf6Zv4ka8caDd" \
+    --header "Authorization: Bearer PacgaVvE86531e46kDhbdfZ" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
     --form "name=Glass" \
@@ -1830,7 +1830,7 @@ response.json()</code></pre></div>
     --form "price=33" \
     --form "weight=2" \
     --form "stock=34" \
-    --form "thumbnail=@/tmp/phpXJuRjX" </code></pre></div>
+    --form "thumbnail=@/tmp/phpMcA1WN" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -1839,7 +1839,7 @@ response.json()</code></pre></div>
 );
 
 const headers = {
-    "Authorization": "Bearer E5eP13bVh6gf6Zv4ka8caDd",
+    "Authorization": "Bearer PacgaVvE86531e46kDhbdfZ",
     "Content-Type": "multipart/form-data",
     "Accept": "application/json",
 };
@@ -1871,7 +1871,7 @@ require 'rest-client'
     "stock": 34
 }
     headers = {
-            "Authorization": "Bearer E5eP13bVh6gf6Zv4ka8caDd",
+            "Authorization": "Bearer PacgaVvE86531e46kDhbdfZ",
             "Content-Type": "multipart/form-data",
             "Accept": "application/json",
         }
@@ -1892,7 +1892,7 @@ $response = $client-&gt;put(
     'http://localhost:8000/api/products/1',
     [
         'headers' =&gt; [
-            'Authorization' =&gt; 'Bearer E5eP13bVh6gf6Zv4ka8caDd',
+            'Authorization' =&gt; 'Bearer PacgaVvE86531e46kDhbdfZ',
             'Content-Type' =&gt; 'multipart/form-data',
             'Accept' =&gt; 'application/json',
         ],
@@ -1919,7 +1919,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'thumbnail',
-                'contents' =&gt; fopen('/tmp/phpXJuRjX', 'r')
+                'contents' =&gt; fopen('/tmp/phpMcA1WN', 'r')
             ],
         ],
     ]
@@ -1934,7 +1934,7 @@ import json
 
 url = 'http://localhost:8000/api/products/1'
 files = {
-  'thumbnail': open('/tmp/phpXJuRjX', 'rb')
+  'thumbnail': open('/tmp/phpMcA1WN', 'rb')
 }
 payload = {
     "name": "Glass",
@@ -1944,7 +1944,7 @@ payload = {
     "stock": 34
 }
 headers = {
-  'Authorization': 'Bearer E5eP13bVh6gf6Zv4ka8caDd',
+  'Authorization': 'Bearer PacgaVvE86531e46kDhbdfZ',
   'Content-Type': 'multipart/form-data',
   'Accept': 'application/json'
 }
@@ -1971,7 +1971,7 @@ response.json()</code></pre></div>
       data-authed="1"
       data-hasfiles="1"
       data-isarraybody="0"
-      data-headers='{"Authorization":"Bearer E5eP13bVh6gf6Zv4ka8caDd","Content-Type":"multipart\/form-data","Accept":"application\/json"}'
+      data-headers='{"Authorization":"Bearer PacgaVvE86531e46kDhbdfZ","Content-Type":"multipart\/form-data","Accept":"application\/json"}'
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('PUTapi-products--id-', this);">
     <h3>
@@ -2095,19 +2095,19 @@ response.json()</code></pre></div>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/products/6" \
-    --header "Authorization: Bearer V6vk54DdE13Zfeha8acg6Pb" \
+    "http://localhost:8000/api/products/14" \
+    --header "Authorization: Bearer va354kbgd1acZhfe68DE6PV" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/products/6"
+    "http://localhost:8000/api/products/14"
 );
 
 const headers = {
-    "Authorization": "Bearer V6vk54DdE13Zfeha8acg6Pb",
+    "Authorization": "Bearer va354kbgd1acZhfe68DE6PV",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -2123,13 +2123,13 @@ fetch(url, {
 require 'rest-client'
 
     headers = {
-            "Authorization": "Bearer V6vk54DdE13Zfeha8acg6Pb",
+            "Authorization": "Bearer va354kbgd1acZhfe68DE6PV",
             "Content-Type": "application/json",
             "Accept": "application/json",
         }
 
 response = RestClient.delete(
-'http://localhost:8000/api/products/6',
+'http://localhost:8000/api/products/14',
 headers
 )
 
@@ -2140,10 +2140,10 @@ p response.body
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;delete(
-    'http://localhost:8000/api/products/6',
+    'http://localhost:8000/api/products/14',
     [
         'headers' =&gt; [
-            'Authorization' =&gt; 'Bearer V6vk54DdE13Zfeha8acg6Pb',
+            'Authorization' =&gt; 'Bearer va354kbgd1acZhfe68DE6PV',
             'Content-Type' =&gt; 'application/json',
             'Accept' =&gt; 'application/json',
         ],
@@ -2157,9 +2157,9 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/products/6'
+url = 'http://localhost:8000/api/products/14'
 headers = {
-  'Authorization': 'Bearer V6vk54DdE13Zfeha8acg6Pb',
+  'Authorization': 'Bearer va354kbgd1acZhfe68DE6PV',
   'Content-Type': 'application/json',
   'Accept': 'application/json'
 }
@@ -2186,7 +2186,7 @@ response.json()</code></pre></div>
       data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
-      data-headers='{"Authorization":"Bearer V6vk54DdE13Zfeha8acg6Pb","Content-Type":"application\/json","Accept":"application\/json"}'
+      data-headers='{"Authorization":"Bearer va354kbgd1acZhfe68DE6PV","Content-Type":"application\/json","Accept":"application\/json"}'
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('DELETEapi-products--id-', this);">
     <h3>
@@ -2224,7 +2224,7 @@ response.json()</code></pre></div>
                 <input type="number"
                name="id"
                data-endpoint="DELETEapi-products--id-"
-               value="6"
+               value="14"
                data-component="url" hidden>
     <br>
 <p>The ID of the product.</p>

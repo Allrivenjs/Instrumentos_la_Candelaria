@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Gloudemans\Shoppingcart\Contracts\InstanceIdentifier;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -9,14 +10,16 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Passport\HasApiTokens;
+use Spatie\Permission\Traits\HasRoles;
 
-class User extends Authenticatable
+class User extends Authenticatable implements InstanceIdentifier
 {
     use HasApiTokens;
     use HasFactory;
     use HasProfilePhoto;
     use Notifiable;
     use TwoFactorAuthenticatable;
+    use HasRoles;
 
     /**
      * The attributes that are mass assignable.
@@ -58,4 +61,24 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    /**
+     * Get the unique identifier to load the Cart from
+     *
+     * @return int|string
+     */
+    public function getInstanceIdentifier($options = null)
+    {
+        return $this->email;
+    }
+
+    /**
+     * Get the unique identifier to load the Cart from
+     *
+     * @return int|string
+     */
+    public function getInstanceGlobalDiscount($options = null)
+    {
+        return $this->discountRate ?: 0;
+    }
 }

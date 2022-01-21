@@ -100,7 +100,7 @@ paths:
           in: header
           name: Authorization
           description: ''
-          example: 'Bearer 5a8dfehPg1V64kb6EvDc3aZ'
+          example: 'Bearer PfDga8E4ahcd616V3kv5beZ'
           schema:
             type: string
         -
@@ -172,7 +172,7 @@ paths:
           in: header
           name: Authorization
           description: ''
-          example: 'Bearer 8vf6aPg1eb6dk5c3ahDZEV4'
+          example: 'Bearer 85Zka346PEDcdavegVb16hf'
           schema:
             type: string
         -
@@ -263,7 +263,7 @@ paths:
           in: header
           name: Authorization
           description: ''
-          example: 'Bearer 36Efhdvc8a64eZDbV1a5Pkg'
+          example: 'Bearer 68c6fgk1PahVdv3EZa45bDe'
           schema:
             type: string
         -
@@ -291,7 +291,7 @@ paths:
           in: header
           name: Authorization
           description: ''
-          example: 'Bearer 58ge3faZbDvEk64c1VPad6h'
+          example: 'Bearer ZabckP668dafveg13EDh5V4'
           schema:
             type: string
         -
@@ -334,7 +334,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the category.'
-        example: 7
+        example: 20
         required: true
         schema:
           type: integer
@@ -347,7 +347,7 @@ paths:
           in: header
           name: Authorization
           description: ''
-          example: 'Bearer ak4c3aP6bZdv8gf6V5EehD1'
+          example: 'Bearer Z66De3PfVaEcghdv4851kba'
           schema:
             type: string
         -
@@ -1112,7 +1112,7 @@ paths:
           in: header
           name: Authorization
           description: ''
-          example: 'Bearer E5eP13bVh6gf6Zv4ka8caDd'
+          example: 'Bearer PacgaVvE86531e46kDhbdfZ'
           schema:
             type: string
         -
@@ -1178,7 +1178,7 @@ paths:
           in: header
           name: Authorization
           description: ''
-          example: 'Bearer V6vk54DdE13Zfeha8acg6Pb'
+          example: 'Bearer va354kbgd1acZhfe68DE6PV'
           schema:
             type: string
         -

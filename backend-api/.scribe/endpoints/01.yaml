@@ -40,7 +40,7 @@ endpoints:
       authenticated: true
       custom: []
     headers:
-      Authorization: 'Bearer 8vf6aPg1eb6dk5c3ahDZEV4'
+      Authorization: 'Bearer 85Zka346PEDcdavegVb16hf'
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
@@ -79,7 +79,7 @@ endpoints:
         name: id
         description: 'The ID of the category.'
         required: true
-        example: 7
+        example: 20
         type: integer
         custom: []
     queryParameters: []
@@ -106,7 +106,7 @@ endpoints:
       authenticated: true
       custom: []
     headers:
-      Authorization: 'Bearer 36Efhdvc8a64eZDbV1a5Pkg'
+      Authorization: 'Bearer 68c6fgk1PahVdv3EZa45bDe'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -114,7 +114,7 @@ endpoints:
         name: id
         description: 'The ID of the category.'
         required: true
-        example: 9
+        example: 14
         type: integer
         custom: []
     queryParameters: []
@@ -132,7 +132,7 @@ endpoints:
       authenticated: true
       custom: []
     headers:
-      Authorization: 'Bearer 58ge3faZbDvEk64c1VPad6h'
+      Authorization: 'Bearer ZabckP668dafveg13EDh5V4'
       Content-Type: application/json
       Accept: application/json
     urlParameters:

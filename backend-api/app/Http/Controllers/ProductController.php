@@ -33,13 +33,17 @@ class ProductController extends Controller
      *
      *@unauthenticated
      *
-     * @return \Illuminate\Http\JsonResponse|ResourceCollection|object
+     * @return \Illuminate\Http\JsonResponse|ResourceCollection
      *
      */
     public function index()
     {
-        return (ProductResource::collection(Product::with(['user', 'images'])->paginate(8)))->response()
-        ->setStatusCode(Response::HTTP_OK);
+        return (ProductResource::collection(Product::with(['user', 'images', 'categories'])
+            ->orderByDesc('id')
+            ->paginate(8)))
+            ->response()
+            ->setStatusCode(Response::HTTP_OK)
+            ->getData(true);
     }
 
 

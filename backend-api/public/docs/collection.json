@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Api resource of Ecommer's",
-        "_postman_id": "967748f8-f99f-4dea-b6a4-cda22d490a0a",
+        "_postman_id": "8c8f5655-4b40-4293-a562-5cde0a4c049c",
         "description": "Api template for ecommer's basic",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -208,7 +208,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "7",
+                                    "value": "20",
                                     "description": "The ID of the category."
                                 }
                             ]
@@ -272,7 +272,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "9",
+                                    "value": "14",
                                     "description": "The ID of the category."
                                 }
                             ]
@@ -478,7 +478,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "6",
+                                    "value": "14",
                                     "description": "The ID of the product."
                                 }
                             ]
