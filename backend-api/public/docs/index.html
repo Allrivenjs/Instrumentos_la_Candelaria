@@ -145,7 +145,7 @@
                             <li><a href="http://github.com/knuckleswtf/scribe">Documentation powered by Scribe ✍</a></li>
                     </ul>
         <ul class="toc-footer" id="last-updated">
-        <li>Last updated: January 20 2022</li>
+        <li>Last updated: January 21 2022</li>
     </ul>
 </div>
 
@@ -163,7 +163,7 @@ This api is written in PHP-laravel, and it is based on the structure of a basic 
 <pre><code class="language-yaml">http://localhost:8000</code></pre>
 
         <h1 id="authenticating-requests">Authenticating requests</h1>
-<p>This API is authenticated by sending an <strong><code>Authorization</code></strong> header with the value <strong><code>"Bearer your-token"</code></strong>.</p>
+<p>To authenticate requests, include an <strong><code>Authorization</code></strong> header with the value <strong><code>"Bearer your-token"</code></strong>.</p>
 <p>All authenticated endpoints are marked with a <code>requires authentication</code> badge in the documentation below.</p>
 <p>You can retrieve your token by visiting your dashboard and clicking <b>Generate API token</b>.</p>
 
@@ -545,7 +545,7 @@ response.json()</code></pre></div>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
     "http://localhost:8000/api/auth/logout" \
-    --header "Authorization: Bearer 3e6ck5vPbf16daZDg48aVhE" \
+    --header "Authorization: Bearer 5a8dfehPg1V64kb6EvDc3aZ" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -556,7 +556,7 @@ response.json()</code></pre></div>
 );
 
 const headers = {
-    "Authorization": "Bearer 3e6ck5vPbf16daZDg48aVhE",
+    "Authorization": "Bearer 5a8dfehPg1V64kb6EvDc3aZ",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -572,7 +572,7 @@ fetch(url, {
 require 'rest-client'
 
     headers = {
-            "Authorization": "Bearer 3e6ck5vPbf16daZDg48aVhE",
+            "Authorization": "Bearer 5a8dfehPg1V64kb6EvDc3aZ",
             "Content-Type": "application/json",
             "Accept": "application/json",
         }
@@ -592,7 +592,7 @@ $response = $client-&gt;post(
     'http://localhost:8000/api/auth/logout',
     [
         'headers' =&gt; [
-            'Authorization' =&gt; 'Bearer 3e6ck5vPbf16daZDg48aVhE',
+            'Authorization' =&gt; 'Bearer 5a8dfehPg1V64kb6EvDc3aZ',
             'Content-Type' =&gt; 'application/json',
             'Accept' =&gt; 'application/json',
         ],
@@ -608,7 +608,7 @@ import json
 
 url = 'http://localhost:8000/api/auth/logout'
 headers = {
-  'Authorization': 'Bearer 3e6ck5vPbf16daZDg48aVhE',
+  'Authorization': 'Bearer 5a8dfehPg1V64kb6EvDc3aZ',
   'Content-Type': 'application/json',
   'Accept': 'application/json'
 }
@@ -635,7 +635,7 @@ response.json()</code></pre></div>
       data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
-      data-headers='{"Authorization":"Bearer 3e6ck5vPbf16daZDg48aVhE","Content-Type":"application\/json","Accept":"application\/json"}'
+      data-headers='{"Authorization":"Bearer 5a8dfehPg1V64kb6EvDc3aZ","Content-Type":"application\/json","Accept":"application\/json"}'
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('POSTapi-auth-logout', this);">
     <h3>
@@ -766,12 +766,27 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 53
+x-ratelimit-remaining: 57
 access-control-allow-origin: *
  </code></pre>
         </details>         <pre>
 
-<code class="language-json">[]</code>
+<code class="language-json">[
+    {
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot;admin&quot;,
+        &quot;description&quot;: &quot;admin&quot;,
+        &quot;created_at&quot;: &quot;2022-01-21T01:40:14.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-01-21T01:40:14.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 2,
+        &quot;name&quot;: &quot;admin&quot;,
+        &quot;description&quot;: &quot;admin&quot;,
+        &quot;created_at&quot;: &quot;2022-01-21T01:49:06.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-01-21T01:49:06.000000Z&quot;
+    }
+]</code>
  </pre>
     </span>
 <span id="execution-results-GETapi-categories" hidden>
@@ -830,7 +845,7 @@ access-control-allow-origin: *
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
     "http://localhost:8000/api/categories" \
-    --header "Authorization: Bearer Pdgh6k3eDZ14EavV58a6bfc" \
+    --header "Authorization: Bearer 8vf6aPg1eb6dk5c3ahDZEV4" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -846,7 +861,7 @@ access-control-allow-origin: *
 );
 
 const headers = {
-    "Authorization": "Bearer Pdgh6k3eDZ14EavV58a6bfc",
+    "Authorization": "Bearer 8vf6aPg1eb6dk5c3ahDZEV4",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -872,7 +887,7 @@ require 'rest-client'
     "description": "State-of-the-art technological products"
 }
     headers = {
-            "Authorization": "Bearer Pdgh6k3eDZ14EavV58a6bfc",
+            "Authorization": "Bearer 8vf6aPg1eb6dk5c3ahDZEV4",
             "Content-Type": "application/json",
             "Accept": "application/json",
         }
@@ -893,7 +908,7 @@ $response = $client-&gt;post(
     'http://localhost:8000/api/categories',
     [
         'headers' =&gt; [
-            'Authorization' =&gt; 'Bearer Pdgh6k3eDZ14EavV58a6bfc',
+            'Authorization' =&gt; 'Bearer 8vf6aPg1eb6dk5c3ahDZEV4',
             'Content-Type' =&gt; 'application/json',
             'Accept' =&gt; 'application/json',
         ],
@@ -917,7 +932,7 @@ payload = {
     "description": "State-of-the-art technological products"
 }
 headers = {
-  'Authorization': 'Bearer Pdgh6k3eDZ14EavV58a6bfc',
+  'Authorization': 'Bearer 8vf6aPg1eb6dk5c3ahDZEV4',
   'Content-Type': 'application/json',
   'Accept': 'application/json'
 }
@@ -944,7 +959,7 @@ response.json()</code></pre></div>
       data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
-      data-headers='{"Authorization":"Bearer Pdgh6k3eDZ14EavV58a6bfc","Content-Type":"application\/json","Accept":"application\/json"}'
+      data-headers='{"Authorization":"Bearer 8vf6aPg1eb6dk5c3ahDZEV4","Content-Type":"application\/json","Accept":"application\/json"}'
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('POSTapi-categories', this);">
     <h3>
@@ -1012,14 +1027,14 @@ response.json()</code></pre></div>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/categories/1" \
+    --get "http://localhost:8000/api/categories/7" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/categories/1"
+    "http://localhost:8000/api/categories/7"
 );
 
 const headers = {
@@ -1043,7 +1058,7 @@ require 'rest-client'
         }
 
 response = RestClient.get(
-'http://localhost:8000/api/categories/1',
+'http://localhost:8000/api/categories/7',
 headers
 )
 
@@ -1054,7 +1069,7 @@ p response.body
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/categories/1',
+    'http://localhost:8000/api/categories/7',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -1070,7 +1085,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/categories/1'
+url = 'http://localhost:8000/api/categories/7'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -1083,7 +1098,7 @@ response.json()</code></pre></div>
 
 <span id="example-responses-GETapi-categories--id-">
             <blockquote>
-            <p>Example response (404):</p>
+            <p>Example response (200):</p>
         </blockquote>
                 <details class="annotation">
             <summary>
@@ -1092,424 +1107,19 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 52
+x-ratelimit-remaining: 56
 access-control-allow-origin: *
  </code></pre>
         </details>         <pre>
 
 <code class="language-json">{
-    &quot;message&quot;: &quot;No query results for model [App\\Models\\Category] 1&quot;,
-    &quot;exception&quot;: &quot;Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException&quot;,
-    &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php&quot;,
-    &quot;line&quot;: 385,
-    &quot;trace&quot;: [
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php&quot;,
-            &quot;line&quot;: 332,
-            &quot;function&quot;: &quot;prepareException&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Exceptions\\Handler&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/nunomaduro/collision/src/Adapters/Laravel/ExceptionHandler.php&quot;,
-            &quot;line&quot;: 54,
-            &quot;function&quot;: &quot;render&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Exceptions\\Handler&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php&quot;,
-            &quot;line&quot;: 51,
-            &quot;function&quot;: &quot;render&quot;,
-            &quot;class&quot;: &quot;NunoMaduro\\Collision\\Adapters\\Laravel\\ExceptionHandler&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 172,
-            &quot;function&quot;: &quot;handleException&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php&quot;,
-            &quot;line&quot;: 127,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php&quot;,
-            &quot;line&quot;: 103,
-            &quot;function&quot;: &quot;handleRequest&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php&quot;,
-            &quot;line&quot;: 55,
-            &quot;function&quot;: &quot;handleRequestUsingNamedLimiter&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 167,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 103,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
-            &quot;line&quot;: 723,
-            &quot;function&quot;: &quot;then&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
-            &quot;line&quot;: 698,
-            &quot;function&quot;: &quot;runRouteWithinStack&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
-            &quot;line&quot;: 662,
-            &quot;function&quot;: &quot;runRoute&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
-            &quot;line&quot;: 651,
-            &quot;function&quot;: &quot;dispatchToRoute&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php&quot;,
-            &quot;line&quot;: 167,
-            &quot;function&quot;: &quot;dispatch&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 128,
-            &quot;function&quot;: &quot;Illuminate\\Foundation\\Http\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php&quot;,
-            &quot;line&quot;: 21,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php&quot;,
-            &quot;line&quot;: 31,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 167,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php&quot;,
-            &quot;line&quot;: 21,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php&quot;,
-            &quot;line&quot;: 40,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 167,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TrimStrings&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php&quot;,
-            &quot;line&quot;: 27,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 167,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php&quot;,
-            &quot;line&quot;: 86,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 167,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/fruitcake/laravel-cors/src/HandleCors.php&quot;,
-            &quot;line&quot;: 52,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 167,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Fruitcake\\Cors\\HandleCors&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php&quot;,
-            &quot;line&quot;: 39,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 167,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\TrustProxies&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 103,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php&quot;,
-            &quot;line&quot;: 142,
-            &quot;function&quot;: &quot;then&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php&quot;,
-            &quot;line&quot;: 111,
-            &quot;function&quot;: &quot;sendRequestThroughRouter&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
-            &quot;line&quot;: 299,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
-            &quot;line&quot;: 287,
-            &quot;function&quot;: &quot;callLaravelOrLumenRoute&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
-            &quot;line&quot;: 89,
-            &quot;function&quot;: &quot;makeApiCall&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
-            &quot;line&quot;: 45,
-            &quot;function&quot;: &quot;makeResponseCall&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
-            &quot;line&quot;: 35,
-            &quot;function&quot;: &quot;makeResponseCallIfConditionsPass&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php&quot;,
-            &quot;line&quot;: 222,
-            &quot;function&quot;: &quot;__invoke&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php&quot;,
-            &quot;line&quot;: 179,
-            &quot;function&quot;: &quot;iterateThroughStrategies&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php&quot;,
-            &quot;line&quot;: 116,
-            &quot;function&quot;: &quot;fetchResponses&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php&quot;,
-            &quot;line&quot;: 117,
-            &quot;function&quot;: &quot;processRoute&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php&quot;,
-            &quot;line&quot;: 75,
-            &quot;function&quot;: &quot;extractEndpointsInfoFromLaravelApp&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php&quot;,
-            &quot;line&quot;: 51,
-            &quot;function&quot;: &quot;extractEndpointsInfoAndWriteToDisk&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php&quot;,
-            &quot;line&quot;: 48,
-            &quot;function&quot;: &quot;get&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php&quot;,
-            &quot;line&quot;: 36,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Commands\\GenerateDocumentation&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Container/Util.php&quot;,
-            &quot;line&quot;: 40,
-            &quot;function&quot;: &quot;Illuminate\\Container\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php&quot;,
-            &quot;line&quot;: 93,
-            &quot;function&quot;: &quot;unwrapIfClosure&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\Util&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php&quot;,
-            &quot;line&quot;: 37,
-            &quot;function&quot;: &quot;callBoundMethod&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Container/Container.php&quot;,
-            &quot;line&quot;: 653,
-            &quot;function&quot;: &quot;call&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Console/Command.php&quot;,
-            &quot;line&quot;: 136,
-            &quot;function&quot;: &quot;call&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\Container&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/symfony/console/Command/Command.php&quot;,
-            &quot;line&quot;: 298,
-            &quot;function&quot;: &quot;execute&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Console/Command.php&quot;,
-            &quot;line&quot;: 121,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Command\\Command&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/symfony/console/Application.php&quot;,
-            &quot;line&quot;: 1005,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/symfony/console/Application.php&quot;,
-            &quot;line&quot;: 299,
-            &quot;function&quot;: &quot;doRunCommand&quot;,
-            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/symfony/console/Application.php&quot;,
-            &quot;line&quot;: 171,
-            &quot;function&quot;: &quot;doRun&quot;,
-            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Console/Application.php&quot;,
-            &quot;line&quot;: 94,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php&quot;,
-            &quot;line&quot;: 129,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Console\\Application&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/allrivenjs/Programacion/Instrumentos_la_Candelaria/backend-api/artisan&quot;,
-            &quot;line&quot;: 37,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Console\\Kernel&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        }
-    ]
+    &quot;data&quot;: {
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot;admin&quot;,
+        &quot;description&quot;: &quot;admin&quot;,
+        &quot;created_at&quot;: &quot;2022-01-21T01:40:14.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-01-21T01:40:14.000000Z&quot;
+    }
 }</code>
  </pre>
     </span>
@@ -1558,7 +1168,7 @@ access-control-allow-origin: *
                 <input type="number"
                name="id"
                data-endpoint="GETapi-categories--id-"
-               value="1"
+               value="7"
                data-component="url" hidden>
     <br>
 <p>The ID of the category.</p>
@@ -1579,19 +1189,19 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/categories/5" \
-    --header "Authorization: Bearer 14Pdv5E3cekaVZfh68bDa6g" \
+    "http://localhost:8000/api/categories/9" \
+    --header "Authorization: Bearer 36Efhdvc8a64eZDbV1a5Pkg" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/categories/5"
+    "http://localhost:8000/api/categories/9"
 );
 
 const headers = {
-    "Authorization": "Bearer 14Pdv5E3cekaVZfh68bDa6g",
+    "Authorization": "Bearer 36Efhdvc8a64eZDbV1a5Pkg",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -1607,13 +1217,13 @@ fetch(url, {
 require 'rest-client'
 
     headers = {
-            "Authorization": "Bearer 14Pdv5E3cekaVZfh68bDa6g",
+            "Authorization": "Bearer 36Efhdvc8a64eZDbV1a5Pkg",
             "Content-Type": "application/json",
             "Accept": "application/json",
         }
 
 response = RestClient.delete(
-'http://localhost:8000/api/categories/5',
+'http://localhost:8000/api/categories/9',
 headers
 )
 
@@ -1624,10 +1234,10 @@ p response.body
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;delete(
-    'http://localhost:8000/api/categories/5',
+    'http://localhost:8000/api/categories/9',
     [
         'headers' =&gt; [
-            'Authorization' =&gt; 'Bearer 14Pdv5E3cekaVZfh68bDa6g',
+            'Authorization' =&gt; 'Bearer 36Efhdvc8a64eZDbV1a5Pkg',
             'Content-Type' =&gt; 'application/json',
             'Accept' =&gt; 'application/json',
         ],
@@ -1641,9 +1251,9 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/categories/5'
+url = 'http://localhost:8000/api/categories/9'
 headers = {
-  'Authorization': 'Bearer 14Pdv5E3cekaVZfh68bDa6g',
+  'Authorization': 'Bearer 36Efhdvc8a64eZDbV1a5Pkg',
   'Content-Type': 'application/json',
   'Accept': 'application/json'
 }
@@ -1670,7 +1280,7 @@ response.json()</code></pre></div>
       data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
-      data-headers='{"Authorization":"Bearer 14Pdv5E3cekaVZfh68bDa6g","Content-Type":"application\/json","Accept":"application\/json"}'
+      data-headers='{"Authorization":"Bearer 36Efhdvc8a64eZDbV1a5Pkg","Content-Type":"application\/json","Accept":"application\/json"}'
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('DELETEapi-categories--id-', this);">
     <h3>
@@ -1708,7 +1318,7 @@ response.json()</code></pre></div>
                 <input type="number"
                name="id"
                data-endpoint="DELETEapi-categories--id-"
-               value="5"
+               value="9"
                data-component="url" hidden>
     <br>
 <p>The ID of the category.</p>
@@ -1730,7 +1340,7 @@ response.json()</code></pre></div>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
     "http://localhost:8000/api/categories/1" \
-    --header "Authorization: Bearer 65ce68ZdVPgEfbkh4av3D1a" \
+    --header "Authorization: Bearer 58ge3faZbDvEk64c1VPad6h" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -1746,7 +1356,7 @@ response.json()</code></pre></div>
 );
 
 const headers = {
-    "Authorization": "Bearer 65ce68ZdVPgEfbkh4av3D1a",
+    "Authorization": "Bearer 58ge3faZbDvEk64c1VPad6h",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -1772,7 +1382,7 @@ require 'rest-client'
     "description": "State-of-the-art technological products"
 }
     headers = {
-            "Authorization": "Bearer 65ce68ZdVPgEfbkh4av3D1a",
+            "Authorization": "Bearer 58ge3faZbDvEk64c1VPad6h",
             "Content-Type": "application/json",
             "Accept": "application/json",
         }
@@ -1793,7 +1403,7 @@ $response = $client-&gt;put(
     'http://localhost:8000/api/categories/1',
     [
         'headers' =&gt; [
-            'Authorization' =&gt; 'Bearer 65ce68ZdVPgEfbkh4av3D1a',
+            'Authorization' =&gt; 'Bearer 58ge3faZbDvEk64c1VPad6h',
             'Content-Type' =&gt; 'application/json',
             'Accept' =&gt; 'application/json',
         ],
@@ -1817,7 +1427,7 @@ payload = {
     "description": "State-of-the-art technological products"
 }
 headers = {
-  'Authorization': 'Bearer 65ce68ZdVPgEfbkh4av3D1a',
+  'Authorization': 'Bearer 58ge3faZbDvEk64c1VPad6h',
   'Content-Type': 'application/json',
   'Accept': 'application/json'
 }
@@ -1844,7 +1454,7 @@ response.json()</code></pre></div>
       data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
-      data-headers='{"Authorization":"Bearer 65ce68ZdVPgEfbkh4av3D1a","Content-Type":"application\/json","Accept":"application\/json"}'
+      data-headers='{"Authorization":"Bearer 58ge3faZbDvEk64c1VPad6h","Content-Type":"application\/json","Accept":"application\/json"}'
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('PUTapi-categories--id-', this);">
     <h3>
@@ -1933,7 +1543,7 @@ response.json()</code></pre></div>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
     "http://localhost:8000/api/products" \
-    --header "Authorization: Bearer ckdP56Dhg8v1aeVf64bZa3E" \
+    --header "Authorization: Bearer ak4c3aP6bZdv8gf6V5EehD1" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
     --form "name=Glass" \
@@ -1941,8 +1551,8 @@ response.json()</code></pre></div>
     --form "price=33" \
     --form "weight=2" \
     --form "stock=34" \
-    --form "thumbnail=@/tmp/phpfOOigC" \
-    --form "images[]=@/tmp/phpWAq3aD" </code></pre></div>
+    --form "thumbnail=@/tmp/phpLPj1zZ" \
+    --form "images[]=@/tmp/phpNYeibZ" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -1951,7 +1561,7 @@ response.json()</code></pre></div>
 );
 
 const headers = {
-    "Authorization": "Bearer ckdP56Dhg8v1aeVf64bZa3E",
+    "Authorization": "Bearer ak4c3aP6bZdv8gf6V5EehD1",
     "Content-Type": "multipart/form-data",
     "Accept": "application/json",
 };
@@ -1984,7 +1594,7 @@ require 'rest-client'
     "stock": 34
 }
     headers = {
-            "Authorization": "Bearer ckdP56Dhg8v1aeVf64bZa3E",
+            "Authorization": "Bearer ak4c3aP6bZdv8gf6V5EehD1",
             "Content-Type": "multipart/form-data",
             "Accept": "application/json",
         }
@@ -2005,7 +1615,7 @@ $response = $client-&gt;post(
     'http://localhost:8000/api/products',
     [
         'headers' =&gt; [
-            'Authorization' =&gt; 'Bearer ckdP56Dhg8v1aeVf64bZa3E',
+            'Authorization' =&gt; 'Bearer ak4c3aP6bZdv8gf6V5EehD1',
             'Content-Type' =&gt; 'multipart/form-data',
             'Accept' =&gt; 'application/json',
         ],
@@ -2032,11 +1642,11 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'thumbnail',
-                'contents' =&gt; fopen('/tmp/phpfOOigC', 'r')
+                'contents' =&gt; fopen('/tmp/phpLPj1zZ', 'r')
             ],
             [
                 'name' =&gt; 'images[]',
-                'contents' =&gt; fopen('/tmp/phpWAq3aD', 'r')
+                'contents' =&gt; fopen('/tmp/phpNYeibZ', 'r')
             ],
         ],
     ]
@@ -2051,8 +1661,8 @@ import json
 
 url = 'http://localhost:8000/api/products'
 files = {
-  'thumbnail': open('/tmp/phpfOOigC', 'rb'),
-  'images[]': open('/tmp/phpWAq3aD', 'rb')
+  'thumbnail': open('/tmp/phpLPj1zZ', 'rb'),
+  'images[]': open('/tmp/phpNYeibZ', 'rb')
 }
 payload = {
     "name": "Glass",
@@ -2062,7 +1672,7 @@ payload = {
     "stock": 34
 }
 headers = {
-  'Authorization': 'Bearer ckdP56Dhg8v1aeVf64bZa3E',
+  'Authorization': 'Bearer ak4c3aP6bZdv8gf6V5EehD1',
   'Content-Type': 'multipart/form-data',
   'Accept': 'application/json'
 }
@@ -2089,7 +1699,7 @@ response.json()</code></pre></div>
       data-authed="1"
       data-hasfiles="1"
       data-isarraybody="0"
-      data-headers='{"Authorization":"Bearer ckdP56Dhg8v1aeVf64bZa3E","Content-Type":"multipart\/form-data","Accept":"application\/json"}'
+      data-headers='{"Authorization":"Bearer ak4c3aP6bZdv8gf6V5EehD1","Content-Type":"multipart\/form-data","Accept":"application\/json"}'
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('POSTapi-products', this);">
     <h3>
@@ -2212,7 +1822,7 @@ response.json()</code></pre></div>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
     "http://localhost:8000/api/products/1" \
-    --header "Authorization: Bearer Zvc1ab6P8D4dEea35gkVhf6" \
+    --header "Authorization: Bearer E5eP13bVh6gf6Zv4ka8caDd" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
     --form "name=Glass" \
@@ -2220,7 +1830,7 @@ response.json()</code></pre></div>
     --form "price=33" \
     --form "weight=2" \
     --form "stock=34" \
-    --form "thumbnail=@/tmp/phpprOIKE" </code></pre></div>
+    --form "thumbnail=@/tmp/phpXJuRjX" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -2229,7 +1839,7 @@ response.json()</code></pre></div>
 );
 
 const headers = {
-    "Authorization": "Bearer Zvc1ab6P8D4dEea35gkVhf6",
+    "Authorization": "Bearer E5eP13bVh6gf6Zv4ka8caDd",
     "Content-Type": "multipart/form-data",
     "Accept": "application/json",
 };
@@ -2261,7 +1871,7 @@ require 'rest-client'
     "stock": 34
 }
     headers = {
-            "Authorization": "Bearer Zvc1ab6P8D4dEea35gkVhf6",
+            "Authorization": "Bearer E5eP13bVh6gf6Zv4ka8caDd",
             "Content-Type": "multipart/form-data",
             "Accept": "application/json",
         }
@@ -2282,7 +1892,7 @@ $response = $client-&gt;put(
     'http://localhost:8000/api/products/1',
     [
         'headers' =&gt; [
-            'Authorization' =&gt; 'Bearer Zvc1ab6P8D4dEea35gkVhf6',
+            'Authorization' =&gt; 'Bearer E5eP13bVh6gf6Zv4ka8caDd',
             'Content-Type' =&gt; 'multipart/form-data',
             'Accept' =&gt; 'application/json',
         ],
@@ -2309,7 +1919,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'thumbnail',
-                'contents' =&gt; fopen('/tmp/phpprOIKE', 'r')
+                'contents' =&gt; fopen('/tmp/phpXJuRjX', 'r')
             ],
         ],
     ]
@@ -2324,7 +1934,7 @@ import json
 
 url = 'http://localhost:8000/api/products/1'
 files = {
-  'thumbnail': open('/tmp/phpprOIKE', 'rb')
+  'thumbnail': open('/tmp/phpXJuRjX', 'rb')
 }
 payload = {
     "name": "Glass",
@@ -2334,7 +1944,7 @@ payload = {
     "stock": 34
 }
 headers = {
-  'Authorization': 'Bearer Zvc1ab6P8D4dEea35gkVhf6',
+  'Authorization': 'Bearer E5eP13bVh6gf6Zv4ka8caDd',
   'Content-Type': 'multipart/form-data',
   'Accept': 'application/json'
 }
@@ -2361,7 +1971,7 @@ response.json()</code></pre></div>
       data-authed="1"
       data-hasfiles="1"
       data-isarraybody="0"
-      data-headers='{"Authorization":"Bearer Zvc1ab6P8D4dEea35gkVhf6","Content-Type":"multipart\/form-data","Accept":"application\/json"}'
+      data-headers='{"Authorization":"Bearer E5eP13bVh6gf6Zv4ka8caDd","Content-Type":"multipart\/form-data","Accept":"application\/json"}'
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('PUTapi-products--id-', this);">
     <h3>
@@ -2485,19 +2095,19 @@ response.json()</code></pre></div>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/products/10" \
-    --header "Authorization: Bearer kE61ev3Vf65gPadD4aZ8bhc" \
+    "http://localhost:8000/api/products/6" \
+    --header "Authorization: Bearer V6vk54DdE13Zfeha8acg6Pb" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/products/10"
+    "http://localhost:8000/api/products/6"
 );
 
 const headers = {
-    "Authorization": "Bearer kE61ev3Vf65gPadD4aZ8bhc",
+    "Authorization": "Bearer V6vk54DdE13Zfeha8acg6Pb",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -2513,13 +2123,13 @@ fetch(url, {
 require 'rest-client'
 
     headers = {
-            "Authorization": "Bearer kE61ev3Vf65gPadD4aZ8bhc",
+            "Authorization": "Bearer V6vk54DdE13Zfeha8acg6Pb",
             "Content-Type": "application/json",
             "Accept": "application/json",
         }
 
 response = RestClient.delete(
-'http://localhost:8000/api/products/10',
+'http://localhost:8000/api/products/6',
 headers
 )
 
@@ -2530,10 +2140,10 @@ p response.body
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;delete(
-    'http://localhost:8000/api/products/10',
+    'http://localhost:8000/api/products/6',
     [
         'headers' =&gt; [
-            'Authorization' =&gt; 'Bearer kE61ev3Vf65gPadD4aZ8bhc',
+            'Authorization' =&gt; 'Bearer V6vk54DdE13Zfeha8acg6Pb',
             'Content-Type' =&gt; 'application/json',
             'Accept' =&gt; 'application/json',
         ],
@@ -2547,9 +2157,9 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/products/10'
+url = 'http://localhost:8000/api/products/6'
 headers = {
-  'Authorization': 'Bearer kE61ev3Vf65gPadD4aZ8bhc',
+  'Authorization': 'Bearer V6vk54DdE13Zfeha8acg6Pb',
   'Content-Type': 'application/json',
   'Accept': 'application/json'
 }
@@ -2576,7 +2186,7 @@ response.json()</code></pre></div>
       data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
-      data-headers='{"Authorization":"Bearer kE61ev3Vf65gPadD4aZ8bhc","Content-Type":"application\/json","Accept":"application\/json"}'
+      data-headers='{"Authorization":"Bearer V6vk54DdE13Zfeha8acg6Pb","Content-Type":"application\/json","Accept":"application\/json"}'
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('DELETEapi-products--id-', this);">
     <h3>
@@ -2614,7 +2224,7 @@ response.json()</code></pre></div>
                 <input type="number"
                name="id"
                data-endpoint="DELETEapi-products--id-"
-               value="10"
+               value="6"
                data-component="url" hidden>
     <br>
 <p>The ID of the product.</p>
@@ -2714,7 +2324,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 55
+x-ratelimit-remaining: 59
 access-control-allow-origin: *
  </code></pre>
         </details>         <pre>
@@ -2723,337 +2333,345 @@ access-control-allow-origin: *
     &quot;data&quot;: [
         {
             &quot;id&quot;: 1,
-            &quot;sku&quot;: &quot;9793521858489&quot;,
-            &quot;name&quot;: &quot;Jed Predovic&quot;,
-            &quot;price&quot;: 166552,
-            &quot;weight&quot;: 4,
-            &quot;description&quot;: &quot;Cum numquam officiis ullam enim assumenda. Dolorum facilis consequatur dicta possimus quidem. Omnis labore maiores esse aut dolorem voluptatum tempora. Vel soluta odit quas voluptatem. Quaerat blanditiis vero aliquid eum. Facilis aut eos sit delectus expedita. Sed repellat ducimus quod. Eum quia hic ea aut molestias. Quam fugiat est officiis ex qui.&quot;,
-            &quot;thumbnail&quot;: &quot;storage/product/52fd1217246670e373ba362d3c31f95d.png&quot;,
-            &quot;stock&quot;: 41,
-            &quot;slug&quot;: &quot;jed-predovic&quot;,
-            &quot;user_id&quot;: 5,
-            &quot;created_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;,
+            &quot;sku&quot;: &quot;9799108954919&quot;,
+            &quot;name&quot;: &quot;Freda Bernhard&quot;,
+            &quot;price&quot;: 406211,
+            &quot;weight&quot;: 2,
+            &quot;description&quot;: &quot;Dolores harum et quae ad unde quidem. Tenetur earum dolore aut molestiae. Eum cupiditate aut illo nisi nam repellat perferendis. Laborum amet quam quis officiis facilis ut. Dolore numquam laborum illum mollitia qui. Rerum earum atque expedita doloremque ex non. Ducimus rerum modi aspernatur eos. Dolorum ut sit ex accusamus quia distinctio explicabo. Fuga et aperiam saepe rem. Deserunt iste perferendis laboriosam quia autem.&quot;,
+            &quot;thumbnail&quot;: &quot;storage/product/89604b536ad260a754655e12cd900e8d.png&quot;,
+            &quot;stock&quot;: 83,
+            &quot;slug&quot;: &quot;freda-bernhard&quot;,
+            &quot;user_id&quot;: 4,
+            &quot;created_at&quot;: &quot;2022-01-20T20:15:24.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-01-20T20:15:24.000000Z&quot;,
             &quot;user&quot;: {
-                &quot;id&quot;: 5,
-                &quot;name&quot;: &quot;Khalil Hermann&quot;,
-                &quot;email&quot;: &quot;fred.konopelski@example.com&quot;,
-                &quot;email_verified_at&quot;: &quot;2022-01-20T03:34:50.000000Z&quot;,
-                &quot;created_at&quot;: &quot;2022-01-20T03:34:50.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-01-20T03:34:50.000000Z&quot;
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Frederique Stamm&quot;,
+                &quot;email&quot;: &quot;ohara.ted@example.net&quot;,
+                &quot;email_verified_at&quot;: &quot;2022-01-20T20:15:18.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2022-01-20T20:15:19.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-01-20T20:15:19.000000Z&quot;,
+                &quot;profile_photo_url&quot;: &quot;https://ui-avatars.com/api/?name=F+S&amp;color=7F9CF5&amp;background=EBF4FF&quot;
             },
             &quot;image&quot;: [
                 {
                     &quot;id&quot;: 1,
-                    &quot;url&quot;: &quot;storage/product/98c38e14ee36d33e1bc97eb9fc689e57.png&quot;,
-                    &quot;created_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;
+                    &quot;url&quot;: &quot;storage/product/38c15634477d1aa31fe5109020901819.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-20T20:15:26.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-20T20:15:26.000000Z&quot;
                 },
                 {
                     &quot;id&quot;: 2,
-                    &quot;url&quot;: &quot;storage/product/c5e0f7f7d6416c6fa7158a8ce183dc04.png&quot;,
-                    &quot;created_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;
+                    &quot;url&quot;: &quot;storage/product/c60b4dcdf7b3b397e2a262bd4066b7b3.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-20T20:15:26.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-20T20:15:26.000000Z&quot;
                 },
                 {
                     &quot;id&quot;: 3,
-                    &quot;url&quot;: &quot;storage/product/5a2dffa1c4dd74810cc19d7d0cce4e07.png&quot;,
-                    &quot;created_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;
+                    &quot;url&quot;: &quot;storage/product/fd19d75c23ca400c6752b0201e3f336e.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-20T20:15:26.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-20T20:15:26.000000Z&quot;
                 }
             ]
         },
         {
             &quot;id&quot;: 2,
-            &quot;sku&quot;: &quot;9780365725213&quot;,
-            &quot;name&quot;: &quot;Van Moore PhD&quot;,
-            &quot;price&quot;: 103568,
-            &quot;weight&quot;: 2,
-            &quot;description&quot;: &quot;Quisquam et ut similique animi fugit sed aliquam neque. Fugit quis veritatis omnis molestiae. Rerum pariatur quo sint. Aspernatur consequatur sit nemo voluptas voluptas harum. Natus dolorem incidunt ex voluptas ex laudantium. Molestiae suscipit magni qui culpa fuga officiis asperiores unde. Similique rem ab voluptas aliquam non. Necessitatibus commodi recusandae est soluta quod in aut. Debitis sit alias tempore corrupti tempora consequatur.&quot;,
-            &quot;thumbnail&quot;: &quot;storage/product/6480eea7e1e850ef50b9793eeb8bc9e6.png&quot;,
-            &quot;stock&quot;: 3,
-            &quot;slug&quot;: &quot;van-moore-phd&quot;,
-            &quot;user_id&quot;: 2,
-            &quot;created_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;,
+            &quot;sku&quot;: &quot;9794506963853&quot;,
+            &quot;name&quot;: &quot;Wayne Gulgowski&quot;,
+            &quot;price&quot;: 345440,
+            &quot;weight&quot;: 1,
+            &quot;description&quot;: &quot;Nostrum voluptatem quis ad totam aliquam corrupti quia qui. Sit alias dolorem numquam quidem nihil sint minima. Voluptates necessitatibus atque qui molestiae. Cum enim nesciunt eum quia accusantium fugiat. Porro voluptas perspiciatis sapiente dolores rem. Nihil ipsa ipsum corporis consequatur dolorem pariatur. Est corporis aut et nihil sequi id porro quo. Aliquid aut sit aperiam omnis deleniti aspernatur harum corporis. Quisquam nemo nihil aut voluptates aut facere amet.&quot;,
+            &quot;thumbnail&quot;: &quot;storage/product/8b1163a8764d05080e06f49a2f44234f.png&quot;,
+            &quot;stock&quot;: 46,
+            &quot;slug&quot;: &quot;wayne-gulgowski&quot;,
+            &quot;user_id&quot;: 6,
+            &quot;created_at&quot;: &quot;2022-01-20T20:15:24.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-01-20T20:15:24.000000Z&quot;,
             &quot;user&quot;: {
-                &quot;id&quot;: 2,
-                &quot;name&quot;: &quot;Rick Waelchi&quot;,
-                &quot;email&quot;: &quot;dward@example.org&quot;,
-                &quot;email_verified_at&quot;: &quot;2022-01-20T03:34:50.000000Z&quot;,
-                &quot;created_at&quot;: &quot;2022-01-20T03:34:50.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-01-20T03:34:50.000000Z&quot;
+                &quot;id&quot;: 6,
+                &quot;name&quot;: &quot;Reta DuBuque&quot;,
+                &quot;email&quot;: &quot;enola58@example.com&quot;,
+                &quot;email_verified_at&quot;: &quot;2022-01-20T20:15:18.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2022-01-20T20:15:19.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-01-20T20:15:19.000000Z&quot;,
+                &quot;profile_photo_url&quot;: &quot;https://ui-avatars.com/api/?name=R+D&amp;color=7F9CF5&amp;background=EBF4FF&quot;
             },
             &quot;image&quot;: [
                 {
                     &quot;id&quot;: 4,
-                    &quot;url&quot;: &quot;storage/product/73a040ee7f60f5299b262a9a0fd2a276.png&quot;,
-                    &quot;created_at&quot;: &quot;2022-01-20T03:34:55.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-01-20T03:34:55.000000Z&quot;
+                    &quot;url&quot;: &quot;storage/product/9c78002a2be5b3fa598ea219eb7f6fd6.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-20T20:15:27.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-20T20:15:27.000000Z&quot;
                 },
                 {
                     &quot;id&quot;: 5,
-                    &quot;url&quot;: &quot;storage/product/601fbf60160c7b539ab9eda223e32b22.png&quot;,
-                    &quot;created_at&quot;: &quot;2022-01-20T03:34:55.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-01-20T03:34:55.000000Z&quot;
+                    &quot;url&quot;: &quot;storage/product/da4d6ceb46400c8dda7331f209de3b97.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-20T20:15:27.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-20T20:15:27.000000Z&quot;
                 },
                 {
                     &quot;id&quot;: 6,
-                    &quot;url&quot;: &quot;storage/product/abef40878001b6746e2a7ba7e9971750.png&quot;,
-                    &quot;created_at&quot;: &quot;2022-01-20T03:34:55.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-01-20T03:34:55.000000Z&quot;
+                    &quot;url&quot;: &quot;storage/product/c33e145a59450cfec88ed48f9613a052.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-20T20:15:27.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-20T20:15:27.000000Z&quot;
                 }
             ]
         },
         {
             &quot;id&quot;: 3,
-            &quot;sku&quot;: &quot;9793091859589&quot;,
-            &quot;name&quot;: &quot;Prof. Quinn Renner IV&quot;,
-            &quot;price&quot;: 130129,
+            &quot;sku&quot;: &quot;9780182512034&quot;,
+            &quot;name&quot;: &quot;Arely Nolan&quot;,
+            &quot;price&quot;: 948740,
             &quot;weight&quot;: 0,
-            &quot;description&quot;: &quot;Maxime omnis qui iste dolores cupiditate asperiores modi. Qui ipsam aut qui assumenda necessitatibus voluptates sed. Dolor officiis cumque voluptatem fugiat sed. Sint quas voluptas vitae rerum eos deleniti. Dolor animi ad pariatur voluptatem fugit. Sunt eos sunt sint nihil sed esse. Enim et voluptas in sit impedit. Hic a error impedit quasi corrupti. Perferendis est nam eius molestias quia veniam. Ex sit quas dolore qui illo. Qui voluptatum veniam molestias omnis qui tenetur nesciunt.&quot;,
-            &quot;thumbnail&quot;: &quot;storage/product/d07e6848ab87e5e461d040d80ade36e6.png&quot;,
-            &quot;stock&quot;: 50,
-            &quot;slug&quot;: &quot;prof-quinn-renner-iv&quot;,
-            &quot;user_id&quot;: 10,
-            &quot;created_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;,
+            &quot;description&quot;: &quot;Consequatur praesentium omnis nulla eaque. Voluptate et et aliquid incidunt quia blanditiis. Architecto fugiat ipsum eius dolor dolore ullam. Vel qui eligendi quis nulla. Ut cupiditate ut quos quam iste. Et ipsam saepe qui nam sed ad ab. Quia qui magni nesciunt et magni consequatur reprehenderit beatae. Veritatis enim neque doloribus. Fugiat eos magnam sit voluptas nihil dolores alias. Qui qui dolor porro dolores iure. Aut velit atque ut quia.&quot;,
+            &quot;thumbnail&quot;: &quot;storage/product/2a77b14c9fbc9ddb7890a247e615d76d.png&quot;,
+            &quot;stock&quot;: 28,
+            &quot;slug&quot;: &quot;arely-nolan&quot;,
+            &quot;user_id&quot;: 8,
+            &quot;created_at&quot;: &quot;2022-01-20T20:15:24.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-01-20T20:15:24.000000Z&quot;,
             &quot;user&quot;: {
-                &quot;id&quot;: 10,
-                &quot;name&quot;: &quot;Prof. Keegan Nikolaus&quot;,
-                &quot;email&quot;: &quot;donnelly.florence@example.org&quot;,
-                &quot;email_verified_at&quot;: &quot;2022-01-20T03:34:50.000000Z&quot;,
-                &quot;created_at&quot;: &quot;2022-01-20T03:34:50.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-01-20T03:34:50.000000Z&quot;
+                &quot;id&quot;: 8,
+                &quot;name&quot;: &quot;Rhianna Wiegand&quot;,
+                &quot;email&quot;: &quot;bailey.golden@example.com&quot;,
+                &quot;email_verified_at&quot;: &quot;2022-01-20T20:15:18.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2022-01-20T20:15:19.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-01-20T20:15:19.000000Z&quot;,
+                &quot;profile_photo_url&quot;: &quot;https://ui-avatars.com/api/?name=R+W&amp;color=7F9CF5&amp;background=EBF4FF&quot;
             },
             &quot;image&quot;: [
                 {
                     &quot;id&quot;: 7,
-                    &quot;url&quot;: &quot;storage/product/1fd7734c6f4016b7ddfc4e53604f2bde.png&quot;,
-                    &quot;created_at&quot;: &quot;2022-01-20T03:34:55.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-01-20T03:34:55.000000Z&quot;
+                    &quot;url&quot;: &quot;storage/product/604b5d1da055c085da9766effe04122d.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-20T20:15:28.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-20T20:15:28.000000Z&quot;
                 },
                 {
                     &quot;id&quot;: 8,
-                    &quot;url&quot;: &quot;storage/product/eb20addb80632c79ea8dbd0b59f36475.png&quot;,
-                    &quot;created_at&quot;: &quot;2022-01-20T03:34:55.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-01-20T03:34:55.000000Z&quot;
+                    &quot;url&quot;: &quot;storage/product/6f3c1e4466afe637ec2fba181f0105c3.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-20T20:15:28.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-20T20:15:28.000000Z&quot;
                 },
                 {
                     &quot;id&quot;: 9,
-                    &quot;url&quot;: &quot;storage/product/23e4a079c92c339e0bd3a79cb6d82c6a.png&quot;,
-                    &quot;created_at&quot;: &quot;2022-01-20T03:34:55.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-01-20T03:34:55.000000Z&quot;
+                    &quot;url&quot;: &quot;storage/product/a3a902e2a957d1a4c13d8f2655f6b016.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-20T20:15:28.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-20T20:15:28.000000Z&quot;
                 }
             ]
         },
         {
             &quot;id&quot;: 4,
-            &quot;sku&quot;: &quot;9793562170229&quot;,
-            &quot;name&quot;: &quot;Cierra Moen DDS&quot;,
-            &quot;price&quot;: 112773,
+            &quot;sku&quot;: &quot;9788987337920&quot;,
+            &quot;name&quot;: &quot;Lyla Hayes&quot;,
+            &quot;price&quot;: 704973,
             &quot;weight&quot;: 4,
-            &quot;description&quot;: &quot;Doloribus dolor laboriosam et sint. Praesentium dolor et sed nemo deleniti. Exercitationem necessitatibus dignissimos quo voluptas aut tenetur. Sunt ipsum iusto non veritatis. Et sunt dolor repudiandae quis repellendus exercitationem delectus eaque. Aut aperiam id placeat odit qui deserunt veritatis hic. Corporis quia adipisci molestiae aperiam dolorem aspernatur laborum.&quot;,
-            &quot;thumbnail&quot;: &quot;storage/product/9929d9f284b1f20831ad12b5e86e1ca4.png&quot;,
-            &quot;stock&quot;: 99,
-            &quot;slug&quot;: &quot;cierra-moen-dds&quot;,
-            &quot;user_id&quot;: 2,
-            &quot;created_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;,
+            &quot;description&quot;: &quot;Quae odio repellat delectus est labore vel sunt. Voluptatem deleniti expedita nostrum vel est qui. Officia a hic quis nobis itaque labore voluptatem. Voluptatem vitae repudiandae sunt labore magnam omnis omnis. Molestiae est ad sint atque possimus. Tempore reiciendis quos dolorem voluptatem cupiditate ullam. Ut nemo nam ullam accusamus accusantium sequi. Quia eos delectus voluptas rerum dicta aut.&quot;,
+            &quot;thumbnail&quot;: &quot;storage/product/bf2adfef4ea0289a4c150c07904e59a7.png&quot;,
+            &quot;stock&quot;: 9,
+            &quot;slug&quot;: &quot;lyla-hayes&quot;,
+            &quot;user_id&quot;: 5,
+            &quot;created_at&quot;: &quot;2022-01-20T20:15:24.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-01-20T20:15:24.000000Z&quot;,
             &quot;user&quot;: {
-                &quot;id&quot;: 2,
-                &quot;name&quot;: &quot;Rick Waelchi&quot;,
-                &quot;email&quot;: &quot;dward@example.org&quot;,
-                &quot;email_verified_at&quot;: &quot;2022-01-20T03:34:50.000000Z&quot;,
-                &quot;created_at&quot;: &quot;2022-01-20T03:34:50.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-01-20T03:34:50.000000Z&quot;
+                &quot;id&quot;: 5,
+                &quot;name&quot;: &quot;Prof. Dallas Jaskolski&quot;,
+                &quot;email&quot;: &quot;fredy.lemke@example.net&quot;,
+                &quot;email_verified_at&quot;: &quot;2022-01-20T20:15:18.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2022-01-20T20:15:19.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-01-20T20:15:19.000000Z&quot;,
+                &quot;profile_photo_url&quot;: &quot;https://ui-avatars.com/api/?name=P+D+J&amp;color=7F9CF5&amp;background=EBF4FF&quot;
             },
             &quot;image&quot;: [
                 {
                     &quot;id&quot;: 10,
-                    &quot;url&quot;: &quot;storage/product/566b65f1d1e514347617e7f1e622daf3.png&quot;,
-                    &quot;created_at&quot;: &quot;2022-01-20T03:34:56.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-01-20T03:34:56.000000Z&quot;
+                    &quot;url&quot;: &quot;storage/product/5fff516920530d8a2883a376c4c82844.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-20T20:15:29.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-20T20:15:29.000000Z&quot;
                 },
                 {
                     &quot;id&quot;: 11,
-                    &quot;url&quot;: &quot;storage/product/5359d7fb7bc0d37266c00b0bdd94f9b1.png&quot;,
-                    &quot;created_at&quot;: &quot;2022-01-20T03:34:56.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-01-20T03:34:56.000000Z&quot;
+                    &quot;url&quot;: &quot;storage/product/3edbeb2b444e27fd4706b52352f96b1a.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-20T20:15:29.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-20T20:15:29.000000Z&quot;
                 },
                 {
                     &quot;id&quot;: 12,
-                    &quot;url&quot;: &quot;storage/product/7d561a754036075eed5d17361c0fea14.png&quot;,
-                    &quot;created_at&quot;: &quot;2022-01-20T03:34:56.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-01-20T03:34:56.000000Z&quot;
+                    &quot;url&quot;: &quot;storage/product/0718c614012b3a04e4f813f53ec4f91a.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-20T20:15:29.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-20T20:15:29.000000Z&quot;
                 }
             ]
         },
         {
             &quot;id&quot;: 5,
-            &quot;sku&quot;: &quot;9792261891329&quot;,
-            &quot;name&quot;: &quot;Vergie Sanford&quot;,
-            &quot;price&quot;: 92512,
-            &quot;weight&quot;: 3,
-            &quot;description&quot;: &quot;Quia optio dignissimos deserunt asperiores. Et aspernatur omnis deleniti numquam iusto porro. Sit et pariatur ut quibusdam consectetur eum. Sed eos similique minus sed. Temporibus at aspernatur commodi labore quia beatae. Excepturi voluptatum fugiat omnis nostrum est minus ea. Accusamus quo enim quis earum quis. Porro non natus quos est quia eum. Atque quis in dolores tenetur ratione voluptates vel labore.&quot;,
-            &quot;thumbnail&quot;: &quot;storage/product/2a42dfe047f3faa375659820d4eb2e7b.png&quot;,
-            &quot;stock&quot;: 51,
-            &quot;slug&quot;: &quot;vergie-sanford&quot;,
-            &quot;user_id&quot;: 1,
-            &quot;created_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;,
+            &quot;sku&quot;: &quot;9782650346967&quot;,
+            &quot;name&quot;: &quot;Gregg Douglas&quot;,
+            &quot;price&quot;: 997028,
+            &quot;weight&quot;: 0,
+            &quot;description&quot;: &quot;Voluptatem similique iste laudantium repellat ut est necessitatibus aspernatur. Necessitatibus aliquid enim dolor sed magnam et laborum. Sunt in amet quod qui sequi. Omnis nostrum tenetur nemo nam in accusamus voluptas. Aut nemo eum quibusdam facere repellat. Veritatis eum tempore amet et est sed. Officia aperiam aut quia accusantium ipsum. Vero suscipit quia enim consequatur mollitia et inventore. Qui delectus quia velit dolorem consequatur soluta dolores ex.&quot;,
+            &quot;thumbnail&quot;: &quot;storage/product/8023fb8b31518c1d0cb20ca620fefa45.png&quot;,
+            &quot;stock&quot;: 30,
+            &quot;slug&quot;: &quot;gregg-douglas&quot;,
+            &quot;user_id&quot;: 8,
+            &quot;created_at&quot;: &quot;2022-01-20T20:15:24.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-01-20T20:15:24.000000Z&quot;,
             &quot;user&quot;: {
-                &quot;id&quot;: 1,
-                &quot;name&quot;: &quot;Admin&quot;,
-                &quot;email&quot;: &quot;admin@gmail.com&quot;,
-                &quot;email_verified_at&quot;: null,
-                &quot;created_at&quot;: &quot;2022-01-20T03:34:50.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-01-20T03:34:50.000000Z&quot;
+                &quot;id&quot;: 8,
+                &quot;name&quot;: &quot;Rhianna Wiegand&quot;,
+                &quot;email&quot;: &quot;bailey.golden@example.com&quot;,
+                &quot;email_verified_at&quot;: &quot;2022-01-20T20:15:18.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2022-01-20T20:15:19.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-01-20T20:15:19.000000Z&quot;,
+                &quot;profile_photo_url&quot;: &quot;https://ui-avatars.com/api/?name=R+W&amp;color=7F9CF5&amp;background=EBF4FF&quot;
             },
             &quot;image&quot;: [
                 {
                     &quot;id&quot;: 13,
-                    &quot;url&quot;: &quot;storage/product/8a3b33056e7e33ca77dfcd2d692c203e.png&quot;,
-                    &quot;created_at&quot;: &quot;2022-01-20T03:34:57.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-01-20T03:34:57.000000Z&quot;
+                    &quot;url&quot;: &quot;storage/product/e9f6b5dbe1d1e40a38d1a757419b9fad.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-20T20:15:30.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-20T20:15:30.000000Z&quot;
                 },
                 {
                     &quot;id&quot;: 14,
-                    &quot;url&quot;: &quot;storage/product/e5470940eba5ae2002678b644abe62e1.png&quot;,
-                    &quot;created_at&quot;: &quot;2022-01-20T03:34:57.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-01-20T03:34:57.000000Z&quot;
+                    &quot;url&quot;: &quot;storage/product/d23c5643ff77911e8143e3a897e8997a.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-20T20:15:31.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-20T20:15:31.000000Z&quot;
                 },
                 {
                     &quot;id&quot;: 15,
-                    &quot;url&quot;: &quot;storage/product/141da6cc81b292a842222e112541aecf.png&quot;,
-                    &quot;created_at&quot;: &quot;2022-01-20T03:34:57.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-01-20T03:34:57.000000Z&quot;
+                    &quot;url&quot;: &quot;storage/product/13ac47a3659761694999c6853e057de2.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-20T20:15:31.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-20T20:15:31.000000Z&quot;
                 }
             ]
         },
         {
             &quot;id&quot;: 6,
-            &quot;sku&quot;: &quot;9784180546015&quot;,
-            &quot;name&quot;: &quot;Darrell Metz&quot;,
-            &quot;price&quot;: 776593,
-            &quot;weight&quot;: 3,
-            &quot;description&quot;: &quot;Dolore eveniet ex tenetur aut ut. Accusamus nihil pariatur quo at id. Saepe sed sunt sed quisquam ab non. Odit assumenda recusandae porro error non voluptatem. Natus nisi qui consequuntur cumque. Ut maiores ut aut reiciendis rerum. Ut perferendis voluptas dignissimos eaque sit voluptatem et. Vitae libero repellendus molestiae ut. Est sed error consequatur suscipit eos quas. Accusamus quaerat sapiente autem ipsa dignissimos.&quot;,
-            &quot;thumbnail&quot;: &quot;storage/product/a0524fd804a05a816840746adaefc407.png&quot;,
-            &quot;stock&quot;: 42,
-            &quot;slug&quot;: &quot;darrell-metz&quot;,
-            &quot;user_id&quot;: 7,
-            &quot;created_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;,
+            &quot;sku&quot;: &quot;9791427912151&quot;,
+            &quot;name&quot;: &quot;Prof. Tavares Franecki DDS&quot;,
+            &quot;price&quot;: 271048,
+            &quot;weight&quot;: 2,
+            &quot;description&quot;: &quot;Hic facere ipsam asperiores voluptatem eaque odio. Aut similique id omnis consequatur saepe vero et neque. Et non in consectetur iste perspiciatis deleniti excepturi quos. Nesciunt hic dolorem adipisci quas consequatur nostrum. Tempora commodi ut eveniet consequuntur nulla. Blanditiis dolore asperiores voluptatem voluptate omnis. Eum voluptatem eos voluptas omnis.&quot;,
+            &quot;thumbnail&quot;: &quot;storage/product/9ed36d072ad4e17f8aeeb06e1b88cff0.png&quot;,
+            &quot;stock&quot;: 45,
+            &quot;slug&quot;: &quot;prof-tavares-franecki-dds&quot;,
+            &quot;user_id&quot;: 9,
+            &quot;created_at&quot;: &quot;2022-01-20T20:15:24.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-01-20T20:15:24.000000Z&quot;,
             &quot;user&quot;: {
-                &quot;id&quot;: 7,
-                &quot;name&quot;: &quot;Simeon Sanford&quot;,
-                &quot;email&quot;: &quot;claudia62@example.net&quot;,
-                &quot;email_verified_at&quot;: &quot;2022-01-20T03:34:50.000000Z&quot;,
-                &quot;created_at&quot;: &quot;2022-01-20T03:34:50.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-01-20T03:34:50.000000Z&quot;
+                &quot;id&quot;: 9,
+                &quot;name&quot;: &quot;Diego Fay&quot;,
+                &quot;email&quot;: &quot;camila02@example.org&quot;,
+                &quot;email_verified_at&quot;: &quot;2022-01-20T20:15:18.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2022-01-20T20:15:19.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-01-20T20:15:19.000000Z&quot;,
+                &quot;profile_photo_url&quot;: &quot;https://ui-avatars.com/api/?name=D+F&amp;color=7F9CF5&amp;background=EBF4FF&quot;
             },
             &quot;image&quot;: [
                 {
                     &quot;id&quot;: 16,
-                    &quot;url&quot;: &quot;storage/product/f0eaf5c78d520608954b87d1f6cdca78.png&quot;,
-                    &quot;created_at&quot;: &quot;2022-01-20T03:34:57.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-01-20T03:34:57.000000Z&quot;
+                    &quot;url&quot;: &quot;storage/product/319ac8811d35b1191a33a0edc6ec39f4.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-20T20:15:32.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-20T20:15:32.000000Z&quot;
                 },
                 {
                     &quot;id&quot;: 17,
-                    &quot;url&quot;: &quot;storage/product/41c6a3e6ef80dd418196c80c5c6b5282.png&quot;,
-                    &quot;created_at&quot;: &quot;2022-01-20T03:34:57.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-01-20T03:34:57.000000Z&quot;
+                    &quot;url&quot;: &quot;storage/product/96cbdf47e5c9e3c59dfcba18595fd35b.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-20T20:15:32.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-20T20:15:32.000000Z&quot;
                 },
                 {
                     &quot;id&quot;: 18,
-                    &quot;url&quot;: &quot;storage/product/9cb402556277c1bd10653ca75cb97a67.png&quot;,
-                    &quot;created_at&quot;: &quot;2022-01-20T03:34:57.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-01-20T03:34:57.000000Z&quot;
+                    &quot;url&quot;: &quot;storage/product/7045a60c9d777ce500455e6d6971a5c5.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-20T20:15:32.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-20T20:15:32.000000Z&quot;
                 }
             ]
         },
         {
             &quot;id&quot;: 7,
-            &quot;sku&quot;: &quot;9786272017366&quot;,
-            &quot;name&quot;: &quot;Faye Thiel&quot;,
-            &quot;price&quot;: 445813,
-            &quot;weight&quot;: 1,
-            &quot;description&quot;: &quot;Dicta vel quo ratione a et qui est doloribus. Vitae architecto voluptate est vel fugit. Asperiores suscipit iste ipsam eos et consectetur. Quis optio et dolorum sed est porro. Voluptates sapiente et quo sit ut. Numquam impedit illo eos ratione dignissimos ipsa. Est voluptate dolores similique velit et illum ipsam. Qui aperiam ut aperiam optio. Mollitia veritatis sunt reprehenderit qui consectetur voluptatem aut. Odit dolor sed excepturi modi praesentium temporibus.&quot;,
-            &quot;thumbnail&quot;: &quot;storage/product/73dedd65fdf050acff7d777b48601fe5.png&quot;,
-            &quot;stock&quot;: 88,
-            &quot;slug&quot;: &quot;faye-thiel&quot;,
-            &quot;user_id&quot;: 9,
-            &quot;created_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;,
+            &quot;sku&quot;: &quot;9794245432023&quot;,
+            &quot;name&quot;: &quot;Prof. Dudley Hane Jr.&quot;,
+            &quot;price&quot;: 554059,
+            &quot;weight&quot;: 3,
+            &quot;description&quot;: &quot;Quo modi ut voluptatem debitis nesciunt omnis culpa. Tempora velit nobis et a accusantium sit occaecati officiis. Fugiat ut ipsa sed excepturi. Perspiciatis minus perferendis ab facere officia. Est veritatis debitis dolore odit eius corrupti velit. Quibusdam doloribus autem et in. Quae necessitatibus et maxime et.&quot;,
+            &quot;thumbnail&quot;: &quot;storage/product/3e1724b59a3a01076fc2f020c7d7be6d.png&quot;,
+            &quot;stock&quot;: 58,
+            &quot;slug&quot;: &quot;prof-dudley-hane-jr&quot;,
+            &quot;user_id&quot;: 10,
+            &quot;created_at&quot;: &quot;2022-01-20T20:15:25.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-01-20T20:15:25.000000Z&quot;,
             &quot;user&quot;: {
-                &quot;id&quot;: 9,
-                &quot;name&quot;: &quot;Evans Feest&quot;,
-                &quot;email&quot;: &quot;ucummerata@example.com&quot;,
-                &quot;email_verified_at&quot;: &quot;2022-01-20T03:34:50.000000Z&quot;,
-                &quot;created_at&quot;: &quot;2022-01-20T03:34:50.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-01-20T03:34:50.000000Z&quot;
+                &quot;id&quot;: 10,
+                &quot;name&quot;: &quot;Bartholome Bogan&quot;,
+                &quot;email&quot;: &quot;marvin.orlando@example.net&quot;,
+                &quot;email_verified_at&quot;: &quot;2022-01-20T20:15:18.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2022-01-20T20:15:20.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-01-20T20:15:20.000000Z&quot;,
+                &quot;profile_photo_url&quot;: &quot;https://ui-avatars.com/api/?name=B+B&amp;color=7F9CF5&amp;background=EBF4FF&quot;
             },
             &quot;image&quot;: [
                 {
                     &quot;id&quot;: 19,
-                    &quot;url&quot;: &quot;storage/product/b91ee45b98285da2f57e884c76e765d5.png&quot;,
-                    &quot;created_at&quot;: &quot;2022-01-20T03:34:58.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-01-20T03:34:58.000000Z&quot;
+                    &quot;url&quot;: &quot;storage/product/4a7b0a1004e4d601abe4156fea632650.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-20T20:15:33.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-20T20:15:33.000000Z&quot;
                 },
                 {
                     &quot;id&quot;: 20,
-                    &quot;url&quot;: &quot;storage/product/83a99cebcdc10588ed532c51ac0976a6.png&quot;,
-                    &quot;created_at&quot;: &quot;2022-01-20T03:34:58.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-01-20T03:34:58.000000Z&quot;
+                    &quot;url&quot;: &quot;storage/product/1e0fa1126a264037aba3885825dee5f1.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-20T20:15:33.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-20T20:15:33.000000Z&quot;
                 },
                 {
                     &quot;id&quot;: 21,
-                    &quot;url&quot;: &quot;storage/product/b1c3f7900fbfba8a9867cb8d64d63505.png&quot;,
-                    &quot;created_at&quot;: &quot;2022-01-20T03:34:58.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-01-20T03:34:58.000000Z&quot;
+                    &quot;url&quot;: &quot;storage/product/dc030433c823b42cf0b5b09e9662b322.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-20T20:15:33.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-20T20:15:33.000000Z&quot;
                 }
             ]
         },
         {
             &quot;id&quot;: 8,
-            &quot;sku&quot;: &quot;9790465816490&quot;,
-            &quot;name&quot;: &quot;Mrs. Reba Sawayn V&quot;,
-            &quot;price&quot;: 964684,
-            &quot;weight&quot;: 0,
-            &quot;description&quot;: &quot;Officiis accusantium perferendis vel nobis saepe. Facilis laboriosam voluptas ipsam qui in delectus occaecati. Quam sit labore velit quaerat corporis et. Iste id doloribus dolore. Nihil consequatur enim a soluta voluptatem. Enim voluptatem est odit dolorum quo hic. Ut fuga ut nihil tenetur facilis et. Omnis eaque sapiente porro fuga ut at reiciendis. Qui velit et quia pariatur sint animi est accusamus.&quot;,
-            &quot;thumbnail&quot;: &quot;storage/product/acad835df11f4ead9d1f57a9d65d1464.png&quot;,
-            &quot;stock&quot;: 32,
-            &quot;slug&quot;: &quot;mrs-reba-sawayn-v&quot;,
-            &quot;user_id&quot;: 8,
-            &quot;created_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;,
+            &quot;sku&quot;: &quot;9791015678735&quot;,
+            &quot;name&quot;: &quot;Gregoria Hyatt&quot;,
+            &quot;price&quot;: 677498,
+            &quot;weight&quot;: 4,
+            &quot;description&quot;: &quot;Sunt est corporis dolore repellendus est commodi quaerat rerum. Quis aliquam repellat ut ratione magnam. Quia cum vitae ad similique. Corporis exercitationem ratione tempore aut deserunt. Cupiditate accusantium officia numquam et consequatur incidunt dolores. Adipisci sed aliquam ut. Nihil laborum repellendus occaecati aspernatur ut aut necessitatibus.&quot;,
+            &quot;thumbnail&quot;: &quot;storage/product/f01a74fc4fd2ae21dd8382704e8e6a31.png&quot;,
+            &quot;stock&quot;: 23,
+            &quot;slug&quot;: &quot;gregoria-hyatt&quot;,
+            &quot;user_id&quot;: 9,
+            &quot;created_at&quot;: &quot;2022-01-20T20:15:25.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-01-20T20:15:25.000000Z&quot;,
             &quot;user&quot;: {
-                &quot;id&quot;: 8,
-                &quot;name&quot;: &quot;Miss Tina Buckridge V&quot;,
-                &quot;email&quot;: &quot;thirthe@example.org&quot;,
-                &quot;email_verified_at&quot;: &quot;2022-01-20T03:34:50.000000Z&quot;,
-                &quot;created_at&quot;: &quot;2022-01-20T03:34:50.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-01-20T03:34:50.000000Z&quot;
+                &quot;id&quot;: 9,
+                &quot;name&quot;: &quot;Diego Fay&quot;,
+                &quot;email&quot;: &quot;camila02@example.org&quot;,
+                &quot;email_verified_at&quot;: &quot;2022-01-20T20:15:18.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2022-01-20T20:15:19.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-01-20T20:15:19.000000Z&quot;,
+                &quot;profile_photo_url&quot;: &quot;https://ui-avatars.com/api/?name=D+F&amp;color=7F9CF5&amp;background=EBF4FF&quot;
             },
             &quot;image&quot;: [
                 {
                     &quot;id&quot;: 22,
-                    &quot;url&quot;: &quot;storage/product/3cd8406a0a6cc7697cfd1debba14a424.png&quot;,
-                    &quot;created_at&quot;: &quot;2022-01-20T03:34:59.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-01-20T03:34:59.000000Z&quot;
+                    &quot;url&quot;: &quot;storage/product/656b5dcd8cd41847075976bbf5e61cc8.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-20T20:15:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-20T20:15:34.000000Z&quot;
                 },
                 {
                     &quot;id&quot;: 23,
-                    &quot;url&quot;: &quot;storage/product/8fd5529dfa00be70d88394a441fc67a4.png&quot;,
-                    &quot;created_at&quot;: &quot;2022-01-20T03:34:59.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-01-20T03:34:59.000000Z&quot;
+                    &quot;url&quot;: &quot;storage/product/82f2a4700c060e1cadb414ba2647e245.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-20T20:15:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-20T20:15:34.000000Z&quot;
                 },
                 {
                     &quot;id&quot;: 24,
-                    &quot;url&quot;: &quot;storage/product/a183e26634c767b1846fe62480a9815d.png&quot;,
-                    &quot;created_at&quot;: &quot;2022-01-20T03:34:59.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-01-20T03:34:59.000000Z&quot;
+                    &quot;url&quot;: &quot;storage/product/325233e81398033cf48c2df0525c91d3.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-20T20:15:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-20T20:15:34.000000Z&quot;
                 }
             ]
         }
@@ -3232,7 +2850,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 54
+x-ratelimit-remaining: 58
 access-control-allow-origin: *
  </code></pre>
         </details>         <pre>
@@ -3240,43 +2858,44 @@ access-control-allow-origin: *
 <code class="language-json">{
     &quot;data&quot;: {
         &quot;id&quot;: 1,
-        &quot;sku&quot;: &quot;9793521858489&quot;,
-        &quot;name&quot;: &quot;Jed Predovic&quot;,
-        &quot;price&quot;: 166552,
-        &quot;weight&quot;: 4,
-        &quot;description&quot;: &quot;Cum numquam officiis ullam enim assumenda. Dolorum facilis consequatur dicta possimus quidem. Omnis labore maiores esse aut dolorem voluptatum tempora. Vel soluta odit quas voluptatem. Quaerat blanditiis vero aliquid eum. Facilis aut eos sit delectus expedita. Sed repellat ducimus quod. Eum quia hic ea aut molestias. Quam fugiat est officiis ex qui.&quot;,
-        &quot;thumbnail&quot;: &quot;storage/product/52fd1217246670e373ba362d3c31f95d.png&quot;,
-        &quot;stock&quot;: 41,
-        &quot;slug&quot;: &quot;jed-predovic&quot;,
-        &quot;user_id&quot;: 5,
-        &quot;created_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;,
+        &quot;sku&quot;: &quot;9799108954919&quot;,
+        &quot;name&quot;: &quot;Freda Bernhard&quot;,
+        &quot;price&quot;: 406211,
+        &quot;weight&quot;: 2,
+        &quot;description&quot;: &quot;Dolores harum et quae ad unde quidem. Tenetur earum dolore aut molestiae. Eum cupiditate aut illo nisi nam repellat perferendis. Laborum amet quam quis officiis facilis ut. Dolore numquam laborum illum mollitia qui. Rerum earum atque expedita doloremque ex non. Ducimus rerum modi aspernatur eos. Dolorum ut sit ex accusamus quia distinctio explicabo. Fuga et aperiam saepe rem. Deserunt iste perferendis laboriosam quia autem.&quot;,
+        &quot;thumbnail&quot;: &quot;storage/product/89604b536ad260a754655e12cd900e8d.png&quot;,
+        &quot;stock&quot;: 83,
+        &quot;slug&quot;: &quot;freda-bernhard&quot;,
+        &quot;user_id&quot;: 4,
+        &quot;created_at&quot;: &quot;2022-01-20T20:15:24.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-01-20T20:15:24.000000Z&quot;,
         &quot;user&quot;: {
-            &quot;id&quot;: 5,
-            &quot;name&quot;: &quot;Khalil Hermann&quot;,
-            &quot;email&quot;: &quot;fred.konopelski@example.com&quot;,
-            &quot;email_verified_at&quot;: &quot;2022-01-20T03:34:50.000000Z&quot;,
-            &quot;created_at&quot;: &quot;2022-01-20T03:34:50.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-01-20T03:34:50.000000Z&quot;
+            &quot;id&quot;: 4,
+            &quot;name&quot;: &quot;Frederique Stamm&quot;,
+            &quot;email&quot;: &quot;ohara.ted@example.net&quot;,
+            &quot;email_verified_at&quot;: &quot;2022-01-20T20:15:18.000000Z&quot;,
+            &quot;created_at&quot;: &quot;2022-01-20T20:15:19.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-01-20T20:15:19.000000Z&quot;,
+            &quot;profile_photo_url&quot;: &quot;https://ui-avatars.com/api/?name=F+S&amp;color=7F9CF5&amp;background=EBF4FF&quot;
         },
         &quot;image&quot;: [
             {
                 &quot;id&quot;: 1,
-                &quot;url&quot;: &quot;storage/product/98c38e14ee36d33e1bc97eb9fc689e57.png&quot;,
-                &quot;created_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;
+                &quot;url&quot;: &quot;storage/product/38c15634477d1aa31fe5109020901819.png&quot;,
+                &quot;created_at&quot;: &quot;2022-01-20T20:15:26.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-01-20T20:15:26.000000Z&quot;
             },
             {
                 &quot;id&quot;: 2,
-                &quot;url&quot;: &quot;storage/product/c5e0f7f7d6416c6fa7158a8ce183dc04.png&quot;,
-                &quot;created_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;
+                &quot;url&quot;: &quot;storage/product/c60b4dcdf7b3b397e2a262bd4066b7b3.png&quot;,
+                &quot;created_at&quot;: &quot;2022-01-20T20:15:26.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-01-20T20:15:26.000000Z&quot;
             },
             {
                 &quot;id&quot;: 3,
-                &quot;url&quot;: &quot;storage/product/5a2dffa1c4dd74810cc19d7d0cce4e07.png&quot;,
-                &quot;created_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-01-20T03:34:53.000000Z&quot;
+                &quot;url&quot;: &quot;storage/product/fd19d75c23ca400c6752b0201e3f336e.png&quot;,
+                &quot;created_at&quot;: &quot;2022-01-20T20:15:26.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-01-20T20:15:26.000000Z&quot;
             }
         ]
     }
