@@ -5,33 +5,6 @@ description: |-
 endpoints:
   -
     httpMethods:
-      - GET
-    uri: api/categories
-    metadata:
-      title: 'Display a listing of the resource.'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    queryParameters: []
-    bodyParameters: []
-    responses:
-      -
-        status: 200
-        content: '[{"id":1,"name":"admin","description":"admin","created_at":"2022-01-21T01:40:14.000000Z","updated_at":"2022-01-21T01:40:14.000000Z"},{"id":2,"name":"admin","description":"admin","created_at":"2022-01-21T01:49:06.000000Z","updated_at":"2022-01-21T01:49:06.000000Z"}]'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '57'
-          access-control-allow-origin: '*'
-        description: null
-    responseFields: []
-  -
-    httpMethods:
       - POST
     uri: api/categories
     metadata:
@@ -40,7 +13,7 @@ endpoints:
       authenticated: true
       custom: []
     headers:
-      Authorization: 'Bearer 8vf6aPg1eb6dk5c3ahDZEV4'
+      Authorization: 'Bearer PcbfDvd4E15Vga3ekZ8h6a6'
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
@@ -64,40 +37,6 @@ endpoints:
     responseFields: []
   -
     httpMethods:
-      - GET
-    uri: 'api/categories/{id}'
-    metadata:
-      title: 'Display the specified resource.'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      id:
-        name: id
-        description: 'The ID of the category.'
-        required: true
-        example: 7
-        type: integer
-        custom: []
-    queryParameters: []
-    bodyParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"data":{"id":1,"name":"admin","description":"admin","created_at":"2022-01-21T01:40:14.000000Z","updated_at":"2022-01-21T01:40:14.000000Z"}}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '56'
-          access-control-allow-origin: '*'
-        description: null
-    responseFields: []
-  -
-    httpMethods:
       - DELETE
     uri: 'api/categories/{id}'
     metadata:
@@ -106,7 +45,7 @@ endpoints:
       authenticated: true
       custom: []
     headers:
-      Authorization: 'Bearer 36Efhdvc8a64eZDbV1a5Pkg'
+      Authorization: 'Bearer g5ZdfacE163k8Pav4V6ehbD'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -114,7 +53,7 @@ endpoints:
         name: id
         description: 'The ID of the category.'
         required: true
-        example: 9
+        example: 13
         type: integer
         custom: []
     queryParameters: []
@@ -132,7 +71,7 @@ endpoints:
       authenticated: true
       custom: []
     headers:
-      Authorization: 'Bearer 58ge3faZbDvEk64c1VPad6h'
+      Authorization: 'Bearer b66Dc51VEveg8fd4P3aakhZ'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -160,4 +99,65 @@ endpoints:
         type: string
         custom: []
     responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/categories
+    metadata:
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '[{"id":1,"name":"admin","description":"admin","created_at":"2022-01-21T01:40:14.000000Z","updated_at":"2022-01-21T01:40:14.000000Z"},{"id":2,"name":"admin","description":"admin","created_at":"2022-01-21T01:49:06.000000Z","updated_at":"2022-01-21T01:49:06.000000Z"}]'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '57'
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/categories/{id}'
+    metadata:
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the category.'
+        required: true
+        example: 18
+        type: integer
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":{"id":1,"name":"admin","description":"admin","created_at":"2022-01-21T01:40:14.000000Z","updated_at":"2022-01-21T01:40:14.000000Z"}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '56'
+          access-control-allow-origin: '*'
+        description: null
     responseFields: []

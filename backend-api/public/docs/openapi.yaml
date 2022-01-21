@@ -100,7 +100,7 @@ paths:
           in: header
           name: Authorization
           description: ''
-          example: 'Bearer 5a8dfehPg1V64kb6EvDc3aZ'
+          example: 'Bearer V5hPvE8cdfD6a3e1abZ6kg4'
           schema:
             type: string
         -
@@ -121,6 +121,52 @@ paths:
       tags:
         - 'Authenticating method v1'
   /api/categories:
+    post:
+      summary: 'Store a newly created resource in storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer PcbfDvd4E15Vga3ekZ8h6a6'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Category Management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: '🤖 Category name, unique in the table category.'
+                  example: technology
+                description:
+                  type: string
+                  description: '📝 Category description .'
+                  example: 'State-of-the-art technological products'
+              required:
+                - name
+                - description
     get:
       summary: 'Display a listing of the resource.'
       description: ''
@@ -164,15 +210,44 @@ paths:
       tags:
         - 'Category Management'
       security: []
-    post:
-      summary: 'Store a newly created resource in storage.'
+  '/api/categories/{id}':
+    delete:
+      summary: 'Remove the specified resource from storage.'
       description: ''
       parameters:
         -
           in: header
           name: Authorization
           description: ''
-          example: 'Bearer 8vf6aPg1eb6dk5c3ahDZEV4'
+          example: 'Bearer g5ZdfacE163k8Pav4V6ehbD'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Category Management'
+    put:
+      summary: 'Update the specified resource in storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer b66Dc51VEveg8fd4P3aakhZ'
           schema:
             type: string
         -
@@ -210,7 +285,6 @@ paths:
               required:
                 - name
                 - description
-  '/api/categories/{id}':
     get:
       summary: 'Display the specified resource.'
       description: ''
@@ -255,86 +329,12 @@ paths:
       tags:
         - 'Category Management'
       security: []
-    delete:
-      summary: 'Remove the specified resource from storage.'
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Authorization
-          description: ''
-          example: 'Bearer 36Efhdvc8a64eZDbV1a5Pkg'
-          schema:
-            type: string
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses: {  }
-      tags:
-        - 'Category Management'
-    put:
-      summary: 'Update the specified resource in storage.'
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Authorization
-          description: ''
-          example: 'Bearer 58ge3faZbDvEk64c1VPad6h'
-          schema:
-            type: string
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses: {  }
-      tags:
-        - 'Category Management'
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                name:
-                  type: string
-                  description: '🤖 Category name, unique in the table category.'
-                  example: technology
-                description:
-                  type: string
-                  description: '📝 Category description .'
-                  example: 'State-of-the-art technological products'
-              required:
-                - name
-                - description
     parameters:
       -
         in: path
         name: id
         description: 'The ID of the category.'
-        example: 7
+        example: 13
         required: true
         schema:
           type: integer
@@ -347,7 +347,7 @@ paths:
           in: header
           name: Authorization
           description: ''
-          example: 'Bearer ak4c3aP6bZdv8gf6V5EehD1'
+          example: 'Bearer f5Zaed8ha66DbvkgcP314VE'
           schema:
             type: string
         -
@@ -1112,7 +1112,7 @@ paths:
           in: header
           name: Authorization
           description: ''
-          example: 'Bearer E5eP13bVh6gf6Zv4ka8caDd'
+          example: 'Bearer 165dcZvPaDhkV4b86fEgae3'
           schema:
             type: string
         -
@@ -1178,7 +1178,7 @@ paths:
           in: header
           name: Authorization
           description: ''
-          example: 'Bearer V6vk54DdE13Zfeha8acg6Pb'
+          example: 'Bearer ba8cgPEhD15ZV6f63av4dek'
           schema:
             type: string
         -

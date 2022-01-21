@@ -96,20 +96,20 @@
                     <a href="#category-management">Category Management</a>
                 </li>
                                     <ul id="tocify-subheader-category-management" class="tocify-subheader">
-                                                    <li class="tocify-item level-2" data-unique="category-management-GETapi-categories">
-                        <a href="#category-management-GETapi-categories">Display a listing of the resource.</a>
-                    </li>
-                                    <li class="tocify-item level-2" data-unique="category-management-POSTapi-categories">
+                                                    <li class="tocify-item level-2" data-unique="category-management-POSTapi-categories">
                         <a href="#category-management-POSTapi-categories">Store a newly created resource in storage.</a>
-                    </li>
-                                    <li class="tocify-item level-2" data-unique="category-management-GETapi-categories--id-">
-                        <a href="#category-management-GETapi-categories--id-">Display the specified resource.</a>
                     </li>
                                     <li class="tocify-item level-2" data-unique="category-management-DELETEapi-categories--id-">
                         <a href="#category-management-DELETEapi-categories--id-">Remove the specified resource from storage.</a>
                     </li>
                                     <li class="tocify-item level-2" data-unique="category-management-PUTapi-categories--id-">
                         <a href="#category-management-PUTapi-categories--id-">Update the specified resource in storage.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="category-management-GETapi-categories">
+                        <a href="#category-management-GETapi-categories">Display a listing of the resource.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="category-management-GETapi-categories--id-">
+                        <a href="#category-management-GETapi-categories--id-">Display the specified resource.</a>
                     </li>
                                                     </ul>
                             </ul>
@@ -160,10 +160,10 @@ This api is written in PHP-laravel, and it is based on the structure of a basic 
 <blockquote>
 <p>Base URL</p>
 </blockquote>
-<pre><code class="language-yaml">http://localhost:8000</code></pre>
+<pre><code class="language-yaml">http://jaime.registrodocumental.com/Instrumentos_la_Candelaria/backend-api/public</code></pre>
 
         <h1 id="authenticating-requests">Authenticating requests</h1>
-<p>To authenticate requests, include an <strong><code>Authorization</code></strong> header with the value <strong><code>"Bearer your-token"</code></strong>.</p>
+<p>This API is authenticated by sending an <strong><code>Authorization</code></strong> header with the value <strong><code>"Bearer your-token"</code></strong>.</p>
 <p>All authenticated endpoints are marked with a <code>requires authentication</code> badge in the documentation below.</p>
 <p>You can retrieve your token by visiting your dashboard and clicking <b>Generate API token</b>.</p>
 
@@ -545,7 +545,7 @@ response.json()</code></pre></div>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
     "http://localhost:8000/api/auth/logout" \
-    --header "Authorization: Bearer 5a8dfehPg1V64kb6EvDc3aZ" \
+    --header "Authorization: Bearer V5hPvE8cdfD6a3e1abZ6kg4" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -556,7 +556,7 @@ response.json()</code></pre></div>
 );
 
 const headers = {
-    "Authorization": "Bearer 5a8dfehPg1V64kb6EvDc3aZ",
+    "Authorization": "Bearer V5hPvE8cdfD6a3e1abZ6kg4",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -572,7 +572,7 @@ fetch(url, {
 require 'rest-client'
 
     headers = {
-            "Authorization": "Bearer 5a8dfehPg1V64kb6EvDc3aZ",
+            "Authorization": "Bearer V5hPvE8cdfD6a3e1abZ6kg4",
             "Content-Type": "application/json",
             "Accept": "application/json",
         }
@@ -592,7 +592,7 @@ $response = $client-&gt;post(
     'http://localhost:8000/api/auth/logout',
     [
         'headers' =&gt; [
-            'Authorization' =&gt; 'Bearer 5a8dfehPg1V64kb6EvDc3aZ',
+            'Authorization' =&gt; 'Bearer V5hPvE8cdfD6a3e1abZ6kg4',
             'Content-Type' =&gt; 'application/json',
             'Accept' =&gt; 'application/json',
         ],
@@ -608,7 +608,7 @@ import json
 
 url = 'http://localhost:8000/api/auth/logout'
 headers = {
-  'Authorization': 'Bearer 5a8dfehPg1V64kb6EvDc3aZ',
+  'Authorization': 'Bearer V5hPvE8cdfD6a3e1abZ6kg4',
   'Content-Type': 'application/json',
   'Accept': 'application/json'
 }
@@ -635,7 +635,7 @@ response.json()</code></pre></div>
       data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
-      data-headers='{"Authorization":"Bearer 5a8dfehPg1V64kb6EvDc3aZ","Content-Type":"application\/json","Accept":"application\/json"}'
+      data-headers='{"Authorization":"Bearer V5hPvE8cdfD6a3e1abZ6kg4","Content-Type":"application\/json","Accept":"application\/json"}'
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('POSTapi-auth-logout', this);">
     <h3>
@@ -672,6 +672,539 @@ response.json()</code></pre></div>
         <h1 id="category-management">Category Management</h1>
 
     <p>APIs to manage the categories resource</p>
+
+            <h2 id="category-management-POSTapi-categories">Store a newly created resource in storage.</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-POSTapi-categories">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost:8000/api/categories" \
+    --header "Authorization: Bearer PcbfDvd4E15Vga3ekZ8h6a6" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"name\": \"technology\",
+    \"description\": \"State-of-the-art technological products\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/categories"
+);
+
+const headers = {
+    "Authorization": "Bearer PcbfDvd4E15Vga3ekZ8h6a6",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "name": "technology",
+    "description": "State-of-the-art technological products"
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="ruby-example">
+    <pre><code class="language-ruby">
+require 'rest-client'
+
+    body = {
+    "name": "technology",
+    "description": "State-of-the-art technological products"
+}
+    headers = {
+            "Authorization": "Bearer PcbfDvd4E15Vga3ekZ8h6a6",
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+        }
+
+response = RestClient.post(
+'http://localhost:8000/api/categories',
+body ,
+headers
+)
+
+p response.body
+</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;post(
+    'http://localhost:8000/api/categories',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer PcbfDvd4E15Vga3ekZ8h6a6',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+        'json' =&gt; [
+            'name' =&gt; 'technology',
+            'description' =&gt; 'State-of-the-art technological products',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/categories'
+payload = {
+    "name": "technology",
+    "description": "State-of-the-art technological products"
+}
+headers = {
+  'Authorization': 'Bearer PcbfDvd4E15Vga3ekZ8h6a6',
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('POST', url, headers=headers, json=payload)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-categories">
+</span>
+<span id="execution-results-POSTapi-categories" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-categories"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-categories"></code></pre>
+</span>
+<span id="execution-error-POSTapi-categories" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-categories"></code></pre>
+</span>
+<form id="form-POSTapi-categories" data-method="POST"
+      data-path="api/categories"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer PcbfDvd4E15Vga3ekZ8h6a6","Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-categories', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-categories"
+                    onclick="tryItOut('POSTapi-categories');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-categories"
+                    onclick="cancelTryOut('POSTapi-categories');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-categories" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/categories</code></b>
+        </p>
+                <p>
+            <label id="auth-POSTapi-categories" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="POSTapi-categories"
+                                                                data-component="header"></label>
+        </p>
+                        <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>name</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="name"
+               data-endpoint="POSTapi-categories"
+               value="technology"
+               data-component="body" hidden>
+    <br>
+<p>🤖 Category name, unique in the table category.</p>
+        </p>
+                <p>
+            <b><code>description</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="description"
+               data-endpoint="POSTapi-categories"
+               value="State-of-the-art technological products"
+               data-component="body" hidden>
+    <br>
+<p>📝 Category description .</p>
+        </p>
+        </form>
+
+            <h2 id="category-management-DELETEapi-categories--id-">Remove the specified resource from storage.</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-DELETEapi-categories--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request DELETE \
+    "http://localhost:8000/api/categories/13" \
+    --header "Authorization: Bearer g5ZdfacE163k8Pav4V6ehbD" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/categories/13"
+);
+
+const headers = {
+    "Authorization": "Bearer g5ZdfacE163k8Pav4V6ehbD",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "DELETE",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="ruby-example">
+    <pre><code class="language-ruby">
+require 'rest-client'
+
+    headers = {
+            "Authorization": "Bearer g5ZdfacE163k8Pav4V6ehbD",
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+        }
+
+response = RestClient.delete(
+'http://localhost:8000/api/categories/13',
+headers
+)
+
+p response.body
+</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;delete(
+    'http://localhost:8000/api/categories/13',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer g5ZdfacE163k8Pav4V6ehbD',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/categories/13'
+headers = {
+  'Authorization': 'Bearer g5ZdfacE163k8Pav4V6ehbD',
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('DELETE', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-DELETEapi-categories--id-">
+</span>
+<span id="execution-results-DELETEapi-categories--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-DELETEapi-categories--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-DELETEapi-categories--id-"></code></pre>
+</span>
+<span id="execution-error-DELETEapi-categories--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-DELETEapi-categories--id-"></code></pre>
+</span>
+<form id="form-DELETEapi-categories--id-" data-method="DELETE"
+      data-path="api/categories/{id}"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer g5ZdfacE163k8Pav4V6ehbD","Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('DELETEapi-categories--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-DELETEapi-categories--id-"
+                    onclick="tryItOut('DELETEapi-categories--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-DELETEapi-categories--id-"
+                    onclick="cancelTryOut('DELETEapi-categories--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-DELETEapi-categories--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-red">DELETE</small>
+            <b><code>api/categories/{id}</code></b>
+        </p>
+                <p>
+            <label id="auth-DELETEapi-categories--id-" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="DELETEapi-categories--id-"
+                                                                data-component="header"></label>
+        </p>
+                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="DELETEapi-categories--id-"
+               value="13"
+               data-component="url" hidden>
+    <br>
+<p>The ID of the category.</p>
+            </p>
+                    </form>
+
+            <h2 id="category-management-PUTapi-categories--id-">Update the specified resource in storage.</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-PUTapi-categories--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request PUT \
+    "http://localhost:8000/api/categories/1" \
+    --header "Authorization: Bearer b66Dc51VEveg8fd4P3aakhZ" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"name\": \"technology\",
+    \"description\": \"State-of-the-art technological products\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/categories/1"
+);
+
+const headers = {
+    "Authorization": "Bearer b66Dc51VEveg8fd4P3aakhZ",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "name": "technology",
+    "description": "State-of-the-art technological products"
+};
+
+fetch(url, {
+    method: "PUT",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="ruby-example">
+    <pre><code class="language-ruby">
+require 'rest-client'
+
+    body = {
+    "name": "technology",
+    "description": "State-of-the-art technological products"
+}
+    headers = {
+            "Authorization": "Bearer b66Dc51VEveg8fd4P3aakhZ",
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+        }
+
+response = RestClient.put(
+'http://localhost:8000/api/categories/1',
+body ,
+headers
+)
+
+p response.body
+</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;put(
+    'http://localhost:8000/api/categories/1',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer b66Dc51VEveg8fd4P3aakhZ',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+        'json' =&gt; [
+            'name' =&gt; 'technology',
+            'description' =&gt; 'State-of-the-art technological products',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/categories/1'
+payload = {
+    "name": "technology",
+    "description": "State-of-the-art technological products"
+}
+headers = {
+  'Authorization': 'Bearer b66Dc51VEveg8fd4P3aakhZ',
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('PUT', url, headers=headers, json=payload)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-PUTapi-categories--id-">
+</span>
+<span id="execution-results-PUTapi-categories--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-PUTapi-categories--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-PUTapi-categories--id-"></code></pre>
+</span>
+<span id="execution-error-PUTapi-categories--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-PUTapi-categories--id-"></code></pre>
+</span>
+<form id="form-PUTapi-categories--id-" data-method="PUT"
+      data-path="api/categories/{id}"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer b66Dc51VEveg8fd4P3aakhZ","Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('PUTapi-categories--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-PUTapi-categories--id-"
+                    onclick="tryItOut('PUTapi-categories--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-PUTapi-categories--id-"
+                    onclick="cancelTryOut('PUTapi-categories--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-PUTapi-categories--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-darkblue">PUT</small>
+            <b><code>api/categories/{id}</code></b>
+        </p>
+            <p>
+            <small class="badge badge-purple">PATCH</small>
+            <b><code>api/categories/{id}</code></b>
+        </p>
+                <p>
+            <label id="auth-PUTapi-categories--id-" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="PUTapi-categories--id-"
+                                                                data-component="header"></label>
+        </p>
+                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="PUTapi-categories--id-"
+               value="1"
+               data-component="url" hidden>
+    <br>
+<p>Defaults to 'id'.</p>
+            </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>name</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="name"
+               data-endpoint="PUTapi-categories--id-"
+               value="technology"
+               data-component="body" hidden>
+    <br>
+<p>🤖 Category name, unique in the table category.</p>
+        </p>
+                <p>
+            <b><code>description</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="description"
+               data-endpoint="PUTapi-categories--id-"
+               value="State-of-the-art technological products"
+               data-component="body" hidden>
+    <br>
+<p>📝 Category description .</p>
+        </p>
+        </form>
 
             <h2 id="category-management-GETapi-categories">Display a listing of the resource.</h2>
 
@@ -830,190 +1363,6 @@ access-control-allow-origin: *
         </p>
                     </form>
 
-            <h2 id="category-management-POSTapi-categories">Store a newly created resource in storage.</h2>
-
-<p>
-<small class="badge badge-darkred">requires authentication</small>
-</p>
-
-
-
-<span id="example-requests-POSTapi-categories">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/categories" \
-    --header "Authorization: Bearer 8vf6aPg1eb6dk5c3ahDZEV4" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json" \
-    --data "{
-    \"name\": \"technology\",
-    \"description\": \"State-of-the-art technological products\"
-}"
-</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/categories"
-);
-
-const headers = {
-    "Authorization": "Bearer 8vf6aPg1eb6dk5c3ahDZEV4",
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-let body = {
-    "name": "technology",
-    "description": "State-of-the-art technological products"
-};
-
-fetch(url, {
-    method: "POST",
-    headers,
-    body: JSON.stringify(body),
-}).then(response =&gt; response.json());</code></pre></div>
-
-
-<div class="ruby-example">
-    <pre><code class="language-ruby">
-require 'rest-client'
-
-    body = {
-    "name": "technology",
-    "description": "State-of-the-art technological products"
-}
-    headers = {
-            "Authorization": "Bearer 8vf6aPg1eb6dk5c3ahDZEV4",
-            "Content-Type": "application/json",
-            "Accept": "application/json",
-        }
-
-response = RestClient.post(
-'http://localhost:8000/api/categories',
-body ,
-headers
-)
-
-p response.body
-</code></pre></div>
-
-
-<div class="php-example">
-    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$response = $client-&gt;post(
-    'http://localhost:8000/api/categories',
-    [
-        'headers' =&gt; [
-            'Authorization' =&gt; 'Bearer 8vf6aPg1eb6dk5c3ahDZEV4',
-            'Content-Type' =&gt; 'application/json',
-            'Accept' =&gt; 'application/json',
-        ],
-        'json' =&gt; [
-            'name' =&gt; 'technology',
-            'description' =&gt; 'State-of-the-art technological products',
-        ],
-    ]
-);
-$body = $response-&gt;getBody();
-print_r(json_decode((string) $body));</code></pre></div>
-
-
-<div class="python-example">
-    <pre><code class="language-python">import requests
-import json
-
-url = 'http://localhost:8000/api/categories'
-payload = {
-    "name": "technology",
-    "description": "State-of-the-art technological products"
-}
-headers = {
-  'Authorization': 'Bearer 8vf6aPg1eb6dk5c3ahDZEV4',
-  'Content-Type': 'application/json',
-  'Accept': 'application/json'
-}
-
-response = requests.request('POST', url, headers=headers, json=payload)
-response.json()</code></pre></div>
-
-</span>
-
-<span id="example-responses-POSTapi-categories">
-</span>
-<span id="execution-results-POSTapi-categories" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-POSTapi-categories"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-categories"></code></pre>
-</span>
-<span id="execution-error-POSTapi-categories" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-categories"></code></pre>
-</span>
-<form id="form-POSTapi-categories" data-method="POST"
-      data-path="api/categories"
-      data-authed="1"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Authorization":"Bearer 8vf6aPg1eb6dk5c3ahDZEV4","Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('POSTapi-categories', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-categories"
-                    onclick="tryItOut('POSTapi-categories');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-categories"
-                    onclick="cancelTryOut('POSTapi-categories');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-categories" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-black">POST</small>
-            <b><code>api/categories</code></b>
-        </p>
-                <p>
-            <label id="auth-POSTapi-categories" hidden>Authorization header:
-                <b><code>Bearer </code></b><input type="text"
-                                                                name="Authorization"
-                                                                data-prefix="Bearer "
-                                                                data-endpoint="POSTapi-categories"
-                                                                data-component="header"></label>
-        </p>
-                        <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
-        <p>
-            <b><code>name</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-                <input type="text"
-               name="name"
-               data-endpoint="POSTapi-categories"
-               value="technology"
-               data-component="body" hidden>
-    <br>
-<p>🤖 Category name, unique in the table category.</p>
-        </p>
-                <p>
-            <b><code>description</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-                <input type="text"
-               name="description"
-               data-endpoint="POSTapi-categories"
-               value="State-of-the-art technological products"
-               data-component="body" hidden>
-    <br>
-<p>📝 Category description .</p>
-        </p>
-        </form>
-
             <h2 id="category-management-GETapi-categories--id-">Display the specified resource.</h2>
 
 <p>
@@ -1027,14 +1376,14 @@ response.json()</code></pre></div>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/categories/7" \
+    --get "http://localhost:8000/api/categories/18" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/categories/7"
+    "http://localhost:8000/api/categories/18"
 );
 
 const headers = {
@@ -1058,7 +1407,7 @@ require 'rest-client'
         }
 
 response = RestClient.get(
-'http://localhost:8000/api/categories/7',
+'http://localhost:8000/api/categories/18',
 headers
 )
 
@@ -1069,7 +1418,7 @@ p response.body
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/categories/7',
+    'http://localhost:8000/api/categories/18',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -1085,7 +1434,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/categories/7'
+url = 'http://localhost:8000/api/categories/18'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -1168,361 +1517,12 @@ access-control-allow-origin: *
                 <input type="number"
                name="id"
                data-endpoint="GETapi-categories--id-"
-               value="7"
+               value="18"
                data-component="url" hidden>
     <br>
 <p>The ID of the category.</p>
             </p>
                     </form>
-
-            <h2 id="category-management-DELETEapi-categories--id-">Remove the specified resource from storage.</h2>
-
-<p>
-<small class="badge badge-darkred">requires authentication</small>
-</p>
-
-
-
-<span id="example-requests-DELETEapi-categories--id-">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/categories/9" \
-    --header "Authorization: Bearer 36Efhdvc8a64eZDbV1a5Pkg" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/categories/9"
-);
-
-const headers = {
-    "Authorization": "Bearer 36Efhdvc8a64eZDbV1a5Pkg",
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "DELETE",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-
-<div class="ruby-example">
-    <pre><code class="language-ruby">
-require 'rest-client'
-
-    headers = {
-            "Authorization": "Bearer 36Efhdvc8a64eZDbV1a5Pkg",
-            "Content-Type": "application/json",
-            "Accept": "application/json",
-        }
-
-response = RestClient.delete(
-'http://localhost:8000/api/categories/9',
-headers
-)
-
-p response.body
-</code></pre></div>
-
-
-<div class="php-example">
-    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$response = $client-&gt;delete(
-    'http://localhost:8000/api/categories/9',
-    [
-        'headers' =&gt; [
-            'Authorization' =&gt; 'Bearer 36Efhdvc8a64eZDbV1a5Pkg',
-            'Content-Type' =&gt; 'application/json',
-            'Accept' =&gt; 'application/json',
-        ],
-    ]
-);
-$body = $response-&gt;getBody();
-print_r(json_decode((string) $body));</code></pre></div>
-
-
-<div class="python-example">
-    <pre><code class="language-python">import requests
-import json
-
-url = 'http://localhost:8000/api/categories/9'
-headers = {
-  'Authorization': 'Bearer 36Efhdvc8a64eZDbV1a5Pkg',
-  'Content-Type': 'application/json',
-  'Accept': 'application/json'
-}
-
-response = requests.request('DELETE', url, headers=headers)
-response.json()</code></pre></div>
-
-</span>
-
-<span id="example-responses-DELETEapi-categories--id-">
-</span>
-<span id="execution-results-DELETEapi-categories--id-" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-DELETEapi-categories--id-"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-DELETEapi-categories--id-"></code></pre>
-</span>
-<span id="execution-error-DELETEapi-categories--id-" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-DELETEapi-categories--id-"></code></pre>
-</span>
-<form id="form-DELETEapi-categories--id-" data-method="DELETE"
-      data-path="api/categories/{id}"
-      data-authed="1"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Authorization":"Bearer 36Efhdvc8a64eZDbV1a5Pkg","Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('DELETEapi-categories--id-', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-DELETEapi-categories--id-"
-                    onclick="tryItOut('DELETEapi-categories--id-');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-DELETEapi-categories--id-"
-                    onclick="cancelTryOut('DELETEapi-categories--id-');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-DELETEapi-categories--id-" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-red">DELETE</small>
-            <b><code>api/categories/{id}</code></b>
-        </p>
-                <p>
-            <label id="auth-DELETEapi-categories--id-" hidden>Authorization header:
-                <b><code>Bearer </code></b><input type="text"
-                                                                name="Authorization"
-                                                                data-prefix="Bearer "
-                                                                data-endpoint="DELETEapi-categories--id-"
-                                                                data-component="header"></label>
-        </p>
-                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
-                    <p>
-                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
-                <input type="number"
-               name="id"
-               data-endpoint="DELETEapi-categories--id-"
-               value="9"
-               data-component="url" hidden>
-    <br>
-<p>The ID of the category.</p>
-            </p>
-                    </form>
-
-            <h2 id="category-management-PUTapi-categories--id-">Update the specified resource in storage.</h2>
-
-<p>
-<small class="badge badge-darkred">requires authentication</small>
-</p>
-
-
-
-<span id="example-requests-PUTapi-categories--id-">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/categories/1" \
-    --header "Authorization: Bearer 58ge3faZbDvEk64c1VPad6h" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json" \
-    --data "{
-    \"name\": \"technology\",
-    \"description\": \"State-of-the-art technological products\"
-}"
-</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/categories/1"
-);
-
-const headers = {
-    "Authorization": "Bearer 58ge3faZbDvEk64c1VPad6h",
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-let body = {
-    "name": "technology",
-    "description": "State-of-the-art technological products"
-};
-
-fetch(url, {
-    method: "PUT",
-    headers,
-    body: JSON.stringify(body),
-}).then(response =&gt; response.json());</code></pre></div>
-
-
-<div class="ruby-example">
-    <pre><code class="language-ruby">
-require 'rest-client'
-
-    body = {
-    "name": "technology",
-    "description": "State-of-the-art technological products"
-}
-    headers = {
-            "Authorization": "Bearer 58ge3faZbDvEk64c1VPad6h",
-            "Content-Type": "application/json",
-            "Accept": "application/json",
-        }
-
-response = RestClient.put(
-'http://localhost:8000/api/categories/1',
-body ,
-headers
-)
-
-p response.body
-</code></pre></div>
-
-
-<div class="php-example">
-    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$response = $client-&gt;put(
-    'http://localhost:8000/api/categories/1',
-    [
-        'headers' =&gt; [
-            'Authorization' =&gt; 'Bearer 58ge3faZbDvEk64c1VPad6h',
-            'Content-Type' =&gt; 'application/json',
-            'Accept' =&gt; 'application/json',
-        ],
-        'json' =&gt; [
-            'name' =&gt; 'technology',
-            'description' =&gt; 'State-of-the-art technological products',
-        ],
-    ]
-);
-$body = $response-&gt;getBody();
-print_r(json_decode((string) $body));</code></pre></div>
-
-
-<div class="python-example">
-    <pre><code class="language-python">import requests
-import json
-
-url = 'http://localhost:8000/api/categories/1'
-payload = {
-    "name": "technology",
-    "description": "State-of-the-art technological products"
-}
-headers = {
-  'Authorization': 'Bearer 58ge3faZbDvEk64c1VPad6h',
-  'Content-Type': 'application/json',
-  'Accept': 'application/json'
-}
-
-response = requests.request('PUT', url, headers=headers, json=payload)
-response.json()</code></pre></div>
-
-</span>
-
-<span id="example-responses-PUTapi-categories--id-">
-</span>
-<span id="execution-results-PUTapi-categories--id-" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-PUTapi-categories--id-"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-PUTapi-categories--id-"></code></pre>
-</span>
-<span id="execution-error-PUTapi-categories--id-" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-PUTapi-categories--id-"></code></pre>
-</span>
-<form id="form-PUTapi-categories--id-" data-method="PUT"
-      data-path="api/categories/{id}"
-      data-authed="1"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Authorization":"Bearer 58ge3faZbDvEk64c1VPad6h","Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('PUTapi-categories--id-', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-PUTapi-categories--id-"
-                    onclick="tryItOut('PUTapi-categories--id-');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-PUTapi-categories--id-"
-                    onclick="cancelTryOut('PUTapi-categories--id-');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-PUTapi-categories--id-" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-darkblue">PUT</small>
-            <b><code>api/categories/{id}</code></b>
-        </p>
-            <p>
-            <small class="badge badge-purple">PATCH</small>
-            <b><code>api/categories/{id}</code></b>
-        </p>
-                <p>
-            <label id="auth-PUTapi-categories--id-" hidden>Authorization header:
-                <b><code>Bearer </code></b><input type="text"
-                                                                name="Authorization"
-                                                                data-prefix="Bearer "
-                                                                data-endpoint="PUTapi-categories--id-"
-                                                                data-component="header"></label>
-        </p>
-                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
-                    <p>
-                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
-                <input type="number"
-               name="id"
-               data-endpoint="PUTapi-categories--id-"
-               value="1"
-               data-component="url" hidden>
-    <br>
-<p>Defaults to 'id'.</p>
-            </p>
-                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
-        <p>
-            <b><code>name</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-                <input type="text"
-               name="name"
-               data-endpoint="PUTapi-categories--id-"
-               value="technology"
-               data-component="body" hidden>
-    <br>
-<p>🤖 Category name, unique in the table category.</p>
-        </p>
-                <p>
-            <b><code>description</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-                <input type="text"
-               name="description"
-               data-endpoint="PUTapi-categories--id-"
-               value="State-of-the-art technological products"
-               data-component="body" hidden>
-    <br>
-<p>📝 Category description .</p>
-        </p>
-        </form>
 
         <h1 id="product-management">Product Management</h1>
 
@@ -1543,7 +1543,7 @@ response.json()</code></pre></div>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
     "http://localhost:8000/api/products" \
-    --header "Authorization: Bearer ak4c3aP6bZdv8gf6V5EehD1" \
+    --header "Authorization: Bearer f5Zaed8ha66DbvkgcP314VE" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
     --form "name=Glass" \
@@ -1551,8 +1551,8 @@ response.json()</code></pre></div>
     --form "price=33" \
     --form "weight=2" \
     --form "stock=34" \
-    --form "thumbnail=@/tmp/phpLPj1zZ" \
-    --form "images[]=@/tmp/phpNYeibZ" </code></pre></div>
+    --form "thumbnail=@/tmp/phpqBaJdy" \
+    --form "images[]=@/tmp/php52ikxi" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -1561,7 +1561,7 @@ response.json()</code></pre></div>
 );
 
 const headers = {
-    "Authorization": "Bearer ak4c3aP6bZdv8gf6V5EehD1",
+    "Authorization": "Bearer f5Zaed8ha66DbvkgcP314VE",
     "Content-Type": "multipart/form-data",
     "Accept": "application/json",
 };
@@ -1594,7 +1594,7 @@ require 'rest-client'
     "stock": 34
 }
     headers = {
-            "Authorization": "Bearer ak4c3aP6bZdv8gf6V5EehD1",
+            "Authorization": "Bearer f5Zaed8ha66DbvkgcP314VE",
             "Content-Type": "multipart/form-data",
             "Accept": "application/json",
         }
@@ -1615,7 +1615,7 @@ $response = $client-&gt;post(
     'http://localhost:8000/api/products',
     [
         'headers' =&gt; [
-            'Authorization' =&gt; 'Bearer ak4c3aP6bZdv8gf6V5EehD1',
+            'Authorization' =&gt; 'Bearer f5Zaed8ha66DbvkgcP314VE',
             'Content-Type' =&gt; 'multipart/form-data',
             'Accept' =&gt; 'application/json',
         ],
@@ -1642,11 +1642,11 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'thumbnail',
-                'contents' =&gt; fopen('/tmp/phpLPj1zZ', 'r')
+                'contents' =&gt; fopen('/tmp/phpqBaJdy', 'r')
             ],
             [
                 'name' =&gt; 'images[]',
-                'contents' =&gt; fopen('/tmp/phpNYeibZ', 'r')
+                'contents' =&gt; fopen('/tmp/php52ikxi', 'r')
             ],
         ],
     ]
@@ -1661,8 +1661,8 @@ import json
 
 url = 'http://localhost:8000/api/products'
 files = {
-  'thumbnail': open('/tmp/phpLPj1zZ', 'rb'),
-  'images[]': open('/tmp/phpNYeibZ', 'rb')
+  'thumbnail': open('/tmp/phpqBaJdy', 'rb'),
+  'images[]': open('/tmp/php52ikxi', 'rb')
 }
 payload = {
     "name": "Glass",
@@ -1672,7 +1672,7 @@ payload = {
     "stock": 34
 }
 headers = {
-  'Authorization': 'Bearer ak4c3aP6bZdv8gf6V5EehD1',
+  'Authorization': 'Bearer f5Zaed8ha66DbvkgcP314VE',
   'Content-Type': 'multipart/form-data',
   'Accept': 'application/json'
 }
@@ -1699,7 +1699,7 @@ response.json()</code></pre></div>
       data-authed="1"
       data-hasfiles="1"
       data-isarraybody="0"
-      data-headers='{"Authorization":"Bearer ak4c3aP6bZdv8gf6V5EehD1","Content-Type":"multipart\/form-data","Accept":"application\/json"}'
+      data-headers='{"Authorization":"Bearer f5Zaed8ha66DbvkgcP314VE","Content-Type":"multipart\/form-data","Accept":"application\/json"}'
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('POSTapi-products', this);">
     <h3>
@@ -1822,7 +1822,7 @@ response.json()</code></pre></div>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
     "http://localhost:8000/api/products/1" \
-    --header "Authorization: Bearer E5eP13bVh6gf6Zv4ka8caDd" \
+    --header "Authorization: Bearer 165dcZvPaDhkV4b86fEgae3" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
     --form "name=Glass" \
@@ -1830,7 +1830,7 @@ response.json()</code></pre></div>
     --form "price=33" \
     --form "weight=2" \
     --form "stock=34" \
-    --form "thumbnail=@/tmp/phpXJuRjX" </code></pre></div>
+    --form "thumbnail=@/tmp/phpSSztC5" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -1839,7 +1839,7 @@ response.json()</code></pre></div>
 );
 
 const headers = {
-    "Authorization": "Bearer E5eP13bVh6gf6Zv4ka8caDd",
+    "Authorization": "Bearer 165dcZvPaDhkV4b86fEgae3",
     "Content-Type": "multipart/form-data",
     "Accept": "application/json",
 };
@@ -1871,7 +1871,7 @@ require 'rest-client'
     "stock": 34
 }
     headers = {
-            "Authorization": "Bearer E5eP13bVh6gf6Zv4ka8caDd",
+            "Authorization": "Bearer 165dcZvPaDhkV4b86fEgae3",
             "Content-Type": "multipart/form-data",
             "Accept": "application/json",
         }
@@ -1892,7 +1892,7 @@ $response = $client-&gt;put(
     'http://localhost:8000/api/products/1',
     [
         'headers' =&gt; [
-            'Authorization' =&gt; 'Bearer E5eP13bVh6gf6Zv4ka8caDd',
+            'Authorization' =&gt; 'Bearer 165dcZvPaDhkV4b86fEgae3',
             'Content-Type' =&gt; 'multipart/form-data',
             'Accept' =&gt; 'application/json',
         ],
@@ -1919,7 +1919,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'thumbnail',
-                'contents' =&gt; fopen('/tmp/phpXJuRjX', 'r')
+                'contents' =&gt; fopen('/tmp/phpSSztC5', 'r')
             ],
         ],
     ]
@@ -1934,7 +1934,7 @@ import json
 
 url = 'http://localhost:8000/api/products/1'
 files = {
-  'thumbnail': open('/tmp/phpXJuRjX', 'rb')
+  'thumbnail': open('/tmp/phpSSztC5', 'rb')
 }
 payload = {
     "name": "Glass",
@@ -1944,7 +1944,7 @@ payload = {
     "stock": 34
 }
 headers = {
-  'Authorization': 'Bearer E5eP13bVh6gf6Zv4ka8caDd',
+  'Authorization': 'Bearer 165dcZvPaDhkV4b86fEgae3',
   'Content-Type': 'multipart/form-data',
   'Accept': 'application/json'
 }
@@ -1971,7 +1971,7 @@ response.json()</code></pre></div>
       data-authed="1"
       data-hasfiles="1"
       data-isarraybody="0"
-      data-headers='{"Authorization":"Bearer E5eP13bVh6gf6Zv4ka8caDd","Content-Type":"multipart\/form-data","Accept":"application\/json"}'
+      data-headers='{"Authorization":"Bearer 165dcZvPaDhkV4b86fEgae3","Content-Type":"multipart\/form-data","Accept":"application\/json"}'
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('PUTapi-products--id-', this);">
     <h3>
@@ -2095,19 +2095,19 @@ response.json()</code></pre></div>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/products/6" \
-    --header "Authorization: Bearer V6vk54DdE13Zfeha8acg6Pb" \
+    "http://localhost:8000/api/products/19" \
+    --header "Authorization: Bearer ba8cgPEhD15ZV6f63av4dek" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/products/6"
+    "http://localhost:8000/api/products/19"
 );
 
 const headers = {
-    "Authorization": "Bearer V6vk54DdE13Zfeha8acg6Pb",
+    "Authorization": "Bearer ba8cgPEhD15ZV6f63av4dek",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -2123,13 +2123,13 @@ fetch(url, {
 require 'rest-client'
 
     headers = {
-            "Authorization": "Bearer V6vk54DdE13Zfeha8acg6Pb",
+            "Authorization": "Bearer ba8cgPEhD15ZV6f63av4dek",
             "Content-Type": "application/json",
             "Accept": "application/json",
         }
 
 response = RestClient.delete(
-'http://localhost:8000/api/products/6',
+'http://localhost:8000/api/products/19',
 headers
 )
 
@@ -2140,10 +2140,10 @@ p response.body
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;delete(
-    'http://localhost:8000/api/products/6',
+    'http://localhost:8000/api/products/19',
     [
         'headers' =&gt; [
-            'Authorization' =&gt; 'Bearer V6vk54DdE13Zfeha8acg6Pb',
+            'Authorization' =&gt; 'Bearer ba8cgPEhD15ZV6f63av4dek',
             'Content-Type' =&gt; 'application/json',
             'Accept' =&gt; 'application/json',
         ],
@@ -2157,9 +2157,9 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/products/6'
+url = 'http://localhost:8000/api/products/19'
 headers = {
-  'Authorization': 'Bearer V6vk54DdE13Zfeha8acg6Pb',
+  'Authorization': 'Bearer ba8cgPEhD15ZV6f63av4dek',
   'Content-Type': 'application/json',
   'Accept': 'application/json'
 }
@@ -2186,7 +2186,7 @@ response.json()</code></pre></div>
       data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
-      data-headers='{"Authorization":"Bearer V6vk54DdE13Zfeha8acg6Pb","Content-Type":"application\/json","Accept":"application\/json"}'
+      data-headers='{"Authorization":"Bearer ba8cgPEhD15ZV6f63av4dek","Content-Type":"application\/json","Accept":"application\/json"}'
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('DELETEapi-products--id-', this);">
     <h3>
@@ -2224,7 +2224,7 @@ response.json()</code></pre></div>
                 <input type="number"
                name="id"
                data-endpoint="DELETEapi-products--id-"
-               value="6"
+               value="19"
                data-component="url" hidden>
     <br>
 <p>The ID of the product.</p>
