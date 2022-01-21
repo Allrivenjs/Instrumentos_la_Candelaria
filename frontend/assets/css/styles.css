@@ -1,3 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('./productos.css');
+@import url('./shoping_cart.css');
+
 /* https://colorhunt.co/palette/ff4646ff8585ffb396fff5c0 */
 
 :root {
