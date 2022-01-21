@@ -21,7 +21,7 @@ class CreateOrdersTable extends Migration
             $table->string('order_email');
             $table->string('order_status');
             $table->timestamp('order_date');
-            $table->timestamp('updated_at');
+            $table->timestamp('updated_at')->nullable();
         });
 
 
