@@ -9,10 +9,7 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Passport\HasApiTokens;
-<<<<<<< HEAD
-=======
 
->>>>>>> 720c89c2d8c0618f4af9a484382f9fad86219ed3
 
 class User extends Authenticatable
 {
