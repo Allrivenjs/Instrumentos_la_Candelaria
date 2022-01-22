@@ -7,6 +7,577 @@ servers:
   -
     url: 'http://localhost:8000'
 paths:
+  /api/cart:
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer d66P3f4Evba5geDahVk8cZ1'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      id: 1
+                      quantity: '7'
+                      product_id: 1
+                      user_id: 10
+                      created_at: '2022-01-22T02:36:15.000000Z'
+                      updated_at: '2022-01-22T02:36:15.000000Z'
+                    -
+                      id: 2
+                      quantity: '3'
+                      product_id: 1
+                      user_id: 10
+                      created_at: '2022-01-22T02:36:15.000000Z'
+                      updated_at: '2022-01-22T02:36:15.000000Z'
+                    -
+                      id: 3
+                      quantity: '7'
+                      product_id: 1
+                      user_id: 10
+                      created_at: '2022-01-22T02:36:16.000000Z'
+                      updated_at: '2022-01-22T02:36:16.000000Z'
+                    -
+                      id: 4
+                      quantity: '9'
+                      product_id: 2
+                      user_id: 11
+                      created_at: '2022-01-22T02:36:17.000000Z'
+                      updated_at: '2022-01-22T02:36:17.000000Z'
+                    -
+                      id: 5
+                      quantity: '9'
+                      product_id: 2
+                      user_id: 11
+                      created_at: '2022-01-22T02:36:17.000000Z'
+                      updated_at: '2022-01-22T02:36:17.000000Z'
+                    -
+                      id: 6
+                      quantity: '2'
+                      product_id: 2
+                      user_id: 11
+                      created_at: '2022-01-22T02:36:17.000000Z'
+                      updated_at: '2022-01-22T02:36:17.000000Z'
+                    -
+                      id: 7
+                      quantity: '5'
+                      product_id: 3
+                      user_id: 5
+                      created_at: '2022-01-22T02:36:19.000000Z'
+                      updated_at: '2022-01-22T02:36:19.000000Z'
+                    -
+                      id: 8
+                      quantity: '3'
+                      product_id: 3
+                      user_id: 5
+                      created_at: '2022-01-22T02:36:19.000000Z'
+                      updated_at: '2022-01-22T02:36:19.000000Z'
+                    -
+                      id: 9
+                      quantity: '7'
+                      product_id: 3
+                      user_id: 5
+                      created_at: '2022-01-22T02:36:19.000000Z'
+                      updated_at: '2022-01-22T02:36:19.000000Z'
+                    -
+                      id: 10
+                      quantity: '9'
+                      product_id: 4
+                      user_id: 1
+                      created_at: '2022-01-22T02:36:21.000000Z'
+                      updated_at: '2022-01-22T02:36:21.000000Z'
+                    -
+                      id: 11
+                      quantity: '7'
+                      product_id: 4
+                      user_id: 1
+                      created_at: '2022-01-22T02:36:21.000000Z'
+                      updated_at: '2022-01-22T02:36:21.000000Z'
+                    -
+                      id: 12
+                      quantity: '4'
+                      product_id: 4
+                      user_id: 1
+                      created_at: '2022-01-22T02:36:21.000000Z'
+                      updated_at: '2022-01-22T02:36:21.000000Z'
+                    -
+                      id: 13
+                      quantity: '1'
+                      product_id: 5
+                      user_id: 11
+                      created_at: '2022-01-22T02:36:23.000000Z'
+                      updated_at: '2022-01-22T02:36:23.000000Z'
+                    -
+                      id: 14
+                      quantity: '10'
+                      product_id: 5
+                      user_id: 11
+                      created_at: '2022-01-22T02:36:23.000000Z'
+                      updated_at: '2022-01-22T02:36:23.000000Z'
+                    -
+                      id: 15
+                      quantity: '3'
+                      product_id: 5
+                      user_id: 11
+                      created_at: '2022-01-22T02:36:23.000000Z'
+                      updated_at: '2022-01-22T02:36:23.000000Z'
+                    -
+                      id: 16
+                      quantity: '4'
+                      product_id: 6
+                      user_id: 10
+                      created_at: '2022-01-22T02:36:25.000000Z'
+                      updated_at: '2022-01-22T02:36:25.000000Z'
+                    -
+                      id: 17
+                      quantity: '4'
+                      product_id: 6
+                      user_id: 10
+                      created_at: '2022-01-22T02:36:25.000000Z'
+                      updated_at: '2022-01-22T02:36:25.000000Z'
+                    -
+                      id: 18
+                      quantity: '2'
+                      product_id: 6
+                      user_id: 10
+                      created_at: '2022-01-22T02:36:25.000000Z'
+                      updated_at: '2022-01-22T02:36:25.000000Z'
+                    -
+                      id: 19
+                      quantity: '8'
+                      product_id: 7
+                      user_id: 2
+                      created_at: '2022-01-22T02:36:27.000000Z'
+                      updated_at: '2022-01-22T02:36:27.000000Z'
+                    -
+                      id: 20
+                      quantity: '5'
+                      product_id: 7
+                      user_id: 2
+                      created_at: '2022-01-22T02:36:27.000000Z'
+                      updated_at: '2022-01-22T02:36:27.000000Z'
+                    -
+                      id: 21
+                      quantity: '10'
+                      product_id: 7
+                      user_id: 2
+                      created_at: '2022-01-22T02:36:27.000000Z'
+                      updated_at: '2022-01-22T02:36:27.000000Z'
+                    -
+                      id: 22
+                      quantity: '9'
+                      product_id: 8
+                      user_id: 9
+                      created_at: '2022-01-22T02:36:28.000000Z'
+                      updated_at: '2022-01-22T02:36:28.000000Z'
+                    -
+                      id: 23
+                      quantity: '9'
+                      product_id: 8
+                      user_id: 9
+                      created_at: '2022-01-22T02:36:29.000000Z'
+                      updated_at: '2022-01-22T02:36:29.000000Z'
+                    -
+                      id: 24
+                      quantity: '3'
+                      product_id: 8
+                      user_id: 9
+                      created_at: '2022-01-22T02:36:29.000000Z'
+                      updated_at: '2022-01-22T02:36:29.000000Z'
+                    -
+                      id: 25
+                      quantity: '9'
+                      product_id: 9
+                      user_id: 2
+                      created_at: '2022-01-22T02:36:30.000000Z'
+                      updated_at: '2022-01-22T02:36:30.000000Z'
+                    -
+                      id: 26
+                      quantity: '10'
+                      product_id: 9
+                      user_id: 2
+                      created_at: '2022-01-22T02:36:30.000000Z'
+                      updated_at: '2022-01-22T02:36:30.000000Z'
+                    -
+                      id: 27
+                      quantity: '10'
+                      product_id: 9
+                      user_id: 2
+                      created_at: '2022-01-22T02:36:31.000000Z'
+                      updated_at: '2022-01-22T02:36:31.000000Z'
+                    -
+                      id: 28
+                      quantity: '8'
+                      product_id: 10
+                      user_id: 3
+                      created_at: '2022-01-22T02:36:32.000000Z'
+                      updated_at: '2022-01-22T02:36:32.000000Z'
+                    -
+                      id: 29
+                      quantity: '5'
+                      product_id: 10
+                      user_id: 3
+                      created_at: '2022-01-22T02:36:32.000000Z'
+                      updated_at: '2022-01-22T02:36:32.000000Z'
+                    -
+                      id: 30
+                      quantity: '6'
+                      product_id: 10
+                      user_id: 3
+                      created_at: '2022-01-22T02:36:32.000000Z'
+                      updated_at: '2022-01-22T02:36:32.000000Z'
+                    -
+                      id: 31
+                      quantity: '8'
+                      product_id: 1
+                      user_id: 1
+                      created_at: '2022-01-22T04:13:49.000000Z'
+                      updated_at: '2022-01-22T04:14:32.000000Z'
+                    -
+                      id: 32
+                      quantity: '9'
+                      product_id: 3
+                      user_id: 1
+                      created_at: '2022-01-22T04:15:12.000000Z'
+                      updated_at: '2022-01-22T04:22:13.000000Z'
+                    -
+                      id: 33
+                      quantity: '10'
+                      product_id: 2
+                      user_id: 1
+                      created_at: '2022-01-22T04:22:34.000000Z'
+                      updated_at: '2022-01-22T04:22:34.000000Z'
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 1
+                        quantity: '7'
+                        product_id: 1
+                        user_id: 10
+                        created_at: '2022-01-22T02:36:15.000000Z'
+                        updated_at: '2022-01-22T02:36:15.000000Z'
+                      -
+                        id: 2
+                        quantity: '3'
+                        product_id: 1
+                        user_id: 10
+                        created_at: '2022-01-22T02:36:15.000000Z'
+                        updated_at: '2022-01-22T02:36:15.000000Z'
+                      -
+                        id: 3
+                        quantity: '7'
+                        product_id: 1
+                        user_id: 10
+                        created_at: '2022-01-22T02:36:16.000000Z'
+                        updated_at: '2022-01-22T02:36:16.000000Z'
+                      -
+                        id: 4
+                        quantity: '9'
+                        product_id: 2
+                        user_id: 11
+                        created_at: '2022-01-22T02:36:17.000000Z'
+                        updated_at: '2022-01-22T02:36:17.000000Z'
+                      -
+                        id: 5
+                        quantity: '9'
+                        product_id: 2
+                        user_id: 11
+                        created_at: '2022-01-22T02:36:17.000000Z'
+                        updated_at: '2022-01-22T02:36:17.000000Z'
+                      -
+                        id: 6
+                        quantity: '2'
+                        product_id: 2
+                        user_id: 11
+                        created_at: '2022-01-22T02:36:17.000000Z'
+                        updated_at: '2022-01-22T02:36:17.000000Z'
+                      -
+                        id: 7
+                        quantity: '5'
+                        product_id: 3
+                        user_id: 5
+                        created_at: '2022-01-22T02:36:19.000000Z'
+                        updated_at: '2022-01-22T02:36:19.000000Z'
+                      -
+                        id: 8
+                        quantity: '3'
+                        product_id: 3
+                        user_id: 5
+                        created_at: '2022-01-22T02:36:19.000000Z'
+                        updated_at: '2022-01-22T02:36:19.000000Z'
+                      -
+                        id: 9
+                        quantity: '7'
+                        product_id: 3
+                        user_id: 5
+                        created_at: '2022-01-22T02:36:19.000000Z'
+                        updated_at: '2022-01-22T02:36:19.000000Z'
+                      -
+                        id: 10
+                        quantity: '9'
+                        product_id: 4
+                        user_id: 1
+                        created_at: '2022-01-22T02:36:21.000000Z'
+                        updated_at: '2022-01-22T02:36:21.000000Z'
+                      -
+                        id: 11
+                        quantity: '7'
+                        product_id: 4
+                        user_id: 1
+                        created_at: '2022-01-22T02:36:21.000000Z'
+                        updated_at: '2022-01-22T02:36:21.000000Z'
+                      -
+                        id: 12
+                        quantity: '4'
+                        product_id: 4
+                        user_id: 1
+                        created_at: '2022-01-22T02:36:21.000000Z'
+                        updated_at: '2022-01-22T02:36:21.000000Z'
+                      -
+                        id: 13
+                        quantity: '1'
+                        product_id: 5
+                        user_id: 11
+                        created_at: '2022-01-22T02:36:23.000000Z'
+                        updated_at: '2022-01-22T02:36:23.000000Z'
+                      -
+                        id: 14
+                        quantity: '10'
+                        product_id: 5
+                        user_id: 11
+                        created_at: '2022-01-22T02:36:23.000000Z'
+                        updated_at: '2022-01-22T02:36:23.000000Z'
+                      -
+                        id: 15
+                        quantity: '3'
+                        product_id: 5
+                        user_id: 11
+                        created_at: '2022-01-22T02:36:23.000000Z'
+                        updated_at: '2022-01-22T02:36:23.000000Z'
+                      -
+                        id: 16
+                        quantity: '4'
+                        product_id: 6
+                        user_id: 10
+                        created_at: '2022-01-22T02:36:25.000000Z'
+                        updated_at: '2022-01-22T02:36:25.000000Z'
+                      -
+                        id: 17
+                        quantity: '4'
+                        product_id: 6
+                        user_id: 10
+                        created_at: '2022-01-22T02:36:25.000000Z'
+                        updated_at: '2022-01-22T02:36:25.000000Z'
+                      -
+                        id: 18
+                        quantity: '2'
+                        product_id: 6
+                        user_id: 10
+                        created_at: '2022-01-22T02:36:25.000000Z'
+                        updated_at: '2022-01-22T02:36:25.000000Z'
+                      -
+                        id: 19
+                        quantity: '8'
+                        product_id: 7
+                        user_id: 2
+                        created_at: '2022-01-22T02:36:27.000000Z'
+                        updated_at: '2022-01-22T02:36:27.000000Z'
+                      -
+                        id: 20
+                        quantity: '5'
+                        product_id: 7
+                        user_id: 2
+                        created_at: '2022-01-22T02:36:27.000000Z'
+                        updated_at: '2022-01-22T02:36:27.000000Z'
+                      -
+                        id: 21
+                        quantity: '10'
+                        product_id: 7
+                        user_id: 2
+                        created_at: '2022-01-22T02:36:27.000000Z'
+                        updated_at: '2022-01-22T02:36:27.000000Z'
+                      -
+                        id: 22
+                        quantity: '9'
+                        product_id: 8
+                        user_id: 9
+                        created_at: '2022-01-22T02:36:28.000000Z'
+                        updated_at: '2022-01-22T02:36:28.000000Z'
+                      -
+                        id: 23
+                        quantity: '9'
+                        product_id: 8
+                        user_id: 9
+                        created_at: '2022-01-22T02:36:29.000000Z'
+                        updated_at: '2022-01-22T02:36:29.000000Z'
+                      -
+                        id: 24
+                        quantity: '3'
+                        product_id: 8
+                        user_id: 9
+                        created_at: '2022-01-22T02:36:29.000000Z'
+                        updated_at: '2022-01-22T02:36:29.000000Z'
+                      -
+                        id: 25
+                        quantity: '9'
+                        product_id: 9
+                        user_id: 2
+                        created_at: '2022-01-22T02:36:30.000000Z'
+                        updated_at: '2022-01-22T02:36:30.000000Z'
+                      -
+                        id: 26
+                        quantity: '10'
+                        product_id: 9
+                        user_id: 2
+                        created_at: '2022-01-22T02:36:30.000000Z'
+                        updated_at: '2022-01-22T02:36:30.000000Z'
+                      -
+                        id: 27
+                        quantity: '10'
+                        product_id: 9
+                        user_id: 2
+                        created_at: '2022-01-22T02:36:31.000000Z'
+                        updated_at: '2022-01-22T02:36:31.000000Z'
+                      -
+                        id: 28
+                        quantity: '8'
+                        product_id: 10
+                        user_id: 3
+                        created_at: '2022-01-22T02:36:32.000000Z'
+                        updated_at: '2022-01-22T02:36:32.000000Z'
+                      -
+                        id: 29
+                        quantity: '5'
+                        product_id: 10
+                        user_id: 3
+                        created_at: '2022-01-22T02:36:32.000000Z'
+                        updated_at: '2022-01-22T02:36:32.000000Z'
+                      -
+                        id: 30
+                        quantity: '6'
+                        product_id: 10
+                        user_id: 3
+                        created_at: '2022-01-22T02:36:32.000000Z'
+                        updated_at: '2022-01-22T02:36:32.000000Z'
+                      -
+                        id: 31
+                        quantity: '8'
+                        product_id: 1
+                        user_id: 1
+                        created_at: '2022-01-22T04:13:49.000000Z'
+                        updated_at: '2022-01-22T04:14:32.000000Z'
+                      -
+                        id: 32
+                        quantity: '9'
+                        product_id: 3
+                        user_id: 1
+                        created_at: '2022-01-22T04:15:12.000000Z'
+                        updated_at: '2022-01-22T04:22:13.000000Z'
+                      -
+                        id: 33
+                        quantity: '10'
+                        product_id: 2
+                        user_id: 1
+                        created_at: '2022-01-22T04:22:34.000000Z'
+                        updated_at: '2022-01-22T04:22:34.000000Z'
+                    items:
+                      type: object
+      tags:
+        - Endpoints
+    post:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer Z5vhVaDPfbEd6kca316e48g'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+  '/api/cart/{id}':
+    delete:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer dv41ak6hcPgDfbZ8a3Ve56E'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the cart.'
+        example: 7
+        required: true
+        schema:
+          type: integer
   /api/auth/login:
     post:
       summary: 'Login Auth'
@@ -100,7 +671,7 @@ paths:
           in: header
           name: Authorization
           description: ''
-          example: 'Bearer PfDga8E4ahcd616V3kv5beZ'
+          example: 'Bearer 6h8a61Vcbfad3Dgv4ekPZE5'
           schema:
             type: string
         -
@@ -151,16 +722,64 @@ paths:
                 example:
                   -
                     id: 1
-                    name: admin
-                    description: admin
-                    created_at: '2022-01-21T01:40:14.000000Z'
-                    updated_at: '2022-01-21T01:40:14.000000Z'
+                    name: 'Christop Sawayn'
+                    description: 'Et ea praesentium vitae quia et.'
+                    created_at: '2022-01-22T02:36:07.000000Z'
+                    updated_at: '2022-01-22T02:36:07.000000Z'
                   -
                     id: 2
-                    name: admin
-                    description: admin
-                    created_at: '2022-01-21T01:49:06.000000Z'
-                    updated_at: '2022-01-21T01:49:06.000000Z'
+                    name: 'Chaim Casper'
+                    description: 'Ut suscipit natus sit.'
+                    created_at: '2022-01-22T02:36:08.000000Z'
+                    updated_at: '2022-01-22T02:36:08.000000Z'
+                  -
+                    id: 3
+                    name: 'Dr. Mose Kiehn PhD'
+                    description: 'Et est accusantium ab aut.'
+                    created_at: '2022-01-22T02:36:08.000000Z'
+                    updated_at: '2022-01-22T02:36:08.000000Z'
+                  -
+                    id: 4
+                    name: 'Ed White'
+                    description: 'Iure omnis inventore ab qui quos.'
+                    created_at: '2022-01-22T02:36:08.000000Z'
+                    updated_at: '2022-01-22T02:36:08.000000Z'
+                  -
+                    id: 5
+                    name: 'Myles Dickens'
+                    description: 'Est facilis ut voluptatem eius et ab.'
+                    created_at: '2022-01-22T02:36:08.000000Z'
+                    updated_at: '2022-01-22T02:36:08.000000Z'
+                  -
+                    id: 6
+                    name: 'Ms. Bridgette Ratke'
+                    description: 'Autem aut quis non qui.'
+                    created_at: '2022-01-22T02:36:08.000000Z'
+                    updated_at: '2022-01-22T02:36:08.000000Z'
+                  -
+                    id: 7
+                    name: 'Prof. Charles Kerluke'
+                    description: 'Animi assumenda nam et.'
+                    created_at: '2022-01-22T02:36:08.000000Z'
+                    updated_at: '2022-01-22T02:36:08.000000Z'
+                  -
+                    id: 8
+                    name: 'Dr. Shawna Carroll IV'
+                    description: 'Non porro maxime dolorum nisi.'
+                    created_at: '2022-01-22T02:36:08.000000Z'
+                    updated_at: '2022-01-22T02:36:08.000000Z'
+                  -
+                    id: 9
+                    name: 'Ms. Neha Herzog V'
+                    description: 'Laudantium quia molestiae sit quo.'
+                    created_at: '2022-01-22T02:36:09.000000Z'
+                    updated_at: '2022-01-22T02:36:09.000000Z'
+                  -
+                    id: 10
+                    name: 'Vidal Watsica'
+                    description: 'Magnam libero suscipit qui molestiae.'
+                    created_at: '2022-01-22T02:36:09.000000Z'
+                    updated_at: '2022-01-22T02:36:09.000000Z'
       tags:
         - 'Category Management'
       security: []
@@ -172,7 +791,7 @@ paths:
           in: header
           name: Authorization
           description: ''
-          example: 'Bearer 85Zka346PEDcdavegVb16hf'
+          example: 'Bearer hebcvPD36E8465fdag1ZVak'
           schema:
             type: string
         -
@@ -239,19 +858,19 @@ paths:
                 example:
                   data:
                     id: 1
-                    name: admin
-                    description: admin
-                    created_at: '2022-01-21T01:40:14.000000Z'
-                    updated_at: '2022-01-21T01:40:14.000000Z'
+                    name: 'Christop Sawayn'
+                    description: 'Et ea praesentium vitae quia et.'
+                    created_at: '2022-01-22T02:36:07.000000Z'
+                    updated_at: '2022-01-22T02:36:07.000000Z'
                 properties:
                   data:
                     type: object
                     example:
                       id: 1
-                      name: admin
-                      description: admin
-                      created_at: '2022-01-21T01:40:14.000000Z'
-                      updated_at: '2022-01-21T01:40:14.000000Z'
+                      name: 'Christop Sawayn'
+                      description: 'Et ea praesentium vitae quia et.'
+                      created_at: '2022-01-22T02:36:07.000000Z'
+                      updated_at: '2022-01-22T02:36:07.000000Z'
       tags:
         - 'Category Management'
       security: []
@@ -263,7 +882,7 @@ paths:
           in: header
           name: Authorization
           description: ''
-          example: 'Bearer 68c6fgk1PahVdv3EZa45bDe'
+          example: 'Bearer f53aeabDc6v8E14dk6gPhVZ'
           schema:
             type: string
         -
@@ -291,7 +910,53 @@ paths:
           in: header
           name: Authorization
           description: ''
-          example: 'Bearer ZabckP668dafveg13EDh5V4'
+          example: 'Bearer 4PkDdcb6aehf8vaV5g6Z31E'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Category Management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: '🤖 Category name, unique in the table category.'
+                  example: technology
+                description:
+                  type: string
+                  description: '📝 Category description .'
+                  example: 'State-of-the-art technological products'
+              required:
+                - name
+                - description
+    post:
+      summary: 'Update the specified resource in storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer kP66v5dcV3aaEfhbDge418Z'
           schema:
             type: string
         -
@@ -334,7 +999,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the category.'
-        example: 20
+        example: 5
         required: true
         schema:
           type: integer
@@ -347,7 +1012,7 @@ paths:
           in: header
           name: Authorization
           description: ''
-          example: 'Bearer Z66De3PfVaEcghdv4851kba'
+          example: 'Bearer 1aa866chgD5vbZ3fPVek4dE'
           schema:
             type: string
         -
@@ -439,301 +1104,446 @@ paths:
                 example:
                   data:
                     -
-                      id: 1
-                      sku: '9799108954919'
-                      name: 'Freda Bernhard'
-                      price: 406211
+                      id: 11
+                      sku: Glas54708
+                      name: Glass
+                      price: 33
                       weight: 2
-                      description: 'Dolores harum et quae ad unde quidem. Tenetur earum dolore aut molestiae. Eum cupiditate aut illo nisi nam repellat perferendis. Laborum amet quam quis officiis facilis ut. Dolore numquam laborum illum mollitia qui. Rerum earum atque expedita doloremque ex non. Ducimus rerum modi aspernatur eos. Dolorum ut sit ex accusamus quia distinctio explicabo. Fuga et aperiam saepe rem. Deserunt iste perferendis laboriosam quia autem.'
-                      thumbnail: storage/product/89604b536ad260a754655e12cd900e8d.png
-                      stock: 83
-                      slug: freda-bernhard
-                      user_id: 4
-                      created_at: '2022-01-20T20:15:24.000000Z'
-                      updated_at: '2022-01-20T20:15:24.000000Z'
+                      description: 'Glasses for all people'
+                      thumbnail: storage/product/3xgVL6GByL9tJxmHIVN40BbzbM4nqPZqGeNdW9pY.jpg
+                      stock: 34
+                      slug: glass-1011330623
+                      user_id: 11
+                      created_at: '2022-01-22T04:18:36.000000Z'
+                      updated_at: '2022-01-22T04:18:36.000000Z'
                       user:
-                        id: 4
-                        name: 'Frederique Stamm'
-                        email: ohara.ted@example.net
-                        email_verified_at: '2022-01-20T20:15:18.000000Z'
-                        created_at: '2022-01-20T20:15:19.000000Z'
-                        updated_at: '2022-01-20T20:15:19.000000Z'
-                        profile_photo_url: 'https://ui-avatars.com/api/?name=F+S&color=7F9CF5&background=EBF4FF'
+                        id: 11
+                        name: 'Novella Mills'
+                        email: yasmeen53@example.org
+                        email_verified_at: '2022-01-22T02:35:59.000000Z'
+                        current_team_id: null
+                        profile_photo_path: null
+                        created_at: '2022-01-22T02:36:01.000000Z'
+                        updated_at: '2022-01-22T02:36:01.000000Z'
+                        profile_photo_url: 'https://ui-avatars.com/api/?name=N+M&color=7F9CF5&background=EBF4FF'
                       image:
                         -
-                          id: 1
-                          url: storage/product/38c15634477d1aa31fe5109020901819.png
-                          created_at: '2022-01-20T20:15:26.000000Z'
-                          updated_at: '2022-01-20T20:15:26.000000Z'
+                          id: 31
+                          url: storage/product/od779LFrRQnGIqlJUJacXCWyr1hp73HOCQbtJYct.jpg
+                          created_at: '2022-01-22T04:18:37.000000Z'
+                          updated_at: '2022-01-22T04:18:37.000000Z'
                         -
-                          id: 2
-                          url: storage/product/c60b4dcdf7b3b397e2a262bd4066b7b3.png
-                          created_at: '2022-01-20T20:15:26.000000Z'
-                          updated_at: '2022-01-20T20:15:26.000000Z'
-                        -
-                          id: 3
-                          url: storage/product/fd19d75c23ca400c6752b0201e3f336e.png
-                          created_at: '2022-01-20T20:15:26.000000Z'
-                          updated_at: '2022-01-20T20:15:26.000000Z'
+                          id: 32
+                          url: storage/product/52JE1iVXzkQL5GxY4FqznkGi3RnohdNf2KkuJihT.png
+                          created_at: '2022-01-22T04:18:37.000000Z'
+                          updated_at: '2022-01-22T04:18:37.000000Z'
+                      categories: []
                     -
-                      id: 2
-                      sku: '9794506963853'
-                      name: 'Wayne Gulgowski'
-                      price: 345440
-                      weight: 1
-                      description: 'Nostrum voluptatem quis ad totam aliquam corrupti quia qui. Sit alias dolorem numquam quidem nihil sint minima. Voluptates necessitatibus atque qui molestiae. Cum enim nesciunt eum quia accusantium fugiat. Porro voluptas perspiciatis sapiente dolores rem. Nihil ipsa ipsum corporis consequatur dolorem pariatur. Est corporis aut et nihil sequi id porro quo. Aliquid aut sit aperiam omnis deleniti aspernatur harum corporis. Quisquam nemo nihil aut voluptates aut facere amet.'
-                      thumbnail: storage/product/8b1163a8764d05080e06f49a2f44234f.png
-                      stock: 46
-                      slug: wayne-gulgowski
-                      user_id: 6
-                      created_at: '2022-01-20T20:15:24.000000Z'
-                      updated_at: '2022-01-20T20:15:24.000000Z'
-                      user:
-                        id: 6
-                        name: 'Reta DuBuque'
-                        email: enola58@example.com
-                        email_verified_at: '2022-01-20T20:15:18.000000Z'
-                        created_at: '2022-01-20T20:15:19.000000Z'
-                        updated_at: '2022-01-20T20:15:19.000000Z'
-                        profile_photo_url: 'https://ui-avatars.com/api/?name=R+D&color=7F9CF5&background=EBF4FF'
-                      image:
-                        -
-                          id: 4
-                          url: storage/product/9c78002a2be5b3fa598ea219eb7f6fd6.png
-                          created_at: '2022-01-20T20:15:27.000000Z'
-                          updated_at: '2022-01-20T20:15:27.000000Z'
-                        -
-                          id: 5
-                          url: storage/product/da4d6ceb46400c8dda7331f209de3b97.png
-                          created_at: '2022-01-20T20:15:27.000000Z'
-                          updated_at: '2022-01-20T20:15:27.000000Z'
-                        -
-                          id: 6
-                          url: storage/product/c33e145a59450cfec88ed48f9613a052.png
-                          created_at: '2022-01-20T20:15:27.000000Z'
-                          updated_at: '2022-01-20T20:15:27.000000Z'
-                    -
-                      id: 3
-                      sku: '9780182512034'
-                      name: 'Arely Nolan'
-                      price: 948740
-                      weight: 0
-                      description: 'Consequatur praesentium omnis nulla eaque. Voluptate et et aliquid incidunt quia blanditiis. Architecto fugiat ipsum eius dolor dolore ullam. Vel qui eligendi quis nulla. Ut cupiditate ut quos quam iste. Et ipsam saepe qui nam sed ad ab. Quia qui magni nesciunt et magni consequatur reprehenderit beatae. Veritatis enim neque doloribus. Fugiat eos magnam sit voluptas nihil dolores alias. Qui qui dolor porro dolores iure. Aut velit atque ut quia.'
-                      thumbnail: storage/product/2a77b14c9fbc9ddb7890a247e615d76d.png
-                      stock: 28
-                      slug: arely-nolan
-                      user_id: 8
-                      created_at: '2022-01-20T20:15:24.000000Z'
-                      updated_at: '2022-01-20T20:15:24.000000Z'
-                      user:
-                        id: 8
-                        name: 'Rhianna Wiegand'
-                        email: bailey.golden@example.com
-                        email_verified_at: '2022-01-20T20:15:18.000000Z'
-                        created_at: '2022-01-20T20:15:19.000000Z'
-                        updated_at: '2022-01-20T20:15:19.000000Z'
-                        profile_photo_url: 'https://ui-avatars.com/api/?name=R+W&color=7F9CF5&background=EBF4FF'
-                      image:
-                        -
-                          id: 7
-                          url: storage/product/604b5d1da055c085da9766effe04122d.png
-                          created_at: '2022-01-20T20:15:28.000000Z'
-                          updated_at: '2022-01-20T20:15:28.000000Z'
-                        -
-                          id: 8
-                          url: storage/product/6f3c1e4466afe637ec2fba181f0105c3.png
-                          created_at: '2022-01-20T20:15:28.000000Z'
-                          updated_at: '2022-01-20T20:15:28.000000Z'
-                        -
-                          id: 9
-                          url: storage/product/a3a902e2a957d1a4c13d8f2655f6b016.png
-                          created_at: '2022-01-20T20:15:28.000000Z'
-                          updated_at: '2022-01-20T20:15:28.000000Z'
-                    -
-                      id: 4
-                      sku: '9788987337920'
-                      name: 'Lyla Hayes'
-                      price: 704973
-                      weight: 4
-                      description: 'Quae odio repellat delectus est labore vel sunt. Voluptatem deleniti expedita nostrum vel est qui. Officia a hic quis nobis itaque labore voluptatem. Voluptatem vitae repudiandae sunt labore magnam omnis omnis. Molestiae est ad sint atque possimus. Tempore reiciendis quos dolorem voluptatem cupiditate ullam. Ut nemo nam ullam accusamus accusantium sequi. Quia eos delectus voluptas rerum dicta aut.'
-                      thumbnail: storage/product/bf2adfef4ea0289a4c150c07904e59a7.png
-                      stock: 9
-                      slug: lyla-hayes
-                      user_id: 5
-                      created_at: '2022-01-20T20:15:24.000000Z'
-                      updated_at: '2022-01-20T20:15:24.000000Z'
-                      user:
-                        id: 5
-                        name: 'Prof. Dallas Jaskolski'
-                        email: fredy.lemke@example.net
-                        email_verified_at: '2022-01-20T20:15:18.000000Z'
-                        created_at: '2022-01-20T20:15:19.000000Z'
-                        updated_at: '2022-01-20T20:15:19.000000Z'
-                        profile_photo_url: 'https://ui-avatars.com/api/?name=P+D+J&color=7F9CF5&background=EBF4FF'
-                      image:
-                        -
-                          id: 10
-                          url: storage/product/5fff516920530d8a2883a376c4c82844.png
-                          created_at: '2022-01-20T20:15:29.000000Z'
-                          updated_at: '2022-01-20T20:15:29.000000Z'
-                        -
-                          id: 11
-                          url: storage/product/3edbeb2b444e27fd4706b52352f96b1a.png
-                          created_at: '2022-01-20T20:15:29.000000Z'
-                          updated_at: '2022-01-20T20:15:29.000000Z'
-                        -
-                          id: 12
-                          url: storage/product/0718c614012b3a04e4f813f53ec4f91a.png
-                          created_at: '2022-01-20T20:15:29.000000Z'
-                          updated_at: '2022-01-20T20:15:29.000000Z'
-                    -
-                      id: 5
-                      sku: '9782650346967'
-                      name: 'Gregg Douglas'
-                      price: 997028
-                      weight: 0
-                      description: 'Voluptatem similique iste laudantium repellat ut est necessitatibus aspernatur. Necessitatibus aliquid enim dolor sed magnam et laborum. Sunt in amet quod qui sequi. Omnis nostrum tenetur nemo nam in accusamus voluptas. Aut nemo eum quibusdam facere repellat. Veritatis eum tempore amet et est sed. Officia aperiam aut quia accusantium ipsum. Vero suscipit quia enim consequatur mollitia et inventore. Qui delectus quia velit dolorem consequatur soluta dolores ex.'
-                      thumbnail: storage/product/8023fb8b31518c1d0cb20ca620fefa45.png
-                      stock: 30
-                      slug: gregg-douglas
-                      user_id: 8
-                      created_at: '2022-01-20T20:15:24.000000Z'
-                      updated_at: '2022-01-20T20:15:24.000000Z'
-                      user:
-                        id: 8
-                        name: 'Rhianna Wiegand'
-                        email: bailey.golden@example.com
-                        email_verified_at: '2022-01-20T20:15:18.000000Z'
-                        created_at: '2022-01-20T20:15:19.000000Z'
-                        updated_at: '2022-01-20T20:15:19.000000Z'
-                        profile_photo_url: 'https://ui-avatars.com/api/?name=R+W&color=7F9CF5&background=EBF4FF'
-                      image:
-                        -
-                          id: 13
-                          url: storage/product/e9f6b5dbe1d1e40a38d1a757419b9fad.png
-                          created_at: '2022-01-20T20:15:30.000000Z'
-                          updated_at: '2022-01-20T20:15:30.000000Z'
-                        -
-                          id: 14
-                          url: storage/product/d23c5643ff77911e8143e3a897e8997a.png
-                          created_at: '2022-01-20T20:15:31.000000Z'
-                          updated_at: '2022-01-20T20:15:31.000000Z'
-                        -
-                          id: 15
-                          url: storage/product/13ac47a3659761694999c6853e057de2.png
-                          created_at: '2022-01-20T20:15:31.000000Z'
-                          updated_at: '2022-01-20T20:15:31.000000Z'
-                    -
-                      id: 6
-                      sku: '9791427912151'
-                      name: 'Prof. Tavares Franecki DDS'
-                      price: 271048
-                      weight: 2
-                      description: 'Hic facere ipsam asperiores voluptatem eaque odio. Aut similique id omnis consequatur saepe vero et neque. Et non in consectetur iste perspiciatis deleniti excepturi quos. Nesciunt hic dolorem adipisci quas consequatur nostrum. Tempora commodi ut eveniet consequuntur nulla. Blanditiis dolore asperiores voluptatem voluptate omnis. Eum voluptatem eos voluptas omnis.'
-                      thumbnail: storage/product/9ed36d072ad4e17f8aeeb06e1b88cff0.png
-                      stock: 45
-                      slug: prof-tavares-franecki-dds
-                      user_id: 9
-                      created_at: '2022-01-20T20:15:24.000000Z'
-                      updated_at: '2022-01-20T20:15:24.000000Z'
-                      user:
-                        id: 9
-                        name: 'Diego Fay'
-                        email: camila02@example.org
-                        email_verified_at: '2022-01-20T20:15:18.000000Z'
-                        created_at: '2022-01-20T20:15:19.000000Z'
-                        updated_at: '2022-01-20T20:15:19.000000Z'
-                        profile_photo_url: 'https://ui-avatars.com/api/?name=D+F&color=7F9CF5&background=EBF4FF'
-                      image:
-                        -
-                          id: 16
-                          url: storage/product/319ac8811d35b1191a33a0edc6ec39f4.png
-                          created_at: '2022-01-20T20:15:32.000000Z'
-                          updated_at: '2022-01-20T20:15:32.000000Z'
-                        -
-                          id: 17
-                          url: storage/product/96cbdf47e5c9e3c59dfcba18595fd35b.png
-                          created_at: '2022-01-20T20:15:32.000000Z'
-                          updated_at: '2022-01-20T20:15:32.000000Z'
-                        -
-                          id: 18
-                          url: storage/product/7045a60c9d777ce500455e6d6971a5c5.png
-                          created_at: '2022-01-20T20:15:32.000000Z'
-                          updated_at: '2022-01-20T20:15:32.000000Z'
-                    -
-                      id: 7
-                      sku: '9794245432023'
-                      name: 'Prof. Dudley Hane Jr.'
-                      price: 554059
+                      id: 10
+                      sku: '9793003385564'
+                      name: 'Celine Carter II'
+                      price: 894598
                       weight: 3
-                      description: 'Quo modi ut voluptatem debitis nesciunt omnis culpa. Tempora velit nobis et a accusantium sit occaecati officiis. Fugiat ut ipsa sed excepturi. Perspiciatis minus perferendis ab facere officia. Est veritatis debitis dolore odit eius corrupti velit. Quibusdam doloribus autem et in. Quae necessitatibus et maxime et.'
-                      thumbnail: storage/product/3e1724b59a3a01076fc2f020c7d7be6d.png
-                      stock: 58
-                      slug: prof-dudley-hane-jr
+                      description: 'Laboriosam laudantium suscipit commodi dignissimos. Dicta est voluptatum animi ipsum est. Blanditiis soluta neque ipsa sint itaque est voluptatem. Quisquam perspiciatis dicta deserunt tempore aut. Labore quia fugit nisi doloremque aspernatur est neque. Autem fuga minus impedit sed delectus dolor tempora minima. Expedita labore repellendus perspiciatis cumque est et.'
+                      thumbnail: storage/product/659e6dbcbe42c9b97f27109d8278b17a.png
+                      stock: 96
+                      slug: celine-carter-ii
                       user_id: 10
-                      created_at: '2022-01-20T20:15:25.000000Z'
-                      updated_at: '2022-01-20T20:15:25.000000Z'
+                      created_at: '2022-01-22T02:36:14.000000Z'
+                      updated_at: '2022-01-22T02:36:14.000000Z'
                       user:
                         id: 10
-                        name: 'Bartholome Bogan'
-                        email: marvin.orlando@example.net
-                        email_verified_at: '2022-01-20T20:15:18.000000Z'
-                        created_at: '2022-01-20T20:15:20.000000Z'
-                        updated_at: '2022-01-20T20:15:20.000000Z'
-                        profile_photo_url: 'https://ui-avatars.com/api/?name=B+B&color=7F9CF5&background=EBF4FF'
+                        name: 'Phyllis Kling'
+                        email: hermiston.isabel@example.org
+                        email_verified_at: '2022-01-22T02:35:59.000000Z'
+                        current_team_id: null
+                        profile_photo_path: null
+                        created_at: '2022-01-22T02:36:01.000000Z'
+                        updated_at: '2022-01-22T02:36:01.000000Z'
+                        profile_photo_url: 'https://ui-avatars.com/api/?name=P+K&color=7F9CF5&background=EBF4FF'
                       image:
                         -
-                          id: 19
-                          url: storage/product/4a7b0a1004e4d601abe4156fea632650.png
-                          created_at: '2022-01-20T20:15:33.000000Z'
-                          updated_at: '2022-01-20T20:15:33.000000Z'
+                          id: 28
+                          url: storage/product/b6a0dd8506815fe46295d06483b45a2c.png
+                          created_at: '2022-01-22T02:36:32.000000Z'
+                          updated_at: '2022-01-22T02:36:32.000000Z'
                         -
-                          id: 20
-                          url: storage/product/1e0fa1126a264037aba3885825dee5f1.png
-                          created_at: '2022-01-20T20:15:33.000000Z'
-                          updated_at: '2022-01-20T20:15:33.000000Z'
+                          id: 29
+                          url: storage/product/763f9c39b7064c8ee87163845d21d529.png
+                          created_at: '2022-01-22T02:36:32.000000Z'
+                          updated_at: '2022-01-22T02:36:32.000000Z'
                         -
-                          id: 21
-                          url: storage/product/dc030433c823b42cf0b5b09e9662b322.png
-                          created_at: '2022-01-20T20:15:33.000000Z'
-                          updated_at: '2022-01-20T20:15:33.000000Z'
+                          id: 30
+                          url: storage/product/95fae5063326ed4815c1f132ea0c81bf.png
+                          created_at: '2022-01-22T02:36:32.000000Z'
+                          updated_at: '2022-01-22T02:36:32.000000Z'
+                      categories:
+                        -
+                          id: 4
+                          name: 'Ed White'
+                          description: 'Iure omnis inventore ab qui quos.'
+                          created_at: '2022-01-22T02:36:08.000000Z'
+                          updated_at: '2022-01-22T02:36:08.000000Z'
+                          pivot:
+                            product_id: 10
+                            category_id: 4
+                        -
+                          id: 8
+                          name: 'Dr. Shawna Carroll IV'
+                          description: 'Non porro maxime dolorum nisi.'
+                          created_at: '2022-01-22T02:36:08.000000Z'
+                          updated_at: '2022-01-22T02:36:08.000000Z'
+                          pivot:
+                            product_id: 10
+                            category_id: 8
+                    -
+                      id: 9
+                      sku: '9788751236664'
+                      name: 'Prof. Torey Rolfson PhD'
+                      price: 499500
+                      weight: 4
+                      description: 'Tenetur dolores magnam porro atque est dolorem ut. Tempora harum nihil in ipsum. Voluptatem nulla animi dolore recusandae sunt illum. Repellat asperiores neque officia. Natus ex qui ratione est molestiae quos nihil. Dicta eligendi consequatur quasi sunt vel et modi. Doloremque molestiae enim numquam quia saepe. Eveniet deleniti ea at. Exercitationem assumenda voluptatem dolore.'
+                      thumbnail: storage/product/f57da780a8ede25eac644e8273c6bed0.png
+                      stock: 90
+                      slug: prof-torey-rolfson-phd
+                      user_id: 2
+                      created_at: '2022-01-22T02:36:14.000000Z'
+                      updated_at: '2022-01-22T02:36:14.000000Z'
+                      user:
+                        id: 2
+                        name: 'Floyd Konopelski DVM'
+                        email: stiedemann.toni@example.com
+                        email_verified_at: '2022-01-22T02:35:59.000000Z'
+                        current_team_id: null
+                        profile_photo_path: null
+                        created_at: '2022-01-22T02:35:59.000000Z'
+                        updated_at: '2022-01-22T02:35:59.000000Z'
+                        profile_photo_url: 'https://ui-avatars.com/api/?name=F+K+D&color=7F9CF5&background=EBF4FF'
+                      image:
+                        -
+                          id: 25
+                          url: storage/product/e31085b45dba447d297752c1d65e9fd1.png
+                          created_at: '2022-01-22T02:36:30.000000Z'
+                          updated_at: '2022-01-22T02:36:30.000000Z'
+                        -
+                          id: 26
+                          url: storage/product/143771d9e7e4b4607baaf34da76dc574.png
+                          created_at: '2022-01-22T02:36:30.000000Z'
+                          updated_at: '2022-01-22T02:36:30.000000Z'
+                        -
+                          id: 27
+                          url: storage/product/54a01d756712ba2d9ee68b9ed5c8a442.png
+                          created_at: '2022-01-22T02:36:30.000000Z'
+                          updated_at: '2022-01-22T02:36:30.000000Z'
+                      categories:
+                        -
+                          id: 1
+                          name: 'Christop Sawayn'
+                          description: 'Et ea praesentium vitae quia et.'
+                          created_at: '2022-01-22T02:36:07.000000Z'
+                          updated_at: '2022-01-22T02:36:07.000000Z'
+                          pivot:
+                            product_id: 9
+                            category_id: 1
+                        -
+                          id: 8
+                          name: 'Dr. Shawna Carroll IV'
+                          description: 'Non porro maxime dolorum nisi.'
+                          created_at: '2022-01-22T02:36:08.000000Z'
+                          updated_at: '2022-01-22T02:36:08.000000Z'
+                          pivot:
+                            product_id: 9
+                            category_id: 8
                     -
                       id: 8
-                      sku: '9791015678735'
-                      name: 'Gregoria Hyatt'
-                      price: 677498
-                      weight: 4
-                      description: 'Sunt est corporis dolore repellendus est commodi quaerat rerum. Quis aliquam repellat ut ratione magnam. Quia cum vitae ad similique. Corporis exercitationem ratione tempore aut deserunt. Cupiditate accusantium officia numquam et consequatur incidunt dolores. Adipisci sed aliquam ut. Nihil laborum repellendus occaecati aspernatur ut aut necessitatibus.'
-                      thumbnail: storage/product/f01a74fc4fd2ae21dd8382704e8e6a31.png
-                      stock: 23
-                      slug: gregoria-hyatt
-                      user_id: 9
-                      created_at: '2022-01-20T20:15:25.000000Z'
-                      updated_at: '2022-01-20T20:15:25.000000Z'
+                      sku: '9790814482604'
+                      name: 'Sven Bailey Jr.'
+                      price: 43131
+                      weight: 1
+                      description: 'Libero voluptatem laborum perspiciatis unde ipsam et. Occaecati voluptatem nostrum qui necessitatibus dolorum. Fugiat earum dignissimos ipsum quas voluptas ea recusandae. Libero consequatur iure perspiciatis quia qui nam ipsa. Ipsam aut est est porro quidem totam. Quia ad nulla et vero veniam vel. Voluptatem sequi quia veritatis nihil sunt. Necessitatibus similique rerum et voluptatibus non sequi est.'
+                      thumbnail: storage/product/755b8fad670256178589ff596cfa7ca1.png
+                      stock: 48
+                      slug: sven-bailey-jr
+                      user_id: 1
+                      created_at: '2022-01-22T02:36:14.000000Z'
+                      updated_at: '2022-01-22T02:36:14.000000Z'
                       user:
-                        id: 9
-                        name: 'Diego Fay'
-                        email: camila02@example.org
-                        email_verified_at: '2022-01-20T20:15:18.000000Z'
-                        created_at: '2022-01-20T20:15:19.000000Z'
-                        updated_at: '2022-01-20T20:15:19.000000Z'
-                        profile_photo_url: 'https://ui-avatars.com/api/?name=D+F&color=7F9CF5&background=EBF4FF'
+                        id: 1
+                        name: Admin
+                        email: admin@gmail.com
+                        email_verified_at: null
+                        current_team_id: null
+                        profile_photo_path: null
+                        created_at: '2022-01-22T02:35:58.000000Z'
+                        updated_at: '2022-01-22T02:35:58.000000Z'
+                        profile_photo_url: 'https://ui-avatars.com/api/?name=A&color=7F9CF5&background=EBF4FF'
                       image:
                         -
                           id: 22
-                          url: storage/product/656b5dcd8cd41847075976bbf5e61cc8.png
-                          created_at: '2022-01-20T20:15:34.000000Z'
-                          updated_at: '2022-01-20T20:15:34.000000Z'
+                          url: storage/product/e9c7271bf00ba0e26e2ace9b57e0aa9d.png
+                          created_at: '2022-01-22T02:36:28.000000Z'
+                          updated_at: '2022-01-22T02:36:28.000000Z'
                         -
                           id: 23
-                          url: storage/product/82f2a4700c060e1cadb414ba2647e245.png
-                          created_at: '2022-01-20T20:15:34.000000Z'
-                          updated_at: '2022-01-20T20:15:34.000000Z'
+                          url: storage/product/19fc4e9c4ac8b6c3f2ec1304e666e2e9.png
+                          created_at: '2022-01-22T02:36:28.000000Z'
+                          updated_at: '2022-01-22T02:36:28.000000Z'
                         -
                           id: 24
-                          url: storage/product/325233e81398033cf48c2df0525c91d3.png
-                          created_at: '2022-01-20T20:15:34.000000Z'
-                          updated_at: '2022-01-20T20:15:34.000000Z'
+                          url: storage/product/28e825b1edc07235f73074a5621c1ba7.png
+                          created_at: '2022-01-22T02:36:28.000000Z'
+                          updated_at: '2022-01-22T02:36:28.000000Z'
+                      categories:
+                        -
+                          id: 3
+                          name: 'Dr. Mose Kiehn PhD'
+                          description: 'Et est accusantium ab aut.'
+                          created_at: '2022-01-22T02:36:08.000000Z'
+                          updated_at: '2022-01-22T02:36:08.000000Z'
+                          pivot:
+                            product_id: 8
+                            category_id: 3
+                        -
+                          id: 7
+                          name: 'Prof. Charles Kerluke'
+                          description: 'Animi assumenda nam et.'
+                          created_at: '2022-01-22T02:36:08.000000Z'
+                          updated_at: '2022-01-22T02:36:08.000000Z'
+                          pivot:
+                            product_id: 8
+                            category_id: 7
+                    -
+                      id: 7
+                      sku: '9789382871644'
+                      name: 'Mr. Norbert Wyman II'
+                      price: 440253
+                      weight: 2
+                      description: 'Velit explicabo officiis iure molestiae excepturi repellendus quia aliquam. Vel rerum reiciendis voluptate totam maxime. Cum ducimus dignissimos numquam id. Doloribus officia consequatur sunt reiciendis exercitationem consequatur. Qui accusantium architecto repellendus est id enim. Est illo quod provident saepe. Necessitatibus iure dolores et doloribus iste nostrum. Aut in perspiciatis eum et aut modi.'
+                      thumbnail: storage/product/284282df51e153934549373491c3c2b2.png
+                      stock: 56
+                      slug: mr-norbert-wyman-ii
+                      user_id: 6
+                      created_at: '2022-01-22T02:36:13.000000Z'
+                      updated_at: '2022-01-22T02:36:13.000000Z'
+                      user:
+                        id: 6
+                        name: 'Ludwig Corwin I'
+                        email: jamie01@example.net
+                        email_verified_at: '2022-01-22T02:35:59.000000Z'
+                        current_team_id: null
+                        profile_photo_path: null
+                        created_at: '2022-01-22T02:35:59.000000Z'
+                        updated_at: '2022-01-22T02:35:59.000000Z'
+                        profile_photo_url: 'https://ui-avatars.com/api/?name=L+C+I&color=7F9CF5&background=EBF4FF'
+                      image:
+                        -
+                          id: 19
+                          url: storage/product/816e4cba485d986a19e815f1371c3b4c.png
+                          created_at: '2022-01-22T02:36:26.000000Z'
+                          updated_at: '2022-01-22T02:36:26.000000Z'
+                        -
+                          id: 20
+                          url: storage/product/9e96bf2954d194125d8115fcf8164ea1.png
+                          created_at: '2022-01-22T02:36:26.000000Z'
+                          updated_at: '2022-01-22T02:36:26.000000Z'
+                        -
+                          id: 21
+                          url: storage/product/fde0b1047f3f89fcaf47fc8492bb2b3c.png
+                          created_at: '2022-01-22T02:36:26.000000Z'
+                          updated_at: '2022-01-22T02:36:26.000000Z'
+                      categories:
+                        -
+                          id: 4
+                          name: 'Ed White'
+                          description: 'Iure omnis inventore ab qui quos.'
+                          created_at: '2022-01-22T02:36:08.000000Z'
+                          updated_at: '2022-01-22T02:36:08.000000Z'
+                          pivot:
+                            product_id: 7
+                            category_id: 4
+                        -
+                          id: 8
+                          name: 'Dr. Shawna Carroll IV'
+                          description: 'Non porro maxime dolorum nisi.'
+                          created_at: '2022-01-22T02:36:08.000000Z'
+                          updated_at: '2022-01-22T02:36:08.000000Z'
+                          pivot:
+                            product_id: 7
+                            category_id: 8
+                    -
+                      id: 6
+                      sku: '9782990203609'
+                      name: 'Elvis Bradtke V'
+                      price: 418749
+                      weight: 2
+                      description: 'Numquam consectetur quibusdam consequatur odit facere hic et. In sint et aut laudantium est velit. Maxime iusto quibusdam ea dolore dolor. Eveniet nulla provident aperiam alias voluptates consequatur ea. Facere itaque possimus voluptas et non expedita placeat. Ea blanditiis qui aut est. Perferendis ipsam perspiciatis ipsum in dolores nihil. Alias aliquid cum non possimus omnis et velit. Sed quia et officiis qui facere deserunt. Fuga quaerat adipisci est. Enim fugit hic autem ab.'
+                      thumbnail: storage/product/96c7253fa63f2ad2f5416771fb54a7d9.png
+                      stock: 70
+                      slug: elvis-bradtke-v
+                      user_id: 7
+                      created_at: '2022-01-22T02:36:13.000000Z'
+                      updated_at: '2022-01-22T02:36:13.000000Z'
+                      user:
+                        id: 7
+                        name: 'Cletus Ernser'
+                        email: ncorwin@example.com
+                        email_verified_at: '2022-01-22T02:35:59.000000Z'
+                        current_team_id: null
+                        profile_photo_path: null
+                        created_at: '2022-01-22T02:36:00.000000Z'
+                        updated_at: '2022-01-22T02:36:00.000000Z'
+                        profile_photo_url: 'https://ui-avatars.com/api/?name=C+E&color=7F9CF5&background=EBF4FF'
+                      image:
+                        -
+                          id: 16
+                          url: storage/product/f556b8b7b19f3291d05beb37a60fdc9e.png
+                          created_at: '2022-01-22T02:36:24.000000Z'
+                          updated_at: '2022-01-22T02:36:24.000000Z'
+                        -
+                          id: 17
+                          url: storage/product/bc303be6229bb8b41cf1a79d8646e7d5.png
+                          created_at: '2022-01-22T02:36:24.000000Z'
+                          updated_at: '2022-01-22T02:36:24.000000Z'
+                        -
+                          id: 18
+                          url: storage/product/465683d4af3ada6b6daff79882ab1b75.png
+                          created_at: '2022-01-22T02:36:24.000000Z'
+                          updated_at: '2022-01-22T02:36:24.000000Z'
+                      categories:
+                        -
+                          id: 1
+                          name: 'Christop Sawayn'
+                          description: 'Et ea praesentium vitae quia et.'
+                          created_at: '2022-01-22T02:36:07.000000Z'
+                          updated_at: '2022-01-22T02:36:07.000000Z'
+                          pivot:
+                            product_id: 6
+                            category_id: 1
+                        -
+                          id: 8
+                          name: 'Dr. Shawna Carroll IV'
+                          description: 'Non porro maxime dolorum nisi.'
+                          created_at: '2022-01-22T02:36:08.000000Z'
+                          updated_at: '2022-01-22T02:36:08.000000Z'
+                          pivot:
+                            product_id: 6
+                            category_id: 8
+                    -
+                      id: 5
+                      sku: '9787130428218'
+                      name: 'Liliane Koch'
+                      price: 15106
+                      weight: 2
+                      description: 'Cupiditate fuga sint temporibus odio ut sequi blanditiis. Aut unde expedita beatae blanditiis. Molestiae ut ut in et optio. Quasi et omnis perferendis deleniti. Natus asperiores omnis aut. Aperiam sit iste blanditiis quasi. Qui similique rerum mollitia est in ut. Provident ducimus nemo sed ipsam porro. Voluptate est ut atque explicabo est et porro. Et tempora dicta qui deleniti nemo itaque dolorum veniam. Nam libero eaque dicta enim. Repudiandae quis expedita blanditiis quaerat.'
+                      thumbnail: storage/product/a5fd6e3bb8dc354be2d27ad04fae0588.png
+                      stock: 53
+                      slug: liliane-koch
+                      user_id: 9
+                      created_at: '2022-01-22T02:36:13.000000Z'
+                      updated_at: '2022-01-22T02:36:13.000000Z'
+                      user:
+                        id: 9
+                        name: 'Elvis Hamill'
+                        email: immanuel.reichert@example.net
+                        email_verified_at: '2022-01-22T02:35:59.000000Z'
+                        current_team_id: null
+                        profile_photo_path: null
+                        created_at: '2022-01-22T02:36:01.000000Z'
+                        updated_at: '2022-01-22T02:36:01.000000Z'
+                        profile_photo_url: 'https://ui-avatars.com/api/?name=E+H&color=7F9CF5&background=EBF4FF'
+                      image:
+                        -
+                          id: 13
+                          url: storage/product/192338dc6359c1b2e06b1a91513a519a.png
+                          created_at: '2022-01-22T02:36:22.000000Z'
+                          updated_at: '2022-01-22T02:36:22.000000Z'
+                        -
+                          id: 14
+                          url: storage/product/6105aecbb673f79d3e32bade659e1412.png
+                          created_at: '2022-01-22T02:36:22.000000Z'
+                          updated_at: '2022-01-22T02:36:22.000000Z'
+                        -
+                          id: 15
+                          url: storage/product/f7e30a4464df7c8935d0bfde4dc0afc2.png
+                          created_at: '2022-01-22T02:36:22.000000Z'
+                          updated_at: '2022-01-22T02:36:22.000000Z'
+                      categories:
+                        -
+                          id: 5
+                          name: 'Myles Dickens'
+                          description: 'Est facilis ut voluptatem eius et ab.'
+                          created_at: '2022-01-22T02:36:08.000000Z'
+                          updated_at: '2022-01-22T02:36:08.000000Z'
+                          pivot:
+                            product_id: 5
+                            category_id: 5
+                        -
+                          id: 9
+                          name: 'Ms. Neha Herzog V'
+                          description: 'Laudantium quia molestiae sit quo.'
+                          created_at: '2022-01-22T02:36:09.000000Z'
+                          updated_at: '2022-01-22T02:36:09.000000Z'
+                          pivot:
+                            product_id: 5
+                            category_id: 9
+                    -
+                      id: 4
+                      sku: '9799451519698'
+                      name: 'Prof. Murray Dicki DVM'
+                      price: 445423
+                      weight: 3
+                      description: 'Dignissimos incidunt vitae et omnis dignissimos. Fuga culpa ab sequi incidunt iusto consectetur natus. Est illum et ratione impedit dolor. Tempora unde natus earum esse. Quo sed magnam blanditiis. Qui et sunt in. Ut accusantium eaque omnis officia eum. Voluptas reprehenderit quia saepe ut. Provident voluptas et qui laudantium ullam accusamus ipsam. Officia aliquid aliquid ullam eos nulla. Qui ut rerum recusandae doloribus iste qui sequi.'
+                      thumbnail: storage/product/5539d27fbc6dbc4787f80d04eaf36425.png
+                      stock: 70
+                      slug: prof-murray-dicki-dvm
+                      user_id: 6
+                      created_at: '2022-01-22T02:36:13.000000Z'
+                      updated_at: '2022-01-22T02:36:13.000000Z'
+                      user:
+                        id: 6
+                        name: 'Ludwig Corwin I'
+                        email: jamie01@example.net
+                        email_verified_at: '2022-01-22T02:35:59.000000Z'
+                        current_team_id: null
+                        profile_photo_path: null
+                        created_at: '2022-01-22T02:35:59.000000Z'
+                        updated_at: '2022-01-22T02:35:59.000000Z'
+                        profile_photo_url: 'https://ui-avatars.com/api/?name=L+C+I&color=7F9CF5&background=EBF4FF'
+                      image:
+                        -
+                          id: 10
+                          url: storage/product/9cb5b8995e1b4b8653324943ae1b11bd.png
+                          created_at: '2022-01-22T02:36:20.000000Z'
+                          updated_at: '2022-01-22T02:36:20.000000Z'
+                        -
+                          id: 11
+                          url: storage/product/ae625e5f7610ecefd8f86f2f1652b77d.png
+                          created_at: '2022-01-22T02:36:20.000000Z'
+                          updated_at: '2022-01-22T02:36:20.000000Z'
+                        -
+                          id: 12
+                          url: storage/product/b05bfbedf660af8891e8e309808009cf.png
+                          created_at: '2022-01-22T02:36:21.000000Z'
+                          updated_at: '2022-01-22T02:36:21.000000Z'
+                      categories:
+                        -
+                          id: 1
+                          name: 'Christop Sawayn'
+                          description: 'Et ea praesentium vitae quia et.'
+                          created_at: '2022-01-22T02:36:07.000000Z'
+                          updated_at: '2022-01-22T02:36:07.000000Z'
+                          pivot:
+                            product_id: 4
+                            category_id: 1
+                        -
+                          id: 9
+                          name: 'Ms. Neha Herzog V'
+                          description: 'Laudantium quia molestiae sit quo.'
+                          created_at: '2022-01-22T02:36:09.000000Z'
+                          updated_at: '2022-01-22T02:36:09.000000Z'
+                          pivot:
+                            product_id: 4
+                            category_id: 9
                   links:
                     first: 'http://localhost:8000/api/products?page=1'
                     last: 'http://localhost:8000/api/products?page=2'
@@ -769,301 +1579,446 @@ paths:
                     type: array
                     example:
                       -
-                        id: 1
-                        sku: '9799108954919'
-                        name: 'Freda Bernhard'
-                        price: 406211
+                        id: 11
+                        sku: Glas54708
+                        name: Glass
+                        price: 33
                         weight: 2
-                        description: 'Dolores harum et quae ad unde quidem. Tenetur earum dolore aut molestiae. Eum cupiditate aut illo nisi nam repellat perferendis. Laborum amet quam quis officiis facilis ut. Dolore numquam laborum illum mollitia qui. Rerum earum atque expedita doloremque ex non. Ducimus rerum modi aspernatur eos. Dolorum ut sit ex accusamus quia distinctio explicabo. Fuga et aperiam saepe rem. Deserunt iste perferendis laboriosam quia autem.'
-                        thumbnail: storage/product/89604b536ad260a754655e12cd900e8d.png
-                        stock: 83
-                        slug: freda-bernhard
-                        user_id: 4
-                        created_at: '2022-01-20T20:15:24.000000Z'
-                        updated_at: '2022-01-20T20:15:24.000000Z'
+                        description: 'Glasses for all people'
+                        thumbnail: storage/product/3xgVL6GByL9tJxmHIVN40BbzbM4nqPZqGeNdW9pY.jpg
+                        stock: 34
+                        slug: glass-1011330623
+                        user_id: 11
+                        created_at: '2022-01-22T04:18:36.000000Z'
+                        updated_at: '2022-01-22T04:18:36.000000Z'
                         user:
-                          id: 4
-                          name: 'Frederique Stamm'
-                          email: ohara.ted@example.net
-                          email_verified_at: '2022-01-20T20:15:18.000000Z'
-                          created_at: '2022-01-20T20:15:19.000000Z'
-                          updated_at: '2022-01-20T20:15:19.000000Z'
-                          profile_photo_url: 'https://ui-avatars.com/api/?name=F+S&color=7F9CF5&background=EBF4FF'
+                          id: 11
+                          name: 'Novella Mills'
+                          email: yasmeen53@example.org
+                          email_verified_at: '2022-01-22T02:35:59.000000Z'
+                          current_team_id: null
+                          profile_photo_path: null
+                          created_at: '2022-01-22T02:36:01.000000Z'
+                          updated_at: '2022-01-22T02:36:01.000000Z'
+                          profile_photo_url: 'https://ui-avatars.com/api/?name=N+M&color=7F9CF5&background=EBF4FF'
                         image:
                           -
-                            id: 1
-                            url: storage/product/38c15634477d1aa31fe5109020901819.png
-                            created_at: '2022-01-20T20:15:26.000000Z'
-                            updated_at: '2022-01-20T20:15:26.000000Z'
+                            id: 31
+                            url: storage/product/od779LFrRQnGIqlJUJacXCWyr1hp73HOCQbtJYct.jpg
+                            created_at: '2022-01-22T04:18:37.000000Z'
+                            updated_at: '2022-01-22T04:18:37.000000Z'
                           -
-                            id: 2
-                            url: storage/product/c60b4dcdf7b3b397e2a262bd4066b7b3.png
-                            created_at: '2022-01-20T20:15:26.000000Z'
-                            updated_at: '2022-01-20T20:15:26.000000Z'
-                          -
-                            id: 3
-                            url: storage/product/fd19d75c23ca400c6752b0201e3f336e.png
-                            created_at: '2022-01-20T20:15:26.000000Z'
-                            updated_at: '2022-01-20T20:15:26.000000Z'
+                            id: 32
+                            url: storage/product/52JE1iVXzkQL5GxY4FqznkGi3RnohdNf2KkuJihT.png
+                            created_at: '2022-01-22T04:18:37.000000Z'
+                            updated_at: '2022-01-22T04:18:37.000000Z'
+                        categories: []
                       -
-                        id: 2
-                        sku: '9794506963853'
-                        name: 'Wayne Gulgowski'
-                        price: 345440
-                        weight: 1
-                        description: 'Nostrum voluptatem quis ad totam aliquam corrupti quia qui. Sit alias dolorem numquam quidem nihil sint minima. Voluptates necessitatibus atque qui molestiae. Cum enim nesciunt eum quia accusantium fugiat. Porro voluptas perspiciatis sapiente dolores rem. Nihil ipsa ipsum corporis consequatur dolorem pariatur. Est corporis aut et nihil sequi id porro quo. Aliquid aut sit aperiam omnis deleniti aspernatur harum corporis. Quisquam nemo nihil aut voluptates aut facere amet.'
-                        thumbnail: storage/product/8b1163a8764d05080e06f49a2f44234f.png
-                        stock: 46
-                        slug: wayne-gulgowski
-                        user_id: 6
-                        created_at: '2022-01-20T20:15:24.000000Z'
-                        updated_at: '2022-01-20T20:15:24.000000Z'
-                        user:
-                          id: 6
-                          name: 'Reta DuBuque'
-                          email: enola58@example.com
-                          email_verified_at: '2022-01-20T20:15:18.000000Z'
-                          created_at: '2022-01-20T20:15:19.000000Z'
-                          updated_at: '2022-01-20T20:15:19.000000Z'
-                          profile_photo_url: 'https://ui-avatars.com/api/?name=R+D&color=7F9CF5&background=EBF4FF'
-                        image:
-                          -
-                            id: 4
-                            url: storage/product/9c78002a2be5b3fa598ea219eb7f6fd6.png
-                            created_at: '2022-01-20T20:15:27.000000Z'
-                            updated_at: '2022-01-20T20:15:27.000000Z'
-                          -
-                            id: 5
-                            url: storage/product/da4d6ceb46400c8dda7331f209de3b97.png
-                            created_at: '2022-01-20T20:15:27.000000Z'
-                            updated_at: '2022-01-20T20:15:27.000000Z'
-                          -
-                            id: 6
-                            url: storage/product/c33e145a59450cfec88ed48f9613a052.png
-                            created_at: '2022-01-20T20:15:27.000000Z'
-                            updated_at: '2022-01-20T20:15:27.000000Z'
-                      -
-                        id: 3
-                        sku: '9780182512034'
-                        name: 'Arely Nolan'
-                        price: 948740
-                        weight: 0
-                        description: 'Consequatur praesentium omnis nulla eaque. Voluptate et et aliquid incidunt quia blanditiis. Architecto fugiat ipsum eius dolor dolore ullam. Vel qui eligendi quis nulla. Ut cupiditate ut quos quam iste. Et ipsam saepe qui nam sed ad ab. Quia qui magni nesciunt et magni consequatur reprehenderit beatae. Veritatis enim neque doloribus. Fugiat eos magnam sit voluptas nihil dolores alias. Qui qui dolor porro dolores iure. Aut velit atque ut quia.'
-                        thumbnail: storage/product/2a77b14c9fbc9ddb7890a247e615d76d.png
-                        stock: 28
-                        slug: arely-nolan
-                        user_id: 8
-                        created_at: '2022-01-20T20:15:24.000000Z'
-                        updated_at: '2022-01-20T20:15:24.000000Z'
-                        user:
-                          id: 8
-                          name: 'Rhianna Wiegand'
-                          email: bailey.golden@example.com
-                          email_verified_at: '2022-01-20T20:15:18.000000Z'
-                          created_at: '2022-01-20T20:15:19.000000Z'
-                          updated_at: '2022-01-20T20:15:19.000000Z'
-                          profile_photo_url: 'https://ui-avatars.com/api/?name=R+W&color=7F9CF5&background=EBF4FF'
-                        image:
-                          -
-                            id: 7
-                            url: storage/product/604b5d1da055c085da9766effe04122d.png
-                            created_at: '2022-01-20T20:15:28.000000Z'
-                            updated_at: '2022-01-20T20:15:28.000000Z'
-                          -
-                            id: 8
-                            url: storage/product/6f3c1e4466afe637ec2fba181f0105c3.png
-                            created_at: '2022-01-20T20:15:28.000000Z'
-                            updated_at: '2022-01-20T20:15:28.000000Z'
-                          -
-                            id: 9
-                            url: storage/product/a3a902e2a957d1a4c13d8f2655f6b016.png
-                            created_at: '2022-01-20T20:15:28.000000Z'
-                            updated_at: '2022-01-20T20:15:28.000000Z'
-                      -
-                        id: 4
-                        sku: '9788987337920'
-                        name: 'Lyla Hayes'
-                        price: 704973
-                        weight: 4
-                        description: 'Quae odio repellat delectus est labore vel sunt. Voluptatem deleniti expedita nostrum vel est qui. Officia a hic quis nobis itaque labore voluptatem. Voluptatem vitae repudiandae sunt labore magnam omnis omnis. Molestiae est ad sint atque possimus. Tempore reiciendis quos dolorem voluptatem cupiditate ullam. Ut nemo nam ullam accusamus accusantium sequi. Quia eos delectus voluptas rerum dicta aut.'
-                        thumbnail: storage/product/bf2adfef4ea0289a4c150c07904e59a7.png
-                        stock: 9
-                        slug: lyla-hayes
-                        user_id: 5
-                        created_at: '2022-01-20T20:15:24.000000Z'
-                        updated_at: '2022-01-20T20:15:24.000000Z'
-                        user:
-                          id: 5
-                          name: 'Prof. Dallas Jaskolski'
-                          email: fredy.lemke@example.net
-                          email_verified_at: '2022-01-20T20:15:18.000000Z'
-                          created_at: '2022-01-20T20:15:19.000000Z'
-                          updated_at: '2022-01-20T20:15:19.000000Z'
-                          profile_photo_url: 'https://ui-avatars.com/api/?name=P+D+J&color=7F9CF5&background=EBF4FF'
-                        image:
-                          -
-                            id: 10
-                            url: storage/product/5fff516920530d8a2883a376c4c82844.png
-                            created_at: '2022-01-20T20:15:29.000000Z'
-                            updated_at: '2022-01-20T20:15:29.000000Z'
-                          -
-                            id: 11
-                            url: storage/product/3edbeb2b444e27fd4706b52352f96b1a.png
-                            created_at: '2022-01-20T20:15:29.000000Z'
-                            updated_at: '2022-01-20T20:15:29.000000Z'
-                          -
-                            id: 12
-                            url: storage/product/0718c614012b3a04e4f813f53ec4f91a.png
-                            created_at: '2022-01-20T20:15:29.000000Z'
-                            updated_at: '2022-01-20T20:15:29.000000Z'
-                      -
-                        id: 5
-                        sku: '9782650346967'
-                        name: 'Gregg Douglas'
-                        price: 997028
-                        weight: 0
-                        description: 'Voluptatem similique iste laudantium repellat ut est necessitatibus aspernatur. Necessitatibus aliquid enim dolor sed magnam et laborum. Sunt in amet quod qui sequi. Omnis nostrum tenetur nemo nam in accusamus voluptas. Aut nemo eum quibusdam facere repellat. Veritatis eum tempore amet et est sed. Officia aperiam aut quia accusantium ipsum. Vero suscipit quia enim consequatur mollitia et inventore. Qui delectus quia velit dolorem consequatur soluta dolores ex.'
-                        thumbnail: storage/product/8023fb8b31518c1d0cb20ca620fefa45.png
-                        stock: 30
-                        slug: gregg-douglas
-                        user_id: 8
-                        created_at: '2022-01-20T20:15:24.000000Z'
-                        updated_at: '2022-01-20T20:15:24.000000Z'
-                        user:
-                          id: 8
-                          name: 'Rhianna Wiegand'
-                          email: bailey.golden@example.com
-                          email_verified_at: '2022-01-20T20:15:18.000000Z'
-                          created_at: '2022-01-20T20:15:19.000000Z'
-                          updated_at: '2022-01-20T20:15:19.000000Z'
-                          profile_photo_url: 'https://ui-avatars.com/api/?name=R+W&color=7F9CF5&background=EBF4FF'
-                        image:
-                          -
-                            id: 13
-                            url: storage/product/e9f6b5dbe1d1e40a38d1a757419b9fad.png
-                            created_at: '2022-01-20T20:15:30.000000Z'
-                            updated_at: '2022-01-20T20:15:30.000000Z'
-                          -
-                            id: 14
-                            url: storage/product/d23c5643ff77911e8143e3a897e8997a.png
-                            created_at: '2022-01-20T20:15:31.000000Z'
-                            updated_at: '2022-01-20T20:15:31.000000Z'
-                          -
-                            id: 15
-                            url: storage/product/13ac47a3659761694999c6853e057de2.png
-                            created_at: '2022-01-20T20:15:31.000000Z'
-                            updated_at: '2022-01-20T20:15:31.000000Z'
-                      -
-                        id: 6
-                        sku: '9791427912151'
-                        name: 'Prof. Tavares Franecki DDS'
-                        price: 271048
-                        weight: 2
-                        description: 'Hic facere ipsam asperiores voluptatem eaque odio. Aut similique id omnis consequatur saepe vero et neque. Et non in consectetur iste perspiciatis deleniti excepturi quos. Nesciunt hic dolorem adipisci quas consequatur nostrum. Tempora commodi ut eveniet consequuntur nulla. Blanditiis dolore asperiores voluptatem voluptate omnis. Eum voluptatem eos voluptas omnis.'
-                        thumbnail: storage/product/9ed36d072ad4e17f8aeeb06e1b88cff0.png
-                        stock: 45
-                        slug: prof-tavares-franecki-dds
-                        user_id: 9
-                        created_at: '2022-01-20T20:15:24.000000Z'
-                        updated_at: '2022-01-20T20:15:24.000000Z'
-                        user:
-                          id: 9
-                          name: 'Diego Fay'
-                          email: camila02@example.org
-                          email_verified_at: '2022-01-20T20:15:18.000000Z'
-                          created_at: '2022-01-20T20:15:19.000000Z'
-                          updated_at: '2022-01-20T20:15:19.000000Z'
-                          profile_photo_url: 'https://ui-avatars.com/api/?name=D+F&color=7F9CF5&background=EBF4FF'
-                        image:
-                          -
-                            id: 16
-                            url: storage/product/319ac8811d35b1191a33a0edc6ec39f4.png
-                            created_at: '2022-01-20T20:15:32.000000Z'
-                            updated_at: '2022-01-20T20:15:32.000000Z'
-                          -
-                            id: 17
-                            url: storage/product/96cbdf47e5c9e3c59dfcba18595fd35b.png
-                            created_at: '2022-01-20T20:15:32.000000Z'
-                            updated_at: '2022-01-20T20:15:32.000000Z'
-                          -
-                            id: 18
-                            url: storage/product/7045a60c9d777ce500455e6d6971a5c5.png
-                            created_at: '2022-01-20T20:15:32.000000Z'
-                            updated_at: '2022-01-20T20:15:32.000000Z'
-                      -
-                        id: 7
-                        sku: '9794245432023'
-                        name: 'Prof. Dudley Hane Jr.'
-                        price: 554059
+                        id: 10
+                        sku: '9793003385564'
+                        name: 'Celine Carter II'
+                        price: 894598
                         weight: 3
-                        description: 'Quo modi ut voluptatem debitis nesciunt omnis culpa. Tempora velit nobis et a accusantium sit occaecati officiis. Fugiat ut ipsa sed excepturi. Perspiciatis minus perferendis ab facere officia. Est veritatis debitis dolore odit eius corrupti velit. Quibusdam doloribus autem et in. Quae necessitatibus et maxime et.'
-                        thumbnail: storage/product/3e1724b59a3a01076fc2f020c7d7be6d.png
-                        stock: 58
-                        slug: prof-dudley-hane-jr
+                        description: 'Laboriosam laudantium suscipit commodi dignissimos. Dicta est voluptatum animi ipsum est. Blanditiis soluta neque ipsa sint itaque est voluptatem. Quisquam perspiciatis dicta deserunt tempore aut. Labore quia fugit nisi doloremque aspernatur est neque. Autem fuga minus impedit sed delectus dolor tempora minima. Expedita labore repellendus perspiciatis cumque est et.'
+                        thumbnail: storage/product/659e6dbcbe42c9b97f27109d8278b17a.png
+                        stock: 96
+                        slug: celine-carter-ii
                         user_id: 10
-                        created_at: '2022-01-20T20:15:25.000000Z'
-                        updated_at: '2022-01-20T20:15:25.000000Z'
+                        created_at: '2022-01-22T02:36:14.000000Z'
+                        updated_at: '2022-01-22T02:36:14.000000Z'
                         user:
                           id: 10
-                          name: 'Bartholome Bogan'
-                          email: marvin.orlando@example.net
-                          email_verified_at: '2022-01-20T20:15:18.000000Z'
-                          created_at: '2022-01-20T20:15:20.000000Z'
-                          updated_at: '2022-01-20T20:15:20.000000Z'
-                          profile_photo_url: 'https://ui-avatars.com/api/?name=B+B&color=7F9CF5&background=EBF4FF'
+                          name: 'Phyllis Kling'
+                          email: hermiston.isabel@example.org
+                          email_verified_at: '2022-01-22T02:35:59.000000Z'
+                          current_team_id: null
+                          profile_photo_path: null
+                          created_at: '2022-01-22T02:36:01.000000Z'
+                          updated_at: '2022-01-22T02:36:01.000000Z'
+                          profile_photo_url: 'https://ui-avatars.com/api/?name=P+K&color=7F9CF5&background=EBF4FF'
                         image:
                           -
-                            id: 19
-                            url: storage/product/4a7b0a1004e4d601abe4156fea632650.png
-                            created_at: '2022-01-20T20:15:33.000000Z'
-                            updated_at: '2022-01-20T20:15:33.000000Z'
+                            id: 28
+                            url: storage/product/b6a0dd8506815fe46295d06483b45a2c.png
+                            created_at: '2022-01-22T02:36:32.000000Z'
+                            updated_at: '2022-01-22T02:36:32.000000Z'
                           -
-                            id: 20
-                            url: storage/product/1e0fa1126a264037aba3885825dee5f1.png
-                            created_at: '2022-01-20T20:15:33.000000Z'
-                            updated_at: '2022-01-20T20:15:33.000000Z'
+                            id: 29
+                            url: storage/product/763f9c39b7064c8ee87163845d21d529.png
+                            created_at: '2022-01-22T02:36:32.000000Z'
+                            updated_at: '2022-01-22T02:36:32.000000Z'
                           -
-                            id: 21
-                            url: storage/product/dc030433c823b42cf0b5b09e9662b322.png
-                            created_at: '2022-01-20T20:15:33.000000Z'
-                            updated_at: '2022-01-20T20:15:33.000000Z'
+                            id: 30
+                            url: storage/product/95fae5063326ed4815c1f132ea0c81bf.png
+                            created_at: '2022-01-22T02:36:32.000000Z'
+                            updated_at: '2022-01-22T02:36:32.000000Z'
+                        categories:
+                          -
+                            id: 4
+                            name: 'Ed White'
+                            description: 'Iure omnis inventore ab qui quos.'
+                            created_at: '2022-01-22T02:36:08.000000Z'
+                            updated_at: '2022-01-22T02:36:08.000000Z'
+                            pivot:
+                              product_id: 10
+                              category_id: 4
+                          -
+                            id: 8
+                            name: 'Dr. Shawna Carroll IV'
+                            description: 'Non porro maxime dolorum nisi.'
+                            created_at: '2022-01-22T02:36:08.000000Z'
+                            updated_at: '2022-01-22T02:36:08.000000Z'
+                            pivot:
+                              product_id: 10
+                              category_id: 8
+                      -
+                        id: 9
+                        sku: '9788751236664'
+                        name: 'Prof. Torey Rolfson PhD'
+                        price: 499500
+                        weight: 4
+                        description: 'Tenetur dolores magnam porro atque est dolorem ut. Tempora harum nihil in ipsum. Voluptatem nulla animi dolore recusandae sunt illum. Repellat asperiores neque officia. Natus ex qui ratione est molestiae quos nihil. Dicta eligendi consequatur quasi sunt vel et modi. Doloremque molestiae enim numquam quia saepe. Eveniet deleniti ea at. Exercitationem assumenda voluptatem dolore.'
+                        thumbnail: storage/product/f57da780a8ede25eac644e8273c6bed0.png
+                        stock: 90
+                        slug: prof-torey-rolfson-phd
+                        user_id: 2
+                        created_at: '2022-01-22T02:36:14.000000Z'
+                        updated_at: '2022-01-22T02:36:14.000000Z'
+                        user:
+                          id: 2
+                          name: 'Floyd Konopelski DVM'
+                          email: stiedemann.toni@example.com
+                          email_verified_at: '2022-01-22T02:35:59.000000Z'
+                          current_team_id: null
+                          profile_photo_path: null
+                          created_at: '2022-01-22T02:35:59.000000Z'
+                          updated_at: '2022-01-22T02:35:59.000000Z'
+                          profile_photo_url: 'https://ui-avatars.com/api/?name=F+K+D&color=7F9CF5&background=EBF4FF'
+                        image:
+                          -
+                            id: 25
+                            url: storage/product/e31085b45dba447d297752c1d65e9fd1.png
+                            created_at: '2022-01-22T02:36:30.000000Z'
+                            updated_at: '2022-01-22T02:36:30.000000Z'
+                          -
+                            id: 26
+                            url: storage/product/143771d9e7e4b4607baaf34da76dc574.png
+                            created_at: '2022-01-22T02:36:30.000000Z'
+                            updated_at: '2022-01-22T02:36:30.000000Z'
+                          -
+                            id: 27
+                            url: storage/product/54a01d756712ba2d9ee68b9ed5c8a442.png
+                            created_at: '2022-01-22T02:36:30.000000Z'
+                            updated_at: '2022-01-22T02:36:30.000000Z'
+                        categories:
+                          -
+                            id: 1
+                            name: 'Christop Sawayn'
+                            description: 'Et ea praesentium vitae quia et.'
+                            created_at: '2022-01-22T02:36:07.000000Z'
+                            updated_at: '2022-01-22T02:36:07.000000Z'
+                            pivot:
+                              product_id: 9
+                              category_id: 1
+                          -
+                            id: 8
+                            name: 'Dr. Shawna Carroll IV'
+                            description: 'Non porro maxime dolorum nisi.'
+                            created_at: '2022-01-22T02:36:08.000000Z'
+                            updated_at: '2022-01-22T02:36:08.000000Z'
+                            pivot:
+                              product_id: 9
+                              category_id: 8
                       -
                         id: 8
-                        sku: '9791015678735'
-                        name: 'Gregoria Hyatt'
-                        price: 677498
-                        weight: 4
-                        description: 'Sunt est corporis dolore repellendus est commodi quaerat rerum. Quis aliquam repellat ut ratione magnam. Quia cum vitae ad similique. Corporis exercitationem ratione tempore aut deserunt. Cupiditate accusantium officia numquam et consequatur incidunt dolores. Adipisci sed aliquam ut. Nihil laborum repellendus occaecati aspernatur ut aut necessitatibus.'
-                        thumbnail: storage/product/f01a74fc4fd2ae21dd8382704e8e6a31.png
-                        stock: 23
-                        slug: gregoria-hyatt
-                        user_id: 9
-                        created_at: '2022-01-20T20:15:25.000000Z'
-                        updated_at: '2022-01-20T20:15:25.000000Z'
+                        sku: '9790814482604'
+                        name: 'Sven Bailey Jr.'
+                        price: 43131
+                        weight: 1
+                        description: 'Libero voluptatem laborum perspiciatis unde ipsam et. Occaecati voluptatem nostrum qui necessitatibus dolorum. Fugiat earum dignissimos ipsum quas voluptas ea recusandae. Libero consequatur iure perspiciatis quia qui nam ipsa. Ipsam aut est est porro quidem totam. Quia ad nulla et vero veniam vel. Voluptatem sequi quia veritatis nihil sunt. Necessitatibus similique rerum et voluptatibus non sequi est.'
+                        thumbnail: storage/product/755b8fad670256178589ff596cfa7ca1.png
+                        stock: 48
+                        slug: sven-bailey-jr
+                        user_id: 1
+                        created_at: '2022-01-22T02:36:14.000000Z'
+                        updated_at: '2022-01-22T02:36:14.000000Z'
                         user:
-                          id: 9
-                          name: 'Diego Fay'
-                          email: camila02@example.org
-                          email_verified_at: '2022-01-20T20:15:18.000000Z'
-                          created_at: '2022-01-20T20:15:19.000000Z'
-                          updated_at: '2022-01-20T20:15:19.000000Z'
-                          profile_photo_url: 'https://ui-avatars.com/api/?name=D+F&color=7F9CF5&background=EBF4FF'
+                          id: 1
+                          name: Admin
+                          email: admin@gmail.com
+                          email_verified_at: null
+                          current_team_id: null
+                          profile_photo_path: null
+                          created_at: '2022-01-22T02:35:58.000000Z'
+                          updated_at: '2022-01-22T02:35:58.000000Z'
+                          profile_photo_url: 'https://ui-avatars.com/api/?name=A&color=7F9CF5&background=EBF4FF'
                         image:
                           -
                             id: 22
-                            url: storage/product/656b5dcd8cd41847075976bbf5e61cc8.png
-                            created_at: '2022-01-20T20:15:34.000000Z'
-                            updated_at: '2022-01-20T20:15:34.000000Z'
+                            url: storage/product/e9c7271bf00ba0e26e2ace9b57e0aa9d.png
+                            created_at: '2022-01-22T02:36:28.000000Z'
+                            updated_at: '2022-01-22T02:36:28.000000Z'
                           -
                             id: 23
-                            url: storage/product/82f2a4700c060e1cadb414ba2647e245.png
-                            created_at: '2022-01-20T20:15:34.000000Z'
-                            updated_at: '2022-01-20T20:15:34.000000Z'
+                            url: storage/product/19fc4e9c4ac8b6c3f2ec1304e666e2e9.png
+                            created_at: '2022-01-22T02:36:28.000000Z'
+                            updated_at: '2022-01-22T02:36:28.000000Z'
                           -
                             id: 24
-                            url: storage/product/325233e81398033cf48c2df0525c91d3.png
-                            created_at: '2022-01-20T20:15:34.000000Z'
-                            updated_at: '2022-01-20T20:15:34.000000Z'
+                            url: storage/product/28e825b1edc07235f73074a5621c1ba7.png
+                            created_at: '2022-01-22T02:36:28.000000Z'
+                            updated_at: '2022-01-22T02:36:28.000000Z'
+                        categories:
+                          -
+                            id: 3
+                            name: 'Dr. Mose Kiehn PhD'
+                            description: 'Et est accusantium ab aut.'
+                            created_at: '2022-01-22T02:36:08.000000Z'
+                            updated_at: '2022-01-22T02:36:08.000000Z'
+                            pivot:
+                              product_id: 8
+                              category_id: 3
+                          -
+                            id: 7
+                            name: 'Prof. Charles Kerluke'
+                            description: 'Animi assumenda nam et.'
+                            created_at: '2022-01-22T02:36:08.000000Z'
+                            updated_at: '2022-01-22T02:36:08.000000Z'
+                            pivot:
+                              product_id: 8
+                              category_id: 7
+                      -
+                        id: 7
+                        sku: '9789382871644'
+                        name: 'Mr. Norbert Wyman II'
+                        price: 440253
+                        weight: 2
+                        description: 'Velit explicabo officiis iure molestiae excepturi repellendus quia aliquam. Vel rerum reiciendis voluptate totam maxime. Cum ducimus dignissimos numquam id. Doloribus officia consequatur sunt reiciendis exercitationem consequatur. Qui accusantium architecto repellendus est id enim. Est illo quod provident saepe. Necessitatibus iure dolores et doloribus iste nostrum. Aut in perspiciatis eum et aut modi.'
+                        thumbnail: storage/product/284282df51e153934549373491c3c2b2.png
+                        stock: 56
+                        slug: mr-norbert-wyman-ii
+                        user_id: 6
+                        created_at: '2022-01-22T02:36:13.000000Z'
+                        updated_at: '2022-01-22T02:36:13.000000Z'
+                        user:
+                          id: 6
+                          name: 'Ludwig Corwin I'
+                          email: jamie01@example.net
+                          email_verified_at: '2022-01-22T02:35:59.000000Z'
+                          current_team_id: null
+                          profile_photo_path: null
+                          created_at: '2022-01-22T02:35:59.000000Z'
+                          updated_at: '2022-01-22T02:35:59.000000Z'
+                          profile_photo_url: 'https://ui-avatars.com/api/?name=L+C+I&color=7F9CF5&background=EBF4FF'
+                        image:
+                          -
+                            id: 19
+                            url: storage/product/816e4cba485d986a19e815f1371c3b4c.png
+                            created_at: '2022-01-22T02:36:26.000000Z'
+                            updated_at: '2022-01-22T02:36:26.000000Z'
+                          -
+                            id: 20
+                            url: storage/product/9e96bf2954d194125d8115fcf8164ea1.png
+                            created_at: '2022-01-22T02:36:26.000000Z'
+                            updated_at: '2022-01-22T02:36:26.000000Z'
+                          -
+                            id: 21
+                            url: storage/product/fde0b1047f3f89fcaf47fc8492bb2b3c.png
+                            created_at: '2022-01-22T02:36:26.000000Z'
+                            updated_at: '2022-01-22T02:36:26.000000Z'
+                        categories:
+                          -
+                            id: 4
+                            name: 'Ed White'
+                            description: 'Iure omnis inventore ab qui quos.'
+                            created_at: '2022-01-22T02:36:08.000000Z'
+                            updated_at: '2022-01-22T02:36:08.000000Z'
+                            pivot:
+                              product_id: 7
+                              category_id: 4
+                          -
+                            id: 8
+                            name: 'Dr. Shawna Carroll IV'
+                            description: 'Non porro maxime dolorum nisi.'
+                            created_at: '2022-01-22T02:36:08.000000Z'
+                            updated_at: '2022-01-22T02:36:08.000000Z'
+                            pivot:
+                              product_id: 7
+                              category_id: 8
+                      -
+                        id: 6
+                        sku: '9782990203609'
+                        name: 'Elvis Bradtke V'
+                        price: 418749
+                        weight: 2
+                        description: 'Numquam consectetur quibusdam consequatur odit facere hic et. In sint et aut laudantium est velit. Maxime iusto quibusdam ea dolore dolor. Eveniet nulla provident aperiam alias voluptates consequatur ea. Facere itaque possimus voluptas et non expedita placeat. Ea blanditiis qui aut est. Perferendis ipsam perspiciatis ipsum in dolores nihil. Alias aliquid cum non possimus omnis et velit. Sed quia et officiis qui facere deserunt. Fuga quaerat adipisci est. Enim fugit hic autem ab.'
+                        thumbnail: storage/product/96c7253fa63f2ad2f5416771fb54a7d9.png
+                        stock: 70
+                        slug: elvis-bradtke-v
+                        user_id: 7
+                        created_at: '2022-01-22T02:36:13.000000Z'
+                        updated_at: '2022-01-22T02:36:13.000000Z'
+                        user:
+                          id: 7
+                          name: 'Cletus Ernser'
+                          email: ncorwin@example.com
+                          email_verified_at: '2022-01-22T02:35:59.000000Z'
+                          current_team_id: null
+                          profile_photo_path: null
+                          created_at: '2022-01-22T02:36:00.000000Z'
+                          updated_at: '2022-01-22T02:36:00.000000Z'
+                          profile_photo_url: 'https://ui-avatars.com/api/?name=C+E&color=7F9CF5&background=EBF4FF'
+                        image:
+                          -
+                            id: 16
+                            url: storage/product/f556b8b7b19f3291d05beb37a60fdc9e.png
+                            created_at: '2022-01-22T02:36:24.000000Z'
+                            updated_at: '2022-01-22T02:36:24.000000Z'
+                          -
+                            id: 17
+                            url: storage/product/bc303be6229bb8b41cf1a79d8646e7d5.png
+                            created_at: '2022-01-22T02:36:24.000000Z'
+                            updated_at: '2022-01-22T02:36:24.000000Z'
+                          -
+                            id: 18
+                            url: storage/product/465683d4af3ada6b6daff79882ab1b75.png
+                            created_at: '2022-01-22T02:36:24.000000Z'
+                            updated_at: '2022-01-22T02:36:24.000000Z'
+                        categories:
+                          -
+                            id: 1
+                            name: 'Christop Sawayn'
+                            description: 'Et ea praesentium vitae quia et.'
+                            created_at: '2022-01-22T02:36:07.000000Z'
+                            updated_at: '2022-01-22T02:36:07.000000Z'
+                            pivot:
+                              product_id: 6
+                              category_id: 1
+                          -
+                            id: 8
+                            name: 'Dr. Shawna Carroll IV'
+                            description: 'Non porro maxime dolorum nisi.'
+                            created_at: '2022-01-22T02:36:08.000000Z'
+                            updated_at: '2022-01-22T02:36:08.000000Z'
+                            pivot:
+                              product_id: 6
+                              category_id: 8
+                      -
+                        id: 5
+                        sku: '9787130428218'
+                        name: 'Liliane Koch'
+                        price: 15106
+                        weight: 2
+                        description: 'Cupiditate fuga sint temporibus odio ut sequi blanditiis. Aut unde expedita beatae blanditiis. Molestiae ut ut in et optio. Quasi et omnis perferendis deleniti. Natus asperiores omnis aut. Aperiam sit iste blanditiis quasi. Qui similique rerum mollitia est in ut. Provident ducimus nemo sed ipsam porro. Voluptate est ut atque explicabo est et porro. Et tempora dicta qui deleniti nemo itaque dolorum veniam. Nam libero eaque dicta enim. Repudiandae quis expedita blanditiis quaerat.'
+                        thumbnail: storage/product/a5fd6e3bb8dc354be2d27ad04fae0588.png
+                        stock: 53
+                        slug: liliane-koch
+                        user_id: 9
+                        created_at: '2022-01-22T02:36:13.000000Z'
+                        updated_at: '2022-01-22T02:36:13.000000Z'
+                        user:
+                          id: 9
+                          name: 'Elvis Hamill'
+                          email: immanuel.reichert@example.net
+                          email_verified_at: '2022-01-22T02:35:59.000000Z'
+                          current_team_id: null
+                          profile_photo_path: null
+                          created_at: '2022-01-22T02:36:01.000000Z'
+                          updated_at: '2022-01-22T02:36:01.000000Z'
+                          profile_photo_url: 'https://ui-avatars.com/api/?name=E+H&color=7F9CF5&background=EBF4FF'
+                        image:
+                          -
+                            id: 13
+                            url: storage/product/192338dc6359c1b2e06b1a91513a519a.png
+                            created_at: '2022-01-22T02:36:22.000000Z'
+                            updated_at: '2022-01-22T02:36:22.000000Z'
+                          -
+                            id: 14
+                            url: storage/product/6105aecbb673f79d3e32bade659e1412.png
+                            created_at: '2022-01-22T02:36:22.000000Z'
+                            updated_at: '2022-01-22T02:36:22.000000Z'
+                          -
+                            id: 15
+                            url: storage/product/f7e30a4464df7c8935d0bfde4dc0afc2.png
+                            created_at: '2022-01-22T02:36:22.000000Z'
+                            updated_at: '2022-01-22T02:36:22.000000Z'
+                        categories:
+                          -
+                            id: 5
+                            name: 'Myles Dickens'
+                            description: 'Est facilis ut voluptatem eius et ab.'
+                            created_at: '2022-01-22T02:36:08.000000Z'
+                            updated_at: '2022-01-22T02:36:08.000000Z'
+                            pivot:
+                              product_id: 5
+                              category_id: 5
+                          -
+                            id: 9
+                            name: 'Ms. Neha Herzog V'
+                            description: 'Laudantium quia molestiae sit quo.'
+                            created_at: '2022-01-22T02:36:09.000000Z'
+                            updated_at: '2022-01-22T02:36:09.000000Z'
+                            pivot:
+                              product_id: 5
+                              category_id: 9
+                      -
+                        id: 4
+                        sku: '9799451519698'
+                        name: 'Prof. Murray Dicki DVM'
+                        price: 445423
+                        weight: 3
+                        description: 'Dignissimos incidunt vitae et omnis dignissimos. Fuga culpa ab sequi incidunt iusto consectetur natus. Est illum et ratione impedit dolor. Tempora unde natus earum esse. Quo sed magnam blanditiis. Qui et sunt in. Ut accusantium eaque omnis officia eum. Voluptas reprehenderit quia saepe ut. Provident voluptas et qui laudantium ullam accusamus ipsam. Officia aliquid aliquid ullam eos nulla. Qui ut rerum recusandae doloribus iste qui sequi.'
+                        thumbnail: storage/product/5539d27fbc6dbc4787f80d04eaf36425.png
+                        stock: 70
+                        slug: prof-murray-dicki-dvm
+                        user_id: 6
+                        created_at: '2022-01-22T02:36:13.000000Z'
+                        updated_at: '2022-01-22T02:36:13.000000Z'
+                        user:
+                          id: 6
+                          name: 'Ludwig Corwin I'
+                          email: jamie01@example.net
+                          email_verified_at: '2022-01-22T02:35:59.000000Z'
+                          current_team_id: null
+                          profile_photo_path: null
+                          created_at: '2022-01-22T02:35:59.000000Z'
+                          updated_at: '2022-01-22T02:35:59.000000Z'
+                          profile_photo_url: 'https://ui-avatars.com/api/?name=L+C+I&color=7F9CF5&background=EBF4FF'
+                        image:
+                          -
+                            id: 10
+                            url: storage/product/9cb5b8995e1b4b8653324943ae1b11bd.png
+                            created_at: '2022-01-22T02:36:20.000000Z'
+                            updated_at: '2022-01-22T02:36:20.000000Z'
+                          -
+                            id: 11
+                            url: storage/product/ae625e5f7610ecefd8f86f2f1652b77d.png
+                            created_at: '2022-01-22T02:36:20.000000Z'
+                            updated_at: '2022-01-22T02:36:20.000000Z'
+                          -
+                            id: 12
+                            url: storage/product/b05bfbedf660af8891e8e309808009cf.png
+                            created_at: '2022-01-22T02:36:21.000000Z'
+                            updated_at: '2022-01-22T02:36:21.000000Z'
+                        categories:
+                          -
+                            id: 1
+                            name: 'Christop Sawayn'
+                            description: 'Et ea praesentium vitae quia et.'
+                            created_at: '2022-01-22T02:36:07.000000Z'
+                            updated_at: '2022-01-22T02:36:07.000000Z'
+                            pivot:
+                              product_id: 4
+                              category_id: 1
+                          -
+                            id: 9
+                            name: 'Ms. Neha Herzog V'
+                            description: 'Laudantium quia molestiae sit quo.'
+                            created_at: '2022-01-22T02:36:09.000000Z'
+                            updated_at: '2022-01-22T02:36:09.000000Z'
+                            pivot:
+                              product_id: 4
+                              category_id: 9
                     items:
                       type: object
                   links:
@@ -1104,7 +2059,183 @@ paths:
         - 'Product Management'
       security: []
   '/api/products/{id}':
-    put:
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer Z5hc1V6E4vkDP3agfba8ed6'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Product Management'
+    get:
+      summary: 'Display the specified resource.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    id: 1
+                    sku: '9796200298132'
+                    name: 'Horace Klocko'
+                    price: 86454
+                    weight: 4
+                    description: 'Ab nemo illo voluptatibus. In inventore qui autem. Dolor sit ab id veniam in. Voluptates quaerat dolorem nisi et. Aspernatur maiores vel et sint magni minima qui. Consequuntur aliquid labore voluptate ut ipsam veritatis et. Minima nesciunt laudantium illo ullam. Doloremque explicabo aut esse et consequatur. Vitae nobis tenetur maiores ea. Tempora libero totam et est iusto qui omnis.'
+                    thumbnail: storage/product/593ed2c02e7e680d6c65d84160ab8aad.png
+                    stock: 76
+                    slug: horace-klocko
+                    user_id: 1
+                    created_at: '2022-01-22T02:36:13.000000Z'
+                    updated_at: '2022-01-22T02:36:13.000000Z'
+                    user:
+                      id: 1
+                      name: Admin
+                      email: admin@gmail.com
+                      email_verified_at: null
+                      current_team_id: null
+                      profile_photo_path: null
+                      created_at: '2022-01-22T02:35:58.000000Z'
+                      updated_at: '2022-01-22T02:35:58.000000Z'
+                      profile_photo_url: 'https://ui-avatars.com/api/?name=A&color=7F9CF5&background=EBF4FF'
+                    image:
+                      -
+                        id: 1
+                        url: storage/product/4d03a19cf08e8d933f29a539fb76804b.png
+                        created_at: '2022-01-22T02:36:15.000000Z'
+                        updated_at: '2022-01-22T02:36:15.000000Z'
+                      -
+                        id: 2
+                        url: storage/product/47485df19b3ad6fe10a6b7121327f97e.png
+                        created_at: '2022-01-22T02:36:15.000000Z'
+                        updated_at: '2022-01-22T02:36:15.000000Z'
+                      -
+                        id: 3
+                        url: storage/product/55bc47f91a8bf3f2d8339f2babe913a3.png
+                        created_at: '2022-01-22T02:36:15.000000Z'
+                        updated_at: '2022-01-22T02:36:15.000000Z'
+                    categories:
+                      -
+                        id: 3
+                        name: 'Dr. Mose Kiehn PhD'
+                        description: 'Et est accusantium ab aut.'
+                        created_at: '2022-01-22T02:36:08.000000Z'
+                        updated_at: '2022-01-22T02:36:08.000000Z'
+                        pivot:
+                          product_id: 1
+                          category_id: 3
+                      -
+                        id: 9
+                        name: 'Ms. Neha Herzog V'
+                        description: 'Laudantium quia molestiae sit quo.'
+                        created_at: '2022-01-22T02:36:09.000000Z'
+                        updated_at: '2022-01-22T02:36:09.000000Z'
+                        pivot:
+                          product_id: 1
+                          category_id: 9
+                properties:
+                  data:
+                    type: object
+                    example:
+                      id: 1
+                      sku: '9796200298132'
+                      name: 'Horace Klocko'
+                      price: 86454
+                      weight: 4
+                      description: 'Ab nemo illo voluptatibus. In inventore qui autem. Dolor sit ab id veniam in. Voluptates quaerat dolorem nisi et. Aspernatur maiores vel et sint magni minima qui. Consequuntur aliquid labore voluptate ut ipsam veritatis et. Minima nesciunt laudantium illo ullam. Doloremque explicabo aut esse et consequatur. Vitae nobis tenetur maiores ea. Tempora libero totam et est iusto qui omnis.'
+                      thumbnail: storage/product/593ed2c02e7e680d6c65d84160ab8aad.png
+                      stock: 76
+                      slug: horace-klocko
+                      user_id: 1
+                      created_at: '2022-01-22T02:36:13.000000Z'
+                      updated_at: '2022-01-22T02:36:13.000000Z'
+                      user:
+                        id: 1
+                        name: Admin
+                        email: admin@gmail.com
+                        email_verified_at: null
+                        current_team_id: null
+                        profile_photo_path: null
+                        created_at: '2022-01-22T02:35:58.000000Z'
+                        updated_at: '2022-01-22T02:35:58.000000Z'
+                        profile_photo_url: 'https://ui-avatars.com/api/?name=A&color=7F9CF5&background=EBF4FF'
+                      image:
+                        -
+                          id: 1
+                          url: storage/product/4d03a19cf08e8d933f29a539fb76804b.png
+                          created_at: '2022-01-22T02:36:15.000000Z'
+                          updated_at: '2022-01-22T02:36:15.000000Z'
+                        -
+                          id: 2
+                          url: storage/product/47485df19b3ad6fe10a6b7121327f97e.png
+                          created_at: '2022-01-22T02:36:15.000000Z'
+                          updated_at: '2022-01-22T02:36:15.000000Z'
+                        -
+                          id: 3
+                          url: storage/product/55bc47f91a8bf3f2d8339f2babe913a3.png
+                          created_at: '2022-01-22T02:36:15.000000Z'
+                          updated_at: '2022-01-22T02:36:15.000000Z'
+                      categories:
+                        -
+                          id: 3
+                          name: 'Dr. Mose Kiehn PhD'
+                          description: 'Et est accusantium ab aut.'
+                          created_at: '2022-01-22T02:36:08.000000Z'
+                          updated_at: '2022-01-22T02:36:08.000000Z'
+                          pivot:
+                            product_id: 1
+                            category_id: 3
+                        -
+                          id: 9
+                          name: 'Ms. Neha Herzog V'
+                          description: 'Laudantium quia molestiae sit quo.'
+                          created_at: '2022-01-22T02:36:09.000000Z'
+                          updated_at: '2022-01-22T02:36:09.000000Z'
+                          pivot:
+                            product_id: 1
+                            category_id: 9
+      tags:
+        - 'Product Management'
+      security: []
+    post:
       summary: 'Update the specified resource in storage.'
       description: ''
       parameters:
@@ -1112,7 +2243,7 @@ paths:
           in: header
           name: Authorization
           description: ''
-          example: 'Bearer PacgaVvE86531e46kDhbdfZ'
+          example: 'Bearer 8E6Pcahe6gD54Zvf13dVbka'
           schema:
             type: string
         -
@@ -1170,150 +2301,19 @@ paths:
                 - weight
                 - stock
                 - thumbnail
-    delete:
-      summary: 'Remove the specified resource from storage.'
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Authorization
-          description: ''
-          example: 'Bearer va354kbgd1acZhfe68DE6PV'
-          schema:
-            type: string
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses: {  }
-      tags:
-        - 'Product Management'
-    get:
-      summary: 'Display the specified resource.'
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  data:
-                    id: 1
-                    sku: '9799108954919'
-                    name: 'Freda Bernhard'
-                    price: 406211
-                    weight: 2
-                    description: 'Dolores harum et quae ad unde quidem. Tenetur earum dolore aut molestiae. Eum cupiditate aut illo nisi nam repellat perferendis. Laborum amet quam quis officiis facilis ut. Dolore numquam laborum illum mollitia qui. Rerum earum atque expedita doloremque ex non. Ducimus rerum modi aspernatur eos. Dolorum ut sit ex accusamus quia distinctio explicabo. Fuga et aperiam saepe rem. Deserunt iste perferendis laboriosam quia autem.'
-                    thumbnail: storage/product/89604b536ad260a754655e12cd900e8d.png
-                    stock: 83
-                    slug: freda-bernhard
-                    user_id: 4
-                    created_at: '2022-01-20T20:15:24.000000Z'
-                    updated_at: '2022-01-20T20:15:24.000000Z'
-                    user:
-                      id: 4
-                      name: 'Frederique Stamm'
-                      email: ohara.ted@example.net
-                      email_verified_at: '2022-01-20T20:15:18.000000Z'
-                      created_at: '2022-01-20T20:15:19.000000Z'
-                      updated_at: '2022-01-20T20:15:19.000000Z'
-                      profile_photo_url: 'https://ui-avatars.com/api/?name=F+S&color=7F9CF5&background=EBF4FF'
-                    image:
-                      -
-                        id: 1
-                        url: storage/product/38c15634477d1aa31fe5109020901819.png
-                        created_at: '2022-01-20T20:15:26.000000Z'
-                        updated_at: '2022-01-20T20:15:26.000000Z'
-                      -
-                        id: 2
-                        url: storage/product/c60b4dcdf7b3b397e2a262bd4066b7b3.png
-                        created_at: '2022-01-20T20:15:26.000000Z'
-                        updated_at: '2022-01-20T20:15:26.000000Z'
-                      -
-                        id: 3
-                        url: storage/product/fd19d75c23ca400c6752b0201e3f336e.png
-                        created_at: '2022-01-20T20:15:26.000000Z'
-                        updated_at: '2022-01-20T20:15:26.000000Z'
-                properties:
-                  data:
-                    type: object
-                    example:
-                      id: 1
-                      sku: '9799108954919'
-                      name: 'Freda Bernhard'
-                      price: 406211
-                      weight: 2
-                      description: 'Dolores harum et quae ad unde quidem. Tenetur earum dolore aut molestiae. Eum cupiditate aut illo nisi nam repellat perferendis. Laborum amet quam quis officiis facilis ut. Dolore numquam laborum illum mollitia qui. Rerum earum atque expedita doloremque ex non. Ducimus rerum modi aspernatur eos. Dolorum ut sit ex accusamus quia distinctio explicabo. Fuga et aperiam saepe rem. Deserunt iste perferendis laboriosam quia autem.'
-                      thumbnail: storage/product/89604b536ad260a754655e12cd900e8d.png
-                      stock: 83
-                      slug: freda-bernhard
-                      user_id: 4
-                      created_at: '2022-01-20T20:15:24.000000Z'
-                      updated_at: '2022-01-20T20:15:24.000000Z'
-                      user:
-                        id: 4
-                        name: 'Frederique Stamm'
-                        email: ohara.ted@example.net
-                        email_verified_at: '2022-01-20T20:15:18.000000Z'
-                        created_at: '2022-01-20T20:15:19.000000Z'
-                        updated_at: '2022-01-20T20:15:19.000000Z'
-                        profile_photo_url: 'https://ui-avatars.com/api/?name=F+S&color=7F9CF5&background=EBF4FF'
-                      image:
-                        -
-                          id: 1
-                          url: storage/product/38c15634477d1aa31fe5109020901819.png
-                          created_at: '2022-01-20T20:15:26.000000Z'
-                          updated_at: '2022-01-20T20:15:26.000000Z'
-                        -
-                          id: 2
-                          url: storage/product/c60b4dcdf7b3b397e2a262bd4066b7b3.png
-                          created_at: '2022-01-20T20:15:26.000000Z'
-                          updated_at: '2022-01-20T20:15:26.000000Z'
-                        -
-                          id: 3
-                          url: storage/product/fd19d75c23ca400c6752b0201e3f336e.png
-                          created_at: '2022-01-20T20:15:26.000000Z'
-                          updated_at: '2022-01-20T20:15:26.000000Z'
-      tags:
-        - 'Product Management'
-      security: []
     parameters:
       -
         in: path
         name: id
-        description: 'Defaults to ''id''.'
-        example: 1
+        description: 'The ID of the product.'
+        example: 18
         required: true
         schema:
           type: integer
 tags:
+  -
+    name: Endpoints
+    description: ''
   -
     name: 'Authenticating method v1'
     description: "\nAPIs to manage the Authenticating requests\n\nThis endpoint allows you to add a word to the list.\nIt's a really useful endpoint, and you should play around\nwith it for a bit.\n<aside class=\"notice\">We mean it; you really should.😕</aside>"
