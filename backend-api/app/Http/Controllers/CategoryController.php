@@ -81,11 +81,11 @@ class CategoryController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  \App\Models\Category  $category
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\JsonResponse|object
      */
     public function destroy(Category $category)
     {
         $category->delete();
-        return \response()->setStatusCode(Response::HTTP_OK);
+        return \response()->json()->setStatusCode(Response::HTTP_OK);
     }
 }
