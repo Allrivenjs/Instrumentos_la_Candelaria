@@ -6,6 +6,7 @@ use App\Http\Requests\StoreCategoryRequest;
 use App\Http\Requests\UpdateCategoryRequest;
 use App\Http\Resources\DataResource;
 use App\Models\Category;
+use Illuminate\Http\Resources\Json\ResourceCollection;
 use Symfony\Component\HttpFoundation\Response;
 
 
@@ -27,11 +28,11 @@ class CategoryController extends Controller
     /**
      * Display a listing of the resource.
      *@unauthenticated
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\JsonResponse|ResourceCollection
      */
-    public function index(): \Illuminate\Http\Response
+    public function index()
     {
-        return response(new DataResource(Category::all()->paginate(8)))->setStatusCode(Response::HTTP_OK)->getData(true);
+        return (new DataResource(Category::paginate(8)))->response()->setStatusCode(Response::HTTP_OK)->getData(true);
     }
 
     /**
