@@ -7,6 +7,431 @@ servers:
   -
     url: 'http://localhost:8000'
 paths:
+  /api/auth/login:
+    post:
+      summary: 'Login Auth'
+      description: '<aside class="notice"> Method to authenticate yourself in the api, it is necessary to use some of its functions</aside>'
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Authenticating method v1'
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: '"Julian"'
+                password:
+                  type: string
+                  description: ''
+                  example: '"passwordsecret"'
+      security: []
+  /api/auth/register:
+    post:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Authenticating method v1'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'User name. Must not be greater than 255 characters.'
+                  example: UserSupersecret
+                email:
+                  type: string
+                  description: 'User email. Must be a valid email address.'
+                  example: UserSupersecret@gmail.com
+                password:
+                  type: string
+                  description: 'User password.'
+                  example: passwordsupersecret123@
+              required:
+                - name
+                - email
+                - password
+      security: []
+  /api/auth/logout:
+    post:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer d4c6P6V3Ze5hDg8avkbaf1E'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Authenticating method v1'
+  /api/categories:
+    get:
+      summary: 'Display a listing of the resource.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                example:
+                  -
+                    id: 1
+                    name: 'Christop Sawayn'
+                    description: 'Et ea praesentium vitae quia et.'
+                    created_at: '2022-01-22T02:36:07.000000Z'
+                    updated_at: '2022-01-22T02:36:07.000000Z'
+                  -
+                    id: 2
+                    name: 'Chaim Casper'
+                    description: 'Ut suscipit natus sit.'
+                    created_at: '2022-01-22T02:36:08.000000Z'
+                    updated_at: '2022-01-22T02:36:08.000000Z'
+                  -
+                    id: 3
+                    name: 'Dr. Mose Kiehn PhD'
+                    description: 'Et est accusantium ab aut.'
+                    created_at: '2022-01-22T02:36:08.000000Z'
+                    updated_at: '2022-01-22T02:36:08.000000Z'
+                  -
+                    id: 4
+                    name: 'Ed White'
+                    description: 'Iure omnis inventore ab qui quos.'
+                    created_at: '2022-01-22T02:36:08.000000Z'
+                    updated_at: '2022-01-22T02:36:08.000000Z'
+                  -
+                    id: 5
+                    name: 'Myles Dickens'
+                    description: 'Est facilis ut voluptatem eius et ab.'
+                    created_at: '2022-01-22T02:36:08.000000Z'
+                    updated_at: '2022-01-22T02:36:08.000000Z'
+                  -
+                    id: 6
+                    name: 'Ms. Bridgette Ratke'
+                    description: 'Autem aut quis non qui.'
+                    created_at: '2022-01-22T02:36:08.000000Z'
+                    updated_at: '2022-01-22T02:36:08.000000Z'
+                  -
+                    id: 7
+                    name: 'Prof. Charles Kerluke'
+                    description: 'Animi assumenda nam et.'
+                    created_at: '2022-01-22T02:36:08.000000Z'
+                    updated_at: '2022-01-22T02:36:08.000000Z'
+                  -
+                    id: 8
+                    name: 'Dr. Shawna Carroll IV'
+                    description: 'Non porro maxime dolorum nisi.'
+                    created_at: '2022-01-22T02:36:08.000000Z'
+                    updated_at: '2022-01-22T02:36:08.000000Z'
+                  -
+                    id: 9
+                    name: 'Ms. Neha Herzog V'
+                    description: 'Laudantium quia molestiae sit quo.'
+                    created_at: '2022-01-22T02:36:09.000000Z'
+                    updated_at: '2022-01-22T02:36:09.000000Z'
+                  -
+                    id: 10
+                    name: 'Vidal Watsica'
+                    description: 'Magnam libero suscipit qui molestiae.'
+                    created_at: '2022-01-22T02:36:09.000000Z'
+                    updated_at: '2022-01-22T02:36:09.000000Z'
+      tags:
+        - 'Category Management'
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer adah614P8bV3cf6gv5kDZeE'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Category Management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: '🤖 Category name, unique in the table category.'
+                  example: technology
+                description:
+                  type: string
+                  description: '📝 Category description .'
+                  example: 'State-of-the-art technological products'
+              required:
+                - name
+                - description
+  '/api/categories/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    id: 1
+                    name: 'Christop Sawayn'
+                    description: 'Et ea praesentium vitae quia et.'
+                    created_at: '2022-01-22T02:36:07.000000Z'
+                    updated_at: '2022-01-22T02:36:07.000000Z'
+                properties:
+                  data:
+                    type: object
+                    example:
+                      id: 1
+                      name: 'Christop Sawayn'
+                      description: 'Et ea praesentium vitae quia et.'
+                      created_at: '2022-01-22T02:36:07.000000Z'
+                      updated_at: '2022-01-22T02:36:07.000000Z'
+      tags:
+        - 'Category Management'
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer P4gZ3E15acd6h8aDv6efkVb'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Category Management'
+    put:
+      summary: 'Update the specified resource in storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer 6VfgZaD8bPEc146kv3h5dea'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Category Management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: '🤖 Category name, unique in the table category.'
+                  example: technology
+                description:
+                  type: string
+                  description: '📝 Category description .'
+                  example: 'State-of-the-art technological products'
+              required:
+                - name
+                - description
+    post:
+      summary: 'Update the specified resource in storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer P1ke8b5DcEv3dh6af6a4ZgV'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Category Management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: '🤖 Category name, unique in the table category.'
+                  example: technology
+                description:
+                  type: string
+                  description: '📝 Category description .'
+                  example: 'State-of-the-art technological products'
+              required:
+                - name
+                - description
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the category.'
+        example: 2
+        required: true
+        schema:
+          type: integer
   /api/cart:
     get:
       summary: ''
@@ -16,7 +441,7 @@ paths:
           in: header
           name: Authorization
           description: ''
-          example: 'Bearer d66P3f4Evba5geDahVk8cZ1'
+          example: 'Bearer 8Dk5haefEcg1bd3v46ZVPa6'
           schema:
             type: string
         -
@@ -520,7 +945,7 @@ paths:
           in: header
           name: Authorization
           description: ''
-          example: 'Bearer Z5vhVaDPfbEd6kca316e48g'
+          example: 'Bearer 5VPdaEc1DgZ3hf86abev46k'
           schema:
             type: string
         -
@@ -549,7 +974,7 @@ paths:
           in: header
           name: Authorization
           description: ''
-          example: 'Bearer dv41ak6hcPgDfbZ8a3Ve56E'
+          example: 'Bearer Dcaea41Evkg635VhfZdb8P6'
           schema:
             type: string
         -
@@ -574,432 +999,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the cart.'
-        example: 7
-        required: true
-        schema:
-          type: integer
-  /api/auth/login:
-    post:
-      summary: 'Login Auth'
-      description: '<aside class="notice"> Method to authenticate yourself in the api, it is necessary to use some of its functions</aside>'
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses: {  }
-      tags:
-        - 'Authenticating method v1'
-      requestBody:
-        required: false
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                name:
-                  type: string
-                  description: ''
-                  example: '"Julian"'
-                password:
-                  type: string
-                  description: ''
-                  example: '"passwordsecret"'
-      security: []
-  /api/auth/register:
-    post:
-      summary: ''
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses: {  }
-      tags:
-        - 'Authenticating method v1'
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                name:
-                  type: string
-                  description: 'User name. Must not be greater than 255 characters.'
-                  example: UserSupersecret
-                email:
-                  type: string
-                  description: 'User email. Must be a valid email address.'
-                  example: UserSupersecret@gmail.com
-                password:
-                  type: string
-                  description: 'User password.'
-                  example: passwordsupersecret123@
-              required:
-                - name
-                - email
-                - password
-      security: []
-  /api/auth/logout:
-    post:
-      summary: ''
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Authorization
-          description: ''
-          example: 'Bearer 6h8a61Vcbfad3Dgv4ekPZE5'
-          schema:
-            type: string
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses: {  }
-      tags:
-        - 'Authenticating method v1'
-  /api/categories:
-    get:
-      summary: 'Display a listing of the resource.'
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  type: object
-                example:
-                  -
-                    id: 1
-                    name: 'Christop Sawayn'
-                    description: 'Et ea praesentium vitae quia et.'
-                    created_at: '2022-01-22T02:36:07.000000Z'
-                    updated_at: '2022-01-22T02:36:07.000000Z'
-                  -
-                    id: 2
-                    name: 'Chaim Casper'
-                    description: 'Ut suscipit natus sit.'
-                    created_at: '2022-01-22T02:36:08.000000Z'
-                    updated_at: '2022-01-22T02:36:08.000000Z'
-                  -
-                    id: 3
-                    name: 'Dr. Mose Kiehn PhD'
-                    description: 'Et est accusantium ab aut.'
-                    created_at: '2022-01-22T02:36:08.000000Z'
-                    updated_at: '2022-01-22T02:36:08.000000Z'
-                  -
-                    id: 4
-                    name: 'Ed White'
-                    description: 'Iure omnis inventore ab qui quos.'
-                    created_at: '2022-01-22T02:36:08.000000Z'
-                    updated_at: '2022-01-22T02:36:08.000000Z'
-                  -
-                    id: 5
-                    name: 'Myles Dickens'
-                    description: 'Est facilis ut voluptatem eius et ab.'
-                    created_at: '2022-01-22T02:36:08.000000Z'
-                    updated_at: '2022-01-22T02:36:08.000000Z'
-                  -
-                    id: 6
-                    name: 'Ms. Bridgette Ratke'
-                    description: 'Autem aut quis non qui.'
-                    created_at: '2022-01-22T02:36:08.000000Z'
-                    updated_at: '2022-01-22T02:36:08.000000Z'
-                  -
-                    id: 7
-                    name: 'Prof. Charles Kerluke'
-                    description: 'Animi assumenda nam et.'
-                    created_at: '2022-01-22T02:36:08.000000Z'
-                    updated_at: '2022-01-22T02:36:08.000000Z'
-                  -
-                    id: 8
-                    name: 'Dr. Shawna Carroll IV'
-                    description: 'Non porro maxime dolorum nisi.'
-                    created_at: '2022-01-22T02:36:08.000000Z'
-                    updated_at: '2022-01-22T02:36:08.000000Z'
-                  -
-                    id: 9
-                    name: 'Ms. Neha Herzog V'
-                    description: 'Laudantium quia molestiae sit quo.'
-                    created_at: '2022-01-22T02:36:09.000000Z'
-                    updated_at: '2022-01-22T02:36:09.000000Z'
-                  -
-                    id: 10
-                    name: 'Vidal Watsica'
-                    description: 'Magnam libero suscipit qui molestiae.'
-                    created_at: '2022-01-22T02:36:09.000000Z'
-                    updated_at: '2022-01-22T02:36:09.000000Z'
-      tags:
-        - 'Category Management'
-      security: []
-    post:
-      summary: 'Store a newly created resource in storage.'
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Authorization
-          description: ''
-          example: 'Bearer hebcvPD36E8465fdag1ZVak'
-          schema:
-            type: string
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses: {  }
-      tags:
-        - 'Category Management'
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                name:
-                  type: string
-                  description: '🤖 Category name, unique in the table category.'
-                  example: technology
-                description:
-                  type: string
-                  description: '📝 Category description .'
-                  example: 'State-of-the-art technological products'
-              required:
-                - name
-                - description
-  '/api/categories/{id}':
-    get:
-      summary: 'Display the specified resource.'
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  data:
-                    id: 1
-                    name: 'Christop Sawayn'
-                    description: 'Et ea praesentium vitae quia et.'
-                    created_at: '2022-01-22T02:36:07.000000Z'
-                    updated_at: '2022-01-22T02:36:07.000000Z'
-                properties:
-                  data:
-                    type: object
-                    example:
-                      id: 1
-                      name: 'Christop Sawayn'
-                      description: 'Et ea praesentium vitae quia et.'
-                      created_at: '2022-01-22T02:36:07.000000Z'
-                      updated_at: '2022-01-22T02:36:07.000000Z'
-      tags:
-        - 'Category Management'
-      security: []
-    delete:
-      summary: 'Remove the specified resource from storage.'
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Authorization
-          description: ''
-          example: 'Bearer f53aeabDc6v8E14dk6gPhVZ'
-          schema:
-            type: string
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses: {  }
-      tags:
-        - 'Category Management'
-    put:
-      summary: 'Update the specified resource in storage.'
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Authorization
-          description: ''
-          example: 'Bearer 4PkDdcb6aehf8vaV5g6Z31E'
-          schema:
-            type: string
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses: {  }
-      tags:
-        - 'Category Management'
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                name:
-                  type: string
-                  description: '🤖 Category name, unique in the table category.'
-                  example: technology
-                description:
-                  type: string
-                  description: '📝 Category description .'
-                  example: 'State-of-the-art technological products'
-              required:
-                - name
-                - description
-    post:
-      summary: 'Update the specified resource in storage.'
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Authorization
-          description: ''
-          example: 'Bearer kP66v5dcV3aaEfhbDge418Z'
-          schema:
-            type: string
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses: {  }
-      tags:
-        - 'Category Management'
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                name:
-                  type: string
-                  description: '🤖 Category name, unique in the table category.'
-                  example: technology
-                description:
-                  type: string
-                  description: '📝 Category description .'
-                  example: 'State-of-the-art technological products'
-              required:
-                - name
-                - description
-    parameters:
-      -
-        in: path
-        name: id
-        description: 'The ID of the category.'
-        example: 5
+        example: 8
         required: true
         schema:
           type: integer
@@ -1012,7 +1012,7 @@ paths:
           in: header
           name: Authorization
           description: ''
-          example: 'Bearer 1aa866chgD5vbZ3fPVek4dE'
+          example: 'Bearer hf3g5kaE61486cbPVdaDeZv'
           schema:
             type: string
         -
@@ -2067,7 +2067,7 @@ paths:
           in: header
           name: Authorization
           description: ''
-          example: 'Bearer Z5hc1V6E4vkDP3agfba8ed6'
+          example: 'Bearer a8D6bv1k4gaeZV56EcdfhP3'
           schema:
             type: string
         -
@@ -2243,7 +2243,7 @@ paths:
           in: header
           name: Authorization
           description: ''
-          example: 'Bearer 8E6Pcahe6gD54Zvf13dVbka'
+          example: 'Bearer 5D1aEPeVvZ86dbc43fkh6ga'
           schema:
             type: string
         -
@@ -2306,20 +2306,20 @@ paths:
         in: path
         name: id
         description: 'The ID of the product.'
-        example: 18
+        example: 9
         required: true
         schema:
           type: integer
 tags:
-  -
-    name: Endpoints
-    description: ''
   -
     name: 'Authenticating method v1'
     description: "\nAPIs to manage the Authenticating requests\n\nThis endpoint allows you to add a word to the list.\nIt's a really useful endpoint, and you should play around\nwith it for a bit.\n<aside class=\"notice\">We mean it; you really should.😕</aside>"
   -
     name: 'Category Management'
     description: "\nAPIs to manage the categories resource"
+  -
+    name: Endpoints
+    description: ''
   -
     name: 'Product Management'
     description: "\nAPIs to manage the product resource"

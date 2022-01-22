@@ -10,128 +10,11 @@
     ],
     "info": {
         "name": "Api resource of Ecommer's",
-        "_postman_id": "85bfc603-d5bd-4171-9ec7-613e4fc7fd08",
+        "_postman_id": "afc33922-dd8c-431b-98f4-1021d144e892",
         "description": "Api template for ecommer's basic",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
     "item": [
-        {
-            "name": "Endpoints",
-            "description": "",
-            "item": [
-                {
-                    "name": "api\/cart",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/cart",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/cart"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "59"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "{\"data\":[{\"id\":1,\"quantity\":\"7\",\"product_id\":1,\"user_id\":10,\"created_at\":\"2022-01-22T02:36:15.000000Z\",\"updated_at\":\"2022-01-22T02:36:15.000000Z\"},{\"id\":2,\"quantity\":\"3\",\"product_id\":1,\"user_id\":10,\"created_at\":\"2022-01-22T02:36:15.000000Z\",\"updated_at\":\"2022-01-22T02:36:15.000000Z\"},{\"id\":3,\"quantity\":\"7\",\"product_id\":1,\"user_id\":10,\"created_at\":\"2022-01-22T02:36:16.000000Z\",\"updated_at\":\"2022-01-22T02:36:16.000000Z\"},{\"id\":4,\"quantity\":\"9\",\"product_id\":2,\"user_id\":11,\"created_at\":\"2022-01-22T02:36:17.000000Z\",\"updated_at\":\"2022-01-22T02:36:17.000000Z\"},{\"id\":5,\"quantity\":\"9\",\"product_id\":2,\"user_id\":11,\"created_at\":\"2022-01-22T02:36:17.000000Z\",\"updated_at\":\"2022-01-22T02:36:17.000000Z\"},{\"id\":6,\"quantity\":\"2\",\"product_id\":2,\"user_id\":11,\"created_at\":\"2022-01-22T02:36:17.000000Z\",\"updated_at\":\"2022-01-22T02:36:17.000000Z\"},{\"id\":7,\"quantity\":\"5\",\"product_id\":3,\"user_id\":5,\"created_at\":\"2022-01-22T02:36:19.000000Z\",\"updated_at\":\"2022-01-22T02:36:19.000000Z\"},{\"id\":8,\"quantity\":\"3\",\"product_id\":3,\"user_id\":5,\"created_at\":\"2022-01-22T02:36:19.000000Z\",\"updated_at\":\"2022-01-22T02:36:19.000000Z\"},{\"id\":9,\"quantity\":\"7\",\"product_id\":3,\"user_id\":5,\"created_at\":\"2022-01-22T02:36:19.000000Z\",\"updated_at\":\"2022-01-22T02:36:19.000000Z\"},{\"id\":10,\"quantity\":\"9\",\"product_id\":4,\"user_id\":1,\"created_at\":\"2022-01-22T02:36:21.000000Z\",\"updated_at\":\"2022-01-22T02:36:21.000000Z\"},{\"id\":11,\"quantity\":\"7\",\"product_id\":4,\"user_id\":1,\"created_at\":\"2022-01-22T02:36:21.000000Z\",\"updated_at\":\"2022-01-22T02:36:21.000000Z\"},{\"id\":12,\"quantity\":\"4\",\"product_id\":4,\"user_id\":1,\"created_at\":\"2022-01-22T02:36:21.000000Z\",\"updated_at\":\"2022-01-22T02:36:21.000000Z\"},{\"id\":13,\"quantity\":\"1\",\"product_id\":5,\"user_id\":11,\"created_at\":\"2022-01-22T02:36:23.000000Z\",\"updated_at\":\"2022-01-22T02:36:23.000000Z\"},{\"id\":14,\"quantity\":\"10\",\"product_id\":5,\"user_id\":11,\"created_at\":\"2022-01-22T02:36:23.000000Z\",\"updated_at\":\"2022-01-22T02:36:23.000000Z\"},{\"id\":15,\"quantity\":\"3\",\"product_id\":5,\"user_id\":11,\"created_at\":\"2022-01-22T02:36:23.000000Z\",\"updated_at\":\"2022-01-22T02:36:23.000000Z\"},{\"id\":16,\"quantity\":\"4\",\"product_id\":6,\"user_id\":10,\"created_at\":\"2022-01-22T02:36:25.000000Z\",\"updated_at\":\"2022-01-22T02:36:25.000000Z\"},{\"id\":17,\"quantity\":\"4\",\"product_id\":6,\"user_id\":10,\"created_at\":\"2022-01-22T02:36:25.000000Z\",\"updated_at\":\"2022-01-22T02:36:25.000000Z\"},{\"id\":18,\"quantity\":\"2\",\"product_id\":6,\"user_id\":10,\"created_at\":\"2022-01-22T02:36:25.000000Z\",\"updated_at\":\"2022-01-22T02:36:25.000000Z\"},{\"id\":19,\"quantity\":\"8\",\"product_id\":7,\"user_id\":2,\"created_at\":\"2022-01-22T02:36:27.000000Z\",\"updated_at\":\"2022-01-22T02:36:27.000000Z\"},{\"id\":20,\"quantity\":\"5\",\"product_id\":7,\"user_id\":2,\"created_at\":\"2022-01-22T02:36:27.000000Z\",\"updated_at\":\"2022-01-22T02:36:27.000000Z\"},{\"id\":21,\"quantity\":\"10\",\"product_id\":7,\"user_id\":2,\"created_at\":\"2022-01-22T02:36:27.000000Z\",\"updated_at\":\"2022-01-22T02:36:27.000000Z\"},{\"id\":22,\"quantity\":\"9\",\"product_id\":8,\"user_id\":9,\"created_at\":\"2022-01-22T02:36:28.000000Z\",\"updated_at\":\"2022-01-22T02:36:28.000000Z\"},{\"id\":23,\"quantity\":\"9\",\"product_id\":8,\"user_id\":9,\"created_at\":\"2022-01-22T02:36:29.000000Z\",\"updated_at\":\"2022-01-22T02:36:29.000000Z\"},{\"id\":24,\"quantity\":\"3\",\"product_id\":8,\"user_id\":9,\"created_at\":\"2022-01-22T02:36:29.000000Z\",\"updated_at\":\"2022-01-22T02:36:29.000000Z\"},{\"id\":25,\"quantity\":\"9\",\"product_id\":9,\"user_id\":2,\"created_at\":\"2022-01-22T02:36:30.000000Z\",\"updated_at\":\"2022-01-22T02:36:30.000000Z\"},{\"id\":26,\"quantity\":\"10\",\"product_id\":9,\"user_id\":2,\"created_at\":\"2022-01-22T02:36:30.000000Z\",\"updated_at\":\"2022-01-22T02:36:30.000000Z\"},{\"id\":27,\"quantity\":\"10\",\"product_id\":9,\"user_id\":2,\"created_at\":\"2022-01-22T02:36:31.000000Z\",\"updated_at\":\"2022-01-22T02:36:31.000000Z\"},{\"id\":28,\"quantity\":\"8\",\"product_id\":10,\"user_id\":3,\"created_at\":\"2022-01-22T02:36:32.000000Z\",\"updated_at\":\"2022-01-22T02:36:32.000000Z\"},{\"id\":29,\"quantity\":\"5\",\"product_id\":10,\"user_id\":3,\"created_at\":\"2022-01-22T02:36:32.000000Z\",\"updated_at\":\"2022-01-22T02:36:32.000000Z\"},{\"id\":30,\"quantity\":\"6\",\"product_id\":10,\"user_id\":3,\"created_at\":\"2022-01-22T02:36:32.000000Z\",\"updated_at\":\"2022-01-22T02:36:32.000000Z\"},{\"id\":31,\"quantity\":\"8\",\"product_id\":1,\"user_id\":1,\"created_at\":\"2022-01-22T04:13:49.000000Z\",\"updated_at\":\"2022-01-22T04:14:32.000000Z\"},{\"id\":32,\"quantity\":\"9\",\"product_id\":3,\"user_id\":1,\"created_at\":\"2022-01-22T04:15:12.000000Z\",\"updated_at\":\"2022-01-22T04:22:13.000000Z\"},{\"id\":33,\"quantity\":\"10\",\"product_id\":2,\"user_id\":1,\"created_at\":\"2022-01-22T04:22:34.000000Z\",\"updated_at\":\"2022-01-22T04:22:34.000000Z\"}]}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "api\/cart",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/cart",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/cart"
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": []
-                },
-                {
-                    "name": "api\/cart\/{id}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/cart\/:id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/cart\/:id",
-                            "variable": [
-                                {
-                                    "id": "id",
-                                    "key": "id",
-                                    "value": "7",
-                                    "description": "The ID of the cart."
-                                }
-                            ]
-                        },
-                        "method": "DELETE",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": []
-                }
-            ]
-        },
         {
             "name": "Authenticating method v1",
             "description": "\nAPIs to manage the Authenticating requests\n\nThis endpoint allows you to add a word to the list.\nIt's a really useful endpoint, and you should play around\nwith it for a bit.\n<aside class=\"notice\">We mean it; you really should.\ud83d\ude15<\/aside>",
@@ -325,7 +208,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "5",
+                                    "value": "2",
                                     "description": "The ID of the category."
                                 }
                             ]
@@ -389,7 +272,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "17",
+                                    "value": "1",
                                     "description": "The ID of the category."
                                 }
                             ]
@@ -485,6 +368,123 @@
             ]
         },
         {
+            "name": "Endpoints",
+            "description": "",
+            "item": [
+                {
+                    "name": "api\/cart",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/cart",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/cart"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "59"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"data\":[{\"id\":1,\"quantity\":\"7\",\"product_id\":1,\"user_id\":10,\"created_at\":\"2022-01-22T02:36:15.000000Z\",\"updated_at\":\"2022-01-22T02:36:15.000000Z\"},{\"id\":2,\"quantity\":\"3\",\"product_id\":1,\"user_id\":10,\"created_at\":\"2022-01-22T02:36:15.000000Z\",\"updated_at\":\"2022-01-22T02:36:15.000000Z\"},{\"id\":3,\"quantity\":\"7\",\"product_id\":1,\"user_id\":10,\"created_at\":\"2022-01-22T02:36:16.000000Z\",\"updated_at\":\"2022-01-22T02:36:16.000000Z\"},{\"id\":4,\"quantity\":\"9\",\"product_id\":2,\"user_id\":11,\"created_at\":\"2022-01-22T02:36:17.000000Z\",\"updated_at\":\"2022-01-22T02:36:17.000000Z\"},{\"id\":5,\"quantity\":\"9\",\"product_id\":2,\"user_id\":11,\"created_at\":\"2022-01-22T02:36:17.000000Z\",\"updated_at\":\"2022-01-22T02:36:17.000000Z\"},{\"id\":6,\"quantity\":\"2\",\"product_id\":2,\"user_id\":11,\"created_at\":\"2022-01-22T02:36:17.000000Z\",\"updated_at\":\"2022-01-22T02:36:17.000000Z\"},{\"id\":7,\"quantity\":\"5\",\"product_id\":3,\"user_id\":5,\"created_at\":\"2022-01-22T02:36:19.000000Z\",\"updated_at\":\"2022-01-22T02:36:19.000000Z\"},{\"id\":8,\"quantity\":\"3\",\"product_id\":3,\"user_id\":5,\"created_at\":\"2022-01-22T02:36:19.000000Z\",\"updated_at\":\"2022-01-22T02:36:19.000000Z\"},{\"id\":9,\"quantity\":\"7\",\"product_id\":3,\"user_id\":5,\"created_at\":\"2022-01-22T02:36:19.000000Z\",\"updated_at\":\"2022-01-22T02:36:19.000000Z\"},{\"id\":10,\"quantity\":\"9\",\"product_id\":4,\"user_id\":1,\"created_at\":\"2022-01-22T02:36:21.000000Z\",\"updated_at\":\"2022-01-22T02:36:21.000000Z\"},{\"id\":11,\"quantity\":\"7\",\"product_id\":4,\"user_id\":1,\"created_at\":\"2022-01-22T02:36:21.000000Z\",\"updated_at\":\"2022-01-22T02:36:21.000000Z\"},{\"id\":12,\"quantity\":\"4\",\"product_id\":4,\"user_id\":1,\"created_at\":\"2022-01-22T02:36:21.000000Z\",\"updated_at\":\"2022-01-22T02:36:21.000000Z\"},{\"id\":13,\"quantity\":\"1\",\"product_id\":5,\"user_id\":11,\"created_at\":\"2022-01-22T02:36:23.000000Z\",\"updated_at\":\"2022-01-22T02:36:23.000000Z\"},{\"id\":14,\"quantity\":\"10\",\"product_id\":5,\"user_id\":11,\"created_at\":\"2022-01-22T02:36:23.000000Z\",\"updated_at\":\"2022-01-22T02:36:23.000000Z\"},{\"id\":15,\"quantity\":\"3\",\"product_id\":5,\"user_id\":11,\"created_at\":\"2022-01-22T02:36:23.000000Z\",\"updated_at\":\"2022-01-22T02:36:23.000000Z\"},{\"id\":16,\"quantity\":\"4\",\"product_id\":6,\"user_id\":10,\"created_at\":\"2022-01-22T02:36:25.000000Z\",\"updated_at\":\"2022-01-22T02:36:25.000000Z\"},{\"id\":17,\"quantity\":\"4\",\"product_id\":6,\"user_id\":10,\"created_at\":\"2022-01-22T02:36:25.000000Z\",\"updated_at\":\"2022-01-22T02:36:25.000000Z\"},{\"id\":18,\"quantity\":\"2\",\"product_id\":6,\"user_id\":10,\"created_at\":\"2022-01-22T02:36:25.000000Z\",\"updated_at\":\"2022-01-22T02:36:25.000000Z\"},{\"id\":19,\"quantity\":\"8\",\"product_id\":7,\"user_id\":2,\"created_at\":\"2022-01-22T02:36:27.000000Z\",\"updated_at\":\"2022-01-22T02:36:27.000000Z\"},{\"id\":20,\"quantity\":\"5\",\"product_id\":7,\"user_id\":2,\"created_at\":\"2022-01-22T02:36:27.000000Z\",\"updated_at\":\"2022-01-22T02:36:27.000000Z\"},{\"id\":21,\"quantity\":\"10\",\"product_id\":7,\"user_id\":2,\"created_at\":\"2022-01-22T02:36:27.000000Z\",\"updated_at\":\"2022-01-22T02:36:27.000000Z\"},{\"id\":22,\"quantity\":\"9\",\"product_id\":8,\"user_id\":9,\"created_at\":\"2022-01-22T02:36:28.000000Z\",\"updated_at\":\"2022-01-22T02:36:28.000000Z\"},{\"id\":23,\"quantity\":\"9\",\"product_id\":8,\"user_id\":9,\"created_at\":\"2022-01-22T02:36:29.000000Z\",\"updated_at\":\"2022-01-22T02:36:29.000000Z\"},{\"id\":24,\"quantity\":\"3\",\"product_id\":8,\"user_id\":9,\"created_at\":\"2022-01-22T02:36:29.000000Z\",\"updated_at\":\"2022-01-22T02:36:29.000000Z\"},{\"id\":25,\"quantity\":\"9\",\"product_id\":9,\"user_id\":2,\"created_at\":\"2022-01-22T02:36:30.000000Z\",\"updated_at\":\"2022-01-22T02:36:30.000000Z\"},{\"id\":26,\"quantity\":\"10\",\"product_id\":9,\"user_id\":2,\"created_at\":\"2022-01-22T02:36:30.000000Z\",\"updated_at\":\"2022-01-22T02:36:30.000000Z\"},{\"id\":27,\"quantity\":\"10\",\"product_id\":9,\"user_id\":2,\"created_at\":\"2022-01-22T02:36:31.000000Z\",\"updated_at\":\"2022-01-22T02:36:31.000000Z\"},{\"id\":28,\"quantity\":\"8\",\"product_id\":10,\"user_id\":3,\"created_at\":\"2022-01-22T02:36:32.000000Z\",\"updated_at\":\"2022-01-22T02:36:32.000000Z\"},{\"id\":29,\"quantity\":\"5\",\"product_id\":10,\"user_id\":3,\"created_at\":\"2022-01-22T02:36:32.000000Z\",\"updated_at\":\"2022-01-22T02:36:32.000000Z\"},{\"id\":30,\"quantity\":\"6\",\"product_id\":10,\"user_id\":3,\"created_at\":\"2022-01-22T02:36:32.000000Z\",\"updated_at\":\"2022-01-22T02:36:32.000000Z\"},{\"id\":31,\"quantity\":\"8\",\"product_id\":1,\"user_id\":1,\"created_at\":\"2022-01-22T04:13:49.000000Z\",\"updated_at\":\"2022-01-22T04:14:32.000000Z\"},{\"id\":32,\"quantity\":\"9\",\"product_id\":3,\"user_id\":1,\"created_at\":\"2022-01-22T04:15:12.000000Z\",\"updated_at\":\"2022-01-22T04:22:13.000000Z\"},{\"id\":33,\"quantity\":\"10\",\"product_id\":2,\"user_id\":1,\"created_at\":\"2022-01-22T04:22:34.000000Z\",\"updated_at\":\"2022-01-22T04:22:34.000000Z\"}]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/cart",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/cart",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/cart"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": []
+                },
+                {
+                    "name": "api\/cart\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/cart\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/cart\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "8",
+                                    "description": "The ID of the cart."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
             "name": "Product Management",
             "description": "\nAPIs to manage the product resource",
             "item": [
@@ -564,7 +564,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "18",
+                                    "value": "9",
                                     "description": "The ID of the product."
                                 }
                             ]

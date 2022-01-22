@@ -1,6 +1,6 @@
 # Authenticating requests
 
-This API is authenticated by sending an **`Authorization`** header with the value **`"Bearer your-token"`**.
+To authenticate requests, include an **`Authorization`** header with the value **`"Bearer your-token"`**.
 
 All authenticated endpoints are marked with a `requires authentication` badge in the documentation below.
 

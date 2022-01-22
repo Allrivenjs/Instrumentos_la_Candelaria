@@ -13,7 +13,7 @@ endpoints:
       authenticated: true
       custom: []
     headers:
-      Authorization: 'Bearer d66P3f4Evba5geDahVk8cZ1'
+      Authorization: 'Bearer 8Dk5haefEcg1bd3v46ZVPa6'
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
@@ -41,7 +41,7 @@ endpoints:
       authenticated: true
       custom: []
     headers:
-      Authorization: 'Bearer Z5vhVaDPfbEd6kca316e48g'
+      Authorization: 'Bearer 5VPdaEc1DgZ3hf86abev46k'
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
@@ -59,7 +59,7 @@ endpoints:
       authenticated: true
       custom: []
     headers:
-      Authorization: 'Bearer dv41ak6hcPgDfbZ8a3Ve56E'
+      Authorization: 'Bearer Dcaea41Evkg635VhfZdb8P6'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -67,7 +67,7 @@ endpoints:
         name: id
         description: 'The ID of the cart.'
         required: true
-        example: 7
+        example: 8
         type: integer
         custom: []
     queryParameters: []
