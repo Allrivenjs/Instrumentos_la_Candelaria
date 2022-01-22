@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\Cart\CartController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Http\Request;
@@ -25,10 +26,15 @@ use Illuminate\Support\Facades\Route;
 Route::prefix('auth')->group(function (){
     Route::post('login',[AuthController::class, 'login'])->name('login');
     Route::post('register',[AuthController::class, 'register'])->name('register');
-    Route::post('logout',[AuthController::class, 'logout'])->name('logout')->middleware('auth:sanctum');
+    Route::post('logout',[AuthController::class, 'logout'])->name('logout')->middleware('auth:api');
 });
 
-Route::apiResource('products', ProductController::class)->names('products');
+Route::apiResource('products', ProductController::class)->names('products')->except('update');
+Route::post('products/{product}',[ProductController::class, 'update'])->name('products.update');
 
 Route::apiResource('categories', CategoryController::class)->names('categories');
+Route::post('categories/{category}', [CategoryController::class,'update'])->name('categories.update');
+
+Route::apiResource('cart', CartController::class)->names('cart')->middleware(['auth:api'])->except('update','show');
+
 
