@@ -6,6 +6,7 @@ use App\Http\Requests\ProductRequest;
 use App\Http\Resources\ProductResource;
 use App\Models\Product;
 use App\Models\User;
+use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\ResourceCollection;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
@@ -39,6 +40,22 @@ class ProductController extends Controller
     public function index()
     {
         return (ProductResource::collection(Product::with(['user', 'images', 'categories'])
+            ->orderByDesc('id')
+            ->paginate(8)))
+            ->response()
+            ->setStatusCode(Response::HTTP_OK)
+            ->getData(true);
+    }
+
+
+    /**
+     *  Desplay a listing of products by user
+     *
+     * @return \Illuminate\Http\JsonResponse|ResourceCollection
+     */
+    public function getItemProductByUser(){
+        return (ProductResource::collection(Product::with(['user', 'images', 'categories'])
+            ->where('user_id', auth()->user()->getAuthIdentifier())
             ->orderByDesc('id')
             ->paginate(8)))
             ->response()
@@ -106,7 +123,6 @@ class ProductController extends Controller
     /**
      * Update the specified resource in storage.
      * @urlParam id int required Defaults to 'id'. Example: 1 Required
-     * @param  \Illuminate\Http\Request  $request
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\JsonResponse|\Illuminate\Http\Response|object
      */

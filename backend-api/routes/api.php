@@ -31,9 +31,10 @@ Route::prefix('auth')->group(function (){
 
 Route::apiResource('products', ProductController::class)->names('products')->except('update');
 Route::post('products/{product}',[ProductController::class, 'update'])->name('products.update');
+Route::get('productsByUser',[ProductController::class, 'getItemProductByUser'])->name('products.getItemProductByUser')->middleware('auth:api');
 
 Route::apiResource('categories', CategoryController::class)->names('categories');
-Route::post('categories/{category}', [CategoryController::class,'update'])->name('categories.update');
+
 
 Route::apiResource('cart', CartController::class)->names('cart')->middleware(['auth:api'])->except('update','show');
 

@@ -31,7 +31,7 @@ class CategoryController extends Controller
      */
     public function index(): \Illuminate\Http\Response
     {
-        return response(new DataResource(Category::all()))->setStatusCode(Response::HTTP_OK);
+        return response(new DataResource(Category::all()->paginate(8)))->setStatusCode(Response::HTTP_OK)->getData(true);
     }
 
     /**

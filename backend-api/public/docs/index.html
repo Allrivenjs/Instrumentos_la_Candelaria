@@ -92,6 +92,22 @@
                                                     </ul>
                             </ul>
                     <ul id="tocify-header-3" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="cart-management">
+                    <a href="#cart-management">Cart Management</a>
+                </li>
+                                    <ul id="tocify-subheader-cart-management" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="cart-management-GETapi-cart">
+                        <a href="#cart-management-GETapi-cart">GET api/cart</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="cart-management-POSTapi-cart">
+                        <a href="#cart-management-POSTapi-cart">Store Cart and update.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="cart-management-DELETEapi-cart--id-">
+                        <a href="#cart-management-DELETEapi-cart--id-">Remove product from cart</a>
+                    </li>
+                                                    </ul>
+                            </ul>
+                    <ul id="tocify-header-4" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="category-management">
                     <a href="#category-management">Category Management</a>
                 </li>
@@ -110,25 +126,6 @@
                     </li>
                                     <li class="tocify-item level-2" data-unique="category-management-PUTapi-categories--id-">
                         <a href="#category-management-PUTapi-categories--id-">Update the specified resource in storage.</a>
-                    </li>
-                                    <li class="tocify-item level-2" data-unique="category-management-POSTapi-categories--id-">
-                        <a href="#category-management-POSTapi-categories--id-">Update the specified resource in storage.</a>
-                    </li>
-                                                    </ul>
-                            </ul>
-                    <ul id="tocify-header-4" class="tocify-header">
-                <li class="tocify-item level-1" data-unique="endpoints">
-                    <a href="#endpoints">Endpoints</a>
-                </li>
-                                    <ul id="tocify-subheader-endpoints" class="tocify-subheader">
-                                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-cart">
-                        <a href="#endpoints-GETapi-cart">GET api/cart</a>
-                    </li>
-                                    <li class="tocify-item level-2" data-unique="endpoints-POSTapi-cart">
-                        <a href="#endpoints-POSTapi-cart">POST api/cart</a>
-                    </li>
-                                    <li class="tocify-item level-2" data-unique="endpoints-DELETEapi-cart--id-">
-                        <a href="#endpoints-DELETEapi-cart--id-">DELETE api/cart/{id}</a>
                     </li>
                                                     </ul>
                             </ul>
@@ -151,6 +148,9 @@
                     </li>
                                     <li class="tocify-item level-2" data-unique="product-management-POSTapi-products--id-">
                         <a href="#product-management-POSTapi-products--id-">Update the specified resource in storage.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="product-management-GETapi-productsByUser">
+                        <a href="#product-management-GETapi-productsByUser">Desplay a listing of products by user</a>
                     </li>
                                                     </ul>
                             </ul>
@@ -182,7 +182,7 @@ This api is written in PHP-laravel, and it is based on the structure of a basic 
 <pre><code class="language-yaml">http://jaime.registrodocumental.com/Instrumentos_la_Candelaria/backend-api/public</code></pre>
 
         <h1 id="authenticating-requests">Authenticating requests</h1>
-<p>To authenticate requests, include an <strong><code>Authorization</code></strong> header with the value <strong><code>"Bearer your-token"</code></strong>.</p>
+<p>This API is authenticated by sending an <strong><code>Authorization</code></strong> header with the value <strong><code>"Bearer your-token"</code></strong>.</p>
 <p>All authenticated endpoints are marked with a <code>requires authentication</code> badge in the documentation below.</p>
 <p>You can retrieve your token by visiting your dashboard and clicking <b>Generate API token</b>.</p>
 
@@ -564,7 +564,7 @@ response.json()</code></pre></div>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
     "http://localhost:8000/api/auth/logout" \
-    --header "Authorization: Bearer d4c6P6V3Ze5hDg8avkbaf1E" \
+    --header "Authorization: Bearer D63fck8EVe6gdhv15b4PZaa" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -575,7 +575,7 @@ response.json()</code></pre></div>
 );
 
 const headers = {
-    "Authorization": "Bearer d4c6P6V3Ze5hDg8avkbaf1E",
+    "Authorization": "Bearer D63fck8EVe6gdhv15b4PZaa",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -591,7 +591,7 @@ fetch(url, {
 require 'rest-client'
 
     headers = {
-            "Authorization": "Bearer d4c6P6V3Ze5hDg8avkbaf1E",
+            "Authorization": "Bearer D63fck8EVe6gdhv15b4PZaa",
             "Content-Type": "application/json",
             "Accept": "application/json",
         }
@@ -611,7 +611,7 @@ $response = $client-&gt;post(
     'http://localhost:8000/api/auth/logout',
     [
         'headers' =&gt; [
-            'Authorization' =&gt; 'Bearer d4c6P6V3Ze5hDg8avkbaf1E',
+            'Authorization' =&gt; 'Bearer D63fck8EVe6gdhv15b4PZaa',
             'Content-Type' =&gt; 'application/json',
             'Accept' =&gt; 'application/json',
         ],
@@ -627,7 +627,7 @@ import json
 
 url = 'http://localhost:8000/api/auth/logout'
 headers = {
-  'Authorization': 'Bearer d4c6P6V3Ze5hDg8avkbaf1E',
+  'Authorization': 'Bearer D63fck8EVe6gdhv15b4PZaa',
   'Content-Type': 'application/json',
   'Accept': 'application/json'
 }
@@ -654,7 +654,7 @@ response.json()</code></pre></div>
       data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
-      data-headers='{"Authorization":"Bearer d4c6P6V3Ze5hDg8avkbaf1E","Content-Type":"application\/json","Accept":"application\/json"}'
+      data-headers='{"Authorization":"Bearer D63fck8EVe6gdhv15b4PZaa","Content-Type":"application\/json","Accept":"application\/json"}'
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('POSTapi-auth-logout', this);">
     <h3>
@@ -687,6 +687,551 @@ response.json()</code></pre></div>
                                                                 data-component="header"></label>
         </p>
                 </form>
+
+        <h1 id="cart-management">Cart Management</h1>
+
+    
+
+            <h2 id="cart-management-GETapi-cart">GET api/cart</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-GETapi-cart">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/cart" \
+    --header "Authorization: Bearer a8D4bk656VfcehgZda3vPE1" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/cart"
+);
+
+const headers = {
+    "Authorization": "Bearer a8D4bk656VfcehgZda3vPE1",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="ruby-example">
+    <pre><code class="language-ruby">
+require 'rest-client'
+
+    headers = {
+            "Authorization": "Bearer a8D4bk656VfcehgZda3vPE1",
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+        }
+
+response = RestClient.get(
+'http://localhost:8000/api/cart',
+headers
+)
+
+p response.body
+</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/cart',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer a8D4bk656VfcehgZda3vPE1',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/cart'
+headers = {
+  'Authorization': 'Bearer a8D4bk656VfcehgZda3vPE1',
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-cart">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 56
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 10,
+            &quot;quantity&quot;: &quot;9&quot;,
+            &quot;product_id&quot;: 4,
+            &quot;user_id&quot;: 1,
+            &quot;created_at&quot;: &quot;2022-01-22T02:36:21.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-01-22T02:36:21.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 11,
+            &quot;quantity&quot;: &quot;7&quot;,
+            &quot;product_id&quot;: 4,
+            &quot;user_id&quot;: 1,
+            &quot;created_at&quot;: &quot;2022-01-22T02:36:21.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-01-22T02:36:21.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 12,
+            &quot;quantity&quot;: &quot;4&quot;,
+            &quot;product_id&quot;: 4,
+            &quot;user_id&quot;: 1,
+            &quot;created_at&quot;: &quot;2022-01-22T02:36:21.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-01-22T02:36:21.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 31,
+            &quot;quantity&quot;: &quot;8&quot;,
+            &quot;product_id&quot;: 1,
+            &quot;user_id&quot;: 1,
+            &quot;created_at&quot;: &quot;2022-01-22T04:13:49.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-01-22T04:14:32.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 32,
+            &quot;quantity&quot;: &quot;9&quot;,
+            &quot;product_id&quot;: 3,
+            &quot;user_id&quot;: 1,
+            &quot;created_at&quot;: &quot;2022-01-22T04:15:12.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-01-22T04:22:13.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 33,
+            &quot;quantity&quot;: &quot;132&quot;,
+            &quot;product_id&quot;: 2,
+            &quot;user_id&quot;: 1,
+            &quot;created_at&quot;: &quot;2022-01-22T04:22:34.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-01-22T06:53:20.000000Z&quot;
+        }
+    ]
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-cart" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-cart"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-cart"></code></pre>
+</span>
+<span id="execution-error-GETapi-cart" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-cart"></code></pre>
+</span>
+<form id="form-GETapi-cart" data-method="GET"
+      data-path="api/cart"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer a8D4bk656VfcehgZda3vPE1","Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-cart', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-cart"
+                    onclick="tryItOut('GETapi-cart');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-cart"
+                    onclick="cancelTryOut('GETapi-cart');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-cart" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/cart</code></b>
+        </p>
+                <p>
+            <label id="auth-GETapi-cart" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="GETapi-cart"
+                                                                data-component="header"></label>
+        </p>
+                </form>
+
+            <h2 id="cart-management-POSTapi-cart">Store Cart and update.</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+<aside>This endpoint works to create and update a user's product.</aside>
+
+<span id="example-requests-POSTapi-cart">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost:8000/api/cart" \
+    --header "Authorization: Bearer e5vg3EZfVaDb8cha1k664dP" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"product_id\": 1,
+    \"quantity\": 1
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/cart"
+);
+
+const headers = {
+    "Authorization": "Bearer e5vg3EZfVaDb8cha1k664dP",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "product_id": 1,
+    "quantity": 1
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="ruby-example">
+    <pre><code class="language-ruby">
+require 'rest-client'
+
+    body = {
+    "product_id": 1,
+    "quantity": 1
+}
+    headers = {
+            "Authorization": "Bearer e5vg3EZfVaDb8cha1k664dP",
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+        }
+
+response = RestClient.post(
+'http://localhost:8000/api/cart',
+body ,
+headers
+)
+
+p response.body
+</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;post(
+    'http://localhost:8000/api/cart',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer e5vg3EZfVaDb8cha1k664dP',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+        'json' =&gt; [
+            'product_id' =&gt; 1,
+            'quantity' =&gt; 1,
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/cart'
+payload = {
+    "product_id": 1,
+    "quantity": 1
+}
+headers = {
+  'Authorization': 'Bearer e5vg3EZfVaDb8cha1k664dP',
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('POST', url, headers=headers, json=payload)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-cart">
+</span>
+<span id="execution-results-POSTapi-cart" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-cart"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-cart"></code></pre>
+</span>
+<span id="execution-error-POSTapi-cart" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-cart"></code></pre>
+</span>
+<form id="form-POSTapi-cart" data-method="POST"
+      data-path="api/cart"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer e5vg3EZfVaDb8cha1k664dP","Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-cart', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-cart"
+                    onclick="tryItOut('POSTapi-cart');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-cart"
+                    onclick="cancelTryOut('POSTapi-cart');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-cart" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/cart</code></b>
+        </p>
+                <p>
+            <label id="auth-POSTapi-cart" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="POSTapi-cart"
+                                                                data-component="header"></label>
+        </p>
+                        <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>product_id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="product_id"
+               data-endpoint="POSTapi-cart"
+               value="1"
+               data-component="body" hidden>
+    <br>
+<p>Product id</p>
+        </p>
+                <p>
+            <b><code>quantity</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="quantity"
+               data-endpoint="POSTapi-cart"
+               value="1"
+               data-component="body" hidden>
+    <br>
+<p>Product quantity, min 1</p>
+        </p>
+        </form>
+
+            <h2 id="cart-management-DELETEapi-cart--id-">Remove product from cart</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-DELETEapi-cart--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request DELETE \
+    "http://localhost:8000/api/cart/5" \
+    --header "Authorization: Bearer EV143eahad6kcPbvf5ZgD86" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/cart/5"
+);
+
+const headers = {
+    "Authorization": "Bearer EV143eahad6kcPbvf5ZgD86",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "DELETE",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="ruby-example">
+    <pre><code class="language-ruby">
+require 'rest-client'
+
+    headers = {
+            "Authorization": "Bearer EV143eahad6kcPbvf5ZgD86",
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+        }
+
+response = RestClient.delete(
+'http://localhost:8000/api/cart/5',
+headers
+)
+
+p response.body
+</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;delete(
+    'http://localhost:8000/api/cart/5',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer EV143eahad6kcPbvf5ZgD86',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/cart/5'
+headers = {
+  'Authorization': 'Bearer EV143eahad6kcPbvf5ZgD86',
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('DELETE', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-DELETEapi-cart--id-">
+</span>
+<span id="execution-results-DELETEapi-cart--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-DELETEapi-cart--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-DELETEapi-cart--id-"></code></pre>
+</span>
+<span id="execution-error-DELETEapi-cart--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-DELETEapi-cart--id-"></code></pre>
+</span>
+<form id="form-DELETEapi-cart--id-" data-method="DELETE"
+      data-path="api/cart/{id}"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer EV143eahad6kcPbvf5ZgD86","Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('DELETEapi-cart--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-DELETEapi-cart--id-"
+                    onclick="tryItOut('DELETEapi-cart--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-DELETEapi-cart--id-"
+                    onclick="cancelTryOut('DELETEapi-cart--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-DELETEapi-cart--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-red">DELETE</small>
+            <b><code>api/cart/{id}</code></b>
+        </p>
+                <p>
+            <label id="auth-DELETEapi-cart--id-" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="DELETEapi-cart--id-"
+                                                                data-component="header"></label>
+        </p>
+                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="DELETEapi-cart--id-"
+               value="5"
+               data-component="url" hidden>
+    <br>
+<p>The ID of the cart.</p>
+            </p>
+                    </form>
 
         <h1 id="category-management">Category Management</h1>
 
@@ -785,7 +1330,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 57
+x-ratelimit-remaining: 58
 access-control-allow-origin: *
  </code></pre>
         </details>         <pre>
@@ -920,7 +1465,7 @@ access-control-allow-origin: *
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
     "http://localhost:8000/api/categories" \
-    --header "Authorization: Bearer adah614P8bV3cf6gv5kDZeE" \
+    --header "Authorization: Bearer vZhdkcg566b4afPa31DeVE8" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -936,7 +1481,7 @@ access-control-allow-origin: *
 );
 
 const headers = {
-    "Authorization": "Bearer adah614P8bV3cf6gv5kDZeE",
+    "Authorization": "Bearer vZhdkcg566b4afPa31DeVE8",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -962,7 +1507,7 @@ require 'rest-client'
     "description": "State-of-the-art technological products"
 }
     headers = {
-            "Authorization": "Bearer adah614P8bV3cf6gv5kDZeE",
+            "Authorization": "Bearer vZhdkcg566b4afPa31DeVE8",
             "Content-Type": "application/json",
             "Accept": "application/json",
         }
@@ -983,7 +1528,7 @@ $response = $client-&gt;post(
     'http://localhost:8000/api/categories',
     [
         'headers' =&gt; [
-            'Authorization' =&gt; 'Bearer adah614P8bV3cf6gv5kDZeE',
+            'Authorization' =&gt; 'Bearer vZhdkcg566b4afPa31DeVE8',
             'Content-Type' =&gt; 'application/json',
             'Accept' =&gt; 'application/json',
         ],
@@ -1007,7 +1552,7 @@ payload = {
     "description": "State-of-the-art technological products"
 }
 headers = {
-  'Authorization': 'Bearer adah614P8bV3cf6gv5kDZeE',
+  'Authorization': 'Bearer vZhdkcg566b4afPa31DeVE8',
   'Content-Type': 'application/json',
   'Accept': 'application/json'
 }
@@ -1034,7 +1579,7 @@ response.json()</code></pre></div>
       data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
-      data-headers='{"Authorization":"Bearer adah614P8bV3cf6gv5kDZeE","Content-Type":"application\/json","Accept":"application\/json"}'
+      data-headers='{"Authorization":"Bearer vZhdkcg566b4afPa31DeVE8","Content-Type":"application\/json","Accept":"application\/json"}'
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('POSTapi-categories', this);">
     <h3>
@@ -1102,14 +1647,14 @@ response.json()</code></pre></div>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/categories/2" \
+    --get "http://localhost:8000/api/categories/5" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/categories/2"
+    "http://localhost:8000/api/categories/5"
 );
 
 const headers = {
@@ -1133,7 +1678,7 @@ require 'rest-client'
         }
 
 response = RestClient.get(
-'http://localhost:8000/api/categories/2',
+'http://localhost:8000/api/categories/5',
 headers
 )
 
@@ -1144,7 +1689,7 @@ p response.body
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/categories/2',
+    'http://localhost:8000/api/categories/5',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -1160,7 +1705,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/categories/2'
+url = 'http://localhost:8000/api/categories/5'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -1182,7 +1727,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 56
+x-ratelimit-remaining: 57
 access-control-allow-origin: *
  </code></pre>
         </details>         <pre>
@@ -1243,7 +1788,7 @@ access-control-allow-origin: *
                 <input type="number"
                name="id"
                data-endpoint="GETapi-categories--id-"
-               value="2"
+               value="5"
                data-component="url" hidden>
     <br>
 <p>The ID of the category.</p>
@@ -1264,19 +1809,19 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/categories/1" \
-    --header "Authorization: Bearer P4gZ3E15acd6h8aDv6efkVb" \
+    "http://localhost:8000/api/categories/13" \
+    --header "Authorization: Bearer v6cPgZ4eVa5bd1kE8ah3fD6" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/categories/1"
+    "http://localhost:8000/api/categories/13"
 );
 
 const headers = {
-    "Authorization": "Bearer P4gZ3E15acd6h8aDv6efkVb",
+    "Authorization": "Bearer v6cPgZ4eVa5bd1kE8ah3fD6",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -1292,13 +1837,13 @@ fetch(url, {
 require 'rest-client'
 
     headers = {
-            "Authorization": "Bearer P4gZ3E15acd6h8aDv6efkVb",
+            "Authorization": "Bearer v6cPgZ4eVa5bd1kE8ah3fD6",
             "Content-Type": "application/json",
             "Accept": "application/json",
         }
 
 response = RestClient.delete(
-'http://localhost:8000/api/categories/1',
+'http://localhost:8000/api/categories/13',
 headers
 )
 
@@ -1309,10 +1854,10 @@ p response.body
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;delete(
-    'http://localhost:8000/api/categories/1',
+    'http://localhost:8000/api/categories/13',
     [
         'headers' =&gt; [
-            'Authorization' =&gt; 'Bearer P4gZ3E15acd6h8aDv6efkVb',
+            'Authorization' =&gt; 'Bearer v6cPgZ4eVa5bd1kE8ah3fD6',
             'Content-Type' =&gt; 'application/json',
             'Accept' =&gt; 'application/json',
         ],
@@ -1326,9 +1871,9 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/categories/1'
+url = 'http://localhost:8000/api/categories/13'
 headers = {
-  'Authorization': 'Bearer P4gZ3E15acd6h8aDv6efkVb',
+  'Authorization': 'Bearer v6cPgZ4eVa5bd1kE8ah3fD6',
   'Content-Type': 'application/json',
   'Accept': 'application/json'
 }
@@ -1355,7 +1900,7 @@ response.json()</code></pre></div>
       data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
-      data-headers='{"Authorization":"Bearer P4gZ3E15acd6h8aDv6efkVb","Content-Type":"application\/json","Accept":"application\/json"}'
+      data-headers='{"Authorization":"Bearer v6cPgZ4eVa5bd1kE8ah3fD6","Content-Type":"application\/json","Accept":"application\/json"}'
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('DELETEapi-categories--id-', this);">
     <h3>
@@ -1393,7 +1938,7 @@ response.json()</code></pre></div>
                 <input type="number"
                name="id"
                data-endpoint="DELETEapi-categories--id-"
-               value="1"
+               value="13"
                data-component="url" hidden>
     <br>
 <p>The ID of the category.</p>
@@ -1415,7 +1960,7 @@ response.json()</code></pre></div>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
     "http://localhost:8000/api/categories/1" \
-    --header "Authorization: Bearer 6VfgZaD8bPEc146kv3h5dea" \
+    --header "Authorization: Bearer ZvDdea48EPf31k656aVbghc" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -1431,7 +1976,7 @@ response.json()</code></pre></div>
 );
 
 const headers = {
-    "Authorization": "Bearer 6VfgZaD8bPEc146kv3h5dea",
+    "Authorization": "Bearer ZvDdea48EPf31k656aVbghc",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -1457,7 +2002,7 @@ require 'rest-client'
     "description": "State-of-the-art technological products"
 }
     headers = {
-            "Authorization": "Bearer 6VfgZaD8bPEc146kv3h5dea",
+            "Authorization": "Bearer ZvDdea48EPf31k656aVbghc",
             "Content-Type": "application/json",
             "Accept": "application/json",
         }
@@ -1478,7 +2023,7 @@ $response = $client-&gt;put(
     'http://localhost:8000/api/categories/1',
     [
         'headers' =&gt; [
-            'Authorization' =&gt; 'Bearer 6VfgZaD8bPEc146kv3h5dea',
+            'Authorization' =&gt; 'Bearer ZvDdea48EPf31k656aVbghc',
             'Content-Type' =&gt; 'application/json',
             'Accept' =&gt; 'application/json',
         ],
@@ -1502,7 +2047,7 @@ payload = {
     "description": "State-of-the-art technological products"
 }
 headers = {
-  'Authorization': 'Bearer 6VfgZaD8bPEc146kv3h5dea',
+  'Authorization': 'Bearer ZvDdea48EPf31k656aVbghc',
   'Content-Type': 'application/json',
   'Accept': 'application/json'
 }
@@ -1529,7 +2074,7 @@ response.json()</code></pre></div>
       data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
-      data-headers='{"Authorization":"Bearer 6VfgZaD8bPEc146kv3h5dea","Content-Type":"application\/json","Accept":"application\/json"}'
+      data-headers='{"Authorization":"Bearer ZvDdea48EPf31k656aVbghc","Content-Type":"application\/json","Accept":"application\/json"}'
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('PUTapi-categories--id-', this);">
     <h3>
@@ -1599,917 +2144,6 @@ response.json()</code></pre></div>
         </p>
         </form>
 
-            <h2 id="category-management-POSTapi-categories--id-">Update the specified resource in storage.</h2>
-
-<p>
-<small class="badge badge-darkred">requires authentication</small>
-</p>
-
-
-
-<span id="example-requests-POSTapi-categories--id-">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/categories/1" \
-    --header "Authorization: Bearer P1ke8b5DcEv3dh6af6a4ZgV" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json" \
-    --data "{
-    \"name\": \"technology\",
-    \"description\": \"State-of-the-art technological products\"
-}"
-</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/categories/1"
-);
-
-const headers = {
-    "Authorization": "Bearer P1ke8b5DcEv3dh6af6a4ZgV",
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-let body = {
-    "name": "technology",
-    "description": "State-of-the-art technological products"
-};
-
-fetch(url, {
-    method: "POST",
-    headers,
-    body: JSON.stringify(body),
-}).then(response =&gt; response.json());</code></pre></div>
-
-
-<div class="ruby-example">
-    <pre><code class="language-ruby">
-require 'rest-client'
-
-    body = {
-    "name": "technology",
-    "description": "State-of-the-art technological products"
-}
-    headers = {
-            "Authorization": "Bearer P1ke8b5DcEv3dh6af6a4ZgV",
-            "Content-Type": "application/json",
-            "Accept": "application/json",
-        }
-
-response = RestClient.post(
-'http://localhost:8000/api/categories/1',
-body ,
-headers
-)
-
-p response.body
-</code></pre></div>
-
-
-<div class="php-example">
-    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$response = $client-&gt;post(
-    'http://localhost:8000/api/categories/1',
-    [
-        'headers' =&gt; [
-            'Authorization' =&gt; 'Bearer P1ke8b5DcEv3dh6af6a4ZgV',
-            'Content-Type' =&gt; 'application/json',
-            'Accept' =&gt; 'application/json',
-        ],
-        'json' =&gt; [
-            'name' =&gt; 'technology',
-            'description' =&gt; 'State-of-the-art technological products',
-        ],
-    ]
-);
-$body = $response-&gt;getBody();
-print_r(json_decode((string) $body));</code></pre></div>
-
-
-<div class="python-example">
-    <pre><code class="language-python">import requests
-import json
-
-url = 'http://localhost:8000/api/categories/1'
-payload = {
-    "name": "technology",
-    "description": "State-of-the-art technological products"
-}
-headers = {
-  'Authorization': 'Bearer P1ke8b5DcEv3dh6af6a4ZgV',
-  'Content-Type': 'application/json',
-  'Accept': 'application/json'
-}
-
-response = requests.request('POST', url, headers=headers, json=payload)
-response.json()</code></pre></div>
-
-</span>
-
-<span id="example-responses-POSTapi-categories--id-">
-</span>
-<span id="execution-results-POSTapi-categories--id-" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-POSTapi-categories--id-"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-categories--id-"></code></pre>
-</span>
-<span id="execution-error-POSTapi-categories--id-" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-categories--id-"></code></pre>
-</span>
-<form id="form-POSTapi-categories--id-" data-method="POST"
-      data-path="api/categories/{id}"
-      data-authed="1"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Authorization":"Bearer P1ke8b5DcEv3dh6af6a4ZgV","Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('POSTapi-categories--id-', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-categories--id-"
-                    onclick="tryItOut('POSTapi-categories--id-');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-categories--id-"
-                    onclick="cancelTryOut('POSTapi-categories--id-');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-categories--id-" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-black">POST</small>
-            <b><code>api/categories/{id}</code></b>
-        </p>
-                <p>
-            <label id="auth-POSTapi-categories--id-" hidden>Authorization header:
-                <b><code>Bearer </code></b><input type="text"
-                                                                name="Authorization"
-                                                                data-prefix="Bearer "
-                                                                data-endpoint="POSTapi-categories--id-"
-                                                                data-component="header"></label>
-        </p>
-                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
-                    <p>
-                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
-                <input type="number"
-               name="id"
-               data-endpoint="POSTapi-categories--id-"
-               value="1"
-               data-component="url" hidden>
-    <br>
-<p>Defaults to 'id'.</p>
-            </p>
-                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
-        <p>
-            <b><code>name</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-                <input type="text"
-               name="name"
-               data-endpoint="POSTapi-categories--id-"
-               value="technology"
-               data-component="body" hidden>
-    <br>
-<p>🤖 Category name, unique in the table category.</p>
-        </p>
-                <p>
-            <b><code>description</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-                <input type="text"
-               name="description"
-               data-endpoint="POSTapi-categories--id-"
-               value="State-of-the-art technological products"
-               data-component="body" hidden>
-    <br>
-<p>📝 Category description .</p>
-        </p>
-        </form>
-
-        <h1 id="endpoints">Endpoints</h1>
-
-    
-
-            <h2 id="endpoints-GETapi-cart">GET api/cart</h2>
-
-<p>
-<small class="badge badge-darkred">requires authentication</small>
-</p>
-
-
-
-<span id="example-requests-GETapi-cart">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/cart" \
-    --header "Authorization: Bearer 8Dk5haefEcg1bd3v46ZVPa6" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/cart"
-);
-
-const headers = {
-    "Authorization": "Bearer 8Dk5haefEcg1bd3v46ZVPa6",
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-
-<div class="ruby-example">
-    <pre><code class="language-ruby">
-require 'rest-client'
-
-    headers = {
-            "Authorization": "Bearer 8Dk5haefEcg1bd3v46ZVPa6",
-            "Content-Type": "application/json",
-            "Accept": "application/json",
-        }
-
-response = RestClient.get(
-'http://localhost:8000/api/cart',
-headers
-)
-
-p response.body
-</code></pre></div>
-
-
-<div class="php-example">
-    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$response = $client-&gt;get(
-    'http://localhost:8000/api/cart',
-    [
-        'headers' =&gt; [
-            'Authorization' =&gt; 'Bearer 8Dk5haefEcg1bd3v46ZVPa6',
-            'Content-Type' =&gt; 'application/json',
-            'Accept' =&gt; 'application/json',
-        ],
-    ]
-);
-$body = $response-&gt;getBody();
-print_r(json_decode((string) $body));</code></pre></div>
-
-
-<div class="python-example">
-    <pre><code class="language-python">import requests
-import json
-
-url = 'http://localhost:8000/api/cart'
-headers = {
-  'Authorization': 'Bearer 8Dk5haefEcg1bd3v46ZVPa6',
-  'Content-Type': 'application/json',
-  'Accept': 'application/json'
-}
-
-response = requests.request('GET', url, headers=headers)
-response.json()</code></pre></div>
-
-</span>
-
-<span id="example-responses-GETapi-cart">
-            <blockquote>
-            <p>Example response (200):</p>
-        </blockquote>
-                <details class="annotation">
-            <summary>
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-x-ratelimit-limit: 60
-x-ratelimit-remaining: 59
-access-control-allow-origin: *
- </code></pre>
-        </details>         <pre>
-
-<code class="language-json">{
-    &quot;data&quot;: [
-        {
-            &quot;id&quot;: 1,
-            &quot;quantity&quot;: &quot;7&quot;,
-            &quot;product_id&quot;: 1,
-            &quot;user_id&quot;: 10,
-            &quot;created_at&quot;: &quot;2022-01-22T02:36:15.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-01-22T02:36:15.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 2,
-            &quot;quantity&quot;: &quot;3&quot;,
-            &quot;product_id&quot;: 1,
-            &quot;user_id&quot;: 10,
-            &quot;created_at&quot;: &quot;2022-01-22T02:36:15.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-01-22T02:36:15.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 3,
-            &quot;quantity&quot;: &quot;7&quot;,
-            &quot;product_id&quot;: 1,
-            &quot;user_id&quot;: 10,
-            &quot;created_at&quot;: &quot;2022-01-22T02:36:16.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-01-22T02:36:16.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 4,
-            &quot;quantity&quot;: &quot;9&quot;,
-            &quot;product_id&quot;: 2,
-            &quot;user_id&quot;: 11,
-            &quot;created_at&quot;: &quot;2022-01-22T02:36:17.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-01-22T02:36:17.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 5,
-            &quot;quantity&quot;: &quot;9&quot;,
-            &quot;product_id&quot;: 2,
-            &quot;user_id&quot;: 11,
-            &quot;created_at&quot;: &quot;2022-01-22T02:36:17.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-01-22T02:36:17.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 6,
-            &quot;quantity&quot;: &quot;2&quot;,
-            &quot;product_id&quot;: 2,
-            &quot;user_id&quot;: 11,
-            &quot;created_at&quot;: &quot;2022-01-22T02:36:17.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-01-22T02:36:17.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 7,
-            &quot;quantity&quot;: &quot;5&quot;,
-            &quot;product_id&quot;: 3,
-            &quot;user_id&quot;: 5,
-            &quot;created_at&quot;: &quot;2022-01-22T02:36:19.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-01-22T02:36:19.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 8,
-            &quot;quantity&quot;: &quot;3&quot;,
-            &quot;product_id&quot;: 3,
-            &quot;user_id&quot;: 5,
-            &quot;created_at&quot;: &quot;2022-01-22T02:36:19.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-01-22T02:36:19.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 9,
-            &quot;quantity&quot;: &quot;7&quot;,
-            &quot;product_id&quot;: 3,
-            &quot;user_id&quot;: 5,
-            &quot;created_at&quot;: &quot;2022-01-22T02:36:19.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-01-22T02:36:19.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 10,
-            &quot;quantity&quot;: &quot;9&quot;,
-            &quot;product_id&quot;: 4,
-            &quot;user_id&quot;: 1,
-            &quot;created_at&quot;: &quot;2022-01-22T02:36:21.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-01-22T02:36:21.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 11,
-            &quot;quantity&quot;: &quot;7&quot;,
-            &quot;product_id&quot;: 4,
-            &quot;user_id&quot;: 1,
-            &quot;created_at&quot;: &quot;2022-01-22T02:36:21.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-01-22T02:36:21.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 12,
-            &quot;quantity&quot;: &quot;4&quot;,
-            &quot;product_id&quot;: 4,
-            &quot;user_id&quot;: 1,
-            &quot;created_at&quot;: &quot;2022-01-22T02:36:21.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-01-22T02:36:21.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 13,
-            &quot;quantity&quot;: &quot;1&quot;,
-            &quot;product_id&quot;: 5,
-            &quot;user_id&quot;: 11,
-            &quot;created_at&quot;: &quot;2022-01-22T02:36:23.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-01-22T02:36:23.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 14,
-            &quot;quantity&quot;: &quot;10&quot;,
-            &quot;product_id&quot;: 5,
-            &quot;user_id&quot;: 11,
-            &quot;created_at&quot;: &quot;2022-01-22T02:36:23.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-01-22T02:36:23.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 15,
-            &quot;quantity&quot;: &quot;3&quot;,
-            &quot;product_id&quot;: 5,
-            &quot;user_id&quot;: 11,
-            &quot;created_at&quot;: &quot;2022-01-22T02:36:23.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-01-22T02:36:23.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 16,
-            &quot;quantity&quot;: &quot;4&quot;,
-            &quot;product_id&quot;: 6,
-            &quot;user_id&quot;: 10,
-            &quot;created_at&quot;: &quot;2022-01-22T02:36:25.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-01-22T02:36:25.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 17,
-            &quot;quantity&quot;: &quot;4&quot;,
-            &quot;product_id&quot;: 6,
-            &quot;user_id&quot;: 10,
-            &quot;created_at&quot;: &quot;2022-01-22T02:36:25.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-01-22T02:36:25.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 18,
-            &quot;quantity&quot;: &quot;2&quot;,
-            &quot;product_id&quot;: 6,
-            &quot;user_id&quot;: 10,
-            &quot;created_at&quot;: &quot;2022-01-22T02:36:25.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-01-22T02:36:25.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 19,
-            &quot;quantity&quot;: &quot;8&quot;,
-            &quot;product_id&quot;: 7,
-            &quot;user_id&quot;: 2,
-            &quot;created_at&quot;: &quot;2022-01-22T02:36:27.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-01-22T02:36:27.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 20,
-            &quot;quantity&quot;: &quot;5&quot;,
-            &quot;product_id&quot;: 7,
-            &quot;user_id&quot;: 2,
-            &quot;created_at&quot;: &quot;2022-01-22T02:36:27.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-01-22T02:36:27.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 21,
-            &quot;quantity&quot;: &quot;10&quot;,
-            &quot;product_id&quot;: 7,
-            &quot;user_id&quot;: 2,
-            &quot;created_at&quot;: &quot;2022-01-22T02:36:27.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-01-22T02:36:27.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 22,
-            &quot;quantity&quot;: &quot;9&quot;,
-            &quot;product_id&quot;: 8,
-            &quot;user_id&quot;: 9,
-            &quot;created_at&quot;: &quot;2022-01-22T02:36:28.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-01-22T02:36:28.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 23,
-            &quot;quantity&quot;: &quot;9&quot;,
-            &quot;product_id&quot;: 8,
-            &quot;user_id&quot;: 9,
-            &quot;created_at&quot;: &quot;2022-01-22T02:36:29.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-01-22T02:36:29.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 24,
-            &quot;quantity&quot;: &quot;3&quot;,
-            &quot;product_id&quot;: 8,
-            &quot;user_id&quot;: 9,
-            &quot;created_at&quot;: &quot;2022-01-22T02:36:29.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-01-22T02:36:29.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 25,
-            &quot;quantity&quot;: &quot;9&quot;,
-            &quot;product_id&quot;: 9,
-            &quot;user_id&quot;: 2,
-            &quot;created_at&quot;: &quot;2022-01-22T02:36:30.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-01-22T02:36:30.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 26,
-            &quot;quantity&quot;: &quot;10&quot;,
-            &quot;product_id&quot;: 9,
-            &quot;user_id&quot;: 2,
-            &quot;created_at&quot;: &quot;2022-01-22T02:36:30.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-01-22T02:36:30.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 27,
-            &quot;quantity&quot;: &quot;10&quot;,
-            &quot;product_id&quot;: 9,
-            &quot;user_id&quot;: 2,
-            &quot;created_at&quot;: &quot;2022-01-22T02:36:31.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-01-22T02:36:31.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 28,
-            &quot;quantity&quot;: &quot;8&quot;,
-            &quot;product_id&quot;: 10,
-            &quot;user_id&quot;: 3,
-            &quot;created_at&quot;: &quot;2022-01-22T02:36:32.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-01-22T02:36:32.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 29,
-            &quot;quantity&quot;: &quot;5&quot;,
-            &quot;product_id&quot;: 10,
-            &quot;user_id&quot;: 3,
-            &quot;created_at&quot;: &quot;2022-01-22T02:36:32.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-01-22T02:36:32.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 30,
-            &quot;quantity&quot;: &quot;6&quot;,
-            &quot;product_id&quot;: 10,
-            &quot;user_id&quot;: 3,
-            &quot;created_at&quot;: &quot;2022-01-22T02:36:32.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-01-22T02:36:32.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 31,
-            &quot;quantity&quot;: &quot;8&quot;,
-            &quot;product_id&quot;: 1,
-            &quot;user_id&quot;: 1,
-            &quot;created_at&quot;: &quot;2022-01-22T04:13:49.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-01-22T04:14:32.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 32,
-            &quot;quantity&quot;: &quot;9&quot;,
-            &quot;product_id&quot;: 3,
-            &quot;user_id&quot;: 1,
-            &quot;created_at&quot;: &quot;2022-01-22T04:15:12.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-01-22T04:22:13.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 33,
-            &quot;quantity&quot;: &quot;10&quot;,
-            &quot;product_id&quot;: 2,
-            &quot;user_id&quot;: 1,
-            &quot;created_at&quot;: &quot;2022-01-22T04:22:34.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-01-22T04:22:34.000000Z&quot;
-        }
-    ]
-}</code>
- </pre>
-    </span>
-<span id="execution-results-GETapi-cart" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-GETapi-cart"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-cart"></code></pre>
-</span>
-<span id="execution-error-GETapi-cart" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-cart"></code></pre>
-</span>
-<form id="form-GETapi-cart" data-method="GET"
-      data-path="api/cart"
-      data-authed="1"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Authorization":"Bearer 8Dk5haefEcg1bd3v46ZVPa6","Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-cart', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-cart"
-                    onclick="tryItOut('GETapi-cart');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-cart"
-                    onclick="cancelTryOut('GETapi-cart');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-cart" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-green">GET</small>
-            <b><code>api/cart</code></b>
-        </p>
-                <p>
-            <label id="auth-GETapi-cart" hidden>Authorization header:
-                <b><code>Bearer </code></b><input type="text"
-                                                                name="Authorization"
-                                                                data-prefix="Bearer "
-                                                                data-endpoint="GETapi-cart"
-                                                                data-component="header"></label>
-        </p>
-                </form>
-
-            <h2 id="endpoints-POSTapi-cart">POST api/cart</h2>
-
-<p>
-<small class="badge badge-darkred">requires authentication</small>
-</p>
-
-
-
-<span id="example-requests-POSTapi-cart">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/cart" \
-    --header "Authorization: Bearer 5VPdaEc1DgZ3hf86abev46k" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/cart"
-);
-
-const headers = {
-    "Authorization": "Bearer 5VPdaEc1DgZ3hf86abev46k",
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "POST",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-
-<div class="ruby-example">
-    <pre><code class="language-ruby">
-require 'rest-client'
-
-    headers = {
-            "Authorization": "Bearer 5VPdaEc1DgZ3hf86abev46k",
-            "Content-Type": "application/json",
-            "Accept": "application/json",
-        }
-
-response = RestClient.post(
-'http://localhost:8000/api/cart',
-headers
-)
-
-p response.body
-</code></pre></div>
-
-
-<div class="php-example">
-    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$response = $client-&gt;post(
-    'http://localhost:8000/api/cart',
-    [
-        'headers' =&gt; [
-            'Authorization' =&gt; 'Bearer 5VPdaEc1DgZ3hf86abev46k',
-            'Content-Type' =&gt; 'application/json',
-            'Accept' =&gt; 'application/json',
-        ],
-    ]
-);
-$body = $response-&gt;getBody();
-print_r(json_decode((string) $body));</code></pre></div>
-
-
-<div class="python-example">
-    <pre><code class="language-python">import requests
-import json
-
-url = 'http://localhost:8000/api/cart'
-headers = {
-  'Authorization': 'Bearer 5VPdaEc1DgZ3hf86abev46k',
-  'Content-Type': 'application/json',
-  'Accept': 'application/json'
-}
-
-response = requests.request('POST', url, headers=headers)
-response.json()</code></pre></div>
-
-</span>
-
-<span id="example-responses-POSTapi-cart">
-</span>
-<span id="execution-results-POSTapi-cart" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-POSTapi-cart"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-cart"></code></pre>
-</span>
-<span id="execution-error-POSTapi-cart" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-cart"></code></pre>
-</span>
-<form id="form-POSTapi-cart" data-method="POST"
-      data-path="api/cart"
-      data-authed="1"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Authorization":"Bearer 5VPdaEc1DgZ3hf86abev46k","Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('POSTapi-cart', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-cart"
-                    onclick="tryItOut('POSTapi-cart');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-cart"
-                    onclick="cancelTryOut('POSTapi-cart');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-cart" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-black">POST</small>
-            <b><code>api/cart</code></b>
-        </p>
-                <p>
-            <label id="auth-POSTapi-cart" hidden>Authorization header:
-                <b><code>Bearer </code></b><input type="text"
-                                                                name="Authorization"
-                                                                data-prefix="Bearer "
-                                                                data-endpoint="POSTapi-cart"
-                                                                data-component="header"></label>
-        </p>
-                </form>
-
-            <h2 id="endpoints-DELETEapi-cart--id-">DELETE api/cart/{id}</h2>
-
-<p>
-<small class="badge badge-darkred">requires authentication</small>
-</p>
-
-
-
-<span id="example-requests-DELETEapi-cart--id-">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/cart/8" \
-    --header "Authorization: Bearer Dcaea41Evkg635VhfZdb8P6" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/cart/8"
-);
-
-const headers = {
-    "Authorization": "Bearer Dcaea41Evkg635VhfZdb8P6",
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "DELETE",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-
-<div class="ruby-example">
-    <pre><code class="language-ruby">
-require 'rest-client'
-
-    headers = {
-            "Authorization": "Bearer Dcaea41Evkg635VhfZdb8P6",
-            "Content-Type": "application/json",
-            "Accept": "application/json",
-        }
-
-response = RestClient.delete(
-'http://localhost:8000/api/cart/8',
-headers
-)
-
-p response.body
-</code></pre></div>
-
-
-<div class="php-example">
-    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$response = $client-&gt;delete(
-    'http://localhost:8000/api/cart/8',
-    [
-        'headers' =&gt; [
-            'Authorization' =&gt; 'Bearer Dcaea41Evkg635VhfZdb8P6',
-            'Content-Type' =&gt; 'application/json',
-            'Accept' =&gt; 'application/json',
-        ],
-    ]
-);
-$body = $response-&gt;getBody();
-print_r(json_decode((string) $body));</code></pre></div>
-
-
-<div class="python-example">
-    <pre><code class="language-python">import requests
-import json
-
-url = 'http://localhost:8000/api/cart/8'
-headers = {
-  'Authorization': 'Bearer Dcaea41Evkg635VhfZdb8P6',
-  'Content-Type': 'application/json',
-  'Accept': 'application/json'
-}
-
-response = requests.request('DELETE', url, headers=headers)
-response.json()</code></pre></div>
-
-</span>
-
-<span id="example-responses-DELETEapi-cart--id-">
-</span>
-<span id="execution-results-DELETEapi-cart--id-" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-DELETEapi-cart--id-"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-DELETEapi-cart--id-"></code></pre>
-</span>
-<span id="execution-error-DELETEapi-cart--id-" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-DELETEapi-cart--id-"></code></pre>
-</span>
-<form id="form-DELETEapi-cart--id-" data-method="DELETE"
-      data-path="api/cart/{id}"
-      data-authed="1"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Authorization":"Bearer Dcaea41Evkg635VhfZdb8P6","Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('DELETEapi-cart--id-', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-DELETEapi-cart--id-"
-                    onclick="tryItOut('DELETEapi-cart--id-');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-DELETEapi-cart--id-"
-                    onclick="cancelTryOut('DELETEapi-cart--id-');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-DELETEapi-cart--id-" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-red">DELETE</small>
-            <b><code>api/cart/{id}</code></b>
-        </p>
-                <p>
-            <label id="auth-DELETEapi-cart--id-" hidden>Authorization header:
-                <b><code>Bearer </code></b><input type="text"
-                                                                name="Authorization"
-                                                                data-prefix="Bearer "
-                                                                data-endpoint="DELETEapi-cart--id-"
-                                                                data-component="header"></label>
-        </p>
-                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
-                    <p>
-                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
-                <input type="number"
-               name="id"
-               data-endpoint="DELETEapi-cart--id-"
-               value="8"
-               data-component="url" hidden>
-    <br>
-<p>The ID of the cart.</p>
-            </p>
-                    </form>
-
         <h1 id="product-management">Product Management</h1>
 
     <p>APIs to manage the product resource</p>
@@ -2529,7 +2163,7 @@ response.json()</code></pre></div>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
     "http://localhost:8000/api/products" \
-    --header "Authorization: Bearer hf3g5kaE61486cbPVdaDeZv" \
+    --header "Authorization: Bearer Eab356P8Z1v6cea4hkfDgdV" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
     --form "name=Glass" \
@@ -2537,8 +2171,8 @@ response.json()</code></pre></div>
     --form "price=33" \
     --form "weight=2" \
     --form "stock=34" \
-    --form "thumbnail=@/tmp/phpt8wwpE" \
-    --form "images[]=@/tmp/php5YMnFE" </code></pre></div>
+    --form "thumbnail=@/tmp/php38CuFh" \
+    --form "images[]=@/tmp/php82CI1g" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -2547,7 +2181,7 @@ response.json()</code></pre></div>
 );
 
 const headers = {
-    "Authorization": "Bearer hf3g5kaE61486cbPVdaDeZv",
+    "Authorization": "Bearer Eab356P8Z1v6cea4hkfDgdV",
     "Content-Type": "multipart/form-data",
     "Accept": "application/json",
 };
@@ -2580,7 +2214,7 @@ require 'rest-client'
     "stock": 34
 }
     headers = {
-            "Authorization": "Bearer hf3g5kaE61486cbPVdaDeZv",
+            "Authorization": "Bearer Eab356P8Z1v6cea4hkfDgdV",
             "Content-Type": "multipart/form-data",
             "Accept": "application/json",
         }
@@ -2601,7 +2235,7 @@ $response = $client-&gt;post(
     'http://localhost:8000/api/products',
     [
         'headers' =&gt; [
-            'Authorization' =&gt; 'Bearer hf3g5kaE61486cbPVdaDeZv',
+            'Authorization' =&gt; 'Bearer Eab356P8Z1v6cea4hkfDgdV',
             'Content-Type' =&gt; 'multipart/form-data',
             'Accept' =&gt; 'application/json',
         ],
@@ -2628,11 +2262,11 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'thumbnail',
-                'contents' =&gt; fopen('/tmp/phpt8wwpE', 'r')
+                'contents' =&gt; fopen('/tmp/php38CuFh', 'r')
             ],
             [
                 'name' =&gt; 'images[]',
-                'contents' =&gt; fopen('/tmp/php5YMnFE', 'r')
+                'contents' =&gt; fopen('/tmp/php82CI1g', 'r')
             ],
         ],
     ]
@@ -2647,8 +2281,8 @@ import json
 
 url = 'http://localhost:8000/api/products'
 files = {
-  'thumbnail': open('/tmp/phpt8wwpE', 'rb'),
-  'images[]': open('/tmp/php5YMnFE', 'rb')
+  'thumbnail': open('/tmp/php38CuFh', 'rb'),
+  'images[]': open('/tmp/php82CI1g', 'rb')
 }
 payload = {
     "name": "Glass",
@@ -2658,7 +2292,7 @@ payload = {
     "stock": 34
 }
 headers = {
-  'Authorization': 'Bearer hf3g5kaE61486cbPVdaDeZv',
+  'Authorization': 'Bearer Eab356P8Z1v6cea4hkfDgdV',
   'Content-Type': 'multipart/form-data',
   'Accept': 'application/json'
 }
@@ -2685,7 +2319,7 @@ response.json()</code></pre></div>
       data-authed="1"
       data-hasfiles="1"
       data-isarraybody="0"
-      data-headers='{"Authorization":"Bearer hf3g5kaE61486cbPVdaDeZv","Content-Type":"multipart\/form-data","Accept":"application\/json"}'
+      data-headers='{"Authorization":"Bearer Eab356P8Z1v6cea4hkfDgdV","Content-Type":"multipart\/form-data","Accept":"application\/json"}'
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('POSTapi-products', this);">
     <h3>
@@ -2807,19 +2441,19 @@ response.json()</code></pre></div>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/products/9" \
-    --header "Authorization: Bearer a8D6bv1k4gaeZV56EcdfhP3" \
+    "http://localhost:8000/api/products/2" \
+    --header "Authorization: Bearer vPage56hc48E61fdaDVZ3kb" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/products/9"
+    "http://localhost:8000/api/products/2"
 );
 
 const headers = {
-    "Authorization": "Bearer a8D6bv1k4gaeZV56EcdfhP3",
+    "Authorization": "Bearer vPage56hc48E61fdaDVZ3kb",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -2835,13 +2469,13 @@ fetch(url, {
 require 'rest-client'
 
     headers = {
-            "Authorization": "Bearer a8D6bv1k4gaeZV56EcdfhP3",
+            "Authorization": "Bearer vPage56hc48E61fdaDVZ3kb",
             "Content-Type": "application/json",
             "Accept": "application/json",
         }
 
 response = RestClient.delete(
-'http://localhost:8000/api/products/9',
+'http://localhost:8000/api/products/2',
 headers
 )
 
@@ -2852,10 +2486,10 @@ p response.body
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;delete(
-    'http://localhost:8000/api/products/9',
+    'http://localhost:8000/api/products/2',
     [
         'headers' =&gt; [
-            'Authorization' =&gt; 'Bearer a8D6bv1k4gaeZV56EcdfhP3',
+            'Authorization' =&gt; 'Bearer vPage56hc48E61fdaDVZ3kb',
             'Content-Type' =&gt; 'application/json',
             'Accept' =&gt; 'application/json',
         ],
@@ -2869,9 +2503,9 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/products/9'
+url = 'http://localhost:8000/api/products/2'
 headers = {
-  'Authorization': 'Bearer a8D6bv1k4gaeZV56EcdfhP3',
+  'Authorization': 'Bearer vPage56hc48E61fdaDVZ3kb',
   'Content-Type': 'application/json',
   'Accept': 'application/json'
 }
@@ -2898,7 +2532,7 @@ response.json()</code></pre></div>
       data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
-      data-headers='{"Authorization":"Bearer a8D6bv1k4gaeZV56EcdfhP3","Content-Type":"application\/json","Accept":"application\/json"}'
+      data-headers='{"Authorization":"Bearer vPage56hc48E61fdaDVZ3kb","Content-Type":"application\/json","Accept":"application\/json"}'
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('DELETEapi-products--id-', this);">
     <h3>
@@ -2936,7 +2570,7 @@ response.json()</code></pre></div>
                 <input type="number"
                name="id"
                data-endpoint="DELETEapi-products--id-"
-               value="9"
+               value="2"
                data-component="url" hidden>
     <br>
 <p>The ID of the product.</p>
@@ -3046,16 +2680,16 @@ access-control-allow-origin: *
         {
             &quot;id&quot;: 11,
             &quot;sku&quot;: &quot;Glas54708&quot;,
-            &quot;name&quot;: &quot;Glass&quot;,
-            &quot;price&quot;: 33,
-            &quot;weight&quot;: 2,
-            &quot;description&quot;: &quot;Glasses for all people&quot;,
-            &quot;thumbnail&quot;: &quot;storage/product/3xgVL6GByL9tJxmHIVN40BbzbM4nqPZqGeNdW9pY.jpg&quot;,
-            &quot;stock&quot;: 34,
+            &quot;name&quot;: &quot;sdadas&quot;,
+            &quot;price&quot;: 12312,
+            &quot;weight&quot;: 12321,
+            &quot;description&quot;: &quot;sadasdas&quot;,
+            &quot;thumbnail&quot;: &quot;storage/product/fXAEQ5eeadb67XQcpj0xz4sf3yjSjHUHk7XhdoWn.jpg&quot;,
+            &quot;stock&quot;: 2131,
             &quot;slug&quot;: &quot;glass-1011330623&quot;,
             &quot;user_id&quot;: 11,
             &quot;created_at&quot;: &quot;2022-01-22T04:18:36.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-01-22T04:18:36.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-01-22T06:34:11.000000Z&quot;,
             &quot;user&quot;: {
                 &quot;id&quot;: 11,
                 &quot;name&quot;: &quot;Novella Mills&quot;,
@@ -3886,7 +3520,7 @@ access-control-allow-origin: *
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
     "http://localhost:8000/api/products/1" \
-    --header "Authorization: Bearer 5D1aEPeVvZ86dbc43fkh6ga" \
+    --header "Authorization: Bearer 3Z4P18g6akDecd56VEahvfb" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
     --form "name=Glass" \
@@ -3894,7 +3528,7 @@ access-control-allow-origin: *
     --form "price=33" \
     --form "weight=2" \
     --form "stock=34" \
-    --form "thumbnail=@/tmp/php0Eir0D" </code></pre></div>
+    --form "thumbnail=@/tmp/phpeXxXCf" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -3903,7 +3537,7 @@ access-control-allow-origin: *
 );
 
 const headers = {
-    "Authorization": "Bearer 5D1aEPeVvZ86dbc43fkh6ga",
+    "Authorization": "Bearer 3Z4P18g6akDecd56VEahvfb",
     "Content-Type": "multipart/form-data",
     "Accept": "application/json",
 };
@@ -3935,7 +3569,7 @@ require 'rest-client'
     "stock": 34
 }
     headers = {
-            "Authorization": "Bearer 5D1aEPeVvZ86dbc43fkh6ga",
+            "Authorization": "Bearer 3Z4P18g6akDecd56VEahvfb",
             "Content-Type": "multipart/form-data",
             "Accept": "application/json",
         }
@@ -3956,7 +3590,7 @@ $response = $client-&gt;post(
     'http://localhost:8000/api/products/1',
     [
         'headers' =&gt; [
-            'Authorization' =&gt; 'Bearer 5D1aEPeVvZ86dbc43fkh6ga',
+            'Authorization' =&gt; 'Bearer 3Z4P18g6akDecd56VEahvfb',
             'Content-Type' =&gt; 'multipart/form-data',
             'Accept' =&gt; 'application/json',
         ],
@@ -3983,7 +3617,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'thumbnail',
-                'contents' =&gt; fopen('/tmp/php0Eir0D', 'r')
+                'contents' =&gt; fopen('/tmp/phpeXxXCf', 'r')
             ],
         ],
     ]
@@ -3998,7 +3632,7 @@ import json
 
 url = 'http://localhost:8000/api/products/1'
 files = {
-  'thumbnail': open('/tmp/php0Eir0D', 'rb')
+  'thumbnail': open('/tmp/phpeXxXCf', 'rb')
 }
 payload = {
     "name": "Glass",
@@ -4008,7 +3642,7 @@ payload = {
     "stock": 34
 }
 headers = {
-  'Authorization': 'Bearer 5D1aEPeVvZ86dbc43fkh6ga',
+  'Authorization': 'Bearer 3Z4P18g6akDecd56VEahvfb',
   'Content-Type': 'multipart/form-data',
   'Accept': 'application/json'
 }
@@ -4035,7 +3669,7 @@ response.json()</code></pre></div>
       data-authed="1"
       data-hasfiles="1"
       data-isarraybody="0"
-      data-headers='{"Authorization":"Bearer 5D1aEPeVvZ86dbc43fkh6ga","Content-Type":"multipart\/form-data","Accept":"application\/json"}'
+      data-headers='{"Authorization":"Bearer 3Z4P18g6akDecd56VEahvfb","Content-Type":"multipart\/form-data","Accept":"application\/json"}'
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('POSTapi-products--id-', this);">
     <h3>
@@ -4140,6 +3774,335 @@ response.json()</code></pre></div>
 <p>📷 Thumbnail of the product, it will be shown as an image when selling . Must be an image.</p>
         </p>
         </form>
+
+            <h2 id="product-management-GETapi-productsByUser">Desplay a listing of products by user</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-GETapi-productsByUser">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/productsByUser" \
+    --header "Authorization: Bearer hV1vE84Pg36kbec6ZaDafd5" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/productsByUser"
+);
+
+const headers = {
+    "Authorization": "Bearer hV1vE84Pg36kbec6ZaDafd5",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="ruby-example">
+    <pre><code class="language-ruby">
+require 'rest-client'
+
+    headers = {
+            "Authorization": "Bearer hV1vE84Pg36kbec6ZaDafd5",
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+        }
+
+response = RestClient.get(
+'http://localhost:8000/api/productsByUser',
+headers
+)
+
+p response.body
+</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/productsByUser',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer hV1vE84Pg36kbec6ZaDafd5',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/productsByUser'
+headers = {
+  'Authorization': 'Bearer hV1vE84Pg36kbec6ZaDafd5',
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-productsByUser">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 59
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 8,
+            &quot;sku&quot;: &quot;9790814482604&quot;,
+            &quot;name&quot;: &quot;Sven Bailey Jr.&quot;,
+            &quot;price&quot;: 43131,
+            &quot;weight&quot;: 1,
+            &quot;description&quot;: &quot;Libero voluptatem laborum perspiciatis unde ipsam et. Occaecati voluptatem nostrum qui necessitatibus dolorum. Fugiat earum dignissimos ipsum quas voluptas ea recusandae. Libero consequatur iure perspiciatis quia qui nam ipsa. Ipsam aut est est porro quidem totam. Quia ad nulla et vero veniam vel. Voluptatem sequi quia veritatis nihil sunt. Necessitatibus similique rerum et voluptatibus non sequi est.&quot;,
+            &quot;thumbnail&quot;: &quot;storage/product/755b8fad670256178589ff596cfa7ca1.png&quot;,
+            &quot;stock&quot;: 48,
+            &quot;slug&quot;: &quot;sven-bailey-jr&quot;,
+            &quot;user_id&quot;: 1,
+            &quot;created_at&quot;: &quot;2022-01-22T02:36:14.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-01-22T02:36:14.000000Z&quot;,
+            &quot;user&quot;: {
+                &quot;id&quot;: 1,
+                &quot;name&quot;: &quot;Admin&quot;,
+                &quot;email&quot;: &quot;admin@gmail.com&quot;,
+                &quot;email_verified_at&quot;: null,
+                &quot;current_team_id&quot;: null,
+                &quot;profile_photo_path&quot;: null,
+                &quot;created_at&quot;: &quot;2022-01-22T02:35:58.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-01-22T02:35:58.000000Z&quot;,
+                &quot;profile_photo_url&quot;: &quot;https://ui-avatars.com/api/?name=A&amp;color=7F9CF5&amp;background=EBF4FF&quot;
+            },
+            &quot;image&quot;: [
+                {
+                    &quot;id&quot;: 22,
+                    &quot;url&quot;: &quot;storage/product/e9c7271bf00ba0e26e2ace9b57e0aa9d.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T02:36:28.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T02:36:28.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 23,
+                    &quot;url&quot;: &quot;storage/product/19fc4e9c4ac8b6c3f2ec1304e666e2e9.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T02:36:28.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T02:36:28.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 24,
+                    &quot;url&quot;: &quot;storage/product/28e825b1edc07235f73074a5621c1ba7.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T02:36:28.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T02:36:28.000000Z&quot;
+                }
+            ],
+            &quot;categories&quot;: [
+                {
+                    &quot;id&quot;: 3,
+                    &quot;name&quot;: &quot;Dr. Mose Kiehn PhD&quot;,
+                    &quot;description&quot;: &quot;Et est accusantium ab aut.&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T02:36:08.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T02:36:08.000000Z&quot;,
+                    &quot;pivot&quot;: {
+                        &quot;product_id&quot;: 8,
+                        &quot;category_id&quot;: 3
+                    }
+                },
+                {
+                    &quot;id&quot;: 7,
+                    &quot;name&quot;: &quot;Prof. Charles Kerluke&quot;,
+                    &quot;description&quot;: &quot;Animi assumenda nam et.&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T02:36:08.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T02:36:08.000000Z&quot;,
+                    &quot;pivot&quot;: {
+                        &quot;product_id&quot;: 8,
+                        &quot;category_id&quot;: 7
+                    }
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: 1,
+            &quot;sku&quot;: &quot;9796200298132&quot;,
+            &quot;name&quot;: &quot;Horace Klocko&quot;,
+            &quot;price&quot;: 86454,
+            &quot;weight&quot;: 4,
+            &quot;description&quot;: &quot;Ab nemo illo voluptatibus. In inventore qui autem. Dolor sit ab id veniam in. Voluptates quaerat dolorem nisi et. Aspernatur maiores vel et sint magni minima qui. Consequuntur aliquid labore voluptate ut ipsam veritatis et. Minima nesciunt laudantium illo ullam. Doloremque explicabo aut esse et consequatur. Vitae nobis tenetur maiores ea. Tempora libero totam et est iusto qui omnis.&quot;,
+            &quot;thumbnail&quot;: &quot;storage/product/593ed2c02e7e680d6c65d84160ab8aad.png&quot;,
+            &quot;stock&quot;: 76,
+            &quot;slug&quot;: &quot;horace-klocko&quot;,
+            &quot;user_id&quot;: 1,
+            &quot;created_at&quot;: &quot;2022-01-22T02:36:13.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-01-22T02:36:13.000000Z&quot;,
+            &quot;user&quot;: {
+                &quot;id&quot;: 1,
+                &quot;name&quot;: &quot;Admin&quot;,
+                &quot;email&quot;: &quot;admin@gmail.com&quot;,
+                &quot;email_verified_at&quot;: null,
+                &quot;current_team_id&quot;: null,
+                &quot;profile_photo_path&quot;: null,
+                &quot;created_at&quot;: &quot;2022-01-22T02:35:58.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-01-22T02:35:58.000000Z&quot;,
+                &quot;profile_photo_url&quot;: &quot;https://ui-avatars.com/api/?name=A&amp;color=7F9CF5&amp;background=EBF4FF&quot;
+            },
+            &quot;image&quot;: [
+                {
+                    &quot;id&quot;: 1,
+                    &quot;url&quot;: &quot;storage/product/4d03a19cf08e8d933f29a539fb76804b.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T02:36:15.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T02:36:15.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 2,
+                    &quot;url&quot;: &quot;storage/product/47485df19b3ad6fe10a6b7121327f97e.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T02:36:15.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T02:36:15.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 3,
+                    &quot;url&quot;: &quot;storage/product/55bc47f91a8bf3f2d8339f2babe913a3.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T02:36:15.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T02:36:15.000000Z&quot;
+                }
+            ],
+            &quot;categories&quot;: [
+                {
+                    &quot;id&quot;: 3,
+                    &quot;name&quot;: &quot;Dr. Mose Kiehn PhD&quot;,
+                    &quot;description&quot;: &quot;Et est accusantium ab aut.&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T02:36:08.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T02:36:08.000000Z&quot;,
+                    &quot;pivot&quot;: {
+                        &quot;product_id&quot;: 1,
+                        &quot;category_id&quot;: 3
+                    }
+                },
+                {
+                    &quot;id&quot;: 9,
+                    &quot;name&quot;: &quot;Ms. Neha Herzog V&quot;,
+                    &quot;description&quot;: &quot;Laudantium quia molestiae sit quo.&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T02:36:09.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T02:36:09.000000Z&quot;,
+                    &quot;pivot&quot;: {
+                        &quot;product_id&quot;: 1,
+                        &quot;category_id&quot;: 9
+                    }
+                }
+            ]
+        }
+    ],
+    &quot;links&quot;: {
+        &quot;first&quot;: &quot;http://localhost:8000/api/productsByUser?page=1&quot;,
+        &quot;last&quot;: &quot;http://localhost:8000/api/productsByUser?page=1&quot;,
+        &quot;prev&quot;: null,
+        &quot;next&quot;: null
+    },
+    &quot;meta&quot;: {
+        &quot;current_page&quot;: 1,
+        &quot;from&quot;: 1,
+        &quot;last_page&quot;: 1,
+        &quot;links&quot;: [
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;&amp;laquo; Previous&quot;,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost:8000/api/productsByUser?page=1&quot;,
+                &quot;label&quot;: &quot;1&quot;,
+                &quot;active&quot;: true
+            },
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
+                &quot;active&quot;: false
+            }
+        ],
+        &quot;path&quot;: &quot;http://localhost:8000/api/productsByUser&quot;,
+        &quot;per_page&quot;: 8,
+        &quot;to&quot;: 2,
+        &quot;total&quot;: 2
+    }
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-productsByUser" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-productsByUser"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-productsByUser"></code></pre>
+</span>
+<span id="execution-error-GETapi-productsByUser" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-productsByUser"></code></pre>
+</span>
+<form id="form-GETapi-productsByUser" data-method="GET"
+      data-path="api/productsByUser"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer hV1vE84Pg36kbec6ZaDafd5","Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-productsByUser', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-productsByUser"
+                    onclick="tryItOut('GETapi-productsByUser');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-productsByUser"
+                    onclick="cancelTryOut('GETapi-productsByUser');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-productsByUser" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/productsByUser</code></b>
+        </p>
+                <p>
+            <label id="auth-GETapi-productsByUser" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="GETapi-productsByUser"
+                                                                data-component="header"></label>
+        </p>
+                </form>
 
     
 

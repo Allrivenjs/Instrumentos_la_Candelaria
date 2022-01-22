@@ -1,17 +1,18 @@
-name: Endpoints
-description: ''
+name: 'Category Management'
+description: |-
+
+  APIs to manage the categories resource
 endpoints:
   -
     httpMethods:
       - GET
-    uri: api/cart
+    uri: api/categories
     metadata:
-      title: ''
+      title: 'Display a listing of the resource.'
       description: ''
-      authenticated: true
+      authenticated: false
       custom: []
     headers:
-      Authorization: 'Bearer 8Dk5haefEcg1bd3v46ZVPa6'
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
@@ -20,55 +21,143 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[{"id":1,"quantity":"7","product_id":1,"user_id":10,"created_at":"2022-01-22T02:36:15.000000Z","updated_at":"2022-01-22T02:36:15.000000Z"},{"id":2,"quantity":"3","product_id":1,"user_id":10,"created_at":"2022-01-22T02:36:15.000000Z","updated_at":"2022-01-22T02:36:15.000000Z"},{"id":3,"quantity":"7","product_id":1,"user_id":10,"created_at":"2022-01-22T02:36:16.000000Z","updated_at":"2022-01-22T02:36:16.000000Z"},{"id":4,"quantity":"9","product_id":2,"user_id":11,"created_at":"2022-01-22T02:36:17.000000Z","updated_at":"2022-01-22T02:36:17.000000Z"},{"id":5,"quantity":"9","product_id":2,"user_id":11,"created_at":"2022-01-22T02:36:17.000000Z","updated_at":"2022-01-22T02:36:17.000000Z"},{"id":6,"quantity":"2","product_id":2,"user_id":11,"created_at":"2022-01-22T02:36:17.000000Z","updated_at":"2022-01-22T02:36:17.000000Z"},{"id":7,"quantity":"5","product_id":3,"user_id":5,"created_at":"2022-01-22T02:36:19.000000Z","updated_at":"2022-01-22T02:36:19.000000Z"},{"id":8,"quantity":"3","product_id":3,"user_id":5,"created_at":"2022-01-22T02:36:19.000000Z","updated_at":"2022-01-22T02:36:19.000000Z"},{"id":9,"quantity":"7","product_id":3,"user_id":5,"created_at":"2022-01-22T02:36:19.000000Z","updated_at":"2022-01-22T02:36:19.000000Z"},{"id":10,"quantity":"9","product_id":4,"user_id":1,"created_at":"2022-01-22T02:36:21.000000Z","updated_at":"2022-01-22T02:36:21.000000Z"},{"id":11,"quantity":"7","product_id":4,"user_id":1,"created_at":"2022-01-22T02:36:21.000000Z","updated_at":"2022-01-22T02:36:21.000000Z"},{"id":12,"quantity":"4","product_id":4,"user_id":1,"created_at":"2022-01-22T02:36:21.000000Z","updated_at":"2022-01-22T02:36:21.000000Z"},{"id":13,"quantity":"1","product_id":5,"user_id":11,"created_at":"2022-01-22T02:36:23.000000Z","updated_at":"2022-01-22T02:36:23.000000Z"},{"id":14,"quantity":"10","product_id":5,"user_id":11,"created_at":"2022-01-22T02:36:23.000000Z","updated_at":"2022-01-22T02:36:23.000000Z"},{"id":15,"quantity":"3","product_id":5,"user_id":11,"created_at":"2022-01-22T02:36:23.000000Z","updated_at":"2022-01-22T02:36:23.000000Z"},{"id":16,"quantity":"4","product_id":6,"user_id":10,"created_at":"2022-01-22T02:36:25.000000Z","updated_at":"2022-01-22T02:36:25.000000Z"},{"id":17,"quantity":"4","product_id":6,"user_id":10,"created_at":"2022-01-22T02:36:25.000000Z","updated_at":"2022-01-22T02:36:25.000000Z"},{"id":18,"quantity":"2","product_id":6,"user_id":10,"created_at":"2022-01-22T02:36:25.000000Z","updated_at":"2022-01-22T02:36:25.000000Z"},{"id":19,"quantity":"8","product_id":7,"user_id":2,"created_at":"2022-01-22T02:36:27.000000Z","updated_at":"2022-01-22T02:36:27.000000Z"},{"id":20,"quantity":"5","product_id":7,"user_id":2,"created_at":"2022-01-22T02:36:27.000000Z","updated_at":"2022-01-22T02:36:27.000000Z"},{"id":21,"quantity":"10","product_id":7,"user_id":2,"created_at":"2022-01-22T02:36:27.000000Z","updated_at":"2022-01-22T02:36:27.000000Z"},{"id":22,"quantity":"9","product_id":8,"user_id":9,"created_at":"2022-01-22T02:36:28.000000Z","updated_at":"2022-01-22T02:36:28.000000Z"},{"id":23,"quantity":"9","product_id":8,"user_id":9,"created_at":"2022-01-22T02:36:29.000000Z","updated_at":"2022-01-22T02:36:29.000000Z"},{"id":24,"quantity":"3","product_id":8,"user_id":9,"created_at":"2022-01-22T02:36:29.000000Z","updated_at":"2022-01-22T02:36:29.000000Z"},{"id":25,"quantity":"9","product_id":9,"user_id":2,"created_at":"2022-01-22T02:36:30.000000Z","updated_at":"2022-01-22T02:36:30.000000Z"},{"id":26,"quantity":"10","product_id":9,"user_id":2,"created_at":"2022-01-22T02:36:30.000000Z","updated_at":"2022-01-22T02:36:30.000000Z"},{"id":27,"quantity":"10","product_id":9,"user_id":2,"created_at":"2022-01-22T02:36:31.000000Z","updated_at":"2022-01-22T02:36:31.000000Z"},{"id":28,"quantity":"8","product_id":10,"user_id":3,"created_at":"2022-01-22T02:36:32.000000Z","updated_at":"2022-01-22T02:36:32.000000Z"},{"id":29,"quantity":"5","product_id":10,"user_id":3,"created_at":"2022-01-22T02:36:32.000000Z","updated_at":"2022-01-22T02:36:32.000000Z"},{"id":30,"quantity":"6","product_id":10,"user_id":3,"created_at":"2022-01-22T02:36:32.000000Z","updated_at":"2022-01-22T02:36:32.000000Z"},{"id":31,"quantity":"8","product_id":1,"user_id":1,"created_at":"2022-01-22T04:13:49.000000Z","updated_at":"2022-01-22T04:14:32.000000Z"},{"id":32,"quantity":"9","product_id":3,"user_id":1,"created_at":"2022-01-22T04:15:12.000000Z","updated_at":"2022-01-22T04:22:13.000000Z"},{"id":33,"quantity":"10","product_id":2,"user_id":1,"created_at":"2022-01-22T04:22:34.000000Z","updated_at":"2022-01-22T04:22:34.000000Z"}]}'
+        content: '[{"id":1,"name":"Christop Sawayn","description":"Et ea praesentium vitae quia et.","created_at":"2022-01-22T02:36:07.000000Z","updated_at":"2022-01-22T02:36:07.000000Z"},{"id":2,"name":"Chaim Casper","description":"Ut suscipit natus sit.","created_at":"2022-01-22T02:36:08.000000Z","updated_at":"2022-01-22T02:36:08.000000Z"},{"id":3,"name":"Dr. Mose Kiehn PhD","description":"Et est accusantium ab aut.","created_at":"2022-01-22T02:36:08.000000Z","updated_at":"2022-01-22T02:36:08.000000Z"},{"id":4,"name":"Ed White","description":"Iure omnis inventore ab qui quos.","created_at":"2022-01-22T02:36:08.000000Z","updated_at":"2022-01-22T02:36:08.000000Z"},{"id":5,"name":"Myles Dickens","description":"Est facilis ut voluptatem eius et ab.","created_at":"2022-01-22T02:36:08.000000Z","updated_at":"2022-01-22T02:36:08.000000Z"},{"id":6,"name":"Ms. Bridgette Ratke","description":"Autem aut quis non qui.","created_at":"2022-01-22T02:36:08.000000Z","updated_at":"2022-01-22T02:36:08.000000Z"},{"id":7,"name":"Prof. Charles Kerluke","description":"Animi assumenda nam et.","created_at":"2022-01-22T02:36:08.000000Z","updated_at":"2022-01-22T02:36:08.000000Z"},{"id":8,"name":"Dr. Shawna Carroll IV","description":"Non porro maxime dolorum nisi.","created_at":"2022-01-22T02:36:08.000000Z","updated_at":"2022-01-22T02:36:08.000000Z"},{"id":9,"name":"Ms. Neha Herzog V","description":"Laudantium quia molestiae sit quo.","created_at":"2022-01-22T02:36:09.000000Z","updated_at":"2022-01-22T02:36:09.000000Z"},{"id":10,"name":"Vidal Watsica","description":"Magnam libero suscipit qui molestiae.","created_at":"2022-01-22T02:36:09.000000Z","updated_at":"2022-01-22T02:36:09.000000Z"}]'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '59'
+          x-ratelimit-remaining: '58'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
   -
     httpMethods:
       - POST
-    uri: api/cart
+    uri: api/categories
     metadata:
-      title: ''
+      title: 'Store a newly created resource in storage.'
       description: ''
       authenticated: true
       custom: []
     headers:
-      Authorization: 'Bearer 5VPdaEc1DgZ3hf86abev46k'
+      Authorization: 'Bearer vZhdkcg566b4afPa31DeVE8'
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: '🤖 Category name, unique in the table category.'
+        required: true
+        example: technology
+        type: string
+        custom: []
+      description:
+        name: description
+        description: '📝 Category description .'
+        required: true
+        example: 'State-of-the-art technological products'
+        type: string
+        custom: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/categories/{id}'
+    metadata:
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the category.'
+        required: true
+        example: 5
+        type: integer
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":{"id":1,"name":"Christop Sawayn","description":"Et ea praesentium vitae quia et.","created_at":"2022-01-22T02:36:07.000000Z","updated_at":"2022-01-22T02:36:07.000000Z"}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '57'
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/categories/{id}'
+    metadata:
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer v6cPgZ4eVa5bd1kE8ah3fD6'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the category.'
+        required: true
+        example: 13
+        type: integer
+        custom: []
     queryParameters: []
     bodyParameters: []
     responses: []
     responseFields: []
   -
     httpMethods:
-      - DELETE
-    uri: 'api/cart/{id}'
+      - PUT
+      - PATCH
+    uri: 'api/categories/{id}'
     metadata:
-      title: ''
+      title: 'Update the specified resource in storage.'
       description: ''
       authenticated: true
       custom: []
     headers:
-      Authorization: 'Bearer Dcaea41Evkg635VhfZdb8P6'
+      Authorization: 'Bearer ZvDdea48EPf31k656aVbghc'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
       id:
         name: id
-        description: 'The ID of the cart.'
+        description: 'Defaults to ''id''.'
         required: true
-        example: 8
+        example: 1
         type: integer
         custom: []
     queryParameters: []
-    bodyParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: '🤖 Category name, unique in the table category.'
+        required: true
+        example: technology
+        type: string
+        custom: []
+      description:
+        name: description
+        description: '📝 Category description .'
+        required: true
+        example: 'State-of-the-art technological products'
+        type: string
+        custom: []
     responses: []
     responseFields: []

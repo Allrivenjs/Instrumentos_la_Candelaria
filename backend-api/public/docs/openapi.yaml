@@ -100,7 +100,7 @@ paths:
           in: header
           name: Authorization
           description: ''
-          example: 'Bearer d4c6P6V3Ze5hDg8avkbaf1E'
+          example: 'Bearer D63fck8EVe6gdhv15b4PZaa'
           schema:
             type: string
         -
@@ -120,6 +120,217 @@ paths:
       responses: {  }
       tags:
         - 'Authenticating method v1'
+  /api/cart:
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer a8D4bk656VfcehgZda3vPE1'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      id: 10
+                      quantity: '9'
+                      product_id: 4
+                      user_id: 1
+                      created_at: '2022-01-22T02:36:21.000000Z'
+                      updated_at: '2022-01-22T02:36:21.000000Z'
+                    -
+                      id: 11
+                      quantity: '7'
+                      product_id: 4
+                      user_id: 1
+                      created_at: '2022-01-22T02:36:21.000000Z'
+                      updated_at: '2022-01-22T02:36:21.000000Z'
+                    -
+                      id: 12
+                      quantity: '4'
+                      product_id: 4
+                      user_id: 1
+                      created_at: '2022-01-22T02:36:21.000000Z'
+                      updated_at: '2022-01-22T02:36:21.000000Z'
+                    -
+                      id: 31
+                      quantity: '8'
+                      product_id: 1
+                      user_id: 1
+                      created_at: '2022-01-22T04:13:49.000000Z'
+                      updated_at: '2022-01-22T04:14:32.000000Z'
+                    -
+                      id: 32
+                      quantity: '9'
+                      product_id: 3
+                      user_id: 1
+                      created_at: '2022-01-22T04:15:12.000000Z'
+                      updated_at: '2022-01-22T04:22:13.000000Z'
+                    -
+                      id: 33
+                      quantity: '132'
+                      product_id: 2
+                      user_id: 1
+                      created_at: '2022-01-22T04:22:34.000000Z'
+                      updated_at: '2022-01-22T06:53:20.000000Z'
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 10
+                        quantity: '9'
+                        product_id: 4
+                        user_id: 1
+                        created_at: '2022-01-22T02:36:21.000000Z'
+                        updated_at: '2022-01-22T02:36:21.000000Z'
+                      -
+                        id: 11
+                        quantity: '7'
+                        product_id: 4
+                        user_id: 1
+                        created_at: '2022-01-22T02:36:21.000000Z'
+                        updated_at: '2022-01-22T02:36:21.000000Z'
+                      -
+                        id: 12
+                        quantity: '4'
+                        product_id: 4
+                        user_id: 1
+                        created_at: '2022-01-22T02:36:21.000000Z'
+                        updated_at: '2022-01-22T02:36:21.000000Z'
+                      -
+                        id: 31
+                        quantity: '8'
+                        product_id: 1
+                        user_id: 1
+                        created_at: '2022-01-22T04:13:49.000000Z'
+                        updated_at: '2022-01-22T04:14:32.000000Z'
+                      -
+                        id: 32
+                        quantity: '9'
+                        product_id: 3
+                        user_id: 1
+                        created_at: '2022-01-22T04:15:12.000000Z'
+                        updated_at: '2022-01-22T04:22:13.000000Z'
+                      -
+                        id: 33
+                        quantity: '132'
+                        product_id: 2
+                        user_id: 1
+                        created_at: '2022-01-22T04:22:34.000000Z'
+                        updated_at: '2022-01-22T06:53:20.000000Z'
+                    items:
+                      type: object
+      tags:
+        - 'Cart Management'
+    post:
+      summary: 'Store Cart and update.'
+      description: '<aside>This endpoint works to create and update a user''s product.</aside>'
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer e5vg3EZfVaDb8cha1k664dP'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Cart Management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                product_id:
+                  type: integer
+                  description: 'Product id'
+                  example: 1
+                quantity:
+                  type: integer
+                  description: 'Product quantity, min 1'
+                  example: 1
+              required:
+                - product_id
+                - quantity
+  '/api/cart/{id}':
+    delete:
+      summary: 'Remove product from cart'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer EV143eahad6kcPbvf5ZgD86'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Cart Management'
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the cart.'
+        example: 5
+        required: true
+        schema:
+          type: integer
   /api/categories:
     get:
       summary: 'Display a listing of the resource.'
@@ -220,7 +431,7 @@ paths:
           in: header
           name: Authorization
           description: ''
-          example: 'Bearer adah614P8bV3cf6gv5kDZeE'
+          example: 'Bearer vZhdkcg566b4afPa31DeVE8'
           schema:
             type: string
         -
@@ -311,7 +522,7 @@ paths:
           in: header
           name: Authorization
           description: ''
-          example: 'Bearer P4gZ3E15acd6h8aDv6efkVb'
+          example: 'Bearer v6cPgZ4eVa5bd1kE8ah3fD6'
           schema:
             type: string
         -
@@ -339,53 +550,7 @@ paths:
           in: header
           name: Authorization
           description: ''
-          example: 'Bearer 6VfgZaD8bPEc146kv3h5dea'
-          schema:
-            type: string
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses: {  }
-      tags:
-        - 'Category Management'
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                name:
-                  type: string
-                  description: '🤖 Category name, unique in the table category.'
-                  example: technology
-                description:
-                  type: string
-                  description: '📝 Category description .'
-                  example: 'State-of-the-art technological products'
-              required:
-                - name
-                - description
-    post:
-      summary: 'Update the specified resource in storage.'
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Authorization
-          description: ''
-          example: 'Bearer P1ke8b5DcEv3dh6af6a4ZgV'
+          example: 'Bearer ZvDdea48EPf31k656aVbghc'
           schema:
             type: string
         -
@@ -428,578 +593,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the category.'
-        example: 2
-        required: true
-        schema:
-          type: integer
-  /api/cart:
-    get:
-      summary: ''
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Authorization
-          description: ''
-          example: 'Bearer 8Dk5haefEcg1bd3v46ZVPa6'
-          schema:
-            type: string
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  data:
-                    -
-                      id: 1
-                      quantity: '7'
-                      product_id: 1
-                      user_id: 10
-                      created_at: '2022-01-22T02:36:15.000000Z'
-                      updated_at: '2022-01-22T02:36:15.000000Z'
-                    -
-                      id: 2
-                      quantity: '3'
-                      product_id: 1
-                      user_id: 10
-                      created_at: '2022-01-22T02:36:15.000000Z'
-                      updated_at: '2022-01-22T02:36:15.000000Z'
-                    -
-                      id: 3
-                      quantity: '7'
-                      product_id: 1
-                      user_id: 10
-                      created_at: '2022-01-22T02:36:16.000000Z'
-                      updated_at: '2022-01-22T02:36:16.000000Z'
-                    -
-                      id: 4
-                      quantity: '9'
-                      product_id: 2
-                      user_id: 11
-                      created_at: '2022-01-22T02:36:17.000000Z'
-                      updated_at: '2022-01-22T02:36:17.000000Z'
-                    -
-                      id: 5
-                      quantity: '9'
-                      product_id: 2
-                      user_id: 11
-                      created_at: '2022-01-22T02:36:17.000000Z'
-                      updated_at: '2022-01-22T02:36:17.000000Z'
-                    -
-                      id: 6
-                      quantity: '2'
-                      product_id: 2
-                      user_id: 11
-                      created_at: '2022-01-22T02:36:17.000000Z'
-                      updated_at: '2022-01-22T02:36:17.000000Z'
-                    -
-                      id: 7
-                      quantity: '5'
-                      product_id: 3
-                      user_id: 5
-                      created_at: '2022-01-22T02:36:19.000000Z'
-                      updated_at: '2022-01-22T02:36:19.000000Z'
-                    -
-                      id: 8
-                      quantity: '3'
-                      product_id: 3
-                      user_id: 5
-                      created_at: '2022-01-22T02:36:19.000000Z'
-                      updated_at: '2022-01-22T02:36:19.000000Z'
-                    -
-                      id: 9
-                      quantity: '7'
-                      product_id: 3
-                      user_id: 5
-                      created_at: '2022-01-22T02:36:19.000000Z'
-                      updated_at: '2022-01-22T02:36:19.000000Z'
-                    -
-                      id: 10
-                      quantity: '9'
-                      product_id: 4
-                      user_id: 1
-                      created_at: '2022-01-22T02:36:21.000000Z'
-                      updated_at: '2022-01-22T02:36:21.000000Z'
-                    -
-                      id: 11
-                      quantity: '7'
-                      product_id: 4
-                      user_id: 1
-                      created_at: '2022-01-22T02:36:21.000000Z'
-                      updated_at: '2022-01-22T02:36:21.000000Z'
-                    -
-                      id: 12
-                      quantity: '4'
-                      product_id: 4
-                      user_id: 1
-                      created_at: '2022-01-22T02:36:21.000000Z'
-                      updated_at: '2022-01-22T02:36:21.000000Z'
-                    -
-                      id: 13
-                      quantity: '1'
-                      product_id: 5
-                      user_id: 11
-                      created_at: '2022-01-22T02:36:23.000000Z'
-                      updated_at: '2022-01-22T02:36:23.000000Z'
-                    -
-                      id: 14
-                      quantity: '10'
-                      product_id: 5
-                      user_id: 11
-                      created_at: '2022-01-22T02:36:23.000000Z'
-                      updated_at: '2022-01-22T02:36:23.000000Z'
-                    -
-                      id: 15
-                      quantity: '3'
-                      product_id: 5
-                      user_id: 11
-                      created_at: '2022-01-22T02:36:23.000000Z'
-                      updated_at: '2022-01-22T02:36:23.000000Z'
-                    -
-                      id: 16
-                      quantity: '4'
-                      product_id: 6
-                      user_id: 10
-                      created_at: '2022-01-22T02:36:25.000000Z'
-                      updated_at: '2022-01-22T02:36:25.000000Z'
-                    -
-                      id: 17
-                      quantity: '4'
-                      product_id: 6
-                      user_id: 10
-                      created_at: '2022-01-22T02:36:25.000000Z'
-                      updated_at: '2022-01-22T02:36:25.000000Z'
-                    -
-                      id: 18
-                      quantity: '2'
-                      product_id: 6
-                      user_id: 10
-                      created_at: '2022-01-22T02:36:25.000000Z'
-                      updated_at: '2022-01-22T02:36:25.000000Z'
-                    -
-                      id: 19
-                      quantity: '8'
-                      product_id: 7
-                      user_id: 2
-                      created_at: '2022-01-22T02:36:27.000000Z'
-                      updated_at: '2022-01-22T02:36:27.000000Z'
-                    -
-                      id: 20
-                      quantity: '5'
-                      product_id: 7
-                      user_id: 2
-                      created_at: '2022-01-22T02:36:27.000000Z'
-                      updated_at: '2022-01-22T02:36:27.000000Z'
-                    -
-                      id: 21
-                      quantity: '10'
-                      product_id: 7
-                      user_id: 2
-                      created_at: '2022-01-22T02:36:27.000000Z'
-                      updated_at: '2022-01-22T02:36:27.000000Z'
-                    -
-                      id: 22
-                      quantity: '9'
-                      product_id: 8
-                      user_id: 9
-                      created_at: '2022-01-22T02:36:28.000000Z'
-                      updated_at: '2022-01-22T02:36:28.000000Z'
-                    -
-                      id: 23
-                      quantity: '9'
-                      product_id: 8
-                      user_id: 9
-                      created_at: '2022-01-22T02:36:29.000000Z'
-                      updated_at: '2022-01-22T02:36:29.000000Z'
-                    -
-                      id: 24
-                      quantity: '3'
-                      product_id: 8
-                      user_id: 9
-                      created_at: '2022-01-22T02:36:29.000000Z'
-                      updated_at: '2022-01-22T02:36:29.000000Z'
-                    -
-                      id: 25
-                      quantity: '9'
-                      product_id: 9
-                      user_id: 2
-                      created_at: '2022-01-22T02:36:30.000000Z'
-                      updated_at: '2022-01-22T02:36:30.000000Z'
-                    -
-                      id: 26
-                      quantity: '10'
-                      product_id: 9
-                      user_id: 2
-                      created_at: '2022-01-22T02:36:30.000000Z'
-                      updated_at: '2022-01-22T02:36:30.000000Z'
-                    -
-                      id: 27
-                      quantity: '10'
-                      product_id: 9
-                      user_id: 2
-                      created_at: '2022-01-22T02:36:31.000000Z'
-                      updated_at: '2022-01-22T02:36:31.000000Z'
-                    -
-                      id: 28
-                      quantity: '8'
-                      product_id: 10
-                      user_id: 3
-                      created_at: '2022-01-22T02:36:32.000000Z'
-                      updated_at: '2022-01-22T02:36:32.000000Z'
-                    -
-                      id: 29
-                      quantity: '5'
-                      product_id: 10
-                      user_id: 3
-                      created_at: '2022-01-22T02:36:32.000000Z'
-                      updated_at: '2022-01-22T02:36:32.000000Z'
-                    -
-                      id: 30
-                      quantity: '6'
-                      product_id: 10
-                      user_id: 3
-                      created_at: '2022-01-22T02:36:32.000000Z'
-                      updated_at: '2022-01-22T02:36:32.000000Z'
-                    -
-                      id: 31
-                      quantity: '8'
-                      product_id: 1
-                      user_id: 1
-                      created_at: '2022-01-22T04:13:49.000000Z'
-                      updated_at: '2022-01-22T04:14:32.000000Z'
-                    -
-                      id: 32
-                      quantity: '9'
-                      product_id: 3
-                      user_id: 1
-                      created_at: '2022-01-22T04:15:12.000000Z'
-                      updated_at: '2022-01-22T04:22:13.000000Z'
-                    -
-                      id: 33
-                      quantity: '10'
-                      product_id: 2
-                      user_id: 1
-                      created_at: '2022-01-22T04:22:34.000000Z'
-                      updated_at: '2022-01-22T04:22:34.000000Z'
-                properties:
-                  data:
-                    type: array
-                    example:
-                      -
-                        id: 1
-                        quantity: '7'
-                        product_id: 1
-                        user_id: 10
-                        created_at: '2022-01-22T02:36:15.000000Z'
-                        updated_at: '2022-01-22T02:36:15.000000Z'
-                      -
-                        id: 2
-                        quantity: '3'
-                        product_id: 1
-                        user_id: 10
-                        created_at: '2022-01-22T02:36:15.000000Z'
-                        updated_at: '2022-01-22T02:36:15.000000Z'
-                      -
-                        id: 3
-                        quantity: '7'
-                        product_id: 1
-                        user_id: 10
-                        created_at: '2022-01-22T02:36:16.000000Z'
-                        updated_at: '2022-01-22T02:36:16.000000Z'
-                      -
-                        id: 4
-                        quantity: '9'
-                        product_id: 2
-                        user_id: 11
-                        created_at: '2022-01-22T02:36:17.000000Z'
-                        updated_at: '2022-01-22T02:36:17.000000Z'
-                      -
-                        id: 5
-                        quantity: '9'
-                        product_id: 2
-                        user_id: 11
-                        created_at: '2022-01-22T02:36:17.000000Z'
-                        updated_at: '2022-01-22T02:36:17.000000Z'
-                      -
-                        id: 6
-                        quantity: '2'
-                        product_id: 2
-                        user_id: 11
-                        created_at: '2022-01-22T02:36:17.000000Z'
-                        updated_at: '2022-01-22T02:36:17.000000Z'
-                      -
-                        id: 7
-                        quantity: '5'
-                        product_id: 3
-                        user_id: 5
-                        created_at: '2022-01-22T02:36:19.000000Z'
-                        updated_at: '2022-01-22T02:36:19.000000Z'
-                      -
-                        id: 8
-                        quantity: '3'
-                        product_id: 3
-                        user_id: 5
-                        created_at: '2022-01-22T02:36:19.000000Z'
-                        updated_at: '2022-01-22T02:36:19.000000Z'
-                      -
-                        id: 9
-                        quantity: '7'
-                        product_id: 3
-                        user_id: 5
-                        created_at: '2022-01-22T02:36:19.000000Z'
-                        updated_at: '2022-01-22T02:36:19.000000Z'
-                      -
-                        id: 10
-                        quantity: '9'
-                        product_id: 4
-                        user_id: 1
-                        created_at: '2022-01-22T02:36:21.000000Z'
-                        updated_at: '2022-01-22T02:36:21.000000Z'
-                      -
-                        id: 11
-                        quantity: '7'
-                        product_id: 4
-                        user_id: 1
-                        created_at: '2022-01-22T02:36:21.000000Z'
-                        updated_at: '2022-01-22T02:36:21.000000Z'
-                      -
-                        id: 12
-                        quantity: '4'
-                        product_id: 4
-                        user_id: 1
-                        created_at: '2022-01-22T02:36:21.000000Z'
-                        updated_at: '2022-01-22T02:36:21.000000Z'
-                      -
-                        id: 13
-                        quantity: '1'
-                        product_id: 5
-                        user_id: 11
-                        created_at: '2022-01-22T02:36:23.000000Z'
-                        updated_at: '2022-01-22T02:36:23.000000Z'
-                      -
-                        id: 14
-                        quantity: '10'
-                        product_id: 5
-                        user_id: 11
-                        created_at: '2022-01-22T02:36:23.000000Z'
-                        updated_at: '2022-01-22T02:36:23.000000Z'
-                      -
-                        id: 15
-                        quantity: '3'
-                        product_id: 5
-                        user_id: 11
-                        created_at: '2022-01-22T02:36:23.000000Z'
-                        updated_at: '2022-01-22T02:36:23.000000Z'
-                      -
-                        id: 16
-                        quantity: '4'
-                        product_id: 6
-                        user_id: 10
-                        created_at: '2022-01-22T02:36:25.000000Z'
-                        updated_at: '2022-01-22T02:36:25.000000Z'
-                      -
-                        id: 17
-                        quantity: '4'
-                        product_id: 6
-                        user_id: 10
-                        created_at: '2022-01-22T02:36:25.000000Z'
-                        updated_at: '2022-01-22T02:36:25.000000Z'
-                      -
-                        id: 18
-                        quantity: '2'
-                        product_id: 6
-                        user_id: 10
-                        created_at: '2022-01-22T02:36:25.000000Z'
-                        updated_at: '2022-01-22T02:36:25.000000Z'
-                      -
-                        id: 19
-                        quantity: '8'
-                        product_id: 7
-                        user_id: 2
-                        created_at: '2022-01-22T02:36:27.000000Z'
-                        updated_at: '2022-01-22T02:36:27.000000Z'
-                      -
-                        id: 20
-                        quantity: '5'
-                        product_id: 7
-                        user_id: 2
-                        created_at: '2022-01-22T02:36:27.000000Z'
-                        updated_at: '2022-01-22T02:36:27.000000Z'
-                      -
-                        id: 21
-                        quantity: '10'
-                        product_id: 7
-                        user_id: 2
-                        created_at: '2022-01-22T02:36:27.000000Z'
-                        updated_at: '2022-01-22T02:36:27.000000Z'
-                      -
-                        id: 22
-                        quantity: '9'
-                        product_id: 8
-                        user_id: 9
-                        created_at: '2022-01-22T02:36:28.000000Z'
-                        updated_at: '2022-01-22T02:36:28.000000Z'
-                      -
-                        id: 23
-                        quantity: '9'
-                        product_id: 8
-                        user_id: 9
-                        created_at: '2022-01-22T02:36:29.000000Z'
-                        updated_at: '2022-01-22T02:36:29.000000Z'
-                      -
-                        id: 24
-                        quantity: '3'
-                        product_id: 8
-                        user_id: 9
-                        created_at: '2022-01-22T02:36:29.000000Z'
-                        updated_at: '2022-01-22T02:36:29.000000Z'
-                      -
-                        id: 25
-                        quantity: '9'
-                        product_id: 9
-                        user_id: 2
-                        created_at: '2022-01-22T02:36:30.000000Z'
-                        updated_at: '2022-01-22T02:36:30.000000Z'
-                      -
-                        id: 26
-                        quantity: '10'
-                        product_id: 9
-                        user_id: 2
-                        created_at: '2022-01-22T02:36:30.000000Z'
-                        updated_at: '2022-01-22T02:36:30.000000Z'
-                      -
-                        id: 27
-                        quantity: '10'
-                        product_id: 9
-                        user_id: 2
-                        created_at: '2022-01-22T02:36:31.000000Z'
-                        updated_at: '2022-01-22T02:36:31.000000Z'
-                      -
-                        id: 28
-                        quantity: '8'
-                        product_id: 10
-                        user_id: 3
-                        created_at: '2022-01-22T02:36:32.000000Z'
-                        updated_at: '2022-01-22T02:36:32.000000Z'
-                      -
-                        id: 29
-                        quantity: '5'
-                        product_id: 10
-                        user_id: 3
-                        created_at: '2022-01-22T02:36:32.000000Z'
-                        updated_at: '2022-01-22T02:36:32.000000Z'
-                      -
-                        id: 30
-                        quantity: '6'
-                        product_id: 10
-                        user_id: 3
-                        created_at: '2022-01-22T02:36:32.000000Z'
-                        updated_at: '2022-01-22T02:36:32.000000Z'
-                      -
-                        id: 31
-                        quantity: '8'
-                        product_id: 1
-                        user_id: 1
-                        created_at: '2022-01-22T04:13:49.000000Z'
-                        updated_at: '2022-01-22T04:14:32.000000Z'
-                      -
-                        id: 32
-                        quantity: '9'
-                        product_id: 3
-                        user_id: 1
-                        created_at: '2022-01-22T04:15:12.000000Z'
-                        updated_at: '2022-01-22T04:22:13.000000Z'
-                      -
-                        id: 33
-                        quantity: '10'
-                        product_id: 2
-                        user_id: 1
-                        created_at: '2022-01-22T04:22:34.000000Z'
-                        updated_at: '2022-01-22T04:22:34.000000Z'
-                    items:
-                      type: object
-      tags:
-        - Endpoints
-    post:
-      summary: ''
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Authorization
-          description: ''
-          example: 'Bearer 5VPdaEc1DgZ3hf86abev46k'
-          schema:
-            type: string
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses: {  }
-      tags:
-        - Endpoints
-  '/api/cart/{id}':
-    delete:
-      summary: ''
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Authorization
-          description: ''
-          example: 'Bearer Dcaea41Evkg635VhfZdb8P6'
-          schema:
-            type: string
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses: {  }
-      tags:
-        - Endpoints
-    parameters:
-      -
-        in: path
-        name: id
-        description: 'The ID of the cart.'
-        example: 8
+        example: 5
         required: true
         schema:
           type: integer
@@ -1012,7 +606,7 @@ paths:
           in: header
           name: Authorization
           description: ''
-          example: 'Bearer hf3g5kaE61486cbPVdaDeZv'
+          example: 'Bearer Eab356P8Z1v6cea4hkfDgdV'
           schema:
             type: string
         -
@@ -1106,16 +700,16 @@ paths:
                     -
                       id: 11
                       sku: Glas54708
-                      name: Glass
-                      price: 33
-                      weight: 2
-                      description: 'Glasses for all people'
-                      thumbnail: storage/product/3xgVL6GByL9tJxmHIVN40BbzbM4nqPZqGeNdW9pY.jpg
-                      stock: 34
+                      name: sdadas
+                      price: 12312
+                      weight: 12321
+                      description: sadasdas
+                      thumbnail: storage/product/fXAEQ5eeadb67XQcpj0xz4sf3yjSjHUHk7XhdoWn.jpg
+                      stock: 2131
                       slug: glass-1011330623
                       user_id: 11
                       created_at: '2022-01-22T04:18:36.000000Z'
-                      updated_at: '2022-01-22T04:18:36.000000Z'
+                      updated_at: '2022-01-22T06:34:11.000000Z'
                       user:
                         id: 11
                         name: 'Novella Mills'
@@ -1581,16 +1175,16 @@ paths:
                       -
                         id: 11
                         sku: Glas54708
-                        name: Glass
-                        price: 33
-                        weight: 2
-                        description: 'Glasses for all people'
-                        thumbnail: storage/product/3xgVL6GByL9tJxmHIVN40BbzbM4nqPZqGeNdW9pY.jpg
-                        stock: 34
+                        name: sdadas
+                        price: 12312
+                        weight: 12321
+                        description: sadasdas
+                        thumbnail: storage/product/fXAEQ5eeadb67XQcpj0xz4sf3yjSjHUHk7XhdoWn.jpg
+                        stock: 2131
                         slug: glass-1011330623
                         user_id: 11
                         created_at: '2022-01-22T04:18:36.000000Z'
-                        updated_at: '2022-01-22T04:18:36.000000Z'
+                        updated_at: '2022-01-22T06:34:11.000000Z'
                         user:
                           id: 11
                           name: 'Novella Mills'
@@ -2067,7 +1661,7 @@ paths:
           in: header
           name: Authorization
           description: ''
-          example: 'Bearer a8D6bv1k4gaeZV56EcdfhP3'
+          example: 'Bearer vPage56hc48E61fdaDVZ3kb'
           schema:
             type: string
         -
@@ -2243,7 +1837,7 @@ paths:
           in: header
           name: Authorization
           description: ''
-          example: 'Bearer 5D1aEPeVvZ86dbc43fkh6ga'
+          example: 'Bearer 3Z4P18g6akDecd56VEahvfb'
           schema:
             type: string
         -
@@ -2306,20 +1900,351 @@ paths:
         in: path
         name: id
         description: 'The ID of the product.'
-        example: 9
+        example: 2
         required: true
         schema:
           type: integer
+  /api/productsByUser:
+    get:
+      summary: 'Desplay a listing of products by user'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer hV1vE84Pg36kbec6ZaDafd5'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      id: 8
+                      sku: '9790814482604'
+                      name: 'Sven Bailey Jr.'
+                      price: 43131
+                      weight: 1
+                      description: 'Libero voluptatem laborum perspiciatis unde ipsam et. Occaecati voluptatem nostrum qui necessitatibus dolorum. Fugiat earum dignissimos ipsum quas voluptas ea recusandae. Libero consequatur iure perspiciatis quia qui nam ipsa. Ipsam aut est est porro quidem totam. Quia ad nulla et vero veniam vel. Voluptatem sequi quia veritatis nihil sunt. Necessitatibus similique rerum et voluptatibus non sequi est.'
+                      thumbnail: storage/product/755b8fad670256178589ff596cfa7ca1.png
+                      stock: 48
+                      slug: sven-bailey-jr
+                      user_id: 1
+                      created_at: '2022-01-22T02:36:14.000000Z'
+                      updated_at: '2022-01-22T02:36:14.000000Z'
+                      user:
+                        id: 1
+                        name: Admin
+                        email: admin@gmail.com
+                        email_verified_at: null
+                        current_team_id: null
+                        profile_photo_path: null
+                        created_at: '2022-01-22T02:35:58.000000Z'
+                        updated_at: '2022-01-22T02:35:58.000000Z'
+                        profile_photo_url: 'https://ui-avatars.com/api/?name=A&color=7F9CF5&background=EBF4FF'
+                      image:
+                        -
+                          id: 22
+                          url: storage/product/e9c7271bf00ba0e26e2ace9b57e0aa9d.png
+                          created_at: '2022-01-22T02:36:28.000000Z'
+                          updated_at: '2022-01-22T02:36:28.000000Z'
+                        -
+                          id: 23
+                          url: storage/product/19fc4e9c4ac8b6c3f2ec1304e666e2e9.png
+                          created_at: '2022-01-22T02:36:28.000000Z'
+                          updated_at: '2022-01-22T02:36:28.000000Z'
+                        -
+                          id: 24
+                          url: storage/product/28e825b1edc07235f73074a5621c1ba7.png
+                          created_at: '2022-01-22T02:36:28.000000Z'
+                          updated_at: '2022-01-22T02:36:28.000000Z'
+                      categories:
+                        -
+                          id: 3
+                          name: 'Dr. Mose Kiehn PhD'
+                          description: 'Et est accusantium ab aut.'
+                          created_at: '2022-01-22T02:36:08.000000Z'
+                          updated_at: '2022-01-22T02:36:08.000000Z'
+                          pivot:
+                            product_id: 8
+                            category_id: 3
+                        -
+                          id: 7
+                          name: 'Prof. Charles Kerluke'
+                          description: 'Animi assumenda nam et.'
+                          created_at: '2022-01-22T02:36:08.000000Z'
+                          updated_at: '2022-01-22T02:36:08.000000Z'
+                          pivot:
+                            product_id: 8
+                            category_id: 7
+                    -
+                      id: 1
+                      sku: '9796200298132'
+                      name: 'Horace Klocko'
+                      price: 86454
+                      weight: 4
+                      description: 'Ab nemo illo voluptatibus. In inventore qui autem. Dolor sit ab id veniam in. Voluptates quaerat dolorem nisi et. Aspernatur maiores vel et sint magni minima qui. Consequuntur aliquid labore voluptate ut ipsam veritatis et. Minima nesciunt laudantium illo ullam. Doloremque explicabo aut esse et consequatur. Vitae nobis tenetur maiores ea. Tempora libero totam et est iusto qui omnis.'
+                      thumbnail: storage/product/593ed2c02e7e680d6c65d84160ab8aad.png
+                      stock: 76
+                      slug: horace-klocko
+                      user_id: 1
+                      created_at: '2022-01-22T02:36:13.000000Z'
+                      updated_at: '2022-01-22T02:36:13.000000Z'
+                      user:
+                        id: 1
+                        name: Admin
+                        email: admin@gmail.com
+                        email_verified_at: null
+                        current_team_id: null
+                        profile_photo_path: null
+                        created_at: '2022-01-22T02:35:58.000000Z'
+                        updated_at: '2022-01-22T02:35:58.000000Z'
+                        profile_photo_url: 'https://ui-avatars.com/api/?name=A&color=7F9CF5&background=EBF4FF'
+                      image:
+                        -
+                          id: 1
+                          url: storage/product/4d03a19cf08e8d933f29a539fb76804b.png
+                          created_at: '2022-01-22T02:36:15.000000Z'
+                          updated_at: '2022-01-22T02:36:15.000000Z'
+                        -
+                          id: 2
+                          url: storage/product/47485df19b3ad6fe10a6b7121327f97e.png
+                          created_at: '2022-01-22T02:36:15.000000Z'
+                          updated_at: '2022-01-22T02:36:15.000000Z'
+                        -
+                          id: 3
+                          url: storage/product/55bc47f91a8bf3f2d8339f2babe913a3.png
+                          created_at: '2022-01-22T02:36:15.000000Z'
+                          updated_at: '2022-01-22T02:36:15.000000Z'
+                      categories:
+                        -
+                          id: 3
+                          name: 'Dr. Mose Kiehn PhD'
+                          description: 'Et est accusantium ab aut.'
+                          created_at: '2022-01-22T02:36:08.000000Z'
+                          updated_at: '2022-01-22T02:36:08.000000Z'
+                          pivot:
+                            product_id: 1
+                            category_id: 3
+                        -
+                          id: 9
+                          name: 'Ms. Neha Herzog V'
+                          description: 'Laudantium quia molestiae sit quo.'
+                          created_at: '2022-01-22T02:36:09.000000Z'
+                          updated_at: '2022-01-22T02:36:09.000000Z'
+                          pivot:
+                            product_id: 1
+                            category_id: 9
+                  links:
+                    first: 'http://localhost:8000/api/productsByUser?page=1'
+                    last: 'http://localhost:8000/api/productsByUser?page=1'
+                    prev: null
+                    next: null
+                  meta:
+                    current_page: 1
+                    from: 1
+                    last_page: 1
+                    links:
+                      -
+                        url: null
+                        label: '&laquo; Previous'
+                        active: false
+                      -
+                        url: 'http://localhost:8000/api/productsByUser?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: null
+                        label: 'Next &raquo;'
+                        active: false
+                    path: 'http://localhost:8000/api/productsByUser'
+                    per_page: 8
+                    to: 2
+                    total: 2
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 8
+                        sku: '9790814482604'
+                        name: 'Sven Bailey Jr.'
+                        price: 43131
+                        weight: 1
+                        description: 'Libero voluptatem laborum perspiciatis unde ipsam et. Occaecati voluptatem nostrum qui necessitatibus dolorum. Fugiat earum dignissimos ipsum quas voluptas ea recusandae. Libero consequatur iure perspiciatis quia qui nam ipsa. Ipsam aut est est porro quidem totam. Quia ad nulla et vero veniam vel. Voluptatem sequi quia veritatis nihil sunt. Necessitatibus similique rerum et voluptatibus non sequi est.'
+                        thumbnail: storage/product/755b8fad670256178589ff596cfa7ca1.png
+                        stock: 48
+                        slug: sven-bailey-jr
+                        user_id: 1
+                        created_at: '2022-01-22T02:36:14.000000Z'
+                        updated_at: '2022-01-22T02:36:14.000000Z'
+                        user:
+                          id: 1
+                          name: Admin
+                          email: admin@gmail.com
+                          email_verified_at: null
+                          current_team_id: null
+                          profile_photo_path: null
+                          created_at: '2022-01-22T02:35:58.000000Z'
+                          updated_at: '2022-01-22T02:35:58.000000Z'
+                          profile_photo_url: 'https://ui-avatars.com/api/?name=A&color=7F9CF5&background=EBF4FF'
+                        image:
+                          -
+                            id: 22
+                            url: storage/product/e9c7271bf00ba0e26e2ace9b57e0aa9d.png
+                            created_at: '2022-01-22T02:36:28.000000Z'
+                            updated_at: '2022-01-22T02:36:28.000000Z'
+                          -
+                            id: 23
+                            url: storage/product/19fc4e9c4ac8b6c3f2ec1304e666e2e9.png
+                            created_at: '2022-01-22T02:36:28.000000Z'
+                            updated_at: '2022-01-22T02:36:28.000000Z'
+                          -
+                            id: 24
+                            url: storage/product/28e825b1edc07235f73074a5621c1ba7.png
+                            created_at: '2022-01-22T02:36:28.000000Z'
+                            updated_at: '2022-01-22T02:36:28.000000Z'
+                        categories:
+                          -
+                            id: 3
+                            name: 'Dr. Mose Kiehn PhD'
+                            description: 'Et est accusantium ab aut.'
+                            created_at: '2022-01-22T02:36:08.000000Z'
+                            updated_at: '2022-01-22T02:36:08.000000Z'
+                            pivot:
+                              product_id: 8
+                              category_id: 3
+                          -
+                            id: 7
+                            name: 'Prof. Charles Kerluke'
+                            description: 'Animi assumenda nam et.'
+                            created_at: '2022-01-22T02:36:08.000000Z'
+                            updated_at: '2022-01-22T02:36:08.000000Z'
+                            pivot:
+                              product_id: 8
+                              category_id: 7
+                      -
+                        id: 1
+                        sku: '9796200298132'
+                        name: 'Horace Klocko'
+                        price: 86454
+                        weight: 4
+                        description: 'Ab nemo illo voluptatibus. In inventore qui autem. Dolor sit ab id veniam in. Voluptates quaerat dolorem nisi et. Aspernatur maiores vel et sint magni minima qui. Consequuntur aliquid labore voluptate ut ipsam veritatis et. Minima nesciunt laudantium illo ullam. Doloremque explicabo aut esse et consequatur. Vitae nobis tenetur maiores ea. Tempora libero totam et est iusto qui omnis.'
+                        thumbnail: storage/product/593ed2c02e7e680d6c65d84160ab8aad.png
+                        stock: 76
+                        slug: horace-klocko
+                        user_id: 1
+                        created_at: '2022-01-22T02:36:13.000000Z'
+                        updated_at: '2022-01-22T02:36:13.000000Z'
+                        user:
+                          id: 1
+                          name: Admin
+                          email: admin@gmail.com
+                          email_verified_at: null
+                          current_team_id: null
+                          profile_photo_path: null
+                          created_at: '2022-01-22T02:35:58.000000Z'
+                          updated_at: '2022-01-22T02:35:58.000000Z'
+                          profile_photo_url: 'https://ui-avatars.com/api/?name=A&color=7F9CF5&background=EBF4FF'
+                        image:
+                          -
+                            id: 1
+                            url: storage/product/4d03a19cf08e8d933f29a539fb76804b.png
+                            created_at: '2022-01-22T02:36:15.000000Z'
+                            updated_at: '2022-01-22T02:36:15.000000Z'
+                          -
+                            id: 2
+                            url: storage/product/47485df19b3ad6fe10a6b7121327f97e.png
+                            created_at: '2022-01-22T02:36:15.000000Z'
+                            updated_at: '2022-01-22T02:36:15.000000Z'
+                          -
+                            id: 3
+                            url: storage/product/55bc47f91a8bf3f2d8339f2babe913a3.png
+                            created_at: '2022-01-22T02:36:15.000000Z'
+                            updated_at: '2022-01-22T02:36:15.000000Z'
+                        categories:
+                          -
+                            id: 3
+                            name: 'Dr. Mose Kiehn PhD'
+                            description: 'Et est accusantium ab aut.'
+                            created_at: '2022-01-22T02:36:08.000000Z'
+                            updated_at: '2022-01-22T02:36:08.000000Z'
+                            pivot:
+                              product_id: 1
+                              category_id: 3
+                          -
+                            id: 9
+                            name: 'Ms. Neha Herzog V'
+                            description: 'Laudantium quia molestiae sit quo.'
+                            created_at: '2022-01-22T02:36:09.000000Z'
+                            updated_at: '2022-01-22T02:36:09.000000Z'
+                            pivot:
+                              product_id: 1
+                              category_id: 9
+                    items:
+                      type: object
+                  links:
+                    type: object
+                    example:
+                      first: 'http://localhost:8000/api/productsByUser?page=1'
+                      last: 'http://localhost:8000/api/productsByUser?page=1'
+                      prev: null
+                      next: null
+                  meta:
+                    type: object
+                    example:
+                      current_page: 1
+                      from: 1
+                      last_page: 1
+                      links:
+                        -
+                          url: null
+                          label: '&laquo; Previous'
+                          active: false
+                        -
+                          url: 'http://localhost:8000/api/productsByUser?page=1'
+                          label: '1'
+                          active: true
+                        -
+                          url: null
+                          label: 'Next &raquo;'
+                          active: false
+                      path: 'http://localhost:8000/api/productsByUser'
+                      per_page: 8
+                      to: 2
+                      total: 2
+      tags:
+        - 'Product Management'
 tags:
   -
     name: 'Authenticating method v1'
     description: "\nAPIs to manage the Authenticating requests\n\nThis endpoint allows you to add a word to the list.\nIt's a really useful endpoint, and you should play around\nwith it for a bit.\n<aside class=\"notice\">We mean it; you really should.😕</aside>"
   -
+    name: 'Cart Management'
+    description: ''
+  -
     name: 'Category Management'
     description: "\nAPIs to manage the categories resource"
-  -
-    name: Endpoints
-    description: ''
   -
     name: 'Product Management'
     description: "\nAPIs to manage the product resource"
