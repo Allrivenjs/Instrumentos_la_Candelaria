@@ -1,15 +1,108 @@
-name: 'Category Management'
+name: 'Product Management'
 description: |-
 
-  APIs to manage the categories resource
+  APIs to manage the product resource
 endpoints:
   -
     httpMethods:
-      - GET
-    uri: api/categories
+      - POST
+    uri: api/products
     metadata:
-      title: 'Display a listing of the resource.'
+      title: 'Store a newly created resource in storage.'
       description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer k6P1f5gehb6caE4dvZ8aV3D'
+      Content-Type: multipart/form-data
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: '🤖 Product name.'
+        required: true
+        example: Glass
+        type: string
+        custom: []
+      description:
+        name: description
+        description: '📝 Product description . Must not be greater than 850 characters.'
+        required: true
+        example: 'Glasses for all people'
+        type: string
+        custom: []
+      price:
+        name: price
+        description: '💵 Product price . Must be at least 1.'
+        required: true
+        example: 33
+        type: integer
+        custom: []
+      weight:
+        name: weight
+        description: '📏 Product weight . Must be at least 1.'
+        required: true
+        example: 2
+        type: integer
+        custom: []
+      stock:
+        name: stock
+        description: '🗃 Product stock . Must be at least 1.'
+        required: true
+        example: 34
+        type: integer
+        custom: []
+      thumbnail:
+        name: thumbnail
+        description: '📷 Thumbnail of the product, it will be shown as an image when selling . Must be an image.'
+        required: true
+        example: null
+        type: file
+        custom: []
+      images:
+        name: images
+        description: '📷 📸 You can upload several images related to the product'
+        required: false
+        example:
+          - null
+        type: 'file[]'
+        custom: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/products/{id}'
+    metadata:
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer bvecd4V66DZPfgaEa3851kh'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the product.'
+        required: true
+        example: 10
+        type: integer
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/products
+    metadata:
+      title: 'Desplay a listing of products'
+      description: 'Gets a list of users'
       authenticated: false
       custom: []
     headers:
@@ -380,40 +473,8 @@ endpoints:
     responseFields: []
   -
     httpMethods:
-      - POST
-    uri: api/categories
-    metadata:
-      title: 'Store a newly created resource in storage.'
-      description: ''
-      authenticated: true
-      custom: []
-    headers:
-      Authorization: 'Bearer 6afvE6d3ha85b41gceZVDkP'
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    queryParameters: []
-    bodyParameters:
-      name:
-        name: name
-        description: '🤖 Category name, unique in the table category.'
-        required: true
-        example: technology
-        type: string
-        custom: []
-      description:
-        name: description
-        description: '📝 Category description .'
-        required: true
-        example: 'State-of-the-art technological products'
-        type: string
-        custom: []
-    responses: []
-    responseFields: []
-  -
-    httpMethods:
       - GET
-    uri: 'api/categories/{id}'
+    uri: 'api/products/{id}'
     metadata:
       title: 'Display the specified resource.'
       description: ''
@@ -425,9 +486,9 @@ endpoints:
     urlParameters:
       id:
         name: id
-        description: 'The ID of the category.'
+        description: 'Defaults to ''id''.'
         required: true
-        example: 19
+        example: 1
         type: integer
         custom: []
     queryParameters: []
@@ -794,81 +855,16 @@ endpoints:
     responseFields: []
   -
     httpMethods:
-      - DELETE
-    uri: 'api/categories/{id}'
-    metadata:
-      title: 'Remove the specified resource from storage.'
-      description: ''
-      authenticated: true
-      custom: []
-    headers:
-      Authorization: 'Bearer PvVhdEegbca1k6384Z6f5aD'
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      id:
-        name: id
-        description: 'The ID of the category.'
-        required: true
-        example: 19
-        type: integer
-        custom: []
-    queryParameters: []
-    bodyParameters: []
-    responses: []
-    responseFields: []
-  -
-    httpMethods:
-      - PUT
-      - PATCH
-    uri: 'api/categories/{id}'
-    metadata:
-      title: 'Update the specified resource in storage.'
-      description: ''
-      authenticated: true
-      custom: []
-    headers:
-      Authorization: 'Bearer aeD58vP66h3aEbd4fZk1cgV'
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      id:
-        name: id
-        description: 'Defaults to ''id''.'
-        required: true
-        example: 1
-        type: integer
-        custom: []
-    queryParameters: []
-    bodyParameters:
-      name:
-        name: name
-        description: '🤖 Category name, unique in the table category.'
-        required: true
-        example: technology
-        type: string
-        custom: []
-      description:
-        name: description
-        description: '📝 Category description .'
-        required: true
-        example: 'State-of-the-art technological products'
-        type: string
-        custom: []
-    responses: []
-    responseFields: []
-  -
-    httpMethods:
       - POST
-    uri: 'api/categories/{id}'
+    uri: 'api/products/{id}'
     metadata:
       title: 'Update the specified resource in storage.'
       description: ''
       authenticated: true
       custom: []
     headers:
-      Authorization: 'Bearer ef8D36ZE6v4g1VPhckaad5b'
-      Content-Type: application/json
+      Authorization: 'Bearer g8e1aEv6cbDhVZ6f43kdaP5'
+      Content-Type: multipart/form-data
       Accept: application/json
     urlParameters:
       id:
@@ -882,17 +878,45 @@ endpoints:
     bodyParameters:
       name:
         name: name
-        description: '🤖 Category name, unique in the table category.'
+        description: '🤖 Product name.'
         required: true
-        example: technology
+        example: Glass
         type: string
         custom: []
       description:
         name: description
-        description: '📝 Category description .'
+        description: '📝 Product description . Must not be greater than 850 characters.'
         required: true
-        example: 'State-of-the-art technological products'
+        example: 'Glasses for all people'
         type: string
+        custom: []
+      price:
+        name: price
+        description: '💵 Product price . Must be at least 1.'
+        required: true
+        example: 33
+        type: integer
+        custom: []
+      weight:
+        name: weight
+        description: '📏 Product weight . Must be at least 1.'
+        required: true
+        example: 2
+        type: integer
+        custom: []
+      stock:
+        name: stock
+        description: '🗃 Product stock . Must be at least 1.'
+        required: true
+        example: 34
+        type: integer
+        custom: []
+      thumbnail:
+        name: thumbnail
+        description: '📷 Thumbnail of the product, it will be shown as an image when selling . Must be an image.'
+        required: true
+        example: null
+        type: file
         custom: []
     responses: []
     responseFields: []
