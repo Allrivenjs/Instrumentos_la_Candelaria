@@ -13,7 +13,7 @@ endpoints:
       authenticated: true
       custom: []
     headers:
-      Authorization: 'Bearer 1aa866chgD5vbZ3fPVek4dE'
+      Authorization: 'Bearer hf3g5kaE61486cbPVdaDeZv'
       Content-Type: multipart/form-data
       Accept: application/json
     urlParameters: []
@@ -81,7 +81,7 @@ endpoints:
       authenticated: true
       custom: []
     headers:
-      Authorization: 'Bearer Z5hc1V6E4vkDP3agfba8ed6'
+      Authorization: 'Bearer a8D6bv1k4gaeZV56EcdfhP3'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -89,7 +89,7 @@ endpoints:
         name: id
         description: 'The ID of the product.'
         required: true
-        example: 18
+        example: 9
         type: integer
         custom: []
     queryParameters: []
@@ -167,7 +167,7 @@ endpoints:
       authenticated: true
       custom: []
     headers:
-      Authorization: 'Bearer 8E6Pcahe6gD54Zvf13dVbka'
+      Authorization: 'Bearer 5D1aEPeVvZ86dbc43fkh6ga'
       Content-Type: multipart/form-data
       Accept: application/json
     urlParameters:
