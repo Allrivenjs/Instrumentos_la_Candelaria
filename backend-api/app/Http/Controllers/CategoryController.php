@@ -70,10 +70,11 @@ class CategoryController extends Controller
      */
     public function update(UpdateCategoryRequest $request, Category $category)
     {
-        return (new DataResource($category->update([
+        $category->update([
             'name'=>$request->name,
             'description'=>$request->description,
-            ])))->response()->setStatusCode(Response::HTTP_OK);
+        ]);
+        return (new DataResource($category))->response()->setStatusCode(Response::HTTP_OK);
     }
 
     /**
