@@ -26,7 +26,7 @@ class ProductResource extends JsonResource
             "updated_at"=> $this->updated_at,
             "user"=> $this->user,
             "image"=> $this->images,
-
+            'categories'=>$this->categories,
         ];
     }
 }

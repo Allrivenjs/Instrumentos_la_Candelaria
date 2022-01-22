@@ -33,13 +33,17 @@ class ProductController extends Controller
      *
      *@unauthenticated
      *
-     * @return \Illuminate\Http\JsonResponse|ResourceCollection|object
+     * @return \Illuminate\Http\JsonResponse|ResourceCollection
      *
      */
     public function index()
     {
-        return (ProductResource::collection(Product::with(['user', 'images'])->paginate(8)))->response()
-        ->setStatusCode(Response::HTTP_OK);
+        return (ProductResource::collection(Product::with(['user', 'images', 'categories'])
+            ->orderByDesc('id')
+            ->paginate(8)))
+            ->response()
+            ->setStatusCode(Response::HTTP_OK)
+            ->getData(true);
     }
 
 
@@ -51,7 +55,6 @@ class ProductController extends Controller
      */
     public function store(ProductRequest $request)
     {
-
         $sku= substr($request->name, 0, 4) . rand(10000, 99999);
         $slug=Str::slug($request->name .'-'. rand());
         $thumbnail='storage/' . Storage::put('product', $request->file('thumbnail'));
@@ -109,7 +112,6 @@ class ProductController extends Controller
      */
     public function update(ProductRequest $request, Product $product)
     {
-
         if ($request->file('thumbnail')){
             Storage::delete(substr($product->thumbnail, 8 , null));
             $thumbnail='storage/' . Storage::put('product', $request->file('thumbnail'));
@@ -117,7 +119,6 @@ class ProductController extends Controller
                 'thumbnail'=>$thumbnail,
             ]);
         }
-
         $product->update([
             'name'=>$request->name,
             'description'=>$request->description,
@@ -138,7 +139,7 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        $product->delete();
+        $product->deleteOrFail();
         return \response()->json()->setStatusCode(Response::HTTP_OK);
     }
 }

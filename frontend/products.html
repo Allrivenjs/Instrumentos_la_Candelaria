@@ -7,7 +7,7 @@
 <meta name="author" content="">
 
 <link rel="icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/facebook/65/guitar_1f3b8.png">
-<link rel="stylesheet" href="./assets/css/styles.css">
+<link rel="stylesheet" href="./dist/styles.css">
 <link rel="stylesheet" href="./assets/css/productos.css">
 <title>Instrumentos La Candelaria</title>
 
@@ -149,7 +149,7 @@
                             </div>
                         </div>
 
-                        <ul class="list__products-ul">
+                        <ul id="products" class="flex flex-wrap justify-center p-2 overflow-hidden">
                             <li>
                                 <a href="javascript:void(0);"> 
                                     <img src="assets/img/instrumentos/strat.jpg"  class="product-img" alt="guitar" />
@@ -224,24 +224,8 @@
 
                         <div class="barra"></div>
 
-                        <div class="list__productos-pages">
-                            <ul class="list__productos-pages-ul">
-                                <li>
-                                    <a href="javascript:void(0);">1</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0);">2</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0);">3</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0);">4</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0);">Siguiente</a>
-                                </li>
-                            </ul>
+                        <div id="pagination">
+                            
                         </div>
 
                     </div>
@@ -262,6 +246,8 @@
             </article>
         </footer>
     </main>
+
+    <script type="module" src="./src/products.js"></script>
 </body>
 
 </html>

@@ -9,7 +9,11 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Passport\HasApiTokens;
+<<<<<<< HEAD
 
+=======
+use Spatie\Permission\Traits\HasRoles;
+>>>>>>> 158d58dcb1c9b45159cfdcf8d5bdc7a28562902e
 
 class User extends Authenticatable
 {
@@ -18,6 +22,7 @@ class User extends Authenticatable
     use HasProfilePhoto;
     use Notifiable;
     use TwoFactorAuthenticatable;
+    use HasRoles;
 
     /**
      * The attributes that are mass assignable.
@@ -59,4 +64,9 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    public function Cart(){
+        return $this->hasMany(Cart::class);
+    }
+
 }

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<link rel="icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/facebook/65/guitar_1f3b8.png">
+<link rel="stylesheet" href="./dist/styles.css">
+<link rel="stylesheet" href="./assets/css/productos.css">
+<link rel="stylesheet" href="./assets/css/shoping_cart.css">
+<title>Instrumentos La Candelaria</title>
+
+
+</head>
+<body>
+	<main class="main">
+        <header class="header">
+            <nav class="nav">
+                <div class="nav__items">
+                    <img src="./assets/img/logo.png" class="logo" />
+                    <ul class="nav__btns">
+                        <li><a href="./index.html">Inicio</a></li>
+                        <li><a href="./products.html#guitarras">Guitarras</a></li>
+                        <li><a href="./products.html">Percusión</a></li> 
+                        <li><a href="./products.html">Bajos</a></li>
+                        <li><a href="./products.html">Ukuleles</a></li>
+                        <li><a href="./products.html">Teclados</a></li>
+                        <li><a href="./products.html">Efectos</a></li>
+                    </ul>
+                </div>
+                <div class="nav__options">
+                    <ul class="options__buttons">
+                        <li>
+                            <img src="./assets/icons/trolley.svg">
+                            <a href="./shoping_cart.html">Carro</a>
+                        </li>
+                        <li>
+                            <img src="./assets/icons/location.svg">
+                            <a href="javascript:void(0);">Ubicación</a>
+                        </li>
+                        <li>
+                            <img src="./assets/icons/info.svg">
+                            <a href="javascript:void(0);">Info</a>
+                        </li> 
+                        <li>
+                            <img src="./assets/icons/login.svg">
+                            <a href="javascript:void(0);">Login</a>
+                        </li> 
+                    </ul>  
+                    <div class="options__search">
+                        <input class="search__bar" type="search">
+                       <a href="javascript:void(0);"><img class="search__icon" src="./assets/icons/search.svg"></a>
+                    </div>
+                </div>
+            </nav>
+            <nav class="nav-mobile">
+                <div class="nav-mobile-btns">
+                    <img src="./assets/img/logo.png" class="logo-mobile" />
+                    <div class="menu-deployer">
+                        <img src="./assets/icons/menu-icon.svg" class="nav-mobile-menu-icon">
+                        <div class="nav-mobile__items">
+                            <ul class="nav-mobile__btns">
+                                <li class="nav-mobile__inicio"><a href="./index.html">Inicio</a></li>
+                                <li class="nav-mobile__subtitle">Categorias</li>
+                                <ul class="nav-mobile__categories">
+                                    <li><a href="./product.html">Guitarras</a></li>
+                                    <li><a href="javascript:void(0);">Percusión</a></li> 
+                                    <li><a href="javascript:void(0);">Bajos</a></li> 
+                                    <li><a href="javascript:void(0);">Ukuleles</a></li> 
+                                    <li><a href="javascript:void(0);">Teclados</a></li>
+                                    <li><a href="javascript:void(0);">Efectos</a></li>
+                                </ul>
+                                <li class="nav-mobile__subtitle">Optiones</li>
+                                <ul class="nav-mobile__categories">
+                                    <li>
+                                        <img src="./assets/icons/trolley.svg">
+                                        <a href="./shoping_cart.html">Carro</a>
+                                    </li>
+                                    <li>
+                                        <img src="./assets/icons/location.svg">
+                                        <a href="javascript:void(0);">Ubicación</a>
+                                    </li>
+                                    <li>
+                                        <img src="./assets/icons/info.svg">
+                                        <a href="javascript:void(0);">Info</a>
+                                    </li> 
+                                    <li>
+                                        <img src="./assets/icons/login.svg">
+                                        <a href="javascript:void(0);">Login</a>
+                                    </li> 
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        
+        <article class="flex flex-col items-center gap-8 pt-32 pb-32">
+            
+            <section class="flex w-3/4 gap-8">
+                <div class="w-1/2 p-4 bg-white border rounded-sm border-slate-200">
+                    <img id="product-img" class="object-contain w-full rounded-sm h-80" src="https://cdn.shopify.com/s/files/1/0512/9116/0767/products/1ae418bc-6754-41da-b17b-0d4a62ee981d_1_700x.jpg?v=1605562725" alt="" />
+                </div>
+                <div class="w-1/2 p-6 bg-white border rounded-sm border-slate-200">
+                    <h2 id="product-name" class="text-3xl font-bold">Nombre del producto</h2>
+                    <div class="flex mt-3 mb-3">
+                        <p id="product-brand" class="mr-2 text-sm text-red-600">MARCA</p>
+                        <div class="mr-2 bg-slate-200" style="width: 1px; height: 20px;"></div>
+                        <p id="product-sku" class="text-sm">SKU: 123123123</p>
+                    </div>
+                    <hr/>
+                    <div class="mt-4">
+                        <p class="mb-2 text-sm">Precio:</p>
+                        <p id="product-price" class="text-2xl text-red-600">$ 123123123</p>
+                    </div>
+                    <div class="mt-4">
+                        <p class="mb-2 text-sm">Cantidad:</p>
+                        <div class="product__info-item products__controls-mobile">
+                            <div class="quantity-controller"><img class="controllers-icons" src="./assets/icons/minus.svg" alt="minus"/></div>
+                            <div class="quantity-view">1</div>
+                            <div class="quantity-controller plus"><img class="controllers-icons" src="./assets/icons/plus.svg" alt="plus"/></div>
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <button class="px-4 py-2 mr-4 font-light text-white transition-all bg-red-600 border border-red-600 hover:bg-red-500">Añadir al carrito</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="flex w-3/4 gap-8">
+                <div class="w-1/2 p-4 bg-white border rounded-sm border-slate-200">
+                    <h2 id="product-name" class="mb-2 text-3xl font-bold">Detalles</h2>
+                    <hr class="mb-4"/>
+                    <p id="product-description" class="mb-4 text-md">Descripción</p>
+                    <p id="product-weight" class="mb-4 text-sm">Peso: peso</p>
+                    <p id="product-stock" class="mb-4 text-sm">Stock: peso</p>
+                </div>
+                <div class="w-1/2">
+                    
+                </div>
+            </section>
+        </article>
+
+        <footer class="footer">
+            <article class="footer__article" >
+               
+                <p class="footer__credits">
+                    Todos los derechos reservados ©️RuizCompany
+                </p>
+               
+                <p class="footer__data">
+                    🎸 Instrumentos la Candelaria
+                </p>
+            </article>
+        </footer>
+    </main>
+    <script type="module" src="./src/product.js"></script>
+</body>
+
+</html>
