@@ -197,9 +197,6 @@ export const getStates = async (id, token) => {
 };
 
 export const updateAddress = async (id, token, body) => {
-
-    console.log(body);
-
     const res = await fetch(`${API_URL}/address/${id}`, { method: 'PUT', 
         headers: {...headers, "Authorization": `Bearer ${token}` },
         body: JSON.stringify(body)
@@ -235,6 +232,24 @@ export const storeAddress = async (token, body) => {
 export const deleteAddress = async (id, token) => {
     const res = await fetch(`${API_URL}/address/${id}`, { method: 'DELETE', 
         headers: {...headers, "Authorization": `Bearer ${token}` },
+    });
+    if(res.status == 200) {
+        const data = await res.json();
+        return data.data;
+    } else {
+        const data = await res.json();
+        console.log(data);
+        return false;
+    }
+};
+
+
+// CART
+
+export const addToCart = async (token, body) => {
+    const res = await fetch(`${API_URL}/cart`, { method: 'POST', 
+        headers: {...headers, "Authorization": `Bearer ${token}` },
+        body: JSON.stringify(body)
     });
     if(res.status == 200) {
         const data = await res.json();

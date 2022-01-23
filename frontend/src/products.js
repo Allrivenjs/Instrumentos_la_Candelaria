@@ -1,8 +1,10 @@
-import { getProducts } from "./admin/services.js";
-import { API_URL } from "./utils/config.js";
+import { getCategories, getProducts } from "./admin/services.js";
+import { API_URL, STORAGE_URL } from "./admin/config/config.js";
 
 
 const domProducts = document.getElementById('products');
+const domCategories = document.getElementById('products-categories');
+
 const domPagination = document.getElementById('pagination');
 
 const removePagination = () => {
@@ -26,7 +28,21 @@ const addPagination = (links) => {
     domPagination.appendChild(paginationBtn);
 };
 
-const showProductsInDOM = async (url = "http://127.0.0.1:8000/api/products?page=1") => {
+const showCategoriesInDOM = async () => {
+    const { data } = await getCategories();
+    
+    domCategories.innerHTML = '';
+
+    data.map((element, i) => {
+        const li = document.createElement('li');
+        li.innerHTML = `
+            <a href="javascript:void(0);">${element.name}</a><hr/>
+        `;
+        domCategories.appendChild(li)
+    });
+};
+
+const showProductsInDOM = async (url = `${API_URL}/products?page=1`) => {
     const { data, links, meta } = await getProducts(url);
 
     removePagination();
@@ -39,7 +55,7 @@ const showProductsInDOM = async (url = "http://127.0.0.1:8000/api/products?page=
 
         li.innerHTML = `
             <a class="h-full w-full" href=${`/product#${element.id}`}> 
-                <img src=${`${API_URL}/${element.thumbnail}`}  class="product-img p-3 w-full h-2/3 object-contain" alt=${element.name} />
+                <img src=${`${STORAGE_URL}/${element.thumbnail}`}  class="product-img p-3 w-full h-2/3 object-contain" alt=${element.name} />
                 <div class="w-full h-1/3 flex flex-col justify-around p-4">
                     <h4 class="text-xl">${element.name}</h4>
                     <p class="text-lg">COP$ ${element.price}</p>
@@ -63,5 +79,9 @@ const showProductsInDOM = async (url = "http://127.0.0.1:8000/api/products?page=
     addPagination(meta.links);
 };
 
+const showElementsInDOM = () => {
+    showCategoriesInDOM();
+    showProductsInDOM();
+};
 
-(() => { showProductsInDOM() })();
+(() => { showElementsInDOM() })();
