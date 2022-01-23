@@ -14,7 +14,6 @@ const addPagination = (links) => {
     paginationBtn.classList = 'flex';
     
     links.map((element, i) => {
-        console.log(element);
         const button = document.createElement('button');
         button.classList = 'px-3 py-2 border border-slate-300 hover:bg-slate-300';
 
