@@ -1,5 +1,18 @@
 {
   "devDependencies": {
     "tailwindcss": "^3.0.15"
-  }
+  },
+  "dependencies": {
+    "serve": "^13.0.2"
+  },
+  "name": "frontend",
+  "version": "1.0.0",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "start": "serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
