@@ -1,8 +1,8 @@
-import { auth } from "./auth.js";
+import { adminAuth } from "./auth.js";
 import { showCategoriesInDOM } from "./categories.js";
 import { showProductsInDOM } from "./products.js";
 
-const token = auth();
+const token = adminAuth();
 
 const changePageWithCurrentHash = () => {
     const hash = window.location.hash.slice(1);

@@ -1,4 +1,4 @@
-import { login } from "../admin/src/services.js";
+import { login } from "./admin/services.js";
 
 const token = window.sessionStorage.getItem('userToken');
 if(token) window.location.href = '/index';

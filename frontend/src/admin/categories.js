@@ -1,8 +1,8 @@
-import { auth } from "./auth.js";
+import { adminAuth } from "./auth.js";
 import { API_URL } from "./config/config.js";
 import { deteleCategory, getCategories } from "./services.js";
 
-const token = auth();
+const token = adminAuth();
 
 const domCategories = document.getElementById('categories-list');
 

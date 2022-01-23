@@ -1,9 +1,9 @@
-import { auth } from "./auth.js";
+import { adminAuth } from "./auth.js";
 import { getProduct, updateProduct } from "./services.js";
 
 const id = window.location.hash.slice(1);
 
-const token = auth();
+const token = adminAuth();
 
 const domProductName = document.getElementById('product-name');
 const domProductPrice = document.getElementById('product-price');

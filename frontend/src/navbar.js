@@ -1,10 +1,10 @@
-import { isAuth } from "./admin/auth.js";
+import { isUserAuth } from "./admin/auth.js";
 
 const loginBtn = document.getElementById('login-btn');
 const loginBtnMobile = document.getElementById('login-btn-mobile');
 
 const insertLoginBtn = () => {
-    if(!isAuth()) {
+    if(!isUserAuth()) {
         loginBtn.innerHTML = `
             <img src="./assets/icons/login.svg">
             <a href="./login">Login</a>

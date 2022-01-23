@@ -1,8 +1,8 @@
-import { auth } from "./auth.js";
+import { userAuth } from "./auth.js";
 import { API_URL, STORAGE_URL } from "./config/config.js";
 import { deteleProduct, getProducts } from "./services.js";
 
-const token = auth();
+const token = userAuth();
 
 const domProducts = document.getElementById('products-list');
 
