@@ -18,7 +18,7 @@ const domAñadirAlCarrito = document.getElementById('add-to-cart-btn');
 
 const product = {
     product_id: hash,
-    quantity: 0,
+    quantity: 1,
 }
 
 const domProductCounter = document.getElementById('product-counter');
@@ -27,14 +27,14 @@ const domProductMinus = document.getElementById('product-minus');
 
 domProductPlus.addEventListener('click', (e) => {
     product.quantity++;
-    if(product.quantity < 0) product.quantity = 0;
+    if(product.quantity < 1) product.quantity = 1;
     domProductCounter.textContent = product.quantity;
 });
 
 
 domProductMinus.addEventListener('click', (e) => {
     product.quantity--;
-    if(product.quantity < 0) product.quantity = 0;
+    if(product.quantity < 1) product.quantity = 1;
     domProductCounter.textContent = product.quantity;
 });
 

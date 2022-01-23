@@ -137,6 +137,7 @@
 .product__img {
     width: 50%;
     object-fit: cover;
+    margin-right: 12px;
 }
 
 .product__info-item {
@@ -146,6 +147,8 @@
 }
 
 .remove-btn {
+    background-color: none;
+    border: none;
     color: red;
     text-decoration: none;
     font-weight: 500;

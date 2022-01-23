@@ -260,3 +260,31 @@ export const addToCart = async (token, body) => {
         return false;
     }
 };
+
+export const getCartData = async (token) => {
+    const res = await fetch(`${API_URL}/cart`, { method: 'GET', 
+        headers: {...headers, "Authorization": `Bearer ${token}` },
+    });
+    if(res.status == 200) {
+        const data = await res.json();
+        return data.data;
+    } else {
+        const data = await res.json();
+        console.log(data);
+        return false;
+    }
+};
+
+export const deleteCartItem = async (id, token) => {
+    const res = await fetch(`${API_URL}/cart/${id}`, { method: 'DELETE', 
+        headers: {...headers, "Authorization": `Bearer ${token}` },
+    });
+    if(res.status == 200) {
+        const data = await res.json();
+        return data.data;
+    } else {
+        const data = await res.json();
+        console.log(data);
+        return false;
+    }
+};
