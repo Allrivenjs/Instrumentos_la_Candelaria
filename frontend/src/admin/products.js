@@ -102,12 +102,12 @@ export const showProductsInDOM = async (url = `${API_URL}/products`) => {
 
         const showBtn = document.createElement('a');
         showBtn.textContent = 'Ver';
-        showBtn.href = `/product#${element.id}`;
+        showBtn.href = `/adminProduct#${element.id}`;
         showBtn.classList = 'text-green-600 hover:text-green-900';
 
         const editBtn = document.createElement('a');
         editBtn.textContent = 'Editar';
-        editBtn.href = `/editProduct#${element.id}`;
+        editBtn.href = `/adminEditProduct#${element.id}`;
         editBtn.classList = 'text-indigo-600 hover:text-indigo-900 ml-3';
 
         const deleteBtn = document.createElement('button');

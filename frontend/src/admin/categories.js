@@ -84,7 +84,7 @@ export const showCategoriesInDOM = async (url = `${API_URL}/categories`) => {
 
         const editBtn = document.createElement('a');
         editBtn.textContent = 'Editar';
-        editBtn.href = `/editCategory#${element.id}`;
+        editBtn.href = `/adminEditCategory#${element.id}`;
         editBtn.classList = 'text-indigo-600 hover:text-indigo-900 ml-3';
 
         const deleteBtn = document.createElement('button');

@@ -32,8 +32,6 @@ const setProductData = async () => {
 
     domProductThumbnail.appendChild(thumbnail);
 
-    console.log(data);
-
     data.image.map((element, i) => {
         const image =  document.createElement('img');
 

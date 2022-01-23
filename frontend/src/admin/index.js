@@ -1,7 +1,7 @@
 import { login } from "./services.js";
 
-const token = window.sessionStorage.getItem('userToken');
-if(token) window.location.href = '/panel';
+const token = window.sessionStorage.getItem('adminToken');
+if(token) window.location.href = '/adminPanel';
 
 const domUser = document.getElementById('user');
 const domPassword = document.getElementById('password');
@@ -27,7 +27,8 @@ domForm.addEventListener('submit', (e) => {
 });
 
 const sendLogin = async () => {
+    
     const token = await login(user);
-    window.sessionStorage.setItem('userToken', token)
-    window.location.href = '/panel'
+    window.sessionStorage.setItem('adminToken', token)
+    window.location.href = '/adminPanel'
 };
