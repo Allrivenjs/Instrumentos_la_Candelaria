@@ -8,6 +8,7 @@ use App\Http\Resources\DataResource;
 use App\Models\Cart;
 use App\Models\Product;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 

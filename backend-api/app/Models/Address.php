@@ -5,15 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Cart extends Model
+class Address extends Model
 {
     use HasFactory;
-    protected $fillable = ['product_id', 'cartable_id','cartable_type',  'quantity'];
+    protected $fillable = ['address','zipcode','reference','city','countries_id','states_id','user_id'];
 
-
-
-
-    public function User(){
+    public function user(){
         return $this->belongsTo(User::class);
     }
 
