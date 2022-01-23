@@ -1,4 +1,4 @@
-import { login } from "../admin/src/services.js";
+import { register } from "../admin/src/services.js";
 
 const token = window.sessionStorage.getItem('userToken');
 if(token) window.location.href = '/index';
@@ -34,6 +34,15 @@ domForm.addEventListener('submit', (e) => {
 
 const sendLogin = async () => {
     const token = await register(user);
-    window.sessionStorage.setItem('userToken', token)
-    window.location.href = '/index'
+
+    if(token) {
+        window.sessionStorage.setItem('userToken', token)
+        window.location.href = '/index'
+    } else {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Algo ha salido mal! Intentalo de nuevo',
+        });
+    };
 };

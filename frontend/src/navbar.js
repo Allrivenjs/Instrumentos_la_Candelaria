@@ -4,7 +4,6 @@ const loginBtn = document.getElementById('login-btn');
 const loginBtnMobile = document.getElementById('login-btn-mobile');
 
 const insertLoginBtn = () => {
-    console.log(isAuth());
     if(!isAuth()) {
         loginBtn.innerHTML = `
             <img src="./assets/icons/login.svg">

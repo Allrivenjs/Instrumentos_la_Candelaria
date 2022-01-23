@@ -9,17 +9,29 @@ const headers2 = {
     "Accept": "application/json",
 };
 
+
 // AUTH
 export const login = async (user) => {
     const res = await fetch(`${API_URL}/auth/login`, { method: 'POST', headers, body: JSON.stringify(user) });
-    const data = await res.json();
-    return data.access_token;
+    if(res.status === 200) {
+        const data = await res.json();
+        return data.access_token;
+    } else {
+        const data = await res.json();
+        return false;
+    };
 };
 
 export const register = async (user) => {
     const res = await fetch(`${API_URL}/auth/register`, { method: 'POST', headers, body: JSON.stringify(user) });
-    const data = await res.json();
-    return data.access_token;
+    if(res.status === 200) {
+        const data = await res.json();
+        console.log(data);
+        return data.access_token;
+    } else {
+        const data = await res.json();
+        return false;
+    };
 };
 
 // PRODUCTS

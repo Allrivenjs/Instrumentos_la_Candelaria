@@ -28,6 +28,17 @@ domForm.addEventListener('submit', (e) => {
 
 const sendLogin = async () => {
     const token = await login(user);
-    window.sessionStorage.setItem('userToken', token)
-    window.location.href = '/index'
+
+    console.log(token);
+
+    if(token) {
+        window.sessionStorage.setItem('userToken', token)
+        window.location.href = '/index'
+    } else {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Algo ha salido mal! Intentalo de nuevo',
+        });
+    }
 };
