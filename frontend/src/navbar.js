@@ -1,4 +1,4 @@
-import { isAuth } from "../admin/src/auth.js";
+import { isAuth } from "./admin/auth.js";
 
 const loginBtn = document.getElementById('login-btn');
 const loginBtnMobile = document.getElementById('login-btn-mobile');

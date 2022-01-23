@@ -1,4 +1,4 @@
-import { getProducts  } from "./services.js";
+import { getProducts } from "./admin/services.js";
 import { API_URL } from "./utils/config.js";
 
 
