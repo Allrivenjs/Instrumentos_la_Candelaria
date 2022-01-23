@@ -32,7 +32,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        return (new DataResource(Category::paginate(8)))->response()->setStatusCode(Response::HTTP_OK)->getData(true);
+        return (new DataResource(Category::orderByDesc('id')->paginate(8)
+        ))->response()->setStatusCode(Response::HTTP_OK)->getData(true);
     }
 
     /**
