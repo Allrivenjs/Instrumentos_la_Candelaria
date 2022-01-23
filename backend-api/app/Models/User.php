@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use Gloudemans\Shoppingcart\Contracts\InstanceIdentifier;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -12,7 +11,8 @@ use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Passport\HasApiTokens;
 use Spatie\Permission\Traits\HasRoles;
 
-class User extends Authenticatable implements InstanceIdentifier
+
+class User extends Authenticatable
 {
     use HasApiTokens;
     use HasFactory;
@@ -62,23 +62,8 @@ class User extends Authenticatable implements InstanceIdentifier
         'profile_photo_url',
     ];
 
-    /**
-     * Get the unique identifier to load the Cart from
-     *
-     * @return int|string
-     */
-    public function getInstanceIdentifier($options = null)
-    {
-        return $this->email;
+    public function Cart(){
+        return $this->hasMany(Cart::class);
     }
 
-    /**
-     * Get the unique identifier to load the Cart from
-     *
-     * @return int|string
-     */
-    public function getInstanceGlobalDiscount($options = null)
-    {
-        return $this->discountRate ?: 0;
-    }
 }

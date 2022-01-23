@@ -6,6 +6,7 @@ use App\Http\Requests\StoreCategoryRequest;
 use App\Http\Requests\UpdateCategoryRequest;
 use App\Http\Resources\DataResource;
 use App\Models\Category;
+use Illuminate\Http\Resources\Json\ResourceCollection;
 use Symfony\Component\HttpFoundation\Response;
 
 
@@ -27,11 +28,12 @@ class CategoryController extends Controller
     /**
      * Display a listing of the resource.
      *@unauthenticated
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\JsonResponse|ResourceCollection
      */
-    public function index(): \Illuminate\Http\Response
+    public function index()
     {
-        return response(new DataResource(Category::all()))->setStatusCode(Response::HTTP_OK);
+        return (new DataResource(Category::orderByDesc('id')->paginate(8)
+        ))->response()->setStatusCode(Response::HTTP_OK)->getData(true);
     }
 
     /**
@@ -69,21 +71,22 @@ class CategoryController extends Controller
      */
     public function update(UpdateCategoryRequest $request, Category $category)
     {
-        return (new DataResource($category->update([
+        $category->update([
             'name'=>$request->name,
             'description'=>$request->description,
-            ])))->response()->setStatusCode(Response::HTTP_OK);
+        ]);
+        return (new DataResource($category))->response()->setStatusCode(Response::HTTP_OK);
     }
 
     /**
      * Remove the specified resource from storage.
      *
      * @param  \App\Models\Category  $category
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\JsonResponse|object
      */
     public function destroy(Category $category)
     {
         $category->delete();
-        return \response()->setStatusCode(Response::HTTP_OK);
+        return \response()->json()->setStatusCode(Response::HTTP_OK);
     }
 }

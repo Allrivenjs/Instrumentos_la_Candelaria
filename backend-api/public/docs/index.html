@@ -92,6 +92,22 @@
                                                     </ul>
                             </ul>
                     <ul id="tocify-header-3" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="cart-management">
+                    <a href="#cart-management">Cart Management</a>
+                </li>
+                                    <ul id="tocify-subheader-cart-management" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="cart-management-GETapi-cart">
+                        <a href="#cart-management-GETapi-cart">GET api/cart</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="cart-management-POSTapi-cart">
+                        <a href="#cart-management-POSTapi-cart">Store Cart and update.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="cart-management-DELETEapi-cart--id-">
+                        <a href="#cart-management-DELETEapi-cart--id-">Remove product from cart</a>
+                    </li>
+                                                    </ul>
+                            </ul>
+                    <ul id="tocify-header-4" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="category-management">
                     <a href="#category-management">Category Management</a>
                 </li>
@@ -113,16 +129,13 @@
                     </li>
                                                     </ul>
                             </ul>
-                    <ul id="tocify-header-4" class="tocify-header">
+                    <ul id="tocify-header-5" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="product-management">
                     <a href="#product-management">Product Management</a>
                 </li>
                                     <ul id="tocify-subheader-product-management" class="tocify-subheader">
                                                     <li class="tocify-item level-2" data-unique="product-management-POSTapi-products">
                         <a href="#product-management-POSTapi-products">Store a newly created resource in storage.</a>
-                    </li>
-                                    <li class="tocify-item level-2" data-unique="product-management-PUTapi-products--id-">
-                        <a href="#product-management-PUTapi-products--id-">Update the specified resource in storage.</a>
                     </li>
                                     <li class="tocify-item level-2" data-unique="product-management-DELETEapi-products--id-">
                         <a href="#product-management-DELETEapi-products--id-">Remove the specified resource from storage.</a>
@@ -132,6 +145,12 @@
                     </li>
                                     <li class="tocify-item level-2" data-unique="product-management-GETapi-products--id-">
                         <a href="#product-management-GETapi-products--id-">Display the specified resource.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="product-management-POSTapi-products--id-">
+                        <a href="#product-management-POSTapi-products--id-">Update the specified resource in storage.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="product-management-GETapi-productsByUser">
+                        <a href="#product-management-GETapi-productsByUser">Desplay a listing of products by user</a>
                     </li>
                                                     </ul>
                             </ul>
@@ -145,7 +164,7 @@
                             <li><a href="http://github.com/knuckleswtf/scribe">Documentation powered by Scribe ✍</a></li>
                     </ul>
         <ul class="toc-footer" id="last-updated">
-        <li>Last updated: January 21 2022</li>
+        <li>Last updated: January 22 2022</li>
     </ul>
 </div>
 
@@ -163,7 +182,7 @@ This api is written in PHP-laravel, and it is based on the structure of a basic 
 <pre><code class="language-yaml">http://jaime.registrodocumental.com/Instrumentos_la_Candelaria/backend-api/public</code></pre>
 
         <h1 id="authenticating-requests">Authenticating requests</h1>
-<p>Authenticate requests to this API's endpoints by sending an <strong><code>Authorization</code></strong> header with the value <strong><code>"Bearer your-token"</code></strong>.</p>
+<p>This API is authenticated by sending an <strong><code>Authorization</code></strong> header with the value <strong><code>"Bearer your-token"</code></strong>.</p>
 <p>All authenticated endpoints are marked with a <code>requires authentication</code> badge in the documentation below.</p>
 <p>You can retrieve your token by visiting your dashboard and clicking <b>Generate API token</b>.</p>
 
@@ -545,7 +564,7 @@ response.json()</code></pre></div>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
     "http://localhost:8000/api/auth/logout" \
-    --header "Authorization: Bearer PfDga8E4ahcd616V3kv5beZ" \
+    --header "Authorization: Bearer D63fck8EVe6gdhv15b4PZaa" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -556,7 +575,7 @@ response.json()</code></pre></div>
 );
 
 const headers = {
-    "Authorization": "Bearer PfDga8E4ahcd616V3kv5beZ",
+    "Authorization": "Bearer D63fck8EVe6gdhv15b4PZaa",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -572,7 +591,7 @@ fetch(url, {
 require 'rest-client'
 
     headers = {
-            "Authorization": "Bearer PfDga8E4ahcd616V3kv5beZ",
+            "Authorization": "Bearer D63fck8EVe6gdhv15b4PZaa",
             "Content-Type": "application/json",
             "Accept": "application/json",
         }
@@ -592,7 +611,7 @@ $response = $client-&gt;post(
     'http://localhost:8000/api/auth/logout',
     [
         'headers' =&gt; [
-            'Authorization' =&gt; 'Bearer PfDga8E4ahcd616V3kv5beZ',
+            'Authorization' =&gt; 'Bearer D63fck8EVe6gdhv15b4PZaa',
             'Content-Type' =&gt; 'application/json',
             'Accept' =&gt; 'application/json',
         ],
@@ -608,7 +627,7 @@ import json
 
 url = 'http://localhost:8000/api/auth/logout'
 headers = {
-  'Authorization': 'Bearer PfDga8E4ahcd616V3kv5beZ',
+  'Authorization': 'Bearer D63fck8EVe6gdhv15b4PZaa',
   'Content-Type': 'application/json',
   'Accept': 'application/json'
 }
@@ -635,7 +654,7 @@ response.json()</code></pre></div>
       data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
-      data-headers='{"Authorization":"Bearer PfDga8E4ahcd616V3kv5beZ","Content-Type":"application\/json","Accept":"application\/json"}'
+      data-headers='{"Authorization":"Bearer D63fck8EVe6gdhv15b4PZaa","Content-Type":"application\/json","Accept":"application\/json"}'
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('POSTapi-auth-logout', this);">
     <h3>
@@ -668,6 +687,551 @@ response.json()</code></pre></div>
                                                                 data-component="header"></label>
         </p>
                 </form>
+
+        <h1 id="cart-management">Cart Management</h1>
+
+    
+
+            <h2 id="cart-management-GETapi-cart">GET api/cart</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-GETapi-cart">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/cart" \
+    --header "Authorization: Bearer a8D4bk656VfcehgZda3vPE1" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/cart"
+);
+
+const headers = {
+    "Authorization": "Bearer a8D4bk656VfcehgZda3vPE1",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="ruby-example">
+    <pre><code class="language-ruby">
+require 'rest-client'
+
+    headers = {
+            "Authorization": "Bearer a8D4bk656VfcehgZda3vPE1",
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+        }
+
+response = RestClient.get(
+'http://localhost:8000/api/cart',
+headers
+)
+
+p response.body
+</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/cart',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer a8D4bk656VfcehgZda3vPE1',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/cart'
+headers = {
+  'Authorization': 'Bearer a8D4bk656VfcehgZda3vPE1',
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-cart">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 56
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 10,
+            &quot;quantity&quot;: &quot;9&quot;,
+            &quot;product_id&quot;: 4,
+            &quot;user_id&quot;: 1,
+            &quot;created_at&quot;: &quot;2022-01-22T02:36:21.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-01-22T02:36:21.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 11,
+            &quot;quantity&quot;: &quot;7&quot;,
+            &quot;product_id&quot;: 4,
+            &quot;user_id&quot;: 1,
+            &quot;created_at&quot;: &quot;2022-01-22T02:36:21.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-01-22T02:36:21.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 12,
+            &quot;quantity&quot;: &quot;4&quot;,
+            &quot;product_id&quot;: 4,
+            &quot;user_id&quot;: 1,
+            &quot;created_at&quot;: &quot;2022-01-22T02:36:21.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-01-22T02:36:21.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 31,
+            &quot;quantity&quot;: &quot;8&quot;,
+            &quot;product_id&quot;: 1,
+            &quot;user_id&quot;: 1,
+            &quot;created_at&quot;: &quot;2022-01-22T04:13:49.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-01-22T04:14:32.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 32,
+            &quot;quantity&quot;: &quot;9&quot;,
+            &quot;product_id&quot;: 3,
+            &quot;user_id&quot;: 1,
+            &quot;created_at&quot;: &quot;2022-01-22T04:15:12.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-01-22T04:22:13.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 33,
+            &quot;quantity&quot;: &quot;132&quot;,
+            &quot;product_id&quot;: 2,
+            &quot;user_id&quot;: 1,
+            &quot;created_at&quot;: &quot;2022-01-22T04:22:34.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-01-22T06:53:20.000000Z&quot;
+        }
+    ]
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-cart" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-cart"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-cart"></code></pre>
+</span>
+<span id="execution-error-GETapi-cart" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-cart"></code></pre>
+</span>
+<form id="form-GETapi-cart" data-method="GET"
+      data-path="api/cart"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer a8D4bk656VfcehgZda3vPE1","Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-cart', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-cart"
+                    onclick="tryItOut('GETapi-cart');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-cart"
+                    onclick="cancelTryOut('GETapi-cart');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-cart" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/cart</code></b>
+        </p>
+                <p>
+            <label id="auth-GETapi-cart" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="GETapi-cart"
+                                                                data-component="header"></label>
+        </p>
+                </form>
+
+            <h2 id="cart-management-POSTapi-cart">Store Cart and update.</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+<aside>This endpoint works to create and update a user's product.</aside>
+
+<span id="example-requests-POSTapi-cart">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost:8000/api/cart" \
+    --header "Authorization: Bearer e5vg3EZfVaDb8cha1k664dP" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"product_id\": 1,
+    \"quantity\": 1
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/cart"
+);
+
+const headers = {
+    "Authorization": "Bearer e5vg3EZfVaDb8cha1k664dP",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "product_id": 1,
+    "quantity": 1
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="ruby-example">
+    <pre><code class="language-ruby">
+require 'rest-client'
+
+    body = {
+    "product_id": 1,
+    "quantity": 1
+}
+    headers = {
+            "Authorization": "Bearer e5vg3EZfVaDb8cha1k664dP",
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+        }
+
+response = RestClient.post(
+'http://localhost:8000/api/cart',
+body ,
+headers
+)
+
+p response.body
+</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;post(
+    'http://localhost:8000/api/cart',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer e5vg3EZfVaDb8cha1k664dP',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+        'json' =&gt; [
+            'product_id' =&gt; 1,
+            'quantity' =&gt; 1,
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/cart'
+payload = {
+    "product_id": 1,
+    "quantity": 1
+}
+headers = {
+  'Authorization': 'Bearer e5vg3EZfVaDb8cha1k664dP',
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('POST', url, headers=headers, json=payload)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-cart">
+</span>
+<span id="execution-results-POSTapi-cart" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-cart"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-cart"></code></pre>
+</span>
+<span id="execution-error-POSTapi-cart" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-cart"></code></pre>
+</span>
+<form id="form-POSTapi-cart" data-method="POST"
+      data-path="api/cart"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer e5vg3EZfVaDb8cha1k664dP","Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-cart', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-cart"
+                    onclick="tryItOut('POSTapi-cart');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-cart"
+                    onclick="cancelTryOut('POSTapi-cart');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-cart" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/cart</code></b>
+        </p>
+                <p>
+            <label id="auth-POSTapi-cart" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="POSTapi-cart"
+                                                                data-component="header"></label>
+        </p>
+                        <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>product_id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="product_id"
+               data-endpoint="POSTapi-cart"
+               value="1"
+               data-component="body" hidden>
+    <br>
+<p>Product id</p>
+        </p>
+                <p>
+            <b><code>quantity</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="quantity"
+               data-endpoint="POSTapi-cart"
+               value="1"
+               data-component="body" hidden>
+    <br>
+<p>Product quantity, min 1</p>
+        </p>
+        </form>
+
+            <h2 id="cart-management-DELETEapi-cart--id-">Remove product from cart</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-DELETEapi-cart--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request DELETE \
+    "http://localhost:8000/api/cart/5" \
+    --header "Authorization: Bearer EV143eahad6kcPbvf5ZgD86" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/cart/5"
+);
+
+const headers = {
+    "Authorization": "Bearer EV143eahad6kcPbvf5ZgD86",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "DELETE",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="ruby-example">
+    <pre><code class="language-ruby">
+require 'rest-client'
+
+    headers = {
+            "Authorization": "Bearer EV143eahad6kcPbvf5ZgD86",
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+        }
+
+response = RestClient.delete(
+'http://localhost:8000/api/cart/5',
+headers
+)
+
+p response.body
+</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;delete(
+    'http://localhost:8000/api/cart/5',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer EV143eahad6kcPbvf5ZgD86',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/cart/5'
+headers = {
+  'Authorization': 'Bearer EV143eahad6kcPbvf5ZgD86',
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('DELETE', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-DELETEapi-cart--id-">
+</span>
+<span id="execution-results-DELETEapi-cart--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-DELETEapi-cart--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-DELETEapi-cart--id-"></code></pre>
+</span>
+<span id="execution-error-DELETEapi-cart--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-DELETEapi-cart--id-"></code></pre>
+</span>
+<form id="form-DELETEapi-cart--id-" data-method="DELETE"
+      data-path="api/cart/{id}"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer EV143eahad6kcPbvf5ZgD86","Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('DELETEapi-cart--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-DELETEapi-cart--id-"
+                    onclick="tryItOut('DELETEapi-cart--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-DELETEapi-cart--id-"
+                    onclick="cancelTryOut('DELETEapi-cart--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-DELETEapi-cart--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-red">DELETE</small>
+            <b><code>api/cart/{id}</code></b>
+        </p>
+                <p>
+            <label id="auth-DELETEapi-cart--id-" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="DELETEapi-cart--id-"
+                                                                data-component="header"></label>
+        </p>
+                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="DELETEapi-cart--id-"
+               value="5"
+               data-component="url" hidden>
+    <br>
+<p>The ID of the cart.</p>
+            </p>
+                    </form>
 
         <h1 id="category-management">Category Management</h1>
 
@@ -766,7 +1330,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 57
+x-ratelimit-remaining: 58
 access-control-allow-origin: *
  </code></pre>
         </details>         <pre>
@@ -774,17 +1338,73 @@ access-control-allow-origin: *
 <code class="language-json">[
     {
         &quot;id&quot;: 1,
-        &quot;name&quot;: &quot;admin&quot;,
-        &quot;description&quot;: &quot;admin&quot;,
-        &quot;created_at&quot;: &quot;2022-01-21T01:40:14.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-01-21T01:40:14.000000Z&quot;
+        &quot;name&quot;: &quot;Christop Sawayn&quot;,
+        &quot;description&quot;: &quot;Et ea praesentium vitae quia et.&quot;,
+        &quot;created_at&quot;: &quot;2022-01-22T02:36:07.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-01-22T02:36:07.000000Z&quot;
     },
     {
         &quot;id&quot;: 2,
-        &quot;name&quot;: &quot;admin&quot;,
-        &quot;description&quot;: &quot;admin&quot;,
-        &quot;created_at&quot;: &quot;2022-01-21T01:49:06.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-01-21T01:49:06.000000Z&quot;
+        &quot;name&quot;: &quot;Chaim Casper&quot;,
+        &quot;description&quot;: &quot;Ut suscipit natus sit.&quot;,
+        &quot;created_at&quot;: &quot;2022-01-22T02:36:08.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-01-22T02:36:08.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 3,
+        &quot;name&quot;: &quot;Dr. Mose Kiehn PhD&quot;,
+        &quot;description&quot;: &quot;Et est accusantium ab aut.&quot;,
+        &quot;created_at&quot;: &quot;2022-01-22T02:36:08.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-01-22T02:36:08.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 4,
+        &quot;name&quot;: &quot;Ed White&quot;,
+        &quot;description&quot;: &quot;Iure omnis inventore ab qui quos.&quot;,
+        &quot;created_at&quot;: &quot;2022-01-22T02:36:08.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-01-22T02:36:08.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 5,
+        &quot;name&quot;: &quot;Myles Dickens&quot;,
+        &quot;description&quot;: &quot;Est facilis ut voluptatem eius et ab.&quot;,
+        &quot;created_at&quot;: &quot;2022-01-22T02:36:08.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-01-22T02:36:08.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 6,
+        &quot;name&quot;: &quot;Ms. Bridgette Ratke&quot;,
+        &quot;description&quot;: &quot;Autem aut quis non qui.&quot;,
+        &quot;created_at&quot;: &quot;2022-01-22T02:36:08.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-01-22T02:36:08.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 7,
+        &quot;name&quot;: &quot;Prof. Charles Kerluke&quot;,
+        &quot;description&quot;: &quot;Animi assumenda nam et.&quot;,
+        &quot;created_at&quot;: &quot;2022-01-22T02:36:08.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-01-22T02:36:08.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 8,
+        &quot;name&quot;: &quot;Dr. Shawna Carroll IV&quot;,
+        &quot;description&quot;: &quot;Non porro maxime dolorum nisi.&quot;,
+        &quot;created_at&quot;: &quot;2022-01-22T02:36:08.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-01-22T02:36:08.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 9,
+        &quot;name&quot;: &quot;Ms. Neha Herzog V&quot;,
+        &quot;description&quot;: &quot;Laudantium quia molestiae sit quo.&quot;,
+        &quot;created_at&quot;: &quot;2022-01-22T02:36:09.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-01-22T02:36:09.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 10,
+        &quot;name&quot;: &quot;Vidal Watsica&quot;,
+        &quot;description&quot;: &quot;Magnam libero suscipit qui molestiae.&quot;,
+        &quot;created_at&quot;: &quot;2022-01-22T02:36:09.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-01-22T02:36:09.000000Z&quot;
     }
 ]</code>
  </pre>
@@ -845,7 +1465,7 @@ access-control-allow-origin: *
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
     "http://localhost:8000/api/categories" \
-    --header "Authorization: Bearer 85Zka346PEDcdavegVb16hf" \
+    --header "Authorization: Bearer vZhdkcg566b4afPa31DeVE8" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -861,7 +1481,7 @@ access-control-allow-origin: *
 );
 
 const headers = {
-    "Authorization": "Bearer 85Zka346PEDcdavegVb16hf",
+    "Authorization": "Bearer vZhdkcg566b4afPa31DeVE8",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -887,7 +1507,7 @@ require 'rest-client'
     "description": "State-of-the-art technological products"
 }
     headers = {
-            "Authorization": "Bearer 85Zka346PEDcdavegVb16hf",
+            "Authorization": "Bearer vZhdkcg566b4afPa31DeVE8",
             "Content-Type": "application/json",
             "Accept": "application/json",
         }
@@ -908,7 +1528,7 @@ $response = $client-&gt;post(
     'http://localhost:8000/api/categories',
     [
         'headers' =&gt; [
-            'Authorization' =&gt; 'Bearer 85Zka346PEDcdavegVb16hf',
+            'Authorization' =&gt; 'Bearer vZhdkcg566b4afPa31DeVE8',
             'Content-Type' =&gt; 'application/json',
             'Accept' =&gt; 'application/json',
         ],
@@ -932,7 +1552,7 @@ payload = {
     "description": "State-of-the-art technological products"
 }
 headers = {
-  'Authorization': 'Bearer 85Zka346PEDcdavegVb16hf',
+  'Authorization': 'Bearer vZhdkcg566b4afPa31DeVE8',
   'Content-Type': 'application/json',
   'Accept': 'application/json'
 }
@@ -959,7 +1579,7 @@ response.json()</code></pre></div>
       data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
-      data-headers='{"Authorization":"Bearer 85Zka346PEDcdavegVb16hf","Content-Type":"application\/json","Accept":"application\/json"}'
+      data-headers='{"Authorization":"Bearer vZhdkcg566b4afPa31DeVE8","Content-Type":"application\/json","Accept":"application\/json"}'
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('POSTapi-categories', this);">
     <h3>
@@ -1027,14 +1647,14 @@ response.json()</code></pre></div>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/categories/20" \
+    --get "http://localhost:8000/api/categories/5" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/categories/20"
+    "http://localhost:8000/api/categories/5"
 );
 
 const headers = {
@@ -1058,7 +1678,7 @@ require 'rest-client'
         }
 
 response = RestClient.get(
-'http://localhost:8000/api/categories/20',
+'http://localhost:8000/api/categories/5',
 headers
 )
 
@@ -1069,7 +1689,7 @@ p response.body
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/categories/20',
+    'http://localhost:8000/api/categories/5',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -1085,7 +1705,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/categories/20'
+url = 'http://localhost:8000/api/categories/5'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -1107,7 +1727,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 56
+x-ratelimit-remaining: 57
 access-control-allow-origin: *
  </code></pre>
         </details>         <pre>
@@ -1115,10 +1735,10 @@ access-control-allow-origin: *
 <code class="language-json">{
     &quot;data&quot;: {
         &quot;id&quot;: 1,
-        &quot;name&quot;: &quot;admin&quot;,
-        &quot;description&quot;: &quot;admin&quot;,
-        &quot;created_at&quot;: &quot;2022-01-21T01:40:14.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-01-21T01:40:14.000000Z&quot;
+        &quot;name&quot;: &quot;Christop Sawayn&quot;,
+        &quot;description&quot;: &quot;Et ea praesentium vitae quia et.&quot;,
+        &quot;created_at&quot;: &quot;2022-01-22T02:36:07.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-01-22T02:36:07.000000Z&quot;
     }
 }</code>
  </pre>
@@ -1168,7 +1788,7 @@ access-control-allow-origin: *
                 <input type="number"
                name="id"
                data-endpoint="GETapi-categories--id-"
-               value="20"
+               value="5"
                data-component="url" hidden>
     <br>
 <p>The ID of the category.</p>
@@ -1189,19 +1809,19 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/categories/14" \
-    --header "Authorization: Bearer 68c6fgk1PahVdv3EZa45bDe" \
+    "http://localhost:8000/api/categories/13" \
+    --header "Authorization: Bearer v6cPgZ4eVa5bd1kE8ah3fD6" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/categories/14"
+    "http://localhost:8000/api/categories/13"
 );
 
 const headers = {
-    "Authorization": "Bearer 68c6fgk1PahVdv3EZa45bDe",
+    "Authorization": "Bearer v6cPgZ4eVa5bd1kE8ah3fD6",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -1217,13 +1837,13 @@ fetch(url, {
 require 'rest-client'
 
     headers = {
-            "Authorization": "Bearer 68c6fgk1PahVdv3EZa45bDe",
+            "Authorization": "Bearer v6cPgZ4eVa5bd1kE8ah3fD6",
             "Content-Type": "application/json",
             "Accept": "application/json",
         }
 
 response = RestClient.delete(
-'http://localhost:8000/api/categories/14',
+'http://localhost:8000/api/categories/13',
 headers
 )
 
@@ -1234,10 +1854,10 @@ p response.body
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;delete(
-    'http://localhost:8000/api/categories/14',
+    'http://localhost:8000/api/categories/13',
     [
         'headers' =&gt; [
-            'Authorization' =&gt; 'Bearer 68c6fgk1PahVdv3EZa45bDe',
+            'Authorization' =&gt; 'Bearer v6cPgZ4eVa5bd1kE8ah3fD6',
             'Content-Type' =&gt; 'application/json',
             'Accept' =&gt; 'application/json',
         ],
@@ -1251,9 +1871,9 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/categories/14'
+url = 'http://localhost:8000/api/categories/13'
 headers = {
-  'Authorization': 'Bearer 68c6fgk1PahVdv3EZa45bDe',
+  'Authorization': 'Bearer v6cPgZ4eVa5bd1kE8ah3fD6',
   'Content-Type': 'application/json',
   'Accept': 'application/json'
 }
@@ -1280,7 +1900,7 @@ response.json()</code></pre></div>
       data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
-      data-headers='{"Authorization":"Bearer 68c6fgk1PahVdv3EZa45bDe","Content-Type":"application\/json","Accept":"application\/json"}'
+      data-headers='{"Authorization":"Bearer v6cPgZ4eVa5bd1kE8ah3fD6","Content-Type":"application\/json","Accept":"application\/json"}'
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('DELETEapi-categories--id-', this);">
     <h3>
@@ -1318,7 +1938,7 @@ response.json()</code></pre></div>
                 <input type="number"
                name="id"
                data-endpoint="DELETEapi-categories--id-"
-               value="14"
+               value="13"
                data-component="url" hidden>
     <br>
 <p>The ID of the category.</p>
@@ -1340,7 +1960,7 @@ response.json()</code></pre></div>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
     "http://localhost:8000/api/categories/1" \
-    --header "Authorization: Bearer ZabckP668dafveg13EDh5V4" \
+    --header "Authorization: Bearer ZvDdea48EPf31k656aVbghc" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -1356,7 +1976,7 @@ response.json()</code></pre></div>
 );
 
 const headers = {
-    "Authorization": "Bearer ZabckP668dafveg13EDh5V4",
+    "Authorization": "Bearer ZvDdea48EPf31k656aVbghc",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -1382,7 +2002,7 @@ require 'rest-client'
     "description": "State-of-the-art technological products"
 }
     headers = {
-            "Authorization": "Bearer ZabckP668dafveg13EDh5V4",
+            "Authorization": "Bearer ZvDdea48EPf31k656aVbghc",
             "Content-Type": "application/json",
             "Accept": "application/json",
         }
@@ -1403,7 +2023,7 @@ $response = $client-&gt;put(
     'http://localhost:8000/api/categories/1',
     [
         'headers' =&gt; [
-            'Authorization' =&gt; 'Bearer ZabckP668dafveg13EDh5V4',
+            'Authorization' =&gt; 'Bearer ZvDdea48EPf31k656aVbghc',
             'Content-Type' =&gt; 'application/json',
             'Accept' =&gt; 'application/json',
         ],
@@ -1427,7 +2047,7 @@ payload = {
     "description": "State-of-the-art technological products"
 }
 headers = {
-  'Authorization': 'Bearer ZabckP668dafveg13EDh5V4',
+  'Authorization': 'Bearer ZvDdea48EPf31k656aVbghc',
   'Content-Type': 'application/json',
   'Accept': 'application/json'
 }
@@ -1454,7 +2074,7 @@ response.json()</code></pre></div>
       data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
-      data-headers='{"Authorization":"Bearer ZabckP668dafveg13EDh5V4","Content-Type":"application\/json","Accept":"application\/json"}'
+      data-headers='{"Authorization":"Bearer ZvDdea48EPf31k656aVbghc","Content-Type":"application\/json","Accept":"application\/json"}'
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('PUTapi-categories--id-', this);">
     <h3>
@@ -1543,7 +2163,7 @@ response.json()</code></pre></div>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
     "http://localhost:8000/api/products" \
-    --header "Authorization: Bearer Z66De3PfVaEcghdv4851kba" \
+    --header "Authorization: Bearer Eab356P8Z1v6cea4hkfDgdV" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
     --form "name=Glass" \
@@ -1551,8 +2171,8 @@ response.json()</code></pre></div>
     --form "price=33" \
     --form "weight=2" \
     --form "stock=34" \
-    --form "thumbnail=@/tmp/phpsd7krN" \
-    --form "images[]=@/tmp/phpjgJwBP" </code></pre></div>
+    --form "thumbnail=@/tmp/php38CuFh" \
+    --form "images[]=@/tmp/php82CI1g" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -1561,7 +2181,7 @@ response.json()</code></pre></div>
 );
 
 const headers = {
-    "Authorization": "Bearer Z66De3PfVaEcghdv4851kba",
+    "Authorization": "Bearer Eab356P8Z1v6cea4hkfDgdV",
     "Content-Type": "multipart/form-data",
     "Accept": "application/json",
 };
@@ -1594,7 +2214,7 @@ require 'rest-client'
     "stock": 34
 }
     headers = {
-            "Authorization": "Bearer Z66De3PfVaEcghdv4851kba",
+            "Authorization": "Bearer Eab356P8Z1v6cea4hkfDgdV",
             "Content-Type": "multipart/form-data",
             "Accept": "application/json",
         }
@@ -1615,7 +2235,7 @@ $response = $client-&gt;post(
     'http://localhost:8000/api/products',
     [
         'headers' =&gt; [
-            'Authorization' =&gt; 'Bearer Z66De3PfVaEcghdv4851kba',
+            'Authorization' =&gt; 'Bearer Eab356P8Z1v6cea4hkfDgdV',
             'Content-Type' =&gt; 'multipart/form-data',
             'Accept' =&gt; 'application/json',
         ],
@@ -1642,11 +2262,11 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'thumbnail',
-                'contents' =&gt; fopen('/tmp/phpsd7krN', 'r')
+                'contents' =&gt; fopen('/tmp/php38CuFh', 'r')
             ],
             [
                 'name' =&gt; 'images[]',
-                'contents' =&gt; fopen('/tmp/phpjgJwBP', 'r')
+                'contents' =&gt; fopen('/tmp/php82CI1g', 'r')
             ],
         ],
     ]
@@ -1661,8 +2281,8 @@ import json
 
 url = 'http://localhost:8000/api/products'
 files = {
-  'thumbnail': open('/tmp/phpsd7krN', 'rb'),
-  'images[]': open('/tmp/phpjgJwBP', 'rb')
+  'thumbnail': open('/tmp/php38CuFh', 'rb'),
+  'images[]': open('/tmp/php82CI1g', 'rb')
 }
 payload = {
     "name": "Glass",
@@ -1672,7 +2292,7 @@ payload = {
     "stock": 34
 }
 headers = {
-  'Authorization': 'Bearer Z66De3PfVaEcghdv4851kba',
+  'Authorization': 'Bearer Eab356P8Z1v6cea4hkfDgdV',
   'Content-Type': 'multipart/form-data',
   'Accept': 'application/json'
 }
@@ -1699,7 +2319,7 @@ response.json()</code></pre></div>
       data-authed="1"
       data-hasfiles="1"
       data-isarraybody="0"
-      data-headers='{"Authorization":"Bearer Z66De3PfVaEcghdv4851kba","Content-Type":"multipart\/form-data","Accept":"application\/json"}'
+      data-headers='{"Authorization":"Bearer Eab356P8Z1v6cea4hkfDgdV","Content-Type":"multipart\/form-data","Accept":"application\/json"}'
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('POSTapi-products', this);">
     <h3>
@@ -1807,280 +2427,6 @@ response.json()</code></pre></div>
         </p>
         </form>
 
-            <h2 id="product-management-PUTapi-products--id-">Update the specified resource in storage.</h2>
-
-<p>
-<small class="badge badge-darkred">requires authentication</small>
-</p>
-
-
-
-<span id="example-requests-PUTapi-products--id-">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/products/1" \
-    --header "Authorization: Bearer PacgaVvE86531e46kDhbdfZ" \
-    --header "Content-Type: multipart/form-data" \
-    --header "Accept: application/json" \
-    --form "name=Glass" \
-    --form "description=Glasses for all people" \
-    --form "price=33" \
-    --form "weight=2" \
-    --form "stock=34" \
-    --form "thumbnail=@/tmp/phpMcA1WN" </code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/products/1"
-);
-
-const headers = {
-    "Authorization": "Bearer PacgaVvE86531e46kDhbdfZ",
-    "Content-Type": "multipart/form-data",
-    "Accept": "application/json",
-};
-
-const body = new FormData();
-body.append('name', 'Glass');
-body.append('description', 'Glasses for all people');
-body.append('price', '33');
-body.append('weight', '2');
-body.append('stock', '34');
-body.append('thumbnail', document.querySelector('input[name="thumbnail"]').files[0]);
-
-fetch(url, {
-    method: "PUT",
-    headers,
-    body,
-}).then(response =&gt; response.json());</code></pre></div>
-
-
-<div class="ruby-example">
-    <pre><code class="language-ruby">
-require 'rest-client'
-
-    body = {
-    "name": "Glass",
-    "description": "Glasses for all people",
-    "price": 33,
-    "weight": 2,
-    "stock": 34
-}
-    headers = {
-            "Authorization": "Bearer PacgaVvE86531e46kDhbdfZ",
-            "Content-Type": "multipart/form-data",
-            "Accept": "application/json",
-        }
-
-response = RestClient.put(
-'http://localhost:8000/api/products/1',
-body ,
-headers
-)
-
-p response.body
-</code></pre></div>
-
-
-<div class="php-example">
-    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$response = $client-&gt;put(
-    'http://localhost:8000/api/products/1',
-    [
-        'headers' =&gt; [
-            'Authorization' =&gt; 'Bearer PacgaVvE86531e46kDhbdfZ',
-            'Content-Type' =&gt; 'multipart/form-data',
-            'Accept' =&gt; 'application/json',
-        ],
-        'multipart' =&gt; [
-            [
-                'name' =&gt; 'name',
-                'contents' =&gt; 'Glass'
-            ],
-            [
-                'name' =&gt; 'description',
-                'contents' =&gt; 'Glasses for all people'
-            ],
-            [
-                'name' =&gt; 'price',
-                'contents' =&gt; '33'
-            ],
-            [
-                'name' =&gt; 'weight',
-                'contents' =&gt; '2'
-            ],
-            [
-                'name' =&gt; 'stock',
-                'contents' =&gt; '34'
-            ],
-            [
-                'name' =&gt; 'thumbnail',
-                'contents' =&gt; fopen('/tmp/phpMcA1WN', 'r')
-            ],
-        ],
-    ]
-);
-$body = $response-&gt;getBody();
-print_r(json_decode((string) $body));</code></pre></div>
-
-
-<div class="python-example">
-    <pre><code class="language-python">import requests
-import json
-
-url = 'http://localhost:8000/api/products/1'
-files = {
-  'thumbnail': open('/tmp/phpMcA1WN', 'rb')
-}
-payload = {
-    "name": "Glass",
-    "description": "Glasses for all people",
-    "price": 33,
-    "weight": 2,
-    "stock": 34
-}
-headers = {
-  'Authorization': 'Bearer PacgaVvE86531e46kDhbdfZ',
-  'Content-Type': 'multipart/form-data',
-  'Accept': 'application/json'
-}
-
-response = requests.request('PUT', url, headers=headers, files=files, data=payload)
-response.json()</code></pre></div>
-
-</span>
-
-<span id="example-responses-PUTapi-products--id-">
-</span>
-<span id="execution-results-PUTapi-products--id-" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-PUTapi-products--id-"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-PUTapi-products--id-"></code></pre>
-</span>
-<span id="execution-error-PUTapi-products--id-" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-PUTapi-products--id-"></code></pre>
-</span>
-<form id="form-PUTapi-products--id-" data-method="PUT"
-      data-path="api/products/{id}"
-      data-authed="1"
-      data-hasfiles="1"
-      data-isarraybody="0"
-      data-headers='{"Authorization":"Bearer PacgaVvE86531e46kDhbdfZ","Content-Type":"multipart\/form-data","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('PUTapi-products--id-', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-PUTapi-products--id-"
-                    onclick="tryItOut('PUTapi-products--id-');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-PUTapi-products--id-"
-                    onclick="cancelTryOut('PUTapi-products--id-');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-PUTapi-products--id-" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-darkblue">PUT</small>
-            <b><code>api/products/{id}</code></b>
-        </p>
-            <p>
-            <small class="badge badge-purple">PATCH</small>
-            <b><code>api/products/{id}</code></b>
-        </p>
-                <p>
-            <label id="auth-PUTapi-products--id-" hidden>Authorization header:
-                <b><code>Bearer </code></b><input type="text"
-                                                                name="Authorization"
-                                                                data-prefix="Bearer "
-                                                                data-endpoint="PUTapi-products--id-"
-                                                                data-component="header"></label>
-        </p>
-                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
-                    <p>
-                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
-                <input type="number"
-               name="id"
-               data-endpoint="PUTapi-products--id-"
-               value="1"
-               data-component="url" hidden>
-    <br>
-<p>Defaults to 'id'.</p>
-            </p>
-                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
-        <p>
-            <b><code>name</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-                <input type="text"
-               name="name"
-               data-endpoint="PUTapi-products--id-"
-               value="Glass"
-               data-component="body" hidden>
-    <br>
-<p>🤖 Product name.</p>
-        </p>
-                <p>
-            <b><code>description</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-                <input type="text"
-               name="description"
-               data-endpoint="PUTapi-products--id-"
-               value="Glasses for all people"
-               data-component="body" hidden>
-    <br>
-<p>📝 Product description . Must not be greater than 850 characters.</p>
-        </p>
-                <p>
-            <b><code>price</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
-                <input type="number"
-               name="price"
-               data-endpoint="PUTapi-products--id-"
-               value="33"
-               data-component="body" hidden>
-    <br>
-<p>💵 Product price . Must be at least 1.</p>
-        </p>
-                <p>
-            <b><code>weight</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
-                <input type="number"
-               name="weight"
-               data-endpoint="PUTapi-products--id-"
-               value="2"
-               data-component="body" hidden>
-    <br>
-<p>📏 Product weight . Must be at least 1.</p>
-        </p>
-                <p>
-            <b><code>stock</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
-                <input type="number"
-               name="stock"
-               data-endpoint="PUTapi-products--id-"
-               value="34"
-               data-component="body" hidden>
-    <br>
-<p>🗃 Product stock . Must be at least 1.</p>
-        </p>
-                <p>
-            <b><code>thumbnail</code></b>&nbsp;&nbsp;<small>file</small>  &nbsp;
-                <input type="file"
-               name="thumbnail"
-               data-endpoint="PUTapi-products--id-"
-               value=""
-               data-component="body" hidden>
-    <br>
-<p>📷 Thumbnail of the product, it will be shown as an image when selling . Must be an image.</p>
-        </p>
-        </form>
-
             <h2 id="product-management-DELETEapi-products--id-">Remove the specified resource from storage.</h2>
 
 <p>
@@ -2095,19 +2441,19 @@ response.json()</code></pre></div>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/products/14" \
-    --header "Authorization: Bearer va354kbgd1acZhfe68DE6PV" \
+    "http://localhost:8000/api/products/2" \
+    --header "Authorization: Bearer vPage56hc48E61fdaDVZ3kb" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/products/14"
+    "http://localhost:8000/api/products/2"
 );
 
 const headers = {
-    "Authorization": "Bearer va354kbgd1acZhfe68DE6PV",
+    "Authorization": "Bearer vPage56hc48E61fdaDVZ3kb",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -2123,13 +2469,13 @@ fetch(url, {
 require 'rest-client'
 
     headers = {
-            "Authorization": "Bearer va354kbgd1acZhfe68DE6PV",
+            "Authorization": "Bearer vPage56hc48E61fdaDVZ3kb",
             "Content-Type": "application/json",
             "Accept": "application/json",
         }
 
 response = RestClient.delete(
-'http://localhost:8000/api/products/14',
+'http://localhost:8000/api/products/2',
 headers
 )
 
@@ -2140,10 +2486,10 @@ p response.body
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;delete(
-    'http://localhost:8000/api/products/14',
+    'http://localhost:8000/api/products/2',
     [
         'headers' =&gt; [
-            'Authorization' =&gt; 'Bearer va354kbgd1acZhfe68DE6PV',
+            'Authorization' =&gt; 'Bearer vPage56hc48E61fdaDVZ3kb',
             'Content-Type' =&gt; 'application/json',
             'Accept' =&gt; 'application/json',
         ],
@@ -2157,9 +2503,9 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/products/14'
+url = 'http://localhost:8000/api/products/2'
 headers = {
-  'Authorization': 'Bearer va354kbgd1acZhfe68DE6PV',
+  'Authorization': 'Bearer vPage56hc48E61fdaDVZ3kb',
   'Content-Type': 'application/json',
   'Accept': 'application/json'
 }
@@ -2186,7 +2532,7 @@ response.json()</code></pre></div>
       data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
-      data-headers='{"Authorization":"Bearer va354kbgd1acZhfe68DE6PV","Content-Type":"application\/json","Accept":"application\/json"}'
+      data-headers='{"Authorization":"Bearer vPage56hc48E61fdaDVZ3kb","Content-Type":"application\/json","Accept":"application\/json"}'
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('DELETEapi-products--id-', this);">
     <h3>
@@ -2224,7 +2570,7 @@ response.json()</code></pre></div>
                 <input type="number"
                name="id"
                data-endpoint="DELETEapi-products--id-"
-               value="14"
+               value="2"
                data-component="url" hidden>
     <br>
 <p>The ID of the product.</p>
@@ -2332,346 +2678,525 @@ access-control-allow-origin: *
 <code class="language-json">{
     &quot;data&quot;: [
         {
-            &quot;id&quot;: 1,
-            &quot;sku&quot;: &quot;9799108954919&quot;,
-            &quot;name&quot;: &quot;Freda Bernhard&quot;,
-            &quot;price&quot;: 406211,
-            &quot;weight&quot;: 2,
-            &quot;description&quot;: &quot;Dolores harum et quae ad unde quidem. Tenetur earum dolore aut molestiae. Eum cupiditate aut illo nisi nam repellat perferendis. Laborum amet quam quis officiis facilis ut. Dolore numquam laborum illum mollitia qui. Rerum earum atque expedita doloremque ex non. Ducimus rerum modi aspernatur eos. Dolorum ut sit ex accusamus quia distinctio explicabo. Fuga et aperiam saepe rem. Deserunt iste perferendis laboriosam quia autem.&quot;,
-            &quot;thumbnail&quot;: &quot;storage/product/89604b536ad260a754655e12cd900e8d.png&quot;,
-            &quot;stock&quot;: 83,
-            &quot;slug&quot;: &quot;freda-bernhard&quot;,
-            &quot;user_id&quot;: 4,
-            &quot;created_at&quot;: &quot;2022-01-20T20:15:24.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-01-20T20:15:24.000000Z&quot;,
+            &quot;id&quot;: 11,
+            &quot;sku&quot;: &quot;Glas54708&quot;,
+            &quot;name&quot;: &quot;sdadas&quot;,
+            &quot;price&quot;: 12312,
+            &quot;weight&quot;: 12321,
+            &quot;description&quot;: &quot;sadasdas&quot;,
+            &quot;thumbnail&quot;: &quot;storage/product/fXAEQ5eeadb67XQcpj0xz4sf3yjSjHUHk7XhdoWn.jpg&quot;,
+            &quot;stock&quot;: 2131,
+            &quot;slug&quot;: &quot;glass-1011330623&quot;,
+            &quot;user_id&quot;: 11,
+            &quot;created_at&quot;: &quot;2022-01-22T04:18:36.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-01-22T06:34:11.000000Z&quot;,
             &quot;user&quot;: {
-                &quot;id&quot;: 4,
-                &quot;name&quot;: &quot;Frederique Stamm&quot;,
-                &quot;email&quot;: &quot;ohara.ted@example.net&quot;,
-                &quot;email_verified_at&quot;: &quot;2022-01-20T20:15:18.000000Z&quot;,
-                &quot;created_at&quot;: &quot;2022-01-20T20:15:19.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-01-20T20:15:19.000000Z&quot;,
-                &quot;profile_photo_url&quot;: &quot;https://ui-avatars.com/api/?name=F+S&amp;color=7F9CF5&amp;background=EBF4FF&quot;
+                &quot;id&quot;: 11,
+                &quot;name&quot;: &quot;Novella Mills&quot;,
+                &quot;email&quot;: &quot;yasmeen53@example.org&quot;,
+                &quot;email_verified_at&quot;: &quot;2022-01-22T02:35:59.000000Z&quot;,
+                &quot;current_team_id&quot;: null,
+                &quot;profile_photo_path&quot;: null,
+                &quot;created_at&quot;: &quot;2022-01-22T02:36:01.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-01-22T02:36:01.000000Z&quot;,
+                &quot;profile_photo_url&quot;: &quot;https://ui-avatars.com/api/?name=N+M&amp;color=7F9CF5&amp;background=EBF4FF&quot;
             },
             &quot;image&quot;: [
                 {
-                    &quot;id&quot;: 1,
-                    &quot;url&quot;: &quot;storage/product/38c15634477d1aa31fe5109020901819.png&quot;,
-                    &quot;created_at&quot;: &quot;2022-01-20T20:15:26.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-01-20T20:15:26.000000Z&quot;
+                    &quot;id&quot;: 31,
+                    &quot;url&quot;: &quot;storage/product/od779LFrRQnGIqlJUJacXCWyr1hp73HOCQbtJYct.jpg&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T04:18:37.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T04:18:37.000000Z&quot;
                 },
                 {
-                    &quot;id&quot;: 2,
-                    &quot;url&quot;: &quot;storage/product/c60b4dcdf7b3b397e2a262bd4066b7b3.png&quot;,
-                    &quot;created_at&quot;: &quot;2022-01-20T20:15:26.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-01-20T20:15:26.000000Z&quot;
-                },
-                {
-                    &quot;id&quot;: 3,
-                    &quot;url&quot;: &quot;storage/product/fd19d75c23ca400c6752b0201e3f336e.png&quot;,
-                    &quot;created_at&quot;: &quot;2022-01-20T20:15:26.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-01-20T20:15:26.000000Z&quot;
+                    &quot;id&quot;: 32,
+                    &quot;url&quot;: &quot;storage/product/52JE1iVXzkQL5GxY4FqznkGi3RnohdNf2KkuJihT.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T04:18:37.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T04:18:37.000000Z&quot;
                 }
-            ]
+            ],
+            &quot;categories&quot;: []
         },
         {
-            &quot;id&quot;: 2,
-            &quot;sku&quot;: &quot;9794506963853&quot;,
-            &quot;name&quot;: &quot;Wayne Gulgowski&quot;,
-            &quot;price&quot;: 345440,
-            &quot;weight&quot;: 1,
-            &quot;description&quot;: &quot;Nostrum voluptatem quis ad totam aliquam corrupti quia qui. Sit alias dolorem numquam quidem nihil sint minima. Voluptates necessitatibus atque qui molestiae. Cum enim nesciunt eum quia accusantium fugiat. Porro voluptas perspiciatis sapiente dolores rem. Nihil ipsa ipsum corporis consequatur dolorem pariatur. Est corporis aut et nihil sequi id porro quo. Aliquid aut sit aperiam omnis deleniti aspernatur harum corporis. Quisquam nemo nihil aut voluptates aut facere amet.&quot;,
-            &quot;thumbnail&quot;: &quot;storage/product/8b1163a8764d05080e06f49a2f44234f.png&quot;,
-            &quot;stock&quot;: 46,
-            &quot;slug&quot;: &quot;wayne-gulgowski&quot;,
-            &quot;user_id&quot;: 6,
-            &quot;created_at&quot;: &quot;2022-01-20T20:15:24.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-01-20T20:15:24.000000Z&quot;,
+            &quot;id&quot;: 10,
+            &quot;sku&quot;: &quot;9793003385564&quot;,
+            &quot;name&quot;: &quot;Celine Carter II&quot;,
+            &quot;price&quot;: 894598,
+            &quot;weight&quot;: 3,
+            &quot;description&quot;: &quot;Laboriosam laudantium suscipit commodi dignissimos. Dicta est voluptatum animi ipsum est. Blanditiis soluta neque ipsa sint itaque est voluptatem. Quisquam perspiciatis dicta deserunt tempore aut. Labore quia fugit nisi doloremque aspernatur est neque. Autem fuga minus impedit sed delectus dolor tempora minima. Expedita labore repellendus perspiciatis cumque est et.&quot;,
+            &quot;thumbnail&quot;: &quot;storage/product/659e6dbcbe42c9b97f27109d8278b17a.png&quot;,
+            &quot;stock&quot;: 96,
+            &quot;slug&quot;: &quot;celine-carter-ii&quot;,
+            &quot;user_id&quot;: 10,
+            &quot;created_at&quot;: &quot;2022-01-22T02:36:14.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-01-22T02:36:14.000000Z&quot;,
             &quot;user&quot;: {
-                &quot;id&quot;: 6,
-                &quot;name&quot;: &quot;Reta DuBuque&quot;,
-                &quot;email&quot;: &quot;enola58@example.com&quot;,
-                &quot;email_verified_at&quot;: &quot;2022-01-20T20:15:18.000000Z&quot;,
-                &quot;created_at&quot;: &quot;2022-01-20T20:15:19.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-01-20T20:15:19.000000Z&quot;,
-                &quot;profile_photo_url&quot;: &quot;https://ui-avatars.com/api/?name=R+D&amp;color=7F9CF5&amp;background=EBF4FF&quot;
+                &quot;id&quot;: 10,
+                &quot;name&quot;: &quot;Phyllis Kling&quot;,
+                &quot;email&quot;: &quot;hermiston.isabel@example.org&quot;,
+                &quot;email_verified_at&quot;: &quot;2022-01-22T02:35:59.000000Z&quot;,
+                &quot;current_team_id&quot;: null,
+                &quot;profile_photo_path&quot;: null,
+                &quot;created_at&quot;: &quot;2022-01-22T02:36:01.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-01-22T02:36:01.000000Z&quot;,
+                &quot;profile_photo_url&quot;: &quot;https://ui-avatars.com/api/?name=P+K&amp;color=7F9CF5&amp;background=EBF4FF&quot;
             },
             &quot;image&quot;: [
+                {
+                    &quot;id&quot;: 28,
+                    &quot;url&quot;: &quot;storage/product/b6a0dd8506815fe46295d06483b45a2c.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T02:36:32.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T02:36:32.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 29,
+                    &quot;url&quot;: &quot;storage/product/763f9c39b7064c8ee87163845d21d529.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T02:36:32.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T02:36:32.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 30,
+                    &quot;url&quot;: &quot;storage/product/95fae5063326ed4815c1f132ea0c81bf.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T02:36:32.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T02:36:32.000000Z&quot;
+                }
+            ],
+            &quot;categories&quot;: [
                 {
                     &quot;id&quot;: 4,
-                    &quot;url&quot;: &quot;storage/product/9c78002a2be5b3fa598ea219eb7f6fd6.png&quot;,
-                    &quot;created_at&quot;: &quot;2022-01-20T20:15:27.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-01-20T20:15:27.000000Z&quot;
-                },
-                {
-                    &quot;id&quot;: 5,
-                    &quot;url&quot;: &quot;storage/product/da4d6ceb46400c8dda7331f209de3b97.png&quot;,
-                    &quot;created_at&quot;: &quot;2022-01-20T20:15:27.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-01-20T20:15:27.000000Z&quot;
-                },
-                {
-                    &quot;id&quot;: 6,
-                    &quot;url&quot;: &quot;storage/product/c33e145a59450cfec88ed48f9613a052.png&quot;,
-                    &quot;created_at&quot;: &quot;2022-01-20T20:15:27.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-01-20T20:15:27.000000Z&quot;
-                }
-            ]
-        },
-        {
-            &quot;id&quot;: 3,
-            &quot;sku&quot;: &quot;9780182512034&quot;,
-            &quot;name&quot;: &quot;Arely Nolan&quot;,
-            &quot;price&quot;: 948740,
-            &quot;weight&quot;: 0,
-            &quot;description&quot;: &quot;Consequatur praesentium omnis nulla eaque. Voluptate et et aliquid incidunt quia blanditiis. Architecto fugiat ipsum eius dolor dolore ullam. Vel qui eligendi quis nulla. Ut cupiditate ut quos quam iste. Et ipsam saepe qui nam sed ad ab. Quia qui magni nesciunt et magni consequatur reprehenderit beatae. Veritatis enim neque doloribus. Fugiat eos magnam sit voluptas nihil dolores alias. Qui qui dolor porro dolores iure. Aut velit atque ut quia.&quot;,
-            &quot;thumbnail&quot;: &quot;storage/product/2a77b14c9fbc9ddb7890a247e615d76d.png&quot;,
-            &quot;stock&quot;: 28,
-            &quot;slug&quot;: &quot;arely-nolan&quot;,
-            &quot;user_id&quot;: 8,
-            &quot;created_at&quot;: &quot;2022-01-20T20:15:24.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-01-20T20:15:24.000000Z&quot;,
-            &quot;user&quot;: {
-                &quot;id&quot;: 8,
-                &quot;name&quot;: &quot;Rhianna Wiegand&quot;,
-                &quot;email&quot;: &quot;bailey.golden@example.com&quot;,
-                &quot;email_verified_at&quot;: &quot;2022-01-20T20:15:18.000000Z&quot;,
-                &quot;created_at&quot;: &quot;2022-01-20T20:15:19.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-01-20T20:15:19.000000Z&quot;,
-                &quot;profile_photo_url&quot;: &quot;https://ui-avatars.com/api/?name=R+W&amp;color=7F9CF5&amp;background=EBF4FF&quot;
-            },
-            &quot;image&quot;: [
-                {
-                    &quot;id&quot;: 7,
-                    &quot;url&quot;: &quot;storage/product/604b5d1da055c085da9766effe04122d.png&quot;,
-                    &quot;created_at&quot;: &quot;2022-01-20T20:15:28.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-01-20T20:15:28.000000Z&quot;
+                    &quot;name&quot;: &quot;Ed White&quot;,
+                    &quot;description&quot;: &quot;Iure omnis inventore ab qui quos.&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T02:36:08.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T02:36:08.000000Z&quot;,
+                    &quot;pivot&quot;: {
+                        &quot;product_id&quot;: 10,
+                        &quot;category_id&quot;: 4
+                    }
                 },
                 {
                     &quot;id&quot;: 8,
-                    &quot;url&quot;: &quot;storage/product/6f3c1e4466afe637ec2fba181f0105c3.png&quot;,
-                    &quot;created_at&quot;: &quot;2022-01-20T20:15:28.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-01-20T20:15:28.000000Z&quot;
-                },
-                {
-                    &quot;id&quot;: 9,
-                    &quot;url&quot;: &quot;storage/product/a3a902e2a957d1a4c13d8f2655f6b016.png&quot;,
-                    &quot;created_at&quot;: &quot;2022-01-20T20:15:28.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-01-20T20:15:28.000000Z&quot;
+                    &quot;name&quot;: &quot;Dr. Shawna Carroll IV&quot;,
+                    &quot;description&quot;: &quot;Non porro maxime dolorum nisi.&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T02:36:08.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T02:36:08.000000Z&quot;,
+                    &quot;pivot&quot;: {
+                        &quot;product_id&quot;: 10,
+                        &quot;category_id&quot;: 8
+                    }
                 }
             ]
         },
         {
-            &quot;id&quot;: 4,
-            &quot;sku&quot;: &quot;9788987337920&quot;,
-            &quot;name&quot;: &quot;Lyla Hayes&quot;,
-            &quot;price&quot;: 704973,
+            &quot;id&quot;: 9,
+            &quot;sku&quot;: &quot;9788751236664&quot;,
+            &quot;name&quot;: &quot;Prof. Torey Rolfson PhD&quot;,
+            &quot;price&quot;: 499500,
             &quot;weight&quot;: 4,
-            &quot;description&quot;: &quot;Quae odio repellat delectus est labore vel sunt. Voluptatem deleniti expedita nostrum vel est qui. Officia a hic quis nobis itaque labore voluptatem. Voluptatem vitae repudiandae sunt labore magnam omnis omnis. Molestiae est ad sint atque possimus. Tempore reiciendis quos dolorem voluptatem cupiditate ullam. Ut nemo nam ullam accusamus accusantium sequi. Quia eos delectus voluptas rerum dicta aut.&quot;,
-            &quot;thumbnail&quot;: &quot;storage/product/bf2adfef4ea0289a4c150c07904e59a7.png&quot;,
-            &quot;stock&quot;: 9,
-            &quot;slug&quot;: &quot;lyla-hayes&quot;,
-            &quot;user_id&quot;: 5,
-            &quot;created_at&quot;: &quot;2022-01-20T20:15:24.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-01-20T20:15:24.000000Z&quot;,
+            &quot;description&quot;: &quot;Tenetur dolores magnam porro atque est dolorem ut. Tempora harum nihil in ipsum. Voluptatem nulla animi dolore recusandae sunt illum. Repellat asperiores neque officia. Natus ex qui ratione est molestiae quos nihil. Dicta eligendi consequatur quasi sunt vel et modi. Doloremque molestiae enim numquam quia saepe. Eveniet deleniti ea at. Exercitationem assumenda voluptatem dolore.&quot;,
+            &quot;thumbnail&quot;: &quot;storage/product/f57da780a8ede25eac644e8273c6bed0.png&quot;,
+            &quot;stock&quot;: 90,
+            &quot;slug&quot;: &quot;prof-torey-rolfson-phd&quot;,
+            &quot;user_id&quot;: 2,
+            &quot;created_at&quot;: &quot;2022-01-22T02:36:14.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-01-22T02:36:14.000000Z&quot;,
             &quot;user&quot;: {
-                &quot;id&quot;: 5,
-                &quot;name&quot;: &quot;Prof. Dallas Jaskolski&quot;,
-                &quot;email&quot;: &quot;fredy.lemke@example.net&quot;,
-                &quot;email_verified_at&quot;: &quot;2022-01-20T20:15:18.000000Z&quot;,
-                &quot;created_at&quot;: &quot;2022-01-20T20:15:19.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-01-20T20:15:19.000000Z&quot;,
-                &quot;profile_photo_url&quot;: &quot;https://ui-avatars.com/api/?name=P+D+J&amp;color=7F9CF5&amp;background=EBF4FF&quot;
+                &quot;id&quot;: 2,
+                &quot;name&quot;: &quot;Floyd Konopelski DVM&quot;,
+                &quot;email&quot;: &quot;stiedemann.toni@example.com&quot;,
+                &quot;email_verified_at&quot;: &quot;2022-01-22T02:35:59.000000Z&quot;,
+                &quot;current_team_id&quot;: null,
+                &quot;profile_photo_path&quot;: null,
+                &quot;created_at&quot;: &quot;2022-01-22T02:35:59.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-01-22T02:35:59.000000Z&quot;,
+                &quot;profile_photo_url&quot;: &quot;https://ui-avatars.com/api/?name=F+K+D&amp;color=7F9CF5&amp;background=EBF4FF&quot;
             },
             &quot;image&quot;: [
                 {
-                    &quot;id&quot;: 10,
-                    &quot;url&quot;: &quot;storage/product/5fff516920530d8a2883a376c4c82844.png&quot;,
-                    &quot;created_at&quot;: &quot;2022-01-20T20:15:29.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-01-20T20:15:29.000000Z&quot;
+                    &quot;id&quot;: 25,
+                    &quot;url&quot;: &quot;storage/product/e31085b45dba447d297752c1d65e9fd1.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T02:36:30.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T02:36:30.000000Z&quot;
                 },
                 {
-                    &quot;id&quot;: 11,
-                    &quot;url&quot;: &quot;storage/product/3edbeb2b444e27fd4706b52352f96b1a.png&quot;,
-                    &quot;created_at&quot;: &quot;2022-01-20T20:15:29.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-01-20T20:15:29.000000Z&quot;
+                    &quot;id&quot;: 26,
+                    &quot;url&quot;: &quot;storage/product/143771d9e7e4b4607baaf34da76dc574.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T02:36:30.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T02:36:30.000000Z&quot;
                 },
                 {
-                    &quot;id&quot;: 12,
-                    &quot;url&quot;: &quot;storage/product/0718c614012b3a04e4f813f53ec4f91a.png&quot;,
-                    &quot;created_at&quot;: &quot;2022-01-20T20:15:29.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-01-20T20:15:29.000000Z&quot;
+                    &quot;id&quot;: 27,
+                    &quot;url&quot;: &quot;storage/product/54a01d756712ba2d9ee68b9ed5c8a442.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T02:36:30.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T02:36:30.000000Z&quot;
                 }
-            ]
-        },
-        {
-            &quot;id&quot;: 5,
-            &quot;sku&quot;: &quot;9782650346967&quot;,
-            &quot;name&quot;: &quot;Gregg Douglas&quot;,
-            &quot;price&quot;: 997028,
-            &quot;weight&quot;: 0,
-            &quot;description&quot;: &quot;Voluptatem similique iste laudantium repellat ut est necessitatibus aspernatur. Necessitatibus aliquid enim dolor sed magnam et laborum. Sunt in amet quod qui sequi. Omnis nostrum tenetur nemo nam in accusamus voluptas. Aut nemo eum quibusdam facere repellat. Veritatis eum tempore amet et est sed. Officia aperiam aut quia accusantium ipsum. Vero suscipit quia enim consequatur mollitia et inventore. Qui delectus quia velit dolorem consequatur soluta dolores ex.&quot;,
-            &quot;thumbnail&quot;: &quot;storage/product/8023fb8b31518c1d0cb20ca620fefa45.png&quot;,
-            &quot;stock&quot;: 30,
-            &quot;slug&quot;: &quot;gregg-douglas&quot;,
-            &quot;user_id&quot;: 8,
-            &quot;created_at&quot;: &quot;2022-01-20T20:15:24.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-01-20T20:15:24.000000Z&quot;,
-            &quot;user&quot;: {
-                &quot;id&quot;: 8,
-                &quot;name&quot;: &quot;Rhianna Wiegand&quot;,
-                &quot;email&quot;: &quot;bailey.golden@example.com&quot;,
-                &quot;email_verified_at&quot;: &quot;2022-01-20T20:15:18.000000Z&quot;,
-                &quot;created_at&quot;: &quot;2022-01-20T20:15:19.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-01-20T20:15:19.000000Z&quot;,
-                &quot;profile_photo_url&quot;: &quot;https://ui-avatars.com/api/?name=R+W&amp;color=7F9CF5&amp;background=EBF4FF&quot;
-            },
-            &quot;image&quot;: [
+            ],
+            &quot;categories&quot;: [
                 {
-                    &quot;id&quot;: 13,
-                    &quot;url&quot;: &quot;storage/product/e9f6b5dbe1d1e40a38d1a757419b9fad.png&quot;,
-                    &quot;created_at&quot;: &quot;2022-01-20T20:15:30.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-01-20T20:15:30.000000Z&quot;
+                    &quot;id&quot;: 1,
+                    &quot;name&quot;: &quot;Christop Sawayn&quot;,
+                    &quot;description&quot;: &quot;Et ea praesentium vitae quia et.&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T02:36:07.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T02:36:07.000000Z&quot;,
+                    &quot;pivot&quot;: {
+                        &quot;product_id&quot;: 9,
+                        &quot;category_id&quot;: 1
+                    }
                 },
                 {
-                    &quot;id&quot;: 14,
-                    &quot;url&quot;: &quot;storage/product/d23c5643ff77911e8143e3a897e8997a.png&quot;,
-                    &quot;created_at&quot;: &quot;2022-01-20T20:15:31.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-01-20T20:15:31.000000Z&quot;
-                },
-                {
-                    &quot;id&quot;: 15,
-                    &quot;url&quot;: &quot;storage/product/13ac47a3659761694999c6853e057de2.png&quot;,
-                    &quot;created_at&quot;: &quot;2022-01-20T20:15:31.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-01-20T20:15:31.000000Z&quot;
-                }
-            ]
-        },
-        {
-            &quot;id&quot;: 6,
-            &quot;sku&quot;: &quot;9791427912151&quot;,
-            &quot;name&quot;: &quot;Prof. Tavares Franecki DDS&quot;,
-            &quot;price&quot;: 271048,
-            &quot;weight&quot;: 2,
-            &quot;description&quot;: &quot;Hic facere ipsam asperiores voluptatem eaque odio. Aut similique id omnis consequatur saepe vero et neque. Et non in consectetur iste perspiciatis deleniti excepturi quos. Nesciunt hic dolorem adipisci quas consequatur nostrum. Tempora commodi ut eveniet consequuntur nulla. Blanditiis dolore asperiores voluptatem voluptate omnis. Eum voluptatem eos voluptas omnis.&quot;,
-            &quot;thumbnail&quot;: &quot;storage/product/9ed36d072ad4e17f8aeeb06e1b88cff0.png&quot;,
-            &quot;stock&quot;: 45,
-            &quot;slug&quot;: &quot;prof-tavares-franecki-dds&quot;,
-            &quot;user_id&quot;: 9,
-            &quot;created_at&quot;: &quot;2022-01-20T20:15:24.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-01-20T20:15:24.000000Z&quot;,
-            &quot;user&quot;: {
-                &quot;id&quot;: 9,
-                &quot;name&quot;: &quot;Diego Fay&quot;,
-                &quot;email&quot;: &quot;camila02@example.org&quot;,
-                &quot;email_verified_at&quot;: &quot;2022-01-20T20:15:18.000000Z&quot;,
-                &quot;created_at&quot;: &quot;2022-01-20T20:15:19.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-01-20T20:15:19.000000Z&quot;,
-                &quot;profile_photo_url&quot;: &quot;https://ui-avatars.com/api/?name=D+F&amp;color=7F9CF5&amp;background=EBF4FF&quot;
-            },
-            &quot;image&quot;: [
-                {
-                    &quot;id&quot;: 16,
-                    &quot;url&quot;: &quot;storage/product/319ac8811d35b1191a33a0edc6ec39f4.png&quot;,
-                    &quot;created_at&quot;: &quot;2022-01-20T20:15:32.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-01-20T20:15:32.000000Z&quot;
-                },
-                {
-                    &quot;id&quot;: 17,
-                    &quot;url&quot;: &quot;storage/product/96cbdf47e5c9e3c59dfcba18595fd35b.png&quot;,
-                    &quot;created_at&quot;: &quot;2022-01-20T20:15:32.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-01-20T20:15:32.000000Z&quot;
-                },
-                {
-                    &quot;id&quot;: 18,
-                    &quot;url&quot;: &quot;storage/product/7045a60c9d777ce500455e6d6971a5c5.png&quot;,
-                    &quot;created_at&quot;: &quot;2022-01-20T20:15:32.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-01-20T20:15:32.000000Z&quot;
-                }
-            ]
-        },
-        {
-            &quot;id&quot;: 7,
-            &quot;sku&quot;: &quot;9794245432023&quot;,
-            &quot;name&quot;: &quot;Prof. Dudley Hane Jr.&quot;,
-            &quot;price&quot;: 554059,
-            &quot;weight&quot;: 3,
-            &quot;description&quot;: &quot;Quo modi ut voluptatem debitis nesciunt omnis culpa. Tempora velit nobis et a accusantium sit occaecati officiis. Fugiat ut ipsa sed excepturi. Perspiciatis minus perferendis ab facere officia. Est veritatis debitis dolore odit eius corrupti velit. Quibusdam doloribus autem et in. Quae necessitatibus et maxime et.&quot;,
-            &quot;thumbnail&quot;: &quot;storage/product/3e1724b59a3a01076fc2f020c7d7be6d.png&quot;,
-            &quot;stock&quot;: 58,
-            &quot;slug&quot;: &quot;prof-dudley-hane-jr&quot;,
-            &quot;user_id&quot;: 10,
-            &quot;created_at&quot;: &quot;2022-01-20T20:15:25.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-01-20T20:15:25.000000Z&quot;,
-            &quot;user&quot;: {
-                &quot;id&quot;: 10,
-                &quot;name&quot;: &quot;Bartholome Bogan&quot;,
-                &quot;email&quot;: &quot;marvin.orlando@example.net&quot;,
-                &quot;email_verified_at&quot;: &quot;2022-01-20T20:15:18.000000Z&quot;,
-                &quot;created_at&quot;: &quot;2022-01-20T20:15:20.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-01-20T20:15:20.000000Z&quot;,
-                &quot;profile_photo_url&quot;: &quot;https://ui-avatars.com/api/?name=B+B&amp;color=7F9CF5&amp;background=EBF4FF&quot;
-            },
-            &quot;image&quot;: [
-                {
-                    &quot;id&quot;: 19,
-                    &quot;url&quot;: &quot;storage/product/4a7b0a1004e4d601abe4156fea632650.png&quot;,
-                    &quot;created_at&quot;: &quot;2022-01-20T20:15:33.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-01-20T20:15:33.000000Z&quot;
-                },
-                {
-                    &quot;id&quot;: 20,
-                    &quot;url&quot;: &quot;storage/product/1e0fa1126a264037aba3885825dee5f1.png&quot;,
-                    &quot;created_at&quot;: &quot;2022-01-20T20:15:33.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-01-20T20:15:33.000000Z&quot;
-                },
-                {
-                    &quot;id&quot;: 21,
-                    &quot;url&quot;: &quot;storage/product/dc030433c823b42cf0b5b09e9662b322.png&quot;,
-                    &quot;created_at&quot;: &quot;2022-01-20T20:15:33.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-01-20T20:15:33.000000Z&quot;
+                    &quot;id&quot;: 8,
+                    &quot;name&quot;: &quot;Dr. Shawna Carroll IV&quot;,
+                    &quot;description&quot;: &quot;Non porro maxime dolorum nisi.&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T02:36:08.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T02:36:08.000000Z&quot;,
+                    &quot;pivot&quot;: {
+                        &quot;product_id&quot;: 9,
+                        &quot;category_id&quot;: 8
+                    }
                 }
             ]
         },
         {
             &quot;id&quot;: 8,
-            &quot;sku&quot;: &quot;9791015678735&quot;,
-            &quot;name&quot;: &quot;Gregoria Hyatt&quot;,
-            &quot;price&quot;: 677498,
-            &quot;weight&quot;: 4,
-            &quot;description&quot;: &quot;Sunt est corporis dolore repellendus est commodi quaerat rerum. Quis aliquam repellat ut ratione magnam. Quia cum vitae ad similique. Corporis exercitationem ratione tempore aut deserunt. Cupiditate accusantium officia numquam et consequatur incidunt dolores. Adipisci sed aliquam ut. Nihil laborum repellendus occaecati aspernatur ut aut necessitatibus.&quot;,
-            &quot;thumbnail&quot;: &quot;storage/product/f01a74fc4fd2ae21dd8382704e8e6a31.png&quot;,
-            &quot;stock&quot;: 23,
-            &quot;slug&quot;: &quot;gregoria-hyatt&quot;,
-            &quot;user_id&quot;: 9,
-            &quot;created_at&quot;: &quot;2022-01-20T20:15:25.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-01-20T20:15:25.000000Z&quot;,
+            &quot;sku&quot;: &quot;9790814482604&quot;,
+            &quot;name&quot;: &quot;Sven Bailey Jr.&quot;,
+            &quot;price&quot;: 43131,
+            &quot;weight&quot;: 1,
+            &quot;description&quot;: &quot;Libero voluptatem laborum perspiciatis unde ipsam et. Occaecati voluptatem nostrum qui necessitatibus dolorum. Fugiat earum dignissimos ipsum quas voluptas ea recusandae. Libero consequatur iure perspiciatis quia qui nam ipsa. Ipsam aut est est porro quidem totam. Quia ad nulla et vero veniam vel. Voluptatem sequi quia veritatis nihil sunt. Necessitatibus similique rerum et voluptatibus non sequi est.&quot;,
+            &quot;thumbnail&quot;: &quot;storage/product/755b8fad670256178589ff596cfa7ca1.png&quot;,
+            &quot;stock&quot;: 48,
+            &quot;slug&quot;: &quot;sven-bailey-jr&quot;,
+            &quot;user_id&quot;: 1,
+            &quot;created_at&quot;: &quot;2022-01-22T02:36:14.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-01-22T02:36:14.000000Z&quot;,
             &quot;user&quot;: {
-                &quot;id&quot;: 9,
-                &quot;name&quot;: &quot;Diego Fay&quot;,
-                &quot;email&quot;: &quot;camila02@example.org&quot;,
-                &quot;email_verified_at&quot;: &quot;2022-01-20T20:15:18.000000Z&quot;,
-                &quot;created_at&quot;: &quot;2022-01-20T20:15:19.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-01-20T20:15:19.000000Z&quot;,
-                &quot;profile_photo_url&quot;: &quot;https://ui-avatars.com/api/?name=D+F&amp;color=7F9CF5&amp;background=EBF4FF&quot;
+                &quot;id&quot;: 1,
+                &quot;name&quot;: &quot;Admin&quot;,
+                &quot;email&quot;: &quot;admin@gmail.com&quot;,
+                &quot;email_verified_at&quot;: null,
+                &quot;current_team_id&quot;: null,
+                &quot;profile_photo_path&quot;: null,
+                &quot;created_at&quot;: &quot;2022-01-22T02:35:58.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-01-22T02:35:58.000000Z&quot;,
+                &quot;profile_photo_url&quot;: &quot;https://ui-avatars.com/api/?name=A&amp;color=7F9CF5&amp;background=EBF4FF&quot;
             },
             &quot;image&quot;: [
                 {
                     &quot;id&quot;: 22,
-                    &quot;url&quot;: &quot;storage/product/656b5dcd8cd41847075976bbf5e61cc8.png&quot;,
-                    &quot;created_at&quot;: &quot;2022-01-20T20:15:34.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-01-20T20:15:34.000000Z&quot;
+                    &quot;url&quot;: &quot;storage/product/e9c7271bf00ba0e26e2ace9b57e0aa9d.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T02:36:28.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T02:36:28.000000Z&quot;
                 },
                 {
                     &quot;id&quot;: 23,
-                    &quot;url&quot;: &quot;storage/product/82f2a4700c060e1cadb414ba2647e245.png&quot;,
-                    &quot;created_at&quot;: &quot;2022-01-20T20:15:34.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-01-20T20:15:34.000000Z&quot;
+                    &quot;url&quot;: &quot;storage/product/19fc4e9c4ac8b6c3f2ec1304e666e2e9.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T02:36:28.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T02:36:28.000000Z&quot;
                 },
                 {
                     &quot;id&quot;: 24,
-                    &quot;url&quot;: &quot;storage/product/325233e81398033cf48c2df0525c91d3.png&quot;,
-                    &quot;created_at&quot;: &quot;2022-01-20T20:15:34.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-01-20T20:15:34.000000Z&quot;
+                    &quot;url&quot;: &quot;storage/product/28e825b1edc07235f73074a5621c1ba7.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T02:36:28.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T02:36:28.000000Z&quot;
+                }
+            ],
+            &quot;categories&quot;: [
+                {
+                    &quot;id&quot;: 3,
+                    &quot;name&quot;: &quot;Dr. Mose Kiehn PhD&quot;,
+                    &quot;description&quot;: &quot;Et est accusantium ab aut.&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T02:36:08.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T02:36:08.000000Z&quot;,
+                    &quot;pivot&quot;: {
+                        &quot;product_id&quot;: 8,
+                        &quot;category_id&quot;: 3
+                    }
+                },
+                {
+                    &quot;id&quot;: 7,
+                    &quot;name&quot;: &quot;Prof. Charles Kerluke&quot;,
+                    &quot;description&quot;: &quot;Animi assumenda nam et.&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T02:36:08.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T02:36:08.000000Z&quot;,
+                    &quot;pivot&quot;: {
+                        &quot;product_id&quot;: 8,
+                        &quot;category_id&quot;: 7
+                    }
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: 7,
+            &quot;sku&quot;: &quot;9789382871644&quot;,
+            &quot;name&quot;: &quot;Mr. Norbert Wyman II&quot;,
+            &quot;price&quot;: 440253,
+            &quot;weight&quot;: 2,
+            &quot;description&quot;: &quot;Velit explicabo officiis iure molestiae excepturi repellendus quia aliquam. Vel rerum reiciendis voluptate totam maxime. Cum ducimus dignissimos numquam id. Doloribus officia consequatur sunt reiciendis exercitationem consequatur. Qui accusantium architecto repellendus est id enim. Est illo quod provident saepe. Necessitatibus iure dolores et doloribus iste nostrum. Aut in perspiciatis eum et aut modi.&quot;,
+            &quot;thumbnail&quot;: &quot;storage/product/284282df51e153934549373491c3c2b2.png&quot;,
+            &quot;stock&quot;: 56,
+            &quot;slug&quot;: &quot;mr-norbert-wyman-ii&quot;,
+            &quot;user_id&quot;: 6,
+            &quot;created_at&quot;: &quot;2022-01-22T02:36:13.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-01-22T02:36:13.000000Z&quot;,
+            &quot;user&quot;: {
+                &quot;id&quot;: 6,
+                &quot;name&quot;: &quot;Ludwig Corwin I&quot;,
+                &quot;email&quot;: &quot;jamie01@example.net&quot;,
+                &quot;email_verified_at&quot;: &quot;2022-01-22T02:35:59.000000Z&quot;,
+                &quot;current_team_id&quot;: null,
+                &quot;profile_photo_path&quot;: null,
+                &quot;created_at&quot;: &quot;2022-01-22T02:35:59.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-01-22T02:35:59.000000Z&quot;,
+                &quot;profile_photo_url&quot;: &quot;https://ui-avatars.com/api/?name=L+C+I&amp;color=7F9CF5&amp;background=EBF4FF&quot;
+            },
+            &quot;image&quot;: [
+                {
+                    &quot;id&quot;: 19,
+                    &quot;url&quot;: &quot;storage/product/816e4cba485d986a19e815f1371c3b4c.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T02:36:26.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T02:36:26.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 20,
+                    &quot;url&quot;: &quot;storage/product/9e96bf2954d194125d8115fcf8164ea1.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T02:36:26.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T02:36:26.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 21,
+                    &quot;url&quot;: &quot;storage/product/fde0b1047f3f89fcaf47fc8492bb2b3c.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T02:36:26.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T02:36:26.000000Z&quot;
+                }
+            ],
+            &quot;categories&quot;: [
+                {
+                    &quot;id&quot;: 4,
+                    &quot;name&quot;: &quot;Ed White&quot;,
+                    &quot;description&quot;: &quot;Iure omnis inventore ab qui quos.&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T02:36:08.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T02:36:08.000000Z&quot;,
+                    &quot;pivot&quot;: {
+                        &quot;product_id&quot;: 7,
+                        &quot;category_id&quot;: 4
+                    }
+                },
+                {
+                    &quot;id&quot;: 8,
+                    &quot;name&quot;: &quot;Dr. Shawna Carroll IV&quot;,
+                    &quot;description&quot;: &quot;Non porro maxime dolorum nisi.&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T02:36:08.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T02:36:08.000000Z&quot;,
+                    &quot;pivot&quot;: {
+                        &quot;product_id&quot;: 7,
+                        &quot;category_id&quot;: 8
+                    }
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: 6,
+            &quot;sku&quot;: &quot;9782990203609&quot;,
+            &quot;name&quot;: &quot;Elvis Bradtke V&quot;,
+            &quot;price&quot;: 418749,
+            &quot;weight&quot;: 2,
+            &quot;description&quot;: &quot;Numquam consectetur quibusdam consequatur odit facere hic et. In sint et aut laudantium est velit. Maxime iusto quibusdam ea dolore dolor. Eveniet nulla provident aperiam alias voluptates consequatur ea. Facere itaque possimus voluptas et non expedita placeat. Ea blanditiis qui aut est. Perferendis ipsam perspiciatis ipsum in dolores nihil. Alias aliquid cum non possimus omnis et velit. Sed quia et officiis qui facere deserunt. Fuga quaerat adipisci est. Enim fugit hic autem ab.&quot;,
+            &quot;thumbnail&quot;: &quot;storage/product/96c7253fa63f2ad2f5416771fb54a7d9.png&quot;,
+            &quot;stock&quot;: 70,
+            &quot;slug&quot;: &quot;elvis-bradtke-v&quot;,
+            &quot;user_id&quot;: 7,
+            &quot;created_at&quot;: &quot;2022-01-22T02:36:13.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-01-22T02:36:13.000000Z&quot;,
+            &quot;user&quot;: {
+                &quot;id&quot;: 7,
+                &quot;name&quot;: &quot;Cletus Ernser&quot;,
+                &quot;email&quot;: &quot;ncorwin@example.com&quot;,
+                &quot;email_verified_at&quot;: &quot;2022-01-22T02:35:59.000000Z&quot;,
+                &quot;current_team_id&quot;: null,
+                &quot;profile_photo_path&quot;: null,
+                &quot;created_at&quot;: &quot;2022-01-22T02:36:00.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-01-22T02:36:00.000000Z&quot;,
+                &quot;profile_photo_url&quot;: &quot;https://ui-avatars.com/api/?name=C+E&amp;color=7F9CF5&amp;background=EBF4FF&quot;
+            },
+            &quot;image&quot;: [
+                {
+                    &quot;id&quot;: 16,
+                    &quot;url&quot;: &quot;storage/product/f556b8b7b19f3291d05beb37a60fdc9e.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T02:36:24.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T02:36:24.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 17,
+                    &quot;url&quot;: &quot;storage/product/bc303be6229bb8b41cf1a79d8646e7d5.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T02:36:24.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T02:36:24.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 18,
+                    &quot;url&quot;: &quot;storage/product/465683d4af3ada6b6daff79882ab1b75.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T02:36:24.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T02:36:24.000000Z&quot;
+                }
+            ],
+            &quot;categories&quot;: [
+                {
+                    &quot;id&quot;: 1,
+                    &quot;name&quot;: &quot;Christop Sawayn&quot;,
+                    &quot;description&quot;: &quot;Et ea praesentium vitae quia et.&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T02:36:07.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T02:36:07.000000Z&quot;,
+                    &quot;pivot&quot;: {
+                        &quot;product_id&quot;: 6,
+                        &quot;category_id&quot;: 1
+                    }
+                },
+                {
+                    &quot;id&quot;: 8,
+                    &quot;name&quot;: &quot;Dr. Shawna Carroll IV&quot;,
+                    &quot;description&quot;: &quot;Non porro maxime dolorum nisi.&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T02:36:08.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T02:36:08.000000Z&quot;,
+                    &quot;pivot&quot;: {
+                        &quot;product_id&quot;: 6,
+                        &quot;category_id&quot;: 8
+                    }
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: 5,
+            &quot;sku&quot;: &quot;9787130428218&quot;,
+            &quot;name&quot;: &quot;Liliane Koch&quot;,
+            &quot;price&quot;: 15106,
+            &quot;weight&quot;: 2,
+            &quot;description&quot;: &quot;Cupiditate fuga sint temporibus odio ut sequi blanditiis. Aut unde expedita beatae blanditiis. Molestiae ut ut in et optio. Quasi et omnis perferendis deleniti. Natus asperiores omnis aut. Aperiam sit iste blanditiis quasi. Qui similique rerum mollitia est in ut. Provident ducimus nemo sed ipsam porro. Voluptate est ut atque explicabo est et porro. Et tempora dicta qui deleniti nemo itaque dolorum veniam. Nam libero eaque dicta enim. Repudiandae quis expedita blanditiis quaerat.&quot;,
+            &quot;thumbnail&quot;: &quot;storage/product/a5fd6e3bb8dc354be2d27ad04fae0588.png&quot;,
+            &quot;stock&quot;: 53,
+            &quot;slug&quot;: &quot;liliane-koch&quot;,
+            &quot;user_id&quot;: 9,
+            &quot;created_at&quot;: &quot;2022-01-22T02:36:13.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-01-22T02:36:13.000000Z&quot;,
+            &quot;user&quot;: {
+                &quot;id&quot;: 9,
+                &quot;name&quot;: &quot;Elvis Hamill&quot;,
+                &quot;email&quot;: &quot;immanuel.reichert@example.net&quot;,
+                &quot;email_verified_at&quot;: &quot;2022-01-22T02:35:59.000000Z&quot;,
+                &quot;current_team_id&quot;: null,
+                &quot;profile_photo_path&quot;: null,
+                &quot;created_at&quot;: &quot;2022-01-22T02:36:01.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-01-22T02:36:01.000000Z&quot;,
+                &quot;profile_photo_url&quot;: &quot;https://ui-avatars.com/api/?name=E+H&amp;color=7F9CF5&amp;background=EBF4FF&quot;
+            },
+            &quot;image&quot;: [
+                {
+                    &quot;id&quot;: 13,
+                    &quot;url&quot;: &quot;storage/product/192338dc6359c1b2e06b1a91513a519a.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T02:36:22.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T02:36:22.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 14,
+                    &quot;url&quot;: &quot;storage/product/6105aecbb673f79d3e32bade659e1412.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T02:36:22.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T02:36:22.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 15,
+                    &quot;url&quot;: &quot;storage/product/f7e30a4464df7c8935d0bfde4dc0afc2.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T02:36:22.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T02:36:22.000000Z&quot;
+                }
+            ],
+            &quot;categories&quot;: [
+                {
+                    &quot;id&quot;: 5,
+                    &quot;name&quot;: &quot;Myles Dickens&quot;,
+                    &quot;description&quot;: &quot;Est facilis ut voluptatem eius et ab.&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T02:36:08.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T02:36:08.000000Z&quot;,
+                    &quot;pivot&quot;: {
+                        &quot;product_id&quot;: 5,
+                        &quot;category_id&quot;: 5
+                    }
+                },
+                {
+                    &quot;id&quot;: 9,
+                    &quot;name&quot;: &quot;Ms. Neha Herzog V&quot;,
+                    &quot;description&quot;: &quot;Laudantium quia molestiae sit quo.&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T02:36:09.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T02:36:09.000000Z&quot;,
+                    &quot;pivot&quot;: {
+                        &quot;product_id&quot;: 5,
+                        &quot;category_id&quot;: 9
+                    }
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: 4,
+            &quot;sku&quot;: &quot;9799451519698&quot;,
+            &quot;name&quot;: &quot;Prof. Murray Dicki DVM&quot;,
+            &quot;price&quot;: 445423,
+            &quot;weight&quot;: 3,
+            &quot;description&quot;: &quot;Dignissimos incidunt vitae et omnis dignissimos. Fuga culpa ab sequi incidunt iusto consectetur natus. Est illum et ratione impedit dolor. Tempora unde natus earum esse. Quo sed magnam blanditiis. Qui et sunt in. Ut accusantium eaque omnis officia eum. Voluptas reprehenderit quia saepe ut. Provident voluptas et qui laudantium ullam accusamus ipsam. Officia aliquid aliquid ullam eos nulla. Qui ut rerum recusandae doloribus iste qui sequi.&quot;,
+            &quot;thumbnail&quot;: &quot;storage/product/5539d27fbc6dbc4787f80d04eaf36425.png&quot;,
+            &quot;stock&quot;: 70,
+            &quot;slug&quot;: &quot;prof-murray-dicki-dvm&quot;,
+            &quot;user_id&quot;: 6,
+            &quot;created_at&quot;: &quot;2022-01-22T02:36:13.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-01-22T02:36:13.000000Z&quot;,
+            &quot;user&quot;: {
+                &quot;id&quot;: 6,
+                &quot;name&quot;: &quot;Ludwig Corwin I&quot;,
+                &quot;email&quot;: &quot;jamie01@example.net&quot;,
+                &quot;email_verified_at&quot;: &quot;2022-01-22T02:35:59.000000Z&quot;,
+                &quot;current_team_id&quot;: null,
+                &quot;profile_photo_path&quot;: null,
+                &quot;created_at&quot;: &quot;2022-01-22T02:35:59.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-01-22T02:35:59.000000Z&quot;,
+                &quot;profile_photo_url&quot;: &quot;https://ui-avatars.com/api/?name=L+C+I&amp;color=7F9CF5&amp;background=EBF4FF&quot;
+            },
+            &quot;image&quot;: [
+                {
+                    &quot;id&quot;: 10,
+                    &quot;url&quot;: &quot;storage/product/9cb5b8995e1b4b8653324943ae1b11bd.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T02:36:20.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T02:36:20.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 11,
+                    &quot;url&quot;: &quot;storage/product/ae625e5f7610ecefd8f86f2f1652b77d.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T02:36:20.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T02:36:20.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 12,
+                    &quot;url&quot;: &quot;storage/product/b05bfbedf660af8891e8e309808009cf.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T02:36:21.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T02:36:21.000000Z&quot;
+                }
+            ],
+            &quot;categories&quot;: [
+                {
+                    &quot;id&quot;: 1,
+                    &quot;name&quot;: &quot;Christop Sawayn&quot;,
+                    &quot;description&quot;: &quot;Et ea praesentium vitae quia et.&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T02:36:07.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T02:36:07.000000Z&quot;,
+                    &quot;pivot&quot;: {
+                        &quot;product_id&quot;: 4,
+                        &quot;category_id&quot;: 1
+                    }
+                },
+                {
+                    &quot;id&quot;: 9,
+                    &quot;name&quot;: &quot;Ms. Neha Herzog V&quot;,
+                    &quot;description&quot;: &quot;Laudantium quia molestiae sit quo.&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T02:36:09.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T02:36:09.000000Z&quot;,
+                    &quot;pivot&quot;: {
+                        &quot;product_id&quot;: 4,
+                        &quot;category_id&quot;: 9
+                    }
                 }
             ]
         }
@@ -2858,44 +3383,70 @@ access-control-allow-origin: *
 <code class="language-json">{
     &quot;data&quot;: {
         &quot;id&quot;: 1,
-        &quot;sku&quot;: &quot;9799108954919&quot;,
-        &quot;name&quot;: &quot;Freda Bernhard&quot;,
-        &quot;price&quot;: 406211,
-        &quot;weight&quot;: 2,
-        &quot;description&quot;: &quot;Dolores harum et quae ad unde quidem. Tenetur earum dolore aut molestiae. Eum cupiditate aut illo nisi nam repellat perferendis. Laborum amet quam quis officiis facilis ut. Dolore numquam laborum illum mollitia qui. Rerum earum atque expedita doloremque ex non. Ducimus rerum modi aspernatur eos. Dolorum ut sit ex accusamus quia distinctio explicabo. Fuga et aperiam saepe rem. Deserunt iste perferendis laboriosam quia autem.&quot;,
-        &quot;thumbnail&quot;: &quot;storage/product/89604b536ad260a754655e12cd900e8d.png&quot;,
-        &quot;stock&quot;: 83,
-        &quot;slug&quot;: &quot;freda-bernhard&quot;,
-        &quot;user_id&quot;: 4,
-        &quot;created_at&quot;: &quot;2022-01-20T20:15:24.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-01-20T20:15:24.000000Z&quot;,
+        &quot;sku&quot;: &quot;9796200298132&quot;,
+        &quot;name&quot;: &quot;Horace Klocko&quot;,
+        &quot;price&quot;: 86454,
+        &quot;weight&quot;: 4,
+        &quot;description&quot;: &quot;Ab nemo illo voluptatibus. In inventore qui autem. Dolor sit ab id veniam in. Voluptates quaerat dolorem nisi et. Aspernatur maiores vel et sint magni minima qui. Consequuntur aliquid labore voluptate ut ipsam veritatis et. Minima nesciunt laudantium illo ullam. Doloremque explicabo aut esse et consequatur. Vitae nobis tenetur maiores ea. Tempora libero totam et est iusto qui omnis.&quot;,
+        &quot;thumbnail&quot;: &quot;storage/product/593ed2c02e7e680d6c65d84160ab8aad.png&quot;,
+        &quot;stock&quot;: 76,
+        &quot;slug&quot;: &quot;horace-klocko&quot;,
+        &quot;user_id&quot;: 1,
+        &quot;created_at&quot;: &quot;2022-01-22T02:36:13.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-01-22T02:36:13.000000Z&quot;,
         &quot;user&quot;: {
-            &quot;id&quot;: 4,
-            &quot;name&quot;: &quot;Frederique Stamm&quot;,
-            &quot;email&quot;: &quot;ohara.ted@example.net&quot;,
-            &quot;email_verified_at&quot;: &quot;2022-01-20T20:15:18.000000Z&quot;,
-            &quot;created_at&quot;: &quot;2022-01-20T20:15:19.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-01-20T20:15:19.000000Z&quot;,
-            &quot;profile_photo_url&quot;: &quot;https://ui-avatars.com/api/?name=F+S&amp;color=7F9CF5&amp;background=EBF4FF&quot;
+            &quot;id&quot;: 1,
+            &quot;name&quot;: &quot;Admin&quot;,
+            &quot;email&quot;: &quot;admin@gmail.com&quot;,
+            &quot;email_verified_at&quot;: null,
+            &quot;current_team_id&quot;: null,
+            &quot;profile_photo_path&quot;: null,
+            &quot;created_at&quot;: &quot;2022-01-22T02:35:58.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-01-22T02:35:58.000000Z&quot;,
+            &quot;profile_photo_url&quot;: &quot;https://ui-avatars.com/api/?name=A&amp;color=7F9CF5&amp;background=EBF4FF&quot;
         },
         &quot;image&quot;: [
             {
                 &quot;id&quot;: 1,
-                &quot;url&quot;: &quot;storage/product/38c15634477d1aa31fe5109020901819.png&quot;,
-                &quot;created_at&quot;: &quot;2022-01-20T20:15:26.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-01-20T20:15:26.000000Z&quot;
+                &quot;url&quot;: &quot;storage/product/4d03a19cf08e8d933f29a539fb76804b.png&quot;,
+                &quot;created_at&quot;: &quot;2022-01-22T02:36:15.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-01-22T02:36:15.000000Z&quot;
             },
             {
                 &quot;id&quot;: 2,
-                &quot;url&quot;: &quot;storage/product/c60b4dcdf7b3b397e2a262bd4066b7b3.png&quot;,
-                &quot;created_at&quot;: &quot;2022-01-20T20:15:26.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-01-20T20:15:26.000000Z&quot;
+                &quot;url&quot;: &quot;storage/product/47485df19b3ad6fe10a6b7121327f97e.png&quot;,
+                &quot;created_at&quot;: &quot;2022-01-22T02:36:15.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-01-22T02:36:15.000000Z&quot;
             },
             {
                 &quot;id&quot;: 3,
-                &quot;url&quot;: &quot;storage/product/fd19d75c23ca400c6752b0201e3f336e.png&quot;,
-                &quot;created_at&quot;: &quot;2022-01-20T20:15:26.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-01-20T20:15:26.000000Z&quot;
+                &quot;url&quot;: &quot;storage/product/55bc47f91a8bf3f2d8339f2babe913a3.png&quot;,
+                &quot;created_at&quot;: &quot;2022-01-22T02:36:15.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-01-22T02:36:15.000000Z&quot;
+            }
+        ],
+        &quot;categories&quot;: [
+            {
+                &quot;id&quot;: 3,
+                &quot;name&quot;: &quot;Dr. Mose Kiehn PhD&quot;,
+                &quot;description&quot;: &quot;Et est accusantium ab aut.&quot;,
+                &quot;created_at&quot;: &quot;2022-01-22T02:36:08.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-01-22T02:36:08.000000Z&quot;,
+                &quot;pivot&quot;: {
+                    &quot;product_id&quot;: 1,
+                    &quot;category_id&quot;: 3
+                }
+            },
+            {
+                &quot;id&quot;: 9,
+                &quot;name&quot;: &quot;Ms. Neha Herzog V&quot;,
+                &quot;description&quot;: &quot;Laudantium quia molestiae sit quo.&quot;,
+                &quot;created_at&quot;: &quot;2022-01-22T02:36:09.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-01-22T02:36:09.000000Z&quot;,
+                &quot;pivot&quot;: {
+                    &quot;product_id&quot;: 1,
+                    &quot;category_id&quot;: 9
+                }
             }
         ]
     }
@@ -2953,6 +3504,605 @@ access-control-allow-origin: *
 <p>Defaults to 'id'.</p>
             </p>
                     </form>
+
+            <h2 id="product-management-POSTapi-products--id-">Update the specified resource in storage.</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-POSTapi-products--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost:8000/api/products/1" \
+    --header "Authorization: Bearer 3Z4P18g6akDecd56VEahvfb" \
+    --header "Content-Type: multipart/form-data" \
+    --header "Accept: application/json" \
+    --form "name=Glass" \
+    --form "description=Glasses for all people" \
+    --form "price=33" \
+    --form "weight=2" \
+    --form "stock=34" \
+    --form "thumbnail=@/tmp/phpeXxXCf" </code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/products/1"
+);
+
+const headers = {
+    "Authorization": "Bearer 3Z4P18g6akDecd56VEahvfb",
+    "Content-Type": "multipart/form-data",
+    "Accept": "application/json",
+};
+
+const body = new FormData();
+body.append('name', 'Glass');
+body.append('description', 'Glasses for all people');
+body.append('price', '33');
+body.append('weight', '2');
+body.append('stock', '34');
+body.append('thumbnail', document.querySelector('input[name="thumbnail"]').files[0]);
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="ruby-example">
+    <pre><code class="language-ruby">
+require 'rest-client'
+
+    body = {
+    "name": "Glass",
+    "description": "Glasses for all people",
+    "price": 33,
+    "weight": 2,
+    "stock": 34
+}
+    headers = {
+            "Authorization": "Bearer 3Z4P18g6akDecd56VEahvfb",
+            "Content-Type": "multipart/form-data",
+            "Accept": "application/json",
+        }
+
+response = RestClient.post(
+'http://localhost:8000/api/products/1',
+body ,
+headers
+)
+
+p response.body
+</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;post(
+    'http://localhost:8000/api/products/1',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer 3Z4P18g6akDecd56VEahvfb',
+            'Content-Type' =&gt; 'multipart/form-data',
+            'Accept' =&gt; 'application/json',
+        ],
+        'multipart' =&gt; [
+            [
+                'name' =&gt; 'name',
+                'contents' =&gt; 'Glass'
+            ],
+            [
+                'name' =&gt; 'description',
+                'contents' =&gt; 'Glasses for all people'
+            ],
+            [
+                'name' =&gt; 'price',
+                'contents' =&gt; '33'
+            ],
+            [
+                'name' =&gt; 'weight',
+                'contents' =&gt; '2'
+            ],
+            [
+                'name' =&gt; 'stock',
+                'contents' =&gt; '34'
+            ],
+            [
+                'name' =&gt; 'thumbnail',
+                'contents' =&gt; fopen('/tmp/phpeXxXCf', 'r')
+            ],
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/products/1'
+files = {
+  'thumbnail': open('/tmp/phpeXxXCf', 'rb')
+}
+payload = {
+    "name": "Glass",
+    "description": "Glasses for all people",
+    "price": 33,
+    "weight": 2,
+    "stock": 34
+}
+headers = {
+  'Authorization': 'Bearer 3Z4P18g6akDecd56VEahvfb',
+  'Content-Type': 'multipart/form-data',
+  'Accept': 'application/json'
+}
+
+response = requests.request('POST', url, headers=headers, files=files, data=payload)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-products--id-">
+</span>
+<span id="execution-results-POSTapi-products--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-products--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-products--id-"></code></pre>
+</span>
+<span id="execution-error-POSTapi-products--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-products--id-"></code></pre>
+</span>
+<form id="form-POSTapi-products--id-" data-method="POST"
+      data-path="api/products/{id}"
+      data-authed="1"
+      data-hasfiles="1"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer 3Z4P18g6akDecd56VEahvfb","Content-Type":"multipart\/form-data","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-products--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-products--id-"
+                    onclick="tryItOut('POSTapi-products--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-products--id-"
+                    onclick="cancelTryOut('POSTapi-products--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-products--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/products/{id}</code></b>
+        </p>
+                <p>
+            <label id="auth-POSTapi-products--id-" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="POSTapi-products--id-"
+                                                                data-component="header"></label>
+        </p>
+                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="POSTapi-products--id-"
+               value="1"
+               data-component="url" hidden>
+    <br>
+<p>Defaults to 'id'.</p>
+            </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>name</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="name"
+               data-endpoint="POSTapi-products--id-"
+               value="Glass"
+               data-component="body" hidden>
+    <br>
+<p>🤖 Product name.</p>
+        </p>
+                <p>
+            <b><code>description</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="description"
+               data-endpoint="POSTapi-products--id-"
+               value="Glasses for all people"
+               data-component="body" hidden>
+    <br>
+<p>📝 Product description . Must not be greater than 850 characters.</p>
+        </p>
+                <p>
+            <b><code>price</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="price"
+               data-endpoint="POSTapi-products--id-"
+               value="33"
+               data-component="body" hidden>
+    <br>
+<p>💵 Product price . Must be at least 1.</p>
+        </p>
+                <p>
+            <b><code>weight</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="weight"
+               data-endpoint="POSTapi-products--id-"
+               value="2"
+               data-component="body" hidden>
+    <br>
+<p>📏 Product weight . Must be at least 1.</p>
+        </p>
+                <p>
+            <b><code>stock</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="stock"
+               data-endpoint="POSTapi-products--id-"
+               value="34"
+               data-component="body" hidden>
+    <br>
+<p>🗃 Product stock . Must be at least 1.</p>
+        </p>
+                <p>
+            <b><code>thumbnail</code></b>&nbsp;&nbsp;<small>file</small>  &nbsp;
+                <input type="file"
+               name="thumbnail"
+               data-endpoint="POSTapi-products--id-"
+               value=""
+               data-component="body" hidden>
+    <br>
+<p>📷 Thumbnail of the product, it will be shown as an image when selling . Must be an image.</p>
+        </p>
+        </form>
+
+            <h2 id="product-management-GETapi-productsByUser">Desplay a listing of products by user</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-GETapi-productsByUser">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/productsByUser" \
+    --header "Authorization: Bearer hV1vE84Pg36kbec6ZaDafd5" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/productsByUser"
+);
+
+const headers = {
+    "Authorization": "Bearer hV1vE84Pg36kbec6ZaDafd5",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="ruby-example">
+    <pre><code class="language-ruby">
+require 'rest-client'
+
+    headers = {
+            "Authorization": "Bearer hV1vE84Pg36kbec6ZaDafd5",
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+        }
+
+response = RestClient.get(
+'http://localhost:8000/api/productsByUser',
+headers
+)
+
+p response.body
+</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/productsByUser',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer hV1vE84Pg36kbec6ZaDafd5',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/productsByUser'
+headers = {
+  'Authorization': 'Bearer hV1vE84Pg36kbec6ZaDafd5',
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-productsByUser">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 59
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 8,
+            &quot;sku&quot;: &quot;9790814482604&quot;,
+            &quot;name&quot;: &quot;Sven Bailey Jr.&quot;,
+            &quot;price&quot;: 43131,
+            &quot;weight&quot;: 1,
+            &quot;description&quot;: &quot;Libero voluptatem laborum perspiciatis unde ipsam et. Occaecati voluptatem nostrum qui necessitatibus dolorum. Fugiat earum dignissimos ipsum quas voluptas ea recusandae. Libero consequatur iure perspiciatis quia qui nam ipsa. Ipsam aut est est porro quidem totam. Quia ad nulla et vero veniam vel. Voluptatem sequi quia veritatis nihil sunt. Necessitatibus similique rerum et voluptatibus non sequi est.&quot;,
+            &quot;thumbnail&quot;: &quot;storage/product/755b8fad670256178589ff596cfa7ca1.png&quot;,
+            &quot;stock&quot;: 48,
+            &quot;slug&quot;: &quot;sven-bailey-jr&quot;,
+            &quot;user_id&quot;: 1,
+            &quot;created_at&quot;: &quot;2022-01-22T02:36:14.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-01-22T02:36:14.000000Z&quot;,
+            &quot;user&quot;: {
+                &quot;id&quot;: 1,
+                &quot;name&quot;: &quot;Admin&quot;,
+                &quot;email&quot;: &quot;admin@gmail.com&quot;,
+                &quot;email_verified_at&quot;: null,
+                &quot;current_team_id&quot;: null,
+                &quot;profile_photo_path&quot;: null,
+                &quot;created_at&quot;: &quot;2022-01-22T02:35:58.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-01-22T02:35:58.000000Z&quot;,
+                &quot;profile_photo_url&quot;: &quot;https://ui-avatars.com/api/?name=A&amp;color=7F9CF5&amp;background=EBF4FF&quot;
+            },
+            &quot;image&quot;: [
+                {
+                    &quot;id&quot;: 22,
+                    &quot;url&quot;: &quot;storage/product/e9c7271bf00ba0e26e2ace9b57e0aa9d.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T02:36:28.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T02:36:28.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 23,
+                    &quot;url&quot;: &quot;storage/product/19fc4e9c4ac8b6c3f2ec1304e666e2e9.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T02:36:28.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T02:36:28.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 24,
+                    &quot;url&quot;: &quot;storage/product/28e825b1edc07235f73074a5621c1ba7.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T02:36:28.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T02:36:28.000000Z&quot;
+                }
+            ],
+            &quot;categories&quot;: [
+                {
+                    &quot;id&quot;: 3,
+                    &quot;name&quot;: &quot;Dr. Mose Kiehn PhD&quot;,
+                    &quot;description&quot;: &quot;Et est accusantium ab aut.&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T02:36:08.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T02:36:08.000000Z&quot;,
+                    &quot;pivot&quot;: {
+                        &quot;product_id&quot;: 8,
+                        &quot;category_id&quot;: 3
+                    }
+                },
+                {
+                    &quot;id&quot;: 7,
+                    &quot;name&quot;: &quot;Prof. Charles Kerluke&quot;,
+                    &quot;description&quot;: &quot;Animi assumenda nam et.&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T02:36:08.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T02:36:08.000000Z&quot;,
+                    &quot;pivot&quot;: {
+                        &quot;product_id&quot;: 8,
+                        &quot;category_id&quot;: 7
+                    }
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: 1,
+            &quot;sku&quot;: &quot;9796200298132&quot;,
+            &quot;name&quot;: &quot;Horace Klocko&quot;,
+            &quot;price&quot;: 86454,
+            &quot;weight&quot;: 4,
+            &quot;description&quot;: &quot;Ab nemo illo voluptatibus. In inventore qui autem. Dolor sit ab id veniam in. Voluptates quaerat dolorem nisi et. Aspernatur maiores vel et sint magni minima qui. Consequuntur aliquid labore voluptate ut ipsam veritatis et. Minima nesciunt laudantium illo ullam. Doloremque explicabo aut esse et consequatur. Vitae nobis tenetur maiores ea. Tempora libero totam et est iusto qui omnis.&quot;,
+            &quot;thumbnail&quot;: &quot;storage/product/593ed2c02e7e680d6c65d84160ab8aad.png&quot;,
+            &quot;stock&quot;: 76,
+            &quot;slug&quot;: &quot;horace-klocko&quot;,
+            &quot;user_id&quot;: 1,
+            &quot;created_at&quot;: &quot;2022-01-22T02:36:13.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-01-22T02:36:13.000000Z&quot;,
+            &quot;user&quot;: {
+                &quot;id&quot;: 1,
+                &quot;name&quot;: &quot;Admin&quot;,
+                &quot;email&quot;: &quot;admin@gmail.com&quot;,
+                &quot;email_verified_at&quot;: null,
+                &quot;current_team_id&quot;: null,
+                &quot;profile_photo_path&quot;: null,
+                &quot;created_at&quot;: &quot;2022-01-22T02:35:58.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-01-22T02:35:58.000000Z&quot;,
+                &quot;profile_photo_url&quot;: &quot;https://ui-avatars.com/api/?name=A&amp;color=7F9CF5&amp;background=EBF4FF&quot;
+            },
+            &quot;image&quot;: [
+                {
+                    &quot;id&quot;: 1,
+                    &quot;url&quot;: &quot;storage/product/4d03a19cf08e8d933f29a539fb76804b.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T02:36:15.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T02:36:15.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 2,
+                    &quot;url&quot;: &quot;storage/product/47485df19b3ad6fe10a6b7121327f97e.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T02:36:15.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T02:36:15.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 3,
+                    &quot;url&quot;: &quot;storage/product/55bc47f91a8bf3f2d8339f2babe913a3.png&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T02:36:15.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T02:36:15.000000Z&quot;
+                }
+            ],
+            &quot;categories&quot;: [
+                {
+                    &quot;id&quot;: 3,
+                    &quot;name&quot;: &quot;Dr. Mose Kiehn PhD&quot;,
+                    &quot;description&quot;: &quot;Et est accusantium ab aut.&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T02:36:08.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T02:36:08.000000Z&quot;,
+                    &quot;pivot&quot;: {
+                        &quot;product_id&quot;: 1,
+                        &quot;category_id&quot;: 3
+                    }
+                },
+                {
+                    &quot;id&quot;: 9,
+                    &quot;name&quot;: &quot;Ms. Neha Herzog V&quot;,
+                    &quot;description&quot;: &quot;Laudantium quia molestiae sit quo.&quot;,
+                    &quot;created_at&quot;: &quot;2022-01-22T02:36:09.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-01-22T02:36:09.000000Z&quot;,
+                    &quot;pivot&quot;: {
+                        &quot;product_id&quot;: 1,
+                        &quot;category_id&quot;: 9
+                    }
+                }
+            ]
+        }
+    ],
+    &quot;links&quot;: {
+        &quot;first&quot;: &quot;http://localhost:8000/api/productsByUser?page=1&quot;,
+        &quot;last&quot;: &quot;http://localhost:8000/api/productsByUser?page=1&quot;,
+        &quot;prev&quot;: null,
+        &quot;next&quot;: null
+    },
+    &quot;meta&quot;: {
+        &quot;current_page&quot;: 1,
+        &quot;from&quot;: 1,
+        &quot;last_page&quot;: 1,
+        &quot;links&quot;: [
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;&amp;laquo; Previous&quot;,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost:8000/api/productsByUser?page=1&quot;,
+                &quot;label&quot;: &quot;1&quot;,
+                &quot;active&quot;: true
+            },
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
+                &quot;active&quot;: false
+            }
+        ],
+        &quot;path&quot;: &quot;http://localhost:8000/api/productsByUser&quot;,
+        &quot;per_page&quot;: 8,
+        &quot;to&quot;: 2,
+        &quot;total&quot;: 2
+    }
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-productsByUser" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-productsByUser"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-productsByUser"></code></pre>
+</span>
+<span id="execution-error-GETapi-productsByUser" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-productsByUser"></code></pre>
+</span>
+<form id="form-GETapi-productsByUser" data-method="GET"
+      data-path="api/productsByUser"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer hV1vE84Pg36kbec6ZaDafd5","Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-productsByUser', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-productsByUser"
+                    onclick="tryItOut('GETapi-productsByUser');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-productsByUser"
+                    onclick="cancelTryOut('GETapi-productsByUser');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-productsByUser" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/productsByUser</code></b>
+        </p>
+                <p>
+            <label id="auth-GETapi-productsByUser" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="GETapi-productsByUser"
+                                                                data-component="header"></label>
+        </p>
+                </form>
 
     
 

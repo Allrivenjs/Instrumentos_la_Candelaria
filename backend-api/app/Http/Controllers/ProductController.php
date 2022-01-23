@@ -6,6 +6,7 @@ use App\Http\Requests\ProductRequest;
 use App\Http\Resources\ProductResource;
 use App\Models\Product;
 use App\Models\User;
+use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\ResourceCollection;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
@@ -48,6 +49,22 @@ class ProductController extends Controller
 
 
     /**
+     *  Desplay a listing of products by user
+     *
+     * @return \Illuminate\Http\JsonResponse|ResourceCollection
+     */
+    public function getItemProductByUser(){
+        return (ProductResource::collection(Product::with(['user', 'images', 'categories'])
+            ->where('user_id', auth()->user()->getAuthIdentifier())
+            ->orderByDesc('id')
+            ->paginate(8)))
+            ->response()
+            ->setStatusCode(Response::HTTP_OK)
+            ->getData(true);
+    }
+
+
+    /**
      * Store a newly created resource in storage.
      * @bodyParam images file[] 📷 📸 You can upload several images related to the product
      * @param  \Illuminate\Http\Request  $request
@@ -55,7 +72,6 @@ class ProductController extends Controller
      */
     public function store(ProductRequest $request)
     {
-
         $sku= substr($request->name, 0, 4) . rand(10000, 99999);
         $slug=Str::slug($request->name .'-'. rand());
         $thumbnail='storage/' . Storage::put('product', $request->file('thumbnail'));
@@ -107,13 +123,11 @@ class ProductController extends Controller
     /**
      * Update the specified resource in storage.
      * @urlParam id int required Defaults to 'id'. Example: 1 Required
-     * @param  \Illuminate\Http\Request  $request
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\JsonResponse|\Illuminate\Http\Response|object
      */
     public function update(ProductRequest $request, Product $product)
     {
-
         if ($request->file('thumbnail')){
             Storage::delete(substr($product->thumbnail, 8 , null));
             $thumbnail='storage/' . Storage::put('product', $request->file('thumbnail'));
@@ -121,7 +135,6 @@ class ProductController extends Controller
                 'thumbnail'=>$thumbnail,
             ]);
         }
-
         $product->update([
             'name'=>$request->name,
             'description'=>$request->description,
@@ -142,7 +155,7 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        $product->delete();
+        $product->deleteOrFail();
         return \response()->json()->setStatusCode(Response::HTTP_OK);
     }
 }
