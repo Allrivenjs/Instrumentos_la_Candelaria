@@ -1,7 +1,7 @@
-import { auth } from "./auth.js";
+import { adminAuth } from "./auth.js";
 import { storeCategory } from "./services.js";
 
-const token = auth();
+const token = adminAuth();
 
 const domCategoryName = document.getElementById('category-name');
 const domCategoryDescription = document.getElementById('category-description');

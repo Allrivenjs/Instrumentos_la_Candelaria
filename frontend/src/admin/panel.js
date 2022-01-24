@@ -4,6 +4,14 @@ import { showProductsInDOM } from "./products.js";
 
 const token = adminAuth();
 
+const adminLogOutBtn = document.getElementById('admin-log-out-btn');
+
+adminLogOutBtn.addEventListener('click', (e) => {
+    
+    window.sessionStorage.removeItem('adminToken');
+    window.location.href = '/admin';
+});
+
 const changePageWithCurrentHash = () => {
     const hash = window.location.hash.slice(1);
     if(hash === 'products') {
